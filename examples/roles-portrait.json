@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "title": "Portrait motion / 版式适配",
+  "canvas": {
+    "width": 1080,
+    "height": 1350,
+    "fps": 60
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "background": "F2EEE6",
+    "foreground": "171A20",
+    "accent": "4049E8"
+  },
+  "slides": [
+    {
+      "id": "overview",
+      "label": "条件",
+      "duration": 5000,
+      "transition": {
+        "kind": "fade",
+        "duration": 320
+      },
+      "objects": [
+        {
+          "id": "label",
+          "kind": "text",
+          "text": "NATIVE / 01",
+          "box": [
+            90,
+            96,
+            800,
+            64
+          ],
+          "font": "Space Grotesk SemiBold",
+          "size": 29,
+          "fill": "626775",
+          "role": "label"
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "text": "先说明条件。",
+          "box": [
+            90,
+            245,
+            900,
+            230
+          ],
+          "font": "Noto Serif CJK SC",
+          "bold": true,
+          "size": 98,
+          "role": "title"
+        },
+        {
+          "id": "body",
+          "kind": "text",
+          "text": "观众需要先知道，\n变化从哪里开始。",
+          "box": [
+            92,
+            655,
+            880,
+            240
+          ],
+          "size": 46,
+          "role": "body",
+          "reveal_group": 1
+        },
+        {
+          "id": "baseline",
+          "kind": "path",
+          "d": "M 0 270 C 220 30 480 370 760 0",
+          "box": [
+            105,
+            990,
+            790,
+            280
+          ],
+          "fill": "none",
+          "stroke": "4049E8",
+          "stroke_width": 5,
+          "role": "visual"
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "label": "变化",
+      "duration": 5000,
+      "transition": {
+        "kind": "morph",
+        "duration": 520
+      },
+      "objects": [
+        {
+          "id": "label2",
+          "kind": "text",
+          "text": "NATIVE / 02",
+          "box": [
+            90,
+            96,
+            800,
+            64
+          ],
+          "font": "Space Grotesk SemiBold",
+          "size": 29,
+          "fill": "626775",
+          "role": "label"
+        },
+        {
+          "id": "title2",
+          "kind": "text",
+          "text": "再展示变化。",
+          "box": [
+            90,
+            245,
+            900,
+            230
+          ],
+          "font": "Noto Serif CJK SC",
+          "bold": true,
+          "size": 98,
+          "role": "title"
+        },
+        {
+          "id": "body2",
+          "kind": "text",
+          "text": "用同一个对象，\n把前后关系接起来。",
+          "box": [
+            92,
+            655,
+            880,
+            240
+          ],
+          "size": 46,
+          "role": "body",
+          "reveal_group": 1
+        },
+        {
+          "id": "baseline",
+          "kind": "path",
+          "d": "M 0 270 C 260 370 570 30 760 0",
+          "box": [
+            105,
+            990,
+            790,
+            280
+          ],
+          "fill": "none",
+          "stroke": "4049E8",
+          "stroke_width": 5,
+          "role": "visual"
+        }
+      ]
+    }
+  ]
+}

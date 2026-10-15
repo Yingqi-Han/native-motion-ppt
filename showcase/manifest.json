@@ -1,0 +1,108 @@
+{
+  "origin": "immutable excerpts of actual WPS recordings from the 2026-10-15 v1.6.0 acceptance runs",
+  "target": "WPS Office Presentation (Linux)",
+  "package_version": "11.1.0.11723.XA",
+  "full_proof_bundle": {
+    "file": "wps-v1.6.0-delivery.zip",
+    "sha256": "218b5bf942f80c2ffd59f429814641b4edd71c5ea2e681456bf07a952d0c65b3",
+    "bytes": 76704674
+  },
+  "runs": {
+    "science-check": {
+      "original_acceptance_sha256": "ba30d700c7480898f117de0efdf1ae529b91b0e97968fcccfb49acf98307470a",
+      "source_sha256": "120bbafe06c81e162e8a97c956708be31d537042eb4832bbeb40144a02b6049d",
+      "acceptance_status": "passed",
+      "automatic_acceptance_status": "passed",
+      "files": {
+        "player-recording.mp4": {
+          "sha256": "d5d7b64b512fb333d73143541f29d184325b0115d5369e2058fd37c15ee11acf",
+          "bytes": 1450914
+        },
+        "player-recording-auto.mp4": {
+          "sha256": "31fb7714817da148e9215d80c42316bbf553f4fb5e0ca7e3a0127a7e57305ef3",
+          "bytes": 1326743
+        },
+        "deck.pptx": {
+          "sha256": "bf99e0697793cf82516f8ca4c0ae5de8bb4bba4f2a45b534337de1abab748791",
+          "bytes": 56218
+        },
+        "deck-auto.pptx": {
+          "sha256": "5ea1ef6dab3168648fecdcc17fae5b9a2c7d9912e0788f6b9a918ae8ff761f58",
+          "bytes": 56187
+        },
+        "playback-evidence.json": {
+          "sha256": "48203eabce1df18cf0501a4b5ec5a7f3ae60460292400b10c29e1566866a7e4b",
+          "bytes": 3564
+        },
+        "playback-evidence-auto.json": {
+          "sha256": "c92e189f4b26922d18c233847ebbcefc43bea7d3696e6e44df8c30590d8f7c9b",
+          "bytes": 2951
+        },
+        "acceptance.json": {
+          "sha256": "ba30d700c7480898f117de0efdf1ae529b91b0e97968fcccfb49acf98307470a",
+          "bytes": 53994
+        },
+        "project.json": {
+          "sha256": "120bbafe06c81e162e8a97c956708be31d537042eb4832bbeb40144a02b6049d",
+          "bytes": 87031
+        },
+        "qa/visual-review/manual/contact.jpg": {
+          "sha256": "a3811ca76969b6b76204def4dff256bfdc8aee37207e0e1b73c85699ad957c23",
+          "bytes": 153637
+        },
+        "qa/visual-review/automatic/contact.jpg": {
+          "sha256": "2dd6bee75da8df0fc85b1ff9c1d835d2e9391921d526433ff89d73e40f68cd78",
+          "bytes": 152956
+        }
+      }
+    },
+    "generic-record": {
+      "original_acceptance_sha256": "63367f82743790c2ce56eb12069e0fc1fceeea47063e3cfe5567fd5e089e4982",
+      "source_sha256": "5121e43d57c2d661656f26516b77de93bc6961a294b797ead7396f6b5608aca3",
+      "acceptance_status": "passed",
+      "automatic_acceptance_status": "passed",
+      "files": {
+        "player-recording.mp4": {
+          "sha256": "8732a65166272f0f658254743ede55437f1a9384c26fa7db9eeaf9f1cab91601",
+          "bytes": 155961
+        },
+        "player-recording-auto.mp4": {
+          "sha256": "1dac95719c4d1f3f026fd70a18338e074823a4f8ccbff9f0e3a78fd3c2760ab4",
+          "bytes": 171349
+        },
+        "deck.pptx": {
+          "sha256": "efca4d67395a89cf8f4ad699e6ee25bbf7d3fec9870f6ae0ec3c8961551414dc",
+          "bytes": 37500
+        },
+        "deck-auto.pptx": {
+          "sha256": "899b84474a04ad016b60d57443a38779f6d4f4c4911f1e2e5707e44228cf3874",
+          "bytes": 37480
+        },
+        "playback-evidence.json": {
+          "sha256": "de55fb245d740eb54edfc732f639e3f571747f41334c1e0dcaf6e5dbde36d9e6",
+          "bytes": 3105
+        },
+        "playback-evidence-auto.json": {
+          "sha256": "ec41b5dad0bcf077cb75f171ac494c4784f234e137b6e86296df2901a956e2b1",
+          "bytes": 2966
+        },
+        "acceptance.json": {
+          "sha256": "63367f82743790c2ce56eb12069e0fc1fceeea47063e3cfe5567fd5e089e4982",
+          "bytes": 38006
+        },
+        "project.json": {
+          "sha256": "5121e43d57c2d661656f26516b77de93bc6961a294b797ead7396f6b5608aca3",
+          "bytes": 9195
+        },
+        "qa/visual-review/manual/contact.jpg": {
+          "sha256": "6c58add40d5c79cab6e2e6acac80b3a9ffffd90d13befa0c0c10f4e101d2d843",
+          "bytes": 77462
+        },
+        "qa/visual-review/automatic/contact.jpg": {
+          "sha256": "22a719a21911813f6263c236ee6fc4d379cc6fc5bb05782d47675873dab419b2",
+          "bytes": 77401
+        }
+      }
+    }
+  }
+}

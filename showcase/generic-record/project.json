@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "title": "WPS backend and generic phase regression",
+  "canvas": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30
+  },
+  "theme": {
+    "font": "Space Grotesk SemiBold",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "EEF3F7",
+    "foreground": "203047"
+  },
+  "slides": [
+    {
+      "id": "unrelated-layout-a",
+      "duration": 5000,
+      "clicks": [
+        900
+      ],
+      "background": "EEF3F7",
+      "transition": {
+        "kind": "fade",
+        "duration": 260
+      },
+      "objects": [
+        {
+          "id": "probe-heading-1",
+          "kind": "text",
+          "text": "Reveal, then follow the object",
+          "box": [
+            90,
+            70,
+            1090,
+            100
+          ],
+          "size": 50,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 80,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "probe-note-a",
+          "kind": "text",
+          "text": "Two bars. One baseline.",
+          "box": [
+            90,
+            200,
+            420,
+            100
+          ],
+          "size": 27,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "role": "body"
+        },
+        {
+          "id": "probe-zero",
+          "kind": "path",
+          "box": [
+            560,
+            540,
+            490,
+            0.001
+          ],
+          "d": "M 0 0 L 490 0",
+          "fill": "none",
+          "stroke": "203047",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "carry-marker",
+          "kind": "rect",
+          "box": [
+            120,
+            380,
+            80,
+            80
+          ],
+          "fill": "4758B8",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 120,
+              "duration": 1500,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  2.761423749153968,
+                  0
+                ],
+                [
+                  5,
+                  -2.686291501015239
+                ],
+                [
+                  5,
+                  -6
+                ],
+                [
+                  5,
+                  -9.313708498984761
+                ],
+                [
+                  2.761423749153968,
+                  -12
+                ],
+                [
+                  0,
+                  -12
+                ],
+                [
+                  -2.761423749153968,
+                  -12
+                ],
+                [
+                  -5,
+                  -9.313708498984761
+                ],
+                [
+                  -5,
+                  -6
+                ],
+                [
+                  -5,
+                  -2.686291501015239
+                ],
+                [
+                  -2.761423749153968,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "measure-0",
+          "kind": "rect",
+          "box": [
+            650,
+            360,
+            70,
+            180
+          ],
+          "fill": "D1732F",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 0,
+              "duration": 950,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "measure-label-0",
+          "kind": "text",
+          "text": "180",
+          "box": [
+            630,
+            300,
+            110,
+            45
+          ],
+          "size": 28,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "align": "center",
+          "role": "label",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 950,
+              "duration": 250,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "measure-1",
+          "kind": "rect",
+          "box": [
+            850,
+            270,
+            70,
+            270
+          ],
+          "fill": "A4415B",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 180,
+              "duration": 950,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "measure-label-1",
+          "kind": "text",
+          "text": "270",
+          "box": [
+            830,
+            210,
+            110,
+            45
+          ],
+          "size": 28,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "align": "center",
+          "role": "label",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1130,
+              "duration": 250,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unrelated-layout-b",
+      "duration": 4500,
+      "clicks": [],
+      "background": "EEF3F7",
+      "transition": {
+        "kind": "morph",
+        "duration": 1600
+      },
+      "objects": [
+        {
+          "id": "probe-heading-2",
+          "kind": "text",
+          "text": "Same object, new place",
+          "box": [
+            90,
+            70,
+            1090,
+            100
+          ],
+          "size": 50,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 80,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "probe-note-b",
+          "kind": "text",
+          "text": "The blue shape moves and scales with native Morph.",
+          "box": [
+            90,
+            200,
+            1080,
+            65
+          ],
+          "size": 27,
+          "fill": "203047",
+          "font": "Space Grotesk SemiBold",
+          "role": "body"
+        },
+        {
+          "id": "carry-marker",
+          "kind": "rect",
+          "box": [
+            800,
+            330,
+            120,
+            120
+          ],
+          "fill": "4758B8",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 120,
+              "duration": 1500,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  2.761423749153968,
+                  0
+                ],
+                [
+                  5,
+                  -2.686291501015239
+                ],
+                [
+                  5,
+                  -6
+                ],
+                [
+                  5,
+                  -9.313708498984761
+                ],
+                [
+                  2.761423749153968,
+                  -12
+                ],
+                [
+                  0,
+                  -12
+                ],
+                [
+                  -2.761423749153968,
+                  -12
+                ],
+                [
+                  -5,
+                  -9.313708498984761
+                ],
+                [
+                  -5,
+                  -6
+                ],
+                [
+                  -5,
+                  -2.686291501015239
+                ],
+                [
+                  -2.761423749153968,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

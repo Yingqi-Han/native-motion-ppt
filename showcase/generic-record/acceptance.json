@@ -1,0 +1,997 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-15T09:59:00.492101+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-wps/project.json",
+    "snapshot": "project.json",
+    "sha256": "5121e43d57c2d661656f26516b77de93bc6961a294b797ead7396f6b5608aca3"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "reused_from_parent": true,
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "reused_from_parent": true,
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "reused_from_parent": true,
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Required player, tools and fonts are ready; real GUI still checked through recording",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 507 actual frames, 4 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/manual/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "2 actual held pages compared with Office references",
+      "evidence": "qa/manual/playback/native-playback-audit.json"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 491 actual frames, 4 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/automatic/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "2 actual held pages compared with Office references",
+      "evidence": "qa/automatic/playback/native-playback-audit.json"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/80906a557b040652e78344466d442821358a9252dd01d29906c58f3db85a0bed.json",
+      "review_note": "已查看点击/自动真实 WPS 全程抽帧、两页停留帧及 Morph 四分位帧。两根暖色柱保持共同基线向上展开；独立蓝色主体页内漂移，并在两页间连续移动、放大，有清晰实心中间轮廓。文字和柱图在转场中淡出属于非匹配内容，不作为主体 Morph 依据；末页标题/说明完整。无固定页码的 1280×720、30fps 项目也能按序自动播放。结论限本次 WPS Linux 构建及绑定录像。"
+    },
+    {
+      "id": "source-preserved",
+      "label": "输入与依赖绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Immutable new run; selected dependency SHA-256 recorded in lineage"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "record-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck.pptx",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/capture/manual",
+        "--seconds",
+        "16.9",
+        "--show-after",
+        "1.0",
+        "--width",
+        "1280",
+        "--height",
+        "720",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "4.4",
+        "--click-at",
+        "8.78"
+      ],
+      "started_at": "2026-10-15T09:59:00.539983+00:00",
+      "status": "passed",
+      "log": "logs/record-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 24.232
+    },
+    {
+      "id": "record-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck-auto.pptx",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/capture/automatic",
+        "--seconds",
+        "16.36",
+        "--show-after",
+        "1",
+        "--width",
+        "1280",
+        "--height",
+        "720",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile"
+      ],
+      "started_at": "2026-10-15T09:59:24.773435+00:00",
+      "status": "passed",
+      "log": "logs/record-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 23.669
+    },
+    {
+      "id": "morph-probe-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/project.json",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/deck.pptx"
+      ],
+      "started_at": "2026-10-15T09:59:48.444726+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-build.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.321
+    },
+    {
+      "id": "record-morph-probe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/deck.pptx",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/capture",
+        "--seconds",
+        "9",
+        "--show-after",
+        "1",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "60",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "4"
+      ],
+      "started_at": "2026-10-15T09:59:48.767469+00:00",
+      "status": "passed",
+      "log": "logs/record-morph-probe.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 16.525
+    },
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/project.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/phases",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-15T10:00:05.296239+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.951
+    },
+    {
+      "id": "motion-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/project.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-15T10:00:13.249308+00:00",
+      "status": "passed",
+      "log": "logs/motion-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 5.162
+    },
+    {
+      "id": "frames-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/manual/playback"
+      ],
+      "started_at": "2026-10-15T10:00:18.422623+00:00",
+      "status": "passed",
+      "log": "logs/frames-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.791
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/project.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-15T10:00:20.215724+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.473
+    },
+    {
+      "id": "motion-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/project.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-15T10:00:27.691731+00:00",
+      "status": "passed",
+      "log": "logs/motion-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 4.497
+    },
+    {
+      "id": "frames-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/playback-evidence-auto.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/qa/automatic/playback"
+      ],
+      "started_at": "2026-10-15T10:00:32.195526+00:00",
+      "status": "passed",
+      "log": "logs/frames-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.478
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/generic-record/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-15T10:00:33.675626+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.642
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "8732a65166272f0f658254743ede55437f1a9384c26fa7db9eeaf9f1cab91601",
+      "bytes": 155961,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "de55fb245d740eb54edfc732f639e3f571747f41334c1e0dcaf6e5dbde36d9e6",
+      "bytes": 3105,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "1dac95719c4d1f3f026fd70a18338e074823a4f8ccbff9f0e3a78fd3c2760ab4",
+      "bytes": 171349,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "ec41b5dad0bcf077cb75f171ac494c4784f234e137b6e86296df2901a956e2b1",
+      "bytes": 2966,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "5121e43d57c2d661656f26516b77de93bc6961a294b797ead7396f6b5608aca3",
+      "bytes": 9195,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "efca4d67395a89cf8f4ad699e6ee25bbf7d3fec9870f6ae0ec3c8961551414dc",
+      "bytes": 37500,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "899b84474a04ad016b60d57443a38779f6d4f4c4911f1e2e5707e44228cf3874",
+      "bytes": 37480,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "39348b5461d37283ccec6569852594c40fa09b3b515a75ec68c2b91244d57437",
+      "bytes": 280463,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "workflow_mode": "record",
+  "requested_target_player": "wps-desktop",
+  "lineage": {
+    "parent_acceptance_sha256": "7f0917802493606bc5c75b1e66839b71fd245c248c83881614d7b1e5bb46a838",
+    "parent_manifest_sha256": "9abaea8aacf58931831078c021ffc981f5912ccd3e86c85eb9f7a1fdd1818413",
+    "mode": "record",
+    "copied": [
+      {
+        "path": "deck-auto.pptx",
+        "sha256": "899b84474a04ad016b60d57443a38779f6d4f4c4911f1e2e5707e44228cf3874",
+        "bytes": 37480
+      },
+      {
+        "path": "deck.pptx",
+        "sha256": "efca4d67395a89cf8f4ad699e6ee25bbf7d3fec9870f6ae0ec3c8961551414dc",
+        "bytes": 37500
+      },
+      {
+        "path": "design-preview.mp4",
+        "sha256": "39348b5461d37283ccec6569852594c40fa09b3b515a75ec68c2b91244d57437",
+        "bytes": 280463
+      },
+      {
+        "path": "plans/automatic-input.json",
+        "sha256": "47fb96a455417b4d2a2418bf85b7869fc83c82db35970e9f2ea62a1ef7e5b1cd",
+        "bytes": 174
+      },
+      {
+        "path": "plans/manual-input.json",
+        "sha256": "ac87b3794eac981145fba71e958e837eead3700274ba53c9b7570f5616f988d0",
+        "bytes": 972
+      },
+      {
+        "path": "playback-plan.json",
+        "sha256": "ac87b3794eac981145fba71e958e837eead3700274ba53c9b7570f5616f988d0",
+        "bytes": 972
+      },
+      {
+        "path": "project.json",
+        "sha256": "5121e43d57c2d661656f26516b77de93bc6961a294b797ead7396f6b5608aca3",
+        "bytes": 9195
+      },
+      {
+        "path": "qa/auto/audit.json",
+        "sha256": "ee9cb871af07afe6740e6b3d03aa67e816ba6994d9197117f4d3d460e7293c63",
+        "bytes": 937
+      },
+      {
+        "path": "qa/native/audit.json",
+        "sha256": "f41e7df9e1d1d5839fb5b7de54bf0a1c055cc8fa4bb8812d760798f7b9a824d7",
+        "bytes": 3491
+      },
+      {
+        "path": "qa/native/rendered/contact.jpg",
+        "sha256": "39c0e0672f51d7290e7af7bce4d77dfe38dbd65f68208b13265bb18ae1b53a5a",
+        "bytes": 47907
+      },
+      {
+        "path": "qa/native/rendered/deck.pdf",
+        "sha256": "f6cd31da0f2d63c6ffdf87862495f510ae52b7bf7f9518dc9601b25db2ee0070",
+        "bytes": 15105
+      },
+      {
+        "path": "qa/native/rendered/slide-01.png",
+        "sha256": "8e0e1a6fe94b973724ef3edc0d814870cc7eda9227dd9702f3d1f8ebc58f9222",
+        "bytes": 26844
+      },
+      {
+        "path": "qa/native/rendered/slide-02.png",
+        "sha256": "42b27c564ba3e4c91cfef8d801916375b07bd96b13b823198bcffa4a8b852df0",
+        "bytes": 24755
+      },
+      {
+        "path": "qa/preview/dynamic-contact.jpg",
+        "sha256": "5e4a6a6f48ec09fcbd54eaccc6c31eb9ed96b48938564b5c299fc043f92b3343",
+        "bytes": 102470
+      },
+      {
+        "path": "qa/preview/preview-audit.json",
+        "sha256": "66fc7c1ecff71faf030e65e1faed26daff21490c70d7a42120f51effc1b5ccca",
+        "bytes": 6164
+      },
+      {
+        "path": "qa/preview/scene-01-00000.png",
+        "sha256": "4fb8d0c7a53530cca8d2f4c7fd2c89c5996d169a2421502ba6224e1b7f6912a3",
+        "bytes": 11698
+      },
+      {
+        "path": "qa/preview/scene-01-00080.png",
+        "sha256": "4fb8d0c7a53530cca8d2f4c7fd2c89c5996d169a2421502ba6224e1b7f6912a3",
+        "bytes": 11698
+      },
+      {
+        "path": "qa/preview/scene-01-00330.png",
+        "sha256": "3b2f8cffdc6675f456f53578325baddaa29a10e3551aba496f7cb885a55a9708",
+        "bytes": 24383
+      },
+      {
+        "path": "qa/preview/scene-01-00870.png",
+        "sha256": "60a947d6511baa0aac857c3f80d12de3f7dc9286c8982940cfc40d085de32383",
+        "bytes": 24670
+      },
+      {
+        "path": "qa/preview/scene-01-01080.png",
+        "sha256": "0a3c31cad305e6e6682b862075e45d434980f16bf2d2b243e9ca497dec38dbdb",
+        "bytes": 24772
+      },
+      {
+        "path": "qa/preview/scene-01-01555.png",
+        "sha256": "ecdbca00b9f7eba1d089a47d44f4ab7fd7ffb24ec339add72e6a031816752e87",
+        "bytes": 24826
+      },
+      {
+        "path": "qa/preview/scene-01-01621.png",
+        "sha256": "a0f504898db3d48ffe6c8d209a9df2d4464210b48c392caa78cf03eb8b5b640d",
+        "bytes": 24830
+      },
+      {
+        "path": "qa/preview/scene-01-01851.png",
+        "sha256": "dee4f017b03fb26bae38df4a7b2ee545c2f75f39e8ceb0d5565cd84b09586b17",
+        "bytes": 24832
+      },
+      {
+        "path": "qa/preview/scene-01-02030.png",
+        "sha256": "2f048420fc368c66a70a66669a64efb79fc1af75afc2eb4fae056cf2af295504",
+        "bytes": 26532
+      },
+      {
+        "path": "qa/preview/scene-01-02101.png",
+        "sha256": "b31d79739048cbde91316592d6eedcb4dd574c812d0bbbec16fe6a09313fc9bb",
+        "bytes": 28038
+      },
+      {
+        "path": "qa/preview/scene-01-02281.png",
+        "sha256": "9168494f20580371029f583b9cb5c155b8a0d6599d23cf4a3facf4105c4a6439",
+        "bytes": 28072
+      },
+      {
+        "path": "qa/preview/scene-01-04999.png",
+        "sha256": "9168494f20580371029f583b9cb5c155b8a0d6599d23cf4a3facf4105c4a6439",
+        "bytes": 28072
+      },
+      {
+        "path": "qa/preview/scene-02-00000.png",
+        "sha256": "9168494f20580371029f583b9cb5c155b8a0d6599d23cf4a3facf4105c4a6439",
+        "bytes": 28072
+      },
+      {
+        "path": "qa/preview/scene-02-00800.png",
+        "sha256": "3518e9133409295bc8ceff0adb61c4b23eea911a381f7b3eda9a4bd98a7f7b46",
+        "bytes": 35611
+      },
+      {
+        "path": "qa/preview/scene-02-01600.png",
+        "sha256": "adf61c4d7a245e38a489faf90f3fc7db6514112378f694165e1bcd2893e9bc23",
+        "bytes": 16785
+      },
+      {
+        "path": "qa/preview/scene-02-01680.png",
+        "sha256": "adf61c4d7a245e38a489faf90f3fc7db6514112378f694165e1bcd2893e9bc23",
+        "bytes": 16785
+      },
+      {
+        "path": "qa/preview/scene-02-01720.png",
+        "sha256": "29d89797af510b6f37779e003cd307aa9fdaff41ce94bb5739cccd5bd0c76230",
+        "bytes": 23928
+      },
+      {
+        "path": "qa/preview/scene-02-01930.png",
+        "sha256": "1e9bc6197eed58b336e7a2deac183343e151c2a70e6e2eeb2f4596a787214c77",
+        "bytes": 27832
+      },
+      {
+        "path": "qa/preview/scene-02-02181.png",
+        "sha256": "605aa1bfa7a17ad6c094f13522e431f04156ff96e5ade883dbdb132e5ec03a6d",
+        "bytes": 27897
+      },
+      {
+        "path": "qa/preview/scene-02-02470.png",
+        "sha256": "cc6f0f0b12c1bb3211b9c380ce736398c8a5b1cc511b4c47f91a19d5d076a5e4",
+        "bytes": 27898
+      },
+      {
+        "path": "qa/preview/scene-02-03221.png",
+        "sha256": "b23def57b98aec45c3f8b5a83f7b0172bf993b4a47f7d97f292258d0a8b02eb7",
+        "bytes": 27896
+      },
+      {
+        "path": "qa/preview/scene-02-04499.png",
+        "sha256": "b23def57b98aec45c3f8b5a83f7b0172bf993b4a47f7d97f292258d0a8b02eb7",
+        "bytes": 27896
+      },
+      {
+        "path": "qa/source-review.json",
+        "sha256": "cdc45cb1897aaae382a3ce379de1fa2513e3304c6bd17f1514817cb8f1d8e8a2",
+        "bytes": 603
+      },
+      {
+        "path": "qa/video/video-0000.png",
+        "sha256": "2ccc4b123a459f73b3119c839bfa14189cadf7f993f1c6eb50605322b8c5bed5",
+        "bytes": 24440
+      },
+      {
+        "path": "qa/video/video-0027.png",
+        "sha256": "e298883906612d9deaf7ac006c78fcf00fe1102b33e9696589412f9b64988739",
+        "bytes": 84143
+      },
+      {
+        "path": "qa/video/video-0030.png",
+        "sha256": "aacb2029f778b40bd2f57118f980fb277210e8d49ab99e67415456caeec46ecf",
+        "bytes": 86064
+      },
+      {
+        "path": "qa/video/video-0032.png",
+        "sha256": "de0f7b92480e15326070bd2c77cfe3f63d6b130427ca80b9f8e3edfad6508ee9",
+        "bytes": 86780
+      },
+      {
+        "path": "qa/video/video-0034.png",
+        "sha256": "24637acdfa32ec37ac8e48fd260802fe3bfd859e7d290c7582092b7d51f0365e",
+        "bytes": 87957
+      },
+      {
+        "path": "qa/video/video-0035.png",
+        "sha256": "7d102fe2a3827318d516cb1b0eaa5e6fa252503085064bd90b732a6c63e68e2f",
+        "bytes": 89009
+      },
+      {
+        "path": "qa/video/video-0040.png",
+        "sha256": "8ed1787a0c3f992aa6bc6725e0cfe544cdcdf109913e4b18721f074fe6d47ae5",
+        "bytes": 89568
+      },
+      {
+        "path": "qa/video/video-0041.png",
+        "sha256": "a0766998103b552dc05f757800f35ef4ead066f702c91b1591d0e4e8c14e3052",
+        "bytes": 89197
+      },
+      {
+        "path": "qa/video/video-0047.png",
+        "sha256": "518e35c1b10bcbb484a92ab9e262bced69ecfd6097c8893516ef4139e9ababe4",
+        "bytes": 89942
+      },
+      {
+        "path": "qa/video/video-0048.png",
+        "sha256": "fb38d97b968bde12a72c722f5c6c6c93c625a2c14356060524a9d82d4b7e720c",
+        "bytes": 89277
+      },
+      {
+        "path": "qa/video/video-0053.png",
+        "sha256": "5bc605341f094340b90617711059119e4296eb3177d9b7eaf28a7056d1377190",
+        "bytes": 89174
+      },
+      {
+        "path": "qa/video/video-0054.png",
+        "sha256": "e73f56c86ea0b504e63090d10535c8a3d0e4408a2c51f3f83fa9827557f4f881",
+        "bytes": 89401
+      },
+      {
+        "path": "qa/video/video-0056.png",
+        "sha256": "8b465c2334dfc07f5b348cfbe00a9bec004ea87a59cd542fe52162c73263cb55",
+        "bytes": 90338
+      },
+      {
+        "path": "qa/video/video-0058.png",
+        "sha256": "deeb964dcc54ef3f9301067722490f59dde3b7dc391f021aededc9e494ce4f19",
+        "bytes": 92268
+      },
+      {
+        "path": "qa/video/video-0061.png",
+        "sha256": "a86fb2e145c431b06a34300a5f29fbf7cb455b5daec6afa3e4b886bc5c87260d",
+        "bytes": 92928
+      },
+      {
+        "path": "qa/video/video-0105.png",
+        "sha256": "ada9798d52ea303e69607bd06cc25440307b479eab53ea659d128f65e7f9925a",
+        "bytes": 96001
+      },
+      {
+        "path": "qa/video/video-0149.png",
+        "sha256": "bc344172a30154c9fcd2b7f837dd73e49c7ba4c7b998604a880a3c1a8e6d65a5",
+        "bytes": 96074
+      },
+      {
+        "path": "qa/video/video-0150.png",
+        "sha256": "5ad8983d6b35d6db30f5f8f1398c867f5b84bbb644d36c24d05c94934347f191",
+        "bytes": 96095
+      },
+      {
+        "path": "qa/video/video-0151.png",
+        "sha256": "b8bab1966c43181f59e477c5a56a15802e2a18c9ce317285f5a91864a836df03",
+        "bytes": 98085
+      },
+      {
+        "path": "qa/video/video-0174.png",
+        "sha256": "671da82237be67b56be0f019ab33c6b6e7a42228e5abdce5b929e544fb70b088",
+        "bytes": 98043
+      },
+      {
+        "path": "qa/video/video-0244.png",
+        "sha256": "ab6bd71d3db8974949dbf3a7eb6556afbc34741f8b58943d00d18a3a09f7c087",
+        "bytes": 96828
+      },
+      {
+        "path": "qa/video/video-audit.json",
+        "sha256": "38359a3ca9d98390e68121a17953898f1623dd063fddd8f094f8c302ca181db9",
+        "bytes": 2853
+      },
+      {
+        "path": "qa/video/video-contact.jpg",
+        "sha256": "6f4543dfc520f6f2fa70e3467cf1837cc6b33083eb4f17825e1d5d3fefb9f84e",
+        "bytes": 354036
+      }
+    ]
+  },
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "8732a65166272f0f658254743ede55437f1a9384c26fa7db9eeaf9f1cab91601",
+      "source_pptx_sha256": "efca4d67395a89cf8f4ad699e6ee25bbf7d3fec9870f6ae0ec3c8961551414dc"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "1dac95719c4d1f3f026fd70a18338e074823a4f8ccbff9f0e3a78fd3c2760ab4",
+      "source_pptx_sha256": "899b84474a04ad016b60d57443a38779f6d4f4c4911f1e2e5707e44228cf3874"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "passed",
+  "automatic_acceptance_status": "passed",
+  "finished_at": "2026-10-15T10:09:02.251583+00:00"
+}

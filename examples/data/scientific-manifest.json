@@ -1,0 +1,263 @@
+{
+  "source": "scientific-demo.csv",
+  "source_sha256": "4feefd91c14174bd544194846988fd360116cd25adc3c4d54c9b3e9e251012b6",
+  "data_status": "simulated demonstration data",
+  "figures": [
+    {
+      "slide": 1,
+      "kind": "positive-bar",
+      "prefix": "comparison",
+      "box": [
+        920,
+        385,
+        800,
+        425
+      ],
+      "domain": [
+        0,
+        60
+      ],
+      "unit": "完成时间（s）",
+      "values": [
+        52.0,
+        34.0,
+        21.0
+      ],
+      "labels": [
+        "方法 A",
+        "方法 B",
+        "方法 C"
+      ],
+      "bars": [
+        {
+          "id": "comparison-bar-0",
+          "value": 52.0,
+          "baseline": 810,
+          "box": [
+            997.3333333333333,
+            441.6666666666667,
+            112,
+            368.3333333333333
+          ]
+        },
+        {
+          "id": "comparison-bar-1",
+          "value": 34.0,
+          "baseline": 810,
+          "box": [
+            1264.0,
+            569.1666666666666,
+            112,
+            240.83333333333334
+          ]
+        },
+        {
+          "id": "comparison-bar-2",
+          "value": 21.0,
+          "baseline": 810,
+          "box": [
+            1530.6666666666667,
+            661.25,
+            112,
+            148.75
+          ]
+        }
+      ],
+      "axes_stay_static": true,
+      "zero_is_a_native_line": true,
+      "reveal": "native wipe from bottom",
+      "geometry_stays_static": true
+    },
+    {
+      "slide": 2,
+      "kind": "sampled-line",
+      "prefix": "response",
+      "box": [
+        920,
+        385,
+        800,
+        425
+      ],
+      "x": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0
+      ],
+      "values": [
+        1.2,
+        1.4,
+        2.25,
+        2.85,
+        2.25,
+        1.5
+      ],
+      "reference": [
+        1.2,
+        1.25,
+        1.15,
+        1.3,
+        1.24,
+        1.28
+      ],
+      "domain": [
+        0,
+        3.2
+      ],
+      "points": [
+        [
+          920.0,
+          650.625
+        ],
+        [
+          1080.0,
+          624.0625
+        ],
+        [
+          1240.0,
+          511.171875
+        ],
+        [
+          1400.0,
+          431.484375
+        ],
+        [
+          1560.0,
+          511.171875
+        ],
+        [
+          1720.0,
+          610.78125
+        ]
+      ],
+      "unit": "响应（a.u.）",
+      "axes_stay_static": true,
+      "reveal": "native segment fades",
+      "data_series": "改变条件后"
+    },
+    {
+      "slide": 3,
+      "kind": "process",
+      "centers": [
+        [
+          400.0,
+          634.0
+        ],
+        [
+          960.0,
+          634.0
+        ],
+        [
+          1520.0,
+          634.0
+        ]
+      ],
+      "active": 0,
+      "labels": [
+        "输入条件",
+        "受控变化",
+        "观察响应"
+      ],
+      "shared_actor": "sample-token",
+      "actor_box": [
+        272,
+        506,
+        256,
+        256
+      ],
+      "settle_ms": 3240
+    },
+    {
+      "slide": 4,
+      "kind": "process",
+      "centers": [
+        [
+          400.0,
+          634.0
+        ],
+        [
+          960.0,
+          634.0
+        ],
+        [
+          1520.0,
+          634.0
+        ]
+      ],
+      "active": 1,
+      "labels": [
+        "输入条件",
+        "受控变化",
+        "观察响应"
+      ],
+      "shared_actor": "sample-token",
+      "actor_box": [
+        790,
+        464,
+        340,
+        340
+      ],
+      "settle_ms": 2800
+    },
+    {
+      "slide": 5,
+      "kind": "observations-iqr-median",
+      "prefix": "distribution",
+      "box": [
+        920,
+        385,
+        800,
+        425
+      ],
+      "domain": [
+        0,
+        80
+      ],
+      "unit": "观测值（a.u.）",
+      "statistics": [
+        {
+          "label": "条件 A",
+          "n": 8,
+          "values": [
+            55.0,
+            59.0,
+            51.0,
+            62.0,
+            58.0,
+            53.0,
+            56.0,
+            60.0
+          ],
+          "median": 57.0,
+          "q1": 54.5,
+          "q3": 59.25,
+          "quartiles": "inclusive",
+          "center_x": 1120.0
+        },
+        {
+          "label": "条件 B",
+          "n": 8,
+          "values": [
+            34.0,
+            31.0,
+            38.0,
+            36.0,
+            32.0,
+            40.0,
+            35.0,
+            33.0
+          ],
+          "median": 34.5,
+          "q1": 32.75,
+          "q3": 36.5,
+          "quartiles": "inclusive",
+          "center_x": 1520.0
+        }
+      ],
+      "jitter_is_not_data": true,
+      "axes_stay_static": true
+    }
+  ]
+}

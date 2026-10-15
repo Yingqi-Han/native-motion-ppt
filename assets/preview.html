@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Native Motion · 代码设计预演</title><link rel="icon" href="data:,"><style>
+*{box-sizing:border-box}html,body{margin:0;background:#0b0d14;color:#f1f0eb;font:14px system-ui}
+body{min-height:100vh;padding:25px 3vw}header{display:flex;justify-content:space-between;align-items:center;margin:0 auto 24px;max-width:1480px}
+.brand{font-weight:650;letter-spacing:.18em}.sub{font-size:12px;color:#9b9eac}#frame{max-width:1480px;aspect-ratio:16/9;margin:auto;overflow:hidden;background:#090b12;border:1px solid #252938}svg{width:100%;height:100%;display:block}
+nav{display:flex;gap:12px;align-items:center;max-width:1480px;margin:18px auto}button{border:1px solid #3a3e50;background:#171b29;color:#f1f0eb;padding:10px 18px;border-radius:5px;cursor:pointer}button:hover{background:#2d334b}input{flex:1;accent-color:#777cff}#clock{font-variant-numeric:tabular-nums;min-width:110px}.note{max-width:1480px;margin:12px auto;color:#999dac;font-size:12px;line-height:1.7}#scenes{display:flex;gap:8px;max-width:1480px;margin:auto}#scenes button{flex:1;padding:12px 6px;font-size:12px}#scenes .selected{border-color:#8287ff;color:#b5b8ff}
+</style></head><body><header><div class="brand">NATIVE MOTION <span class="sub"> / STUDIO</span></div><div class="sub">代码设计预演 · 非PPT放映录屏</div></header><div id="frame"></div><nav><button id="toggle">暂停</button><button id="restart">重播</button><input id="seek" type="range" min="0" max="15000" step="1"><span id="clock"></span></nav><div id="scenes"></div><p class="note">这里由代码重建设计效果，不是WPS或PowerPoint放映录屏。PPTX使用原生对象与动画，需在目标播放器单独检查。Morph、字体和缓动仍需在目标 PowerPoint 中检查。点击动画按示例中约定的时间自动预演。</p><script type="module">
+import{renderFrame,sceneSVG,locate}from"./timeline.mjs";
+const doc=await(await fetch("./document.json")).json();const total=doc.slides.reduce((n,s)=>n+s.duration,0);
+const frame=document.querySelector("#frame"),seek=document.querySelector("#seek"),clock=document.querySelector("#clock"),toggle=document.querySelector("#toggle");
+seek.max=total;let time=0,running=true,last=performance.now(),request;
+frame.style.aspectRatio=`${doc.canvas.width}/${doc.canvas.height}`;
+function paint(){frame.innerHTML=renderFrame(doc,time);seek.value=time;const[i]=locate(doc,time);clock.textContent=`${(time/1000).toFixed(2)}s · ${i+1}/${doc.slides.length}`;for(const[b,k]of Array.from(document.querySelectorAll("#scenes button")).map((b,k)=>[b,k]))b.classList.toggle("selected",k===i);}
+window.NM={doc,ready:false,setTime(t){running=false;time=t;paint();toggle.textContent="播放";},setScene(i,t=0){running=false;frame.innerHTML=sceneSVG(doc,i,t,false);},pause(){running=false;},play(){running=true;last=performance.now();}};
+toggle.onclick=()=>{running=!running;toggle.textContent=running?"暂停":"播放";last=performance.now();};
+document.querySelector("#restart").onclick=()=>{time=0;running=true;last=performance.now();};
+seek.oninput=()=>window.NM.setTime(Number(seek.value));
+let offset=0;doc.slides.forEach((s,i)=>{const b=document.createElement("button");b.textContent=`${String(i+1).padStart(2,"0")} / ${s.label||s.id}`;const start=offset;b.onclick=()=>window.NM.setTime(start);document.querySelector("#scenes").append(b);offset+=s.duration;});
+function tick(now){if(running){time+=now-last;if(time>=total)time=0;paint();}last=now;request=requestAnimationFrame(tick);}paint();
+const fonts=await(await fetch("./fonts.json")).json();
+await Promise.all(fonts.map(f=>document.fonts.load(f.weight+" 40px "+JSON.stringify(f.family))));
+await document.fonts.ready;window.NM.ready=true;last=performance.now();request=requestAnimationFrame(tick);
+</script></body></html>
+

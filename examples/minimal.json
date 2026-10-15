@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "title": "First Native Motion",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "background": "090B12",
+    "foreground": "F1F0EB",
+    "accent": "4148FF"
+  },
+  "slides": [
+    {
+      "id": "opening",
+      "duration": 3000,
+      "transition": {
+        "kind": "fade",
+        "duration": 300
+      },
+      "objects": [
+        {
+          "id": "title",
+          "kind": "text",
+          "text": "让信息有节奏。",
+          "box": [
+            112,
+            390,
+            1400,
+            180
+          ],
+          "size": 116,
+          "bold": true,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 120,
+              "duration": 650,
+              "from": [
+                0,
+                55
+              ]
+            }
+          ]
+        },
+        {
+          "id": "actor",
+          "kind": "ellipse",
+          "box": [
+            1430,
+            325,
+            270,
+            270
+          ],
+          "fill": "4148FF"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "duration": 3000,
+      "background": "F1F0EB",
+      "transition": {
+        "kind": "morph",
+        "duration": 500
+      },
+      "objects": [
+        {
+          "id": "title2",
+          "kind": "text",
+          "text": "一步一步，看清重点。",
+          "box": [
+            112,
+            390,
+            1550,
+            180
+          ],
+          "size": 95,
+          "fill": "090B12",
+          "bold": true,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 140,
+              "duration": 650,
+              "from": [
+                0,
+                45
+              ],
+              "by_letter": true
+            }
+          ]
+        },
+        {
+          "id": "actor",
+          "kind": "ellipse",
+          "box": [
+            1420,
+            735,
+            120,
+            120
+          ],
+          "fill": "4148FF"
+        }
+      ]
+    }
+  ]
+}

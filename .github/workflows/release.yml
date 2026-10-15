@@ -1,0 +1,30 @@
+name: Release skill
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  source-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r requirements.txt
+      - name: Check tag and version
+        run: test "${GITHUB_REF_NAME}" = "v$(cat VERSION)"
+      - run: python -m unittest discover -s tests -v
+      - run: node --test tests/test_timeline.mjs
+      - run: python scripts/validate_skill.py
+      - run: python scripts/package_skill.py --source-only --out dist
+      - run: python scripts/verify_delivery.py dist
+      - name: Publish verified source archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip dist/manifest.json dist/package-check.json --verify-tag --title "Native Motion PPT $GITHUB_REF_NAME" --notes-file docs/RELEASE_NOTES.md

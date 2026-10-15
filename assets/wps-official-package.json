@@ -1,0 +1,10 @@
+{
+  "player": "WPS Office Presentation (Linux)",
+  "version": "11.1.0.11723",
+  "architecture": "amd64",
+  "url": "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11723/wps-office_11.1.0.11723.XA_amd64.deb",
+  "sha256": "fe6326210f69d94efdbf2728914d293036be391b93a614f58cd0e1ff1d4923b3",
+  "bytes": 318892996,
+  "checksum_reference": "https://github.com/flathub/com.wps.Office/blob/master/com.wps.Office.yml",
+  "scope": "Known international Linux build, not a claim about the latest China or Windows release."
+}

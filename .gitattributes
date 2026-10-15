@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.mjs text eol=lf
+*.sh text eol=lf
+*.mp4 binary
+*.pptx binary
+*.ttf binary
+*.png binary
+*.jpg binary

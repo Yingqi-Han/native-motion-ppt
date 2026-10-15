@@ -1,0 +1,3709 @@
+{
+  "version": 1,
+  "title": "Science / Motion · 动态图表与科研流程",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "F4F2EA",
+    "foreground": "142B31",
+    "accent": "00766A"
+  },
+  "slides": [
+    {
+      "id": "science-1",
+      "label": "共同基线",
+      "duration": 6000,
+      "background": "F4F2EA",
+      "clicks": [
+        750
+      ],
+      "transition": {
+        "kind": "fade",
+        "duration": 360
+      },
+      "objects": [
+        {
+          "id": "science-brand",
+          "kind": "text",
+          "text": "SCIENCE / MOTION",
+          "box": [
+            108,
+            70,
+            800,
+            45
+          ],
+          "size": 25,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "spacing": 2.3
+        },
+        {
+          "id": "science-folio-1",
+          "kind": "text",
+          "text": "01 / 05",
+          "box": [
+            1600,
+            70,
+            212,
+            45
+          ],
+          "size": 25,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "science-rule",
+          "kind": "path",
+          "box": [
+            108,
+            142,
+            1704,
+            0.001
+          ],
+          "d": "M 0 0 L 1704 0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "science-source",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；不代表实验结果。",
+          "box": [
+            112,
+            1004,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "science-title-1",
+          "kind": "text",
+          "text": "把比较\n放在一起。",
+          "box": [
+            108,
+            316,
+            710,
+            300
+          ],
+          "size": 100,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "bold": true,
+          "line_height": 1.18,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 700,
+              "click": 0,
+              "from": [
+                0,
+                36
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "science-note-1",
+          "kind": "text",
+          "text": "共用坐标和基线，\n差异才看得清。",
+          "box": [
+            114,
+            730,
+            690,
+            120
+          ],
+          "size": 34,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-grid-0",
+          "kind": "path",
+          "box": [
+            920,
+            810.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            820,
+            790.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "comparison-grid-1",
+          "kind": "path",
+          "box": [
+            920,
+            703.75,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-tick-1",
+          "kind": "text",
+          "text": "15",
+          "box": [
+            820,
+            683.75,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "comparison-grid-2",
+          "kind": "path",
+          "box": [
+            920,
+            597.5,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-tick-2",
+          "kind": "text",
+          "text": "30",
+          "box": [
+            820,
+            577.5,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "comparison-grid-3",
+          "kind": "path",
+          "box": [
+            920,
+            491.25,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-tick-3",
+          "kind": "text",
+          "text": "45",
+          "box": [
+            820,
+            471.25,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "comparison-grid-4",
+          "kind": "path",
+          "box": [
+            920,
+            385.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-tick-4",
+          "kind": "text",
+          "text": "60",
+          "box": [
+            820,
+            365.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "comparison-baseline",
+          "kind": "path",
+          "box": [
+            920,
+            810,
+            800,
+            0.001
+          ],
+          "d": "M 0 0 L 800 0",
+          "fill": "none",
+          "stroke": "142B31",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "comparison-unit",
+          "kind": "text",
+          "text": "完成时间（s）",
+          "box": [
+            920,
+            260,
+            300,
+            48
+          ],
+          "size": 29,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "comparison-bar-0",
+          "kind": "rect",
+          "box": [
+            997.3333333333333,
+            441.6666666666667,
+            112,
+            368.3333333333333
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 0,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-category-0",
+          "kind": "text",
+          "text": "方法 A",
+          "box": [
+            933.3333333333333,
+            836,
+            240.00000000000003,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "comparison-value-0",
+          "kind": "text",
+          "text": "52",
+          "box": [
+            958.3333333333333,
+            375.6666666666667,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1100,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-bar-1",
+          "kind": "rect",
+          "box": [
+            1264.0,
+            569.1666666666666,
+            112,
+            240.83333333333334
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 120,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-category-1",
+          "kind": "text",
+          "text": "方法 B",
+          "box": [
+            1200.0,
+            836,
+            240.00000000000003,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "comparison-value-1",
+          "kind": "text",
+          "text": "34",
+          "box": [
+            1225.0,
+            503.16666666666663,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1220,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-bar-2",
+          "kind": "rect",
+          "box": [
+            1530.6666666666667,
+            661.25,
+            112,
+            148.75
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 240,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "comparison-category-2",
+          "kind": "text",
+          "text": "方法 C",
+          "box": [
+            1466.6666666666667,
+            836,
+            240.00000000000003,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "comparison-value-2",
+          "kind": "text",
+          "text": "21",
+          "box": [
+            1491.6666666666667,
+            595.25,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1340,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ],
+      "notes": "一次点击展开三根柱子及其数值。柱子的底部保持在同一基线上。数字来自scientific-demo.csv中的模拟数据。"
+    },
+    {
+      "id": "science-2",
+      "label": "时间顺序",
+      "duration": 6500,
+      "background": "F4F2EA",
+      "clicks": [
+        750
+      ],
+      "transition": {
+        "kind": "fade",
+        "duration": 360
+      },
+      "objects": [
+        {
+          "id": "science-brand",
+          "kind": "text",
+          "text": "SCIENCE / MOTION",
+          "box": [
+            108,
+            70,
+            800,
+            45
+          ],
+          "size": 25,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "spacing": 2.3
+        },
+        {
+          "id": "science-folio-2",
+          "kind": "text",
+          "text": "02 / 05",
+          "box": [
+            1600,
+            70,
+            212,
+            45
+          ],
+          "size": 25,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "science-rule",
+          "kind": "path",
+          "box": [
+            108,
+            142,
+            1704,
+            0.001
+          ],
+          "d": "M 0 0 L 1704 0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "science-source",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；不代表实验结果。",
+          "box": [
+            112,
+            1004,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "science-title-2",
+          "kind": "text",
+          "text": "变化需要\n一段过程。",
+          "box": [
+            108,
+            316,
+            710,
+            300
+          ],
+          "size": 100,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "bold": true,
+          "line_height": 1.18,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 700,
+              "click": 0,
+              "from": [
+                0,
+                36
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "science-note-2",
+          "kind": "text",
+          "text": "参照保持可见，\n再看变化怎样发生。",
+          "box": [
+            114,
+            730,
+            690,
+            120
+          ],
+          "size": 34,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-grid-0",
+          "kind": "path",
+          "box": [
+            920,
+            810.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "response-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            820,
+            790.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "response-grid-1",
+          "kind": "path",
+          "box": [
+            920,
+            703.75,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "response-tick-1",
+          "kind": "text",
+          "text": "0.8",
+          "box": [
+            820,
+            683.75,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "response-grid-2",
+          "kind": "path",
+          "box": [
+            920,
+            597.5,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "response-tick-2",
+          "kind": "text",
+          "text": "1.6",
+          "box": [
+            820,
+            577.5,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "response-grid-3",
+          "kind": "path",
+          "box": [
+            920,
+            491.25,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "response-tick-3",
+          "kind": "text",
+          "text": "2.4",
+          "box": [
+            820,
+            471.25,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "response-grid-4",
+          "kind": "path",
+          "box": [
+            920,
+            385.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "response-tick-4",
+          "kind": "text",
+          "text": "3.2",
+          "box": [
+            820,
+            365.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "response-baseline",
+          "kind": "path",
+          "box": [
+            920,
+            810,
+            800,
+            0.001
+          ],
+          "d": "M 0 0 L 800 0",
+          "fill": "none",
+          "stroke": "142B31",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "response-unit",
+          "kind": "text",
+          "text": "响应（a.u.）",
+          "box": [
+            920,
+            260,
+            300,
+            48
+          ],
+          "size": 29,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "response-x-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            870.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-x-1",
+          "kind": "text",
+          "text": "10",
+          "box": [
+            1030.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-x-2",
+          "kind": "text",
+          "text": "20",
+          "box": [
+            1190.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-x-3",
+          "kind": "text",
+          "text": "30",
+          "box": [
+            1350.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-x-4",
+          "kind": "text",
+          "text": "40",
+          "box": [
+            1510.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-x-5",
+          "kind": "text",
+          "text": "50",
+          "box": [
+            1670.0,
+            834,
+            100,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "response-reference-0",
+          "kind": "path",
+          "box": [
+            920.0,
+            643.984375,
+            160.0,
+            6.640625
+          ],
+          "d": "M 0.0 6.640625 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "response-reference-1",
+          "kind": "path",
+          "box": [
+            1080.0,
+            643.984375,
+            160.0,
+            13.28125
+          ],
+          "d": "M 0.0 0.0 L 160.0 13.28125",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "response-reference-2",
+          "kind": "path",
+          "box": [
+            1240.0,
+            637.34375,
+            160.0,
+            19.921875
+          ],
+          "d": "M 0.0 19.921875 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "response-reference-3",
+          "kind": "path",
+          "box": [
+            1400.0,
+            637.34375,
+            160.0,
+            7.96875
+          ],
+          "d": "M 0.0 0.0 L 160.0 7.96875",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "response-reference-4",
+          "kind": "path",
+          "box": [
+            1560.0,
+            640.0,
+            160.0,
+            5.3125
+          ],
+          "d": "M 0.0 5.3125 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "response-segment-0",
+          "kind": "path",
+          "box": [
+            920.0,
+            624.0625,
+            160.0,
+            26.5625
+          ],
+          "d": "M 0.0 26.5625 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-segment-1",
+          "kind": "path",
+          "box": [
+            1080.0,
+            511.171875,
+            160.0,
+            112.890625
+          ],
+          "d": "M 0.0 112.890625 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 150,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-segment-2",
+          "kind": "path",
+          "box": [
+            1240.0,
+            431.484375,
+            160.0,
+            79.6875
+          ],
+          "d": "M 0.0 79.6875 L 160.0 0.0",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 300,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-segment-3",
+          "kind": "path",
+          "box": [
+            1400.0,
+            431.484375,
+            160.0,
+            79.6875
+          ],
+          "d": "M 0.0 0.0 L 160.0 79.6875",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-segment-4",
+          "kind": "path",
+          "box": [
+            1560.0,
+            511.171875,
+            160.0,
+            99.609375
+          ],
+          "d": "M 0.0 0.0 L 160.0 99.609375",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 600,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-0",
+          "kind": "ellipse",
+          "box": [
+            913.0,
+            643.625,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 180,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-1",
+          "kind": "ellipse",
+          "box": [
+            1073.0,
+            617.0625,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 180,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-2",
+          "kind": "ellipse",
+          "box": [
+            1233.0,
+            504.171875,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 330,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-3",
+          "kind": "ellipse",
+          "box": [
+            1393.0,
+            424.484375,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 480,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-4",
+          "kind": "ellipse",
+          "box": [
+            1553.0,
+            504.171875,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 630,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "response-point-5",
+          "kind": "ellipse",
+          "box": [
+            1713.0,
+            603.78125,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 780,
+              "duration": 240,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "legend-reference-line",
+          "kind": "path",
+          "box": [
+            1280,
+            281,
+            50,
+            0.001
+          ],
+          "d": "M 0 0 L 50 0",
+          "fill": "none",
+          "stroke": "536867",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "legend-reference",
+          "kind": "text",
+          "text": "参照",
+          "box": [
+            1345,
+            258,
+            115,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "legend-response-line",
+          "kind": "path",
+          "box": [
+            1500,
+            281,
+            50,
+            0.001
+          ],
+          "d": "M 0 0 L 50 0",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "decoration"
+        },
+        {
+          "id": "legend-response",
+          "kind": "text",
+          "text": "改变条件后",
+          "box": [
+            1565,
+            258,
+            220,
+            48
+          ],
+          "size": 28,
+          "fill": "00766A",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "response-time-unit",
+          "kind": "text",
+          "text": "时间（s）",
+          "box": [
+            1490,
+            898,
+            285,
+            48
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        }
+      ],
+      "notes": "一次点击，曲线按观测时间逐段淡入，点位保持原始采样值。灰色参照曲线、坐标和刻度始终保持可见。"
+    },
+    {
+      "id": "science-3",
+      "label": "固定条件",
+      "duration": 5500,
+      "background": "F4F2EA",
+      "clicks": [],
+      "transition": {
+        "kind": "fade",
+        "duration": 360
+      },
+      "objects": [
+        {
+          "id": "science-brand",
+          "kind": "text",
+          "text": "SCIENCE / MOTION",
+          "box": [
+            108,
+            70,
+            800,
+            45
+          ],
+          "size": 25,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "spacing": 2.3
+        },
+        {
+          "id": "science-folio-3",
+          "kind": "text",
+          "text": "03 / 05",
+          "box": [
+            1600,
+            70,
+            212,
+            45
+          ],
+          "size": 25,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "science-rule",
+          "kind": "path",
+          "box": [
+            108,
+            142,
+            1704,
+            0.001
+          ],
+          "d": "M 0 0 L 1704 0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "science-source",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；不代表实验结果。",
+          "box": [
+            112,
+            1004,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "science-title-3",
+          "kind": "text",
+          "text": "先固定条件。",
+          "box": [
+            108,
+            218,
+            1640,
+            170
+          ],
+          "size": 108,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "bold": true,
+          "line_height": 1.18,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 700,
+              "click": 0,
+              "from": [
+                0,
+                36
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "experiment-stage-0",
+          "kind": "text",
+          "text": "输入条件",
+          "box": [
+            180.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "00766A",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "experiment-link-0",
+          "kind": "path",
+          "box": [
+            555.0,
+            634.0,
+            250.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 250.0 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-arrow-0",
+          "kind": "polygon",
+          "box": [
+            790.0,
+            625.0,
+            15,
+            18
+          ],
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "fill": "536867",
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-stage-1",
+          "kind": "text",
+          "text": "受控变化",
+          "box": [
+            740.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "experiment-link-1",
+          "kind": "path",
+          "box": [
+            1115.0,
+            634.0,
+            250.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 250.0 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-arrow-1",
+          "kind": "polygon",
+          "box": [
+            1350.0,
+            625.0,
+            15,
+            18
+          ],
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "fill": "536867",
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-stage-2",
+          "kind": "text",
+          "text": "观察响应",
+          "box": [
+            1300.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "sample-token",
+          "kind": "group",
+          "box": [
+            272,
+            506,
+            256,
+            256
+          ],
+          "objects": [
+            {
+              "id": "sample-token-bond-0",
+              "kind": "path",
+              "box": [
+                56.32,
+                61.44,
+                71.68,
+                66.56
+              ],
+              "d": "M 71.68 66.56 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-1",
+              "kind": "path",
+              "box": [
+                128.0,
+                51.2,
+                69.12,
+                76.8
+              ],
+              "d": "M 0.0 76.8 L 69.12 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-2",
+              "kind": "path",
+              "box": [
+                128.0,
+                128.0,
+                97.28,
+                7.680000000000007
+              ],
+              "d": "M 0.0 0.0 L 97.28 7.680000000000007",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-3",
+              "kind": "path",
+              "box": [
+                128.0,
+                128.0,
+                53.75999999999999,
+                84.47999999999999
+              ],
+              "d": "M 0.0 0.0 L 53.75999999999999 84.47999999999999",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-4",
+              "kind": "path",
+              "box": [
+                74.24,
+                128.0,
+                53.760000000000005,
+                74.24000000000001
+              ],
+              "d": "M 53.760000000000005 0.0 L 0.0 74.24000000000001",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-5",
+              "kind": "path",
+              "box": [
+                28.16,
+                128.0,
+                99.84,
+                2.5600000000000023
+              ],
+              "d": "M 99.84 0.0 L 0.0 2.5600000000000023",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-6",
+              "kind": "path",
+              "box": [
+                56.32,
+                51.2,
+                140.8,
+                10.239999999999995
+              ],
+              "d": "M 0.0 10.239999999999995 L 140.8 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-7",
+              "kind": "path",
+              "box": [
+                197.12,
+                51.2,
+                28.159999999999997,
+                84.48
+              ],
+              "d": "M 0.0 0.0 L 28.159999999999997 84.48",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-8",
+              "kind": "path",
+              "box": [
+                181.76,
+                135.68,
+                43.52000000000001,
+                76.79999999999998
+              ],
+              "d": "M 43.52000000000001 0.0 L 0.0 76.79999999999998",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-9",
+              "kind": "path",
+              "box": [
+                74.24,
+                202.24,
+                107.52,
+                10.23999999999998
+              ],
+              "d": "M 107.52 10.23999999999998 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-10",
+              "kind": "path",
+              "box": [
+                28.16,
+                130.56,
+                46.08,
+                71.68
+              ],
+              "d": "M 46.08 71.68 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-11",
+              "kind": "path",
+              "box": [
+                28.16,
+                61.44,
+                28.16,
+                69.12
+              ],
+              "d": "M 0.0 69.12 L 28.16 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-node-0",
+              "kind": "ellipse",
+              "box": [
+                108.288,
+                108.288,
+                39.424,
+                39.424
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-1",
+              "kind": "ellipse",
+              "box": [
+                47.616,
+                52.736,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-2",
+              "kind": "ellipse",
+              "box": [
+                188.416,
+                42.496,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-3",
+              "kind": "ellipse",
+              "box": [
+                216.576,
+                126.976,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-4",
+              "kind": "ellipse",
+              "box": [
+                173.05599999999998,
+                203.77599999999998,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-5",
+              "kind": "ellipse",
+              "box": [
+                65.536,
+                193.536,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-6",
+              "kind": "ellipse",
+              "box": [
+                19.456,
+                121.856,
+                17.408,
+                17.408
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            }
+          ],
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 100,
+              "duration": 1800,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  3.865993248815555,
+                  0
+                ],
+                [
+                  7,
+                  -3.5817220013536515
+                ],
+                [
+                  7,
+                  -8
+                ],
+                [
+                  7,
+                  -12.41827799864635
+                ],
+                [
+                  3.865993248815555,
+                  -16
+                ],
+                [
+                  0,
+                  -16
+                ],
+                [
+                  -3.865993248815555,
+                  -16
+                ],
+                [
+                  -7,
+                  -12.41827799864635
+                ],
+                [
+                  -7,
+                  -8
+                ],
+                [
+                  -7,
+                  -3.5817220013536515
+                ],
+                [
+                  -3.865993248815555,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "science-note-3",
+          "kind": "text",
+          "text": "保持输入一致，才能比较后面的变化。",
+          "box": [
+            114,
+            876,
+            1690,
+            60
+          ],
+          "size": 34,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "process-schematic-3",
+          "kind": "text",
+          "text": "网络结构为程序化示意，不对应真实分子。",
+          "box": [
+            114,
+            946,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        }
+      ],
+      "notes": "同一sample-token保持对象与子对象身份；曲线漂移结束后回到静态布局，再进行跨页Morph。示意网络不代表真实分子或实验模型。"
+    },
+    {
+      "id": "science-4",
+      "label": "改变因素",
+      "duration": 5500,
+      "background": "F4F2EA",
+      "clicks": [],
+      "transition": {
+        "kind": "morph",
+        "duration": 1400
+      },
+      "objects": [
+        {
+          "id": "science-brand",
+          "kind": "text",
+          "text": "SCIENCE / MOTION",
+          "box": [
+            108,
+            70,
+            800,
+            45
+          ],
+          "size": 25,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "spacing": 2.3
+        },
+        {
+          "id": "science-folio-4",
+          "kind": "text",
+          "text": "04 / 05",
+          "box": [
+            1600,
+            70,
+            212,
+            45
+          ],
+          "size": 25,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "science-rule",
+          "kind": "path",
+          "box": [
+            108,
+            142,
+            1704,
+            0.001
+          ],
+          "d": "M 0 0 L 1704 0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "science-source",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；不代表实验结果。",
+          "box": [
+            112,
+            1004,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "science-title-4",
+          "kind": "text",
+          "text": "再改变一个因素。",
+          "box": [
+            108,
+            218,
+            1640,
+            170
+          ],
+          "size": 108,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "bold": true,
+          "line_height": 1.18,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 700,
+              "click": 0,
+              "from": [
+                0,
+                36
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "experiment-stage-0",
+          "kind": "text",
+          "text": "输入条件",
+          "box": [
+            180.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "experiment-link-0",
+          "kind": "path",
+          "box": [
+            555.0,
+            634.0,
+            250.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 250.0 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-arrow-0",
+          "kind": "polygon",
+          "box": [
+            790.0,
+            625.0,
+            15,
+            18
+          ],
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "fill": "536867",
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-stage-1",
+          "kind": "text",
+          "text": "受控变化",
+          "box": [
+            740.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "00766A",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "experiment-link-1",
+          "kind": "path",
+          "box": [
+            1115.0,
+            634.0,
+            250.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 250.0 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-arrow-1",
+          "kind": "polygon",
+          "box": [
+            1350.0,
+            625.0,
+            15,
+            18
+          ],
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "fill": "536867",
+          "role": "decoration"
+        },
+        {
+          "id": "experiment-stage-2",
+          "kind": "text",
+          "text": "观察响应",
+          "box": [
+            1300.0,
+            438,
+            440,
+            90
+          ],
+          "size": 54,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "sample-token",
+          "kind": "group",
+          "box": [
+            790,
+            464,
+            340,
+            340
+          ],
+          "objects": [
+            {
+              "id": "sample-token-bond-0",
+              "kind": "path",
+              "box": [
+                74.8,
+                81.6,
+                95.2,
+                88.4
+              ],
+              "d": "M 95.2 88.4 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-1",
+              "kind": "path",
+              "box": [
+                170.0,
+                68.0,
+                91.80000000000001,
+                102.0
+              ],
+              "d": "M 0.0 102.0 L 91.80000000000001 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-2",
+              "kind": "path",
+              "box": [
+                170.0,
+                170.0,
+                129.2,
+                10.200000000000017
+              ],
+              "d": "M 0.0 0.0 L 129.2 10.200000000000017",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-3",
+              "kind": "path",
+              "box": [
+                170.0,
+                170.0,
+                71.39999999999998,
+                112.19999999999999
+              ],
+              "d": "M 0.0 0.0 L 71.39999999999998 112.19999999999999",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-4",
+              "kind": "path",
+              "box": [
+                98.6,
+                170.0,
+                71.4,
+                98.60000000000002
+              ],
+              "d": "M 71.4 0.0 L 0.0 98.60000000000002",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-5",
+              "kind": "path",
+              "box": [
+                37.4,
+                170.0,
+                132.6,
+                3.4000000000000057
+              ],
+              "d": "M 132.6 0.0 L 0.0 3.4000000000000057",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-6",
+              "kind": "path",
+              "box": [
+                74.8,
+                68.0,
+                187.0,
+                13.599999999999994
+              ],
+              "d": "M 0.0 13.599999999999994 L 187.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-7",
+              "kind": "path",
+              "box": [
+                261.8,
+                68.0,
+                37.39999999999998,
+                112.20000000000002
+              ],
+              "d": "M 0.0 0.0 L 37.39999999999998 112.20000000000002",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-8",
+              "kind": "path",
+              "box": [
+                241.39999999999998,
+                180.20000000000002,
+                57.80000000000001,
+                101.99999999999997
+              ],
+              "d": "M 57.80000000000001 0.0 L 0.0 101.99999999999997",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-9",
+              "kind": "path",
+              "box": [
+                98.6,
+                268.6,
+                142.79999999999998,
+                13.599999999999966
+              ],
+              "d": "M 142.79999999999998 13.599999999999966 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-10",
+              "kind": "path",
+              "box": [
+                37.4,
+                173.4,
+                61.199999999999996,
+                95.20000000000002
+              ],
+              "d": "M 61.199999999999996 95.20000000000002 L 0.0 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-bond-11",
+              "kind": "path",
+              "box": [
+                37.4,
+                81.6,
+                37.4,
+                91.80000000000001
+              ],
+              "d": "M 0.0 91.80000000000001 L 37.4 0.0",
+              "fill": "none",
+              "stroke": "00766A",
+              "stroke_width": 2,
+              "role": "decoration"
+            },
+            {
+              "id": "sample-token-node-0",
+              "kind": "ellipse",
+              "box": [
+                143.82,
+                143.82,
+                52.36,
+                52.36
+              ],
+              "fill": "BE5434",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "BE5434",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-1",
+              "kind": "ellipse",
+              "box": [
+                63.239999999999995,
+                70.03999999999999,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-2",
+              "kind": "ellipse",
+              "box": [
+                250.24,
+                56.44,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-3",
+              "kind": "ellipse",
+              "box": [
+                287.64,
+                168.64000000000001,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-4",
+              "kind": "ellipse",
+              "box": [
+                229.83999999999997,
+                270.64,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-5",
+              "kind": "ellipse",
+              "box": [
+                87.03999999999999,
+                257.04,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            },
+            {
+              "id": "sample-token-node-6",
+              "kind": "ellipse",
+              "box": [
+                25.839999999999996,
+                161.84,
+                23.12,
+                23.12
+              ],
+              "fill": "00766A",
+              "gradient": {
+                "from": "D2E5DE",
+                "to": "00766A",
+                "angle": 55
+              }
+            }
+          ],
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 100,
+              "duration": 1800,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  3.865993248815555,
+                  0
+                ],
+                [
+                  7,
+                  -3.5817220013536515
+                ],
+                [
+                  7,
+                  -8
+                ],
+                [
+                  7,
+                  -12.41827799864635
+                ],
+                [
+                  3.865993248815555,
+                  -16
+                ],
+                [
+                  0,
+                  -16
+                ],
+                [
+                  -3.865993248815555,
+                  -16
+                ],
+                [
+                  -7,
+                  -12.41827799864635
+                ],
+                [
+                  -7,
+                  -8
+                ],
+                [
+                  -7,
+                  -3.5817220013536515
+                ],
+                [
+                  -3.865993248815555,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "science-note-4",
+          "kind": "text",
+          "text": "只改变一个因素，再观察它带来的响应。",
+          "box": [
+            114,
+            876,
+            1690,
+            60
+          ],
+          "size": 34,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "process-schematic-4",
+          "kind": "text",
+          "text": "网络结构为程序化示意，不对应真实分子。",
+          "box": [
+            114,
+            946,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        }
+      ],
+      "notes": "同一sample-token保持对象与子对象身份；曲线漂移结束后回到静态布局，再进行跨页Morph。示意网络不代表真实分子或实验模型。"
+    },
+    {
+      "id": "science-5",
+      "label": "分布与中位数",
+      "duration": 6500,
+      "background": "F4F2EA",
+      "clicks": [
+        750,
+        2100
+      ],
+      "transition": {
+        "kind": "fade",
+        "duration": 360
+      },
+      "objects": [
+        {
+          "id": "science-brand",
+          "kind": "text",
+          "text": "SCIENCE / MOTION",
+          "box": [
+            108,
+            70,
+            800,
+            45
+          ],
+          "size": 25,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "spacing": 2.3
+        },
+        {
+          "id": "science-folio-5",
+          "kind": "text",
+          "text": "05 / 05",
+          "box": [
+            1600,
+            70,
+            212,
+            45
+          ],
+          "size": 25,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "science-rule",
+          "kind": "path",
+          "box": [
+            108,
+            142,
+            1704,
+            0.001
+          ],
+          "d": "M 0 0 L 1704 0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "science-source",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；不代表实验结果。",
+          "box": [
+            112,
+            1004,
+            1500,
+            44
+          ],
+          "size": 23,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "science-title-5",
+          "kind": "text",
+          "text": "把离散程度\n也交代清楚。",
+          "box": [
+            108,
+            316,
+            710,
+            300
+          ],
+          "size": 94,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "bold": true,
+          "line_height": 1.18,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 700,
+              "click": 0,
+              "from": [
+                0,
+                36
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "science-note-5",
+          "kind": "text",
+          "text": "每个点是一条观测。\n中位数和分布一起看。",
+          "box": [
+            114,
+            730,
+            690,
+            120
+          ],
+          "size": 34,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 500,
+              "click": 0,
+              "from": [
+                0,
+                12
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-grid-0",
+          "kind": "path",
+          "box": [
+            920,
+            810.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            820,
+            790.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "distribution-grid-1",
+          "kind": "path",
+          "box": [
+            920,
+            703.75,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-tick-1",
+          "kind": "text",
+          "text": "20",
+          "box": [
+            820,
+            683.75,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "distribution-grid-2",
+          "kind": "path",
+          "box": [
+            920,
+            597.5,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-tick-2",
+          "kind": "text",
+          "text": "40",
+          "box": [
+            820,
+            577.5,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "distribution-grid-3",
+          "kind": "path",
+          "box": [
+            920,
+            491.25,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-tick-3",
+          "kind": "text",
+          "text": "60",
+          "box": [
+            820,
+            471.25,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "distribution-grid-4",
+          "kind": "path",
+          "box": [
+            920,
+            385.0,
+            800,
+            0.001
+          ],
+          "d": "M 0 0.0 L 800 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-tick-4",
+          "kind": "text",
+          "text": "80",
+          "box": [
+            820,
+            365.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "536867",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "distribution-baseline",
+          "kind": "path",
+          "box": [
+            920,
+            810,
+            800,
+            0.001
+          ],
+          "d": "M 0 0 L 800 0",
+          "fill": "none",
+          "stroke": "142B31",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "distribution-unit",
+          "kind": "text",
+          "text": "观测值（a.u.）",
+          "box": [
+            920,
+            260,
+            300,
+            48
+          ],
+          "size": 29,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "distribution-iqr-0",
+          "kind": "rect",
+          "box": [
+            1042.0,
+            495.234375,
+            156,
+            25.234375
+          ],
+          "fill": "D2E5DE",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-0",
+          "kind": "ellipse",
+          "box": [
+            1065.0,
+            510.8125,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-1",
+          "kind": "ellipse",
+          "box": [
+            1134.0,
+            489.5625,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 70,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-2",
+          "kind": "ellipse",
+          "box": [
+            1101.0,
+            532.0625,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 140,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-3",
+          "kind": "ellipse",
+          "box": [
+            1160.0,
+            473.625,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 210,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-4",
+          "kind": "ellipse",
+          "box": [
+            1082.0,
+            494.875,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 280,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-5",
+          "kind": "ellipse",
+          "box": [
+            1117.0,
+            521.4375,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 350,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-6",
+          "kind": "ellipse",
+          "box": [
+            1149.0,
+            505.5,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-0-7",
+          "kind": "ellipse",
+          "box": [
+            1108.0,
+            484.25,
+            14,
+            14
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 490,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-category-0",
+          "kind": "text",
+          "text": "条件 A",
+          "box": [
+            940.0,
+            836,
+            360.0,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "distribution-median-0",
+          "kind": "path",
+          "box": [
+            1030.0,
+            507.1875,
+            180.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 180.0 0.0",
+          "fill": "none",
+          "stroke": "00766A",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-median-label-0",
+          "kind": "text",
+          "text": "中位数 57",
+          "box": [
+            960.0,
+            415.625,
+            320,
+            54
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 170,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-iqr-1",
+          "kind": "rect",
+          "box": [
+            1442.0,
+            616.09375,
+            156,
+            19.921875
+          ],
+          "fill": "D2E5DE",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-0",
+          "kind": "ellipse",
+          "box": [
+            1465.0,
+            622.375,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-1",
+          "kind": "ellipse",
+          "box": [
+            1534.0,
+            638.3125,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 70,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-2",
+          "kind": "ellipse",
+          "box": [
+            1501.0,
+            601.125,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 140,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-3",
+          "kind": "ellipse",
+          "box": [
+            1560.0,
+            611.75,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 210,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-4",
+          "kind": "ellipse",
+          "box": [
+            1482.0,
+            633.0,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 280,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-5",
+          "kind": "ellipse",
+          "box": [
+            1517.0,
+            590.5,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 350,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-6",
+          "kind": "ellipse",
+          "box": [
+            1549.0,
+            617.0625,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-observation-1-7",
+          "kind": "ellipse",
+          "box": [
+            1508.0,
+            627.6875,
+            14,
+            14
+          ],
+          "fill": "BE5434",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 490,
+              "duration": 280,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-category-1",
+          "kind": "text",
+          "text": "条件 B",
+          "box": [
+            1340.0,
+            836,
+            360.0,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "distribution-median-1",
+          "kind": "path",
+          "box": [
+            1430.0,
+            626.71875,
+            180.0,
+            0.001
+          ],
+          "d": "M 0.0 0.0 L 180.0 0.0",
+          "fill": "none",
+          "stroke": "BE5434",
+          "stroke_width": 5,
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-median-label-1",
+          "kind": "text",
+          "text": "中位数 34.5",
+          "box": [
+            1360.0,
+            532.5,
+            320,
+            54
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 170,
+              "duration": 350,
+              "click": 2,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "distribution-legend",
+          "kind": "text",
+          "text": "色块：四分位区间  ·  短线：中位数",
+          "box": [
+            915,
+            900,
+            885,
+            50
+          ],
+          "size": 28,
+          "fill": "536867",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        }
+      ],
+      "notes": "第一次点击展开观测点，第二次点击展示四分位区间与中位数。中位数和四分位数由原始模拟观测计算；横向错开只用于分开点，不表示额外变量。"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "原生动态 PPT"
+  short_description: "原生动态 PPT、设计视频与真实放映运动检查"
+  default_prompt: "使用 $native-motion-ppt 制作或美化原生动态 PPT；自主设计内容、版式与运动，用一键入口渲染设计视频、导出PPT、实际放映并检查。交付可编辑工程和验收报告，明确区分通过、失败与待检查。"
+

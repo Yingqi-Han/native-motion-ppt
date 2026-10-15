@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "id": "KM001",
+      "name": "大球漂移与Morph接续",
+      "source": "examples/demo.json",
+      "original_issue": "不同周期的漂移与平面旋转在换页时重置姿态；旧浏览器边界中心跳变约11.08px",
+      "rule": "曲线首尾偏移0、接点切线连续、翻页前停稳，Morph读取正确局部时钟",
+      "evidence": "qa/motion-comparison.json、qa/native-sphere.json",
+      "user_feedback": "实测效果很好；平台与版本未注明"
+    },
+    {
+      "id": "KM002",
+      "name": "柱状图固定零基线",
+      "source": "examples/scientific.json",
+      "rule": "数据柱保持最终几何，单一原生从底部擦除；标签待到位再显示；目标桌面录屏独立验证",
+      "evidence": "qa/science/wps-bar-diagnosis.json、test_scientific_motion.py、test_timeline.mjs",
+      "original_issue": "用户实测 WPS 桌面：第1页柱边界越过0刻度线后回弹，代码视频没有该现象",
+      "mechanism": "旧版中心缩放与位移补偿仅在进度完全同步时固定柱底；WPS具体通道差异尚未录屏确认",
+      "target_retest": "2026-10-14 用户反馈 WPS 播放正常；系统、版本及文件分支未知",
+      "user_feedback": "我下载后用WPS播放正常了",
+      "independent_playback": "Impress 25.2.3.2 实际录屏测量底边稳定，独立于 WPS 用户反馈"
+    },
+    {
+      "id": "KM003",
+      "name": "重复刻度文本匹配",
+      "source": "tests/test_qa_matching.py",
+      "original_issue": "按文本框左上角匹配重复的0，会把纵轴字形归给横轴文本框",
+      "rule": "先比较矩形相交距离，再比较中心位置；实际超框仍报错",
+      "evidence": "实际LibreOffice渲染的两个回归用例"
+    },
+    {
+      "id": "KM004",
+      "name": "原生擦除方向",
+      "source": "scripts/native_motion/pptx_export.py",
+      "original_issue": "直接将视觉up映射为wipe(up)，实际Office导入为从顶向下擦除",
+      "rule": "视觉up使用preset22/subtype4/filter wipe(down)，实际导入barWipe/topToBottom/reverse",
+      "evidence": "test_bottom_wipe_imports_with_the_correct_direction"
+    },
+    {
+      "id": "KM005",
+      "name": "真实录屏与源文件保护",
+      "source": "scripts/record_desktop.py",
+      "original_issue": "重复打开原文件可能留下文档锁，代码预演也不能证明原生播放",
+      "rule": "只读副本、私有显示器、前后校验值；真实录屏保留实际时间戳，代码预演和过期证据拒绝测量",
+      "evidence": "qa/desktop/manual-bars.json、qa/desktop/auto-bars.json、test_desktop_evidence.py"
+    },
+    {
+      "id": "KM006",
+      "name": "一键验收不能混用证据或隐藏未覆盖项",
+      "source": "scripts/accept_project.py",
+      "rule": "独立运行、输入/PPT/录像绑定；失败和运行中不得判通过，旧录像不能附加新审阅，目标播放器覆盖独立标注",
+      "evidence": "test_acceptance.py、verify_acceptance.py、acceptance.json"
+    },
+    {
+      "id": "KM007",
+      "name": "WPS 库环境与用户字体",
+      "rule": "WPS 自带库仅给 WPS；FFmpeg 使用采集工具环境。Space Grotesk 在 ~/.fonts 或私有 XDG_DATA_HOME/fonts 中安装后重启 WPS，检查真实字形。",
+      "evidence": "2026-10-15 Linux WPS 11.1.0.11723，完整交付 setup/、final-click/ 与 final-auto/；不推定 Windows。"
+    },
+    {
+      "id": "KM008",
+      "name": "Morph 不能用淡切或对象路径冒充",
+      "rule": "两页同名 !! 对象、无对象动画；实际录像至少十个实心中间姿态，检查几何范围与采集缺口。",
+      "evidence": "check_native_morph.py、test_wps_morph.py；本次隔离实录 41 个中间姿态。"
+    }
+  ]
+}

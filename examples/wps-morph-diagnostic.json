@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "title": "WPS native Morph diagnostic",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "F4F2EA",
+    "foreground": "142B31",
+    "accent": "00766A"
+  },
+  "slides": [
+    {
+      "id": "morph-0",
+      "label": "Morph diagnostic",
+      "duration": 4000,
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "none",
+        "duration": 0
+      },
+      "objects": [
+        {
+          "id": "morph-probe",
+          "kind": "rect",
+          "box": [
+            260,
+            450,
+            180,
+            180
+          ],
+          "fill": "00766A"
+        }
+      ]
+    },
+    {
+      "id": "morph-1",
+      "label": "Morph diagnostic",
+      "duration": 4000,
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "morph",
+        "duration": 1600
+      },
+      "objects": [
+        {
+          "id": "morph-probe",
+          "kind": "rect",
+          "box": [
+            1300,
+            350,
+            360,
+            360
+          ],
+          "fill": "00766A"
+        }
+      ]
+    }
+  ]
+}

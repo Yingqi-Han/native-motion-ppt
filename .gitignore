@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+node_modules/
+output/
+.venv/
+.pytest_cache/
+dist/
+.native-motion-install.json
+.agents/
+player-profile/
+*.deb
+*.writing.zip
+

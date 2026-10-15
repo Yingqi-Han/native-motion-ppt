@@ -1,0 +1,22 @@
+{
+  "name": "native-motion-preview",
+  "version": "1.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio --no-open",
+    "render": "remotion render src/index.tsx NativeMotion out/preview.mp4 --browser-executable=/usr/bin/chromium",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "remotion": "4.0.535",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}

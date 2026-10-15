@@ -1,0 +1,1460 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-15T10:00:44.283411+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/full-wps/project.json",
+    "snapshot": "project.json",
+    "sha256": "120bbafe06c81e162e8a97c956708be31d537042eb4832bbeb40144a02b6049d"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "reused_from_parent": true,
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "reused_from_parent": true,
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "actor-motion",
+      "label": "主体连续运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "代码时间线逐帧与跨页边界检查",
+      "reused_from_parent": true,
+      "evidence": "qa/actor/motion-audit.json"
+    },
+    {
+      "id": "science-data",
+      "label": "原始数据与图表坐标",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "浏览器几何与输入 CSV 独立核对",
+      "reused_from_parent": true,
+      "evidence": "qa/data/scientific-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "reused_from_parent": true,
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Reused installation snapshot; check-only launches no player",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 2670 actual frames, 5 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/manual/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "5 actual held pages compared with Office references",
+      "evidence": "qa/manual/playback/native-playback-audit.json"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 2271 actual frames, 5 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/automatic/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "5 actual held pages compared with Office references",
+      "evidence": "qa/automatic/playback/native-playback-audit.json"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/e51c381f6d86a9b1a8c659b5a2379cc36e7928f71132fbe2acebaad0e47d7112.json",
+      "review_note": "已查看点击/自动原始录像的全程抽帧、五页原尺寸停留帧及 Morph 四分位帧。三柱从共同基线向上展开，数值与标签完整；第三、四页网络主体连续移动和缩放，有实心中间位置，抵达后页内运动可见；全部五页按序停留，自动版只发 F5。未见放映中遮挡、裁切或柱底漂移。启动阶段编辑器/短暂黑帧保留在录像中，不计入放映内容。结论限本次 WPS Linux 构建及绑定录像。"
+    },
+    {
+      "id": "source-preserved",
+      "label": "输入与依赖绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Immutable new run; selected dependency SHA-256 recorded in lineage"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/project.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/phases",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-15T10:00:44.360057+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 44.855
+    },
+    {
+      "id": "motion-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/project.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-15T10:01:29.217937+00:00",
+      "status": "passed",
+      "log": "logs/motion-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 34.073
+    },
+    {
+      "id": "frames-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/manual/playback"
+      ],
+      "started_at": "2026-10-15T10:02:03.305483+00:00",
+      "status": "passed",
+      "log": "logs/frames-manual.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 12.959
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/project.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-15T10:02:16.268380+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 37.39
+    },
+    {
+      "id": "motion-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/project.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-15T10:02:53.661089+00:00",
+      "status": "passed",
+      "log": "logs/motion-automatic.log",
+      "implementation": {
+        "sha256": "68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6",
+        "snapshot": "implementations/68fe3da6c2a396af7c6f9c9dffec1dd25e284be8db16e9a87293626c7bab93b6.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 30.806
+    },
+    {
+      "id": "frames-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/deck-auto.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/playback-evidence-auto.json",
+        "--plan",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/native/rendered",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/qa/automatic/playback"
+      ],
+      "started_at": "2026-10-15T10:03:24.484955+00:00",
+      "status": "passed",
+      "log": "logs/frames-automatic.log",
+      "implementation": {
+        "sha256": "c78191e27d972a9ad70f1524ba51b0d6eff40f84ecbf31fd8c43ea73d4139e40",
+        "snapshot": "implementations/c78191e27d972a9ad70f1524ba51b0d6eff40f84ecbf31fd8c43ea73d4139e40.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 10.562
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/Test-Repository-for-Codex/wps-resume/wps-v1.6.0/runs/science-check/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-15T10:03:35.050342+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "c78191e27d972a9ad70f1524ba51b0d6eff40f84ecbf31fd8c43ea73d4139e40",
+        "snapshot": "implementations/c78191e27d972a9ad70f1524ba51b0d6eff40f84ecbf31fd8c43ea73d4139e40.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.055
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "d5d7b64b512fb333d73143541f29d184325b0115d5369e2058fd37c15ee11acf",
+      "bytes": 1450914,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "48203eabce1df18cf0501a4b5ec5a7f3ae60460292400b10c29e1566866a7e4b",
+      "bytes": 3564,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "31fb7714817da148e9215d80c42316bbf553f4fb5e0ca7e3a0127a7e57305ef3",
+      "bytes": 1326743,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "c92e189f4b26922d18c233847ebbcefc43bea7d3696e6e44df8c30590d8f7c9b",
+      "bytes": 2951,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "120bbafe06c81e162e8a97c956708be31d537042eb4832bbeb40144a02b6049d",
+      "bytes": 87031,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "bf99e0697793cf82516f8ca4c0ae5de8bb4bba4f2a45b534337de1abab748791",
+      "bytes": 56218,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "5ea1ef6dab3168648fecdcc17fae5b9a2c7d9912e0788f6b9a918ae8ff761f58",
+      "bytes": 56187,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "aecf42736a6a55f6967a076d60c0d741d3e2a44d45e776dc55a327adf9ddb990",
+      "bytes": 2446198,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "workflow_mode": "check",
+  "requested_target_player": "wps-desktop",
+  "lineage": {
+    "parent_acceptance_sha256": "6c5874f8611a505383d2e12e758a6366783ebc896050004ce4e2fd870a0a7c4f",
+    "parent_manifest_sha256": "eda0f512ded031ee4fd2f3160b43eb1a94a58b8c73ab193cfacdbcbcaddccc7d",
+    "mode": "check",
+    "copied": [
+      {
+        "path": "capture/automatic/capture.log",
+        "sha256": "cd412aebb16021bfcd73b7fc19e39abe252dfd59b5a8e26d9260f64960ea0b43",
+        "bytes": 11855
+      },
+      {
+        "path": "capture/automatic/editor-before-show.png",
+        "sha256": "b2c163d59caf9b6fc49b5e84fbede34f07153793d81f945c47b65fcd5efb993d",
+        "bytes": 147859
+      },
+      {
+        "path": "capture/automatic/playback-evidence.json",
+        "sha256": "c92e189f4b26922d18c233847ebbcefc43bea7d3696e6e44df8c30590d8f7c9b",
+        "bytes": 2951
+      },
+      {
+        "path": "capture/automatic/player-recording.mp4",
+        "sha256": "31fb7714817da148e9215d80c42316bbf553f4fb5e0ca7e3a0127a7e57305ef3",
+        "bytes": 1326743
+      },
+      {
+        "path": "capture/automatic/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "capture/automatic/show-start.png",
+        "sha256": "174d4cdca795e69cb3a598e360c9d5579604c33d4547e4b2bd12fac49a9bb4ea",
+        "bytes": 48517
+      },
+      {
+        "path": "capture/automatic/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "capture/automatic/xvfb.log",
+        "sha256": "87e9572cf030493a1f7ba83d385129046b224374ca1414911674b30fc44276d7",
+        "bytes": 64
+      },
+      {
+        "path": "capture/manual/capture.log",
+        "sha256": "13e0062a2f7e9fbe95f8825d1ce71b7abf0ea47b372fd78d687073cf66ef8b5c",
+        "bytes": 16073
+      },
+      {
+        "path": "capture/manual/editor-before-show.png",
+        "sha256": "72fd50a80f23cee46fac5be2517dcd946ed7b67c2c3e4757cf483c1c7cae294f",
+        "bytes": 147532
+      },
+      {
+        "path": "capture/manual/playback-evidence.json",
+        "sha256": "48203eabce1df18cf0501a4b5ec5a7f3ae60460292400b10c29e1566866a7e4b",
+        "bytes": 3564
+      },
+      {
+        "path": "capture/manual/player-recording.mp4",
+        "sha256": "d5d7b64b512fb333d73143541f29d184325b0115d5369e2058fd37c15ee11acf",
+        "bytes": 1450914
+      },
+      {
+        "path": "capture/manual/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "capture/manual/show-start.png",
+        "sha256": "d0d9aaf66899327fc19186f8cef7fcc20bd02c75d9e3ea710e0c0b8d17456edb",
+        "bytes": 39183
+      },
+      {
+        "path": "capture/manual/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "capture/manual/xvfb.log",
+        "sha256": "87e9572cf030493a1f7ba83d385129046b224374ca1414911674b30fc44276d7",
+        "bytes": 64
+      },
+      {
+        "path": "data/figures.json",
+        "sha256": "0b0bc63d586ce0f193d74b23fe3881525910a814d6480cd7f1388113cbb586b7",
+        "bytes": 4686
+      },
+      {
+        "path": "data/observations.csv",
+        "sha256": "4feefd91c14174bd544194846988fd360116cd25adc3c4d54c9b3e9e251012b6",
+        "bytes": 649
+      },
+      {
+        "path": "deck-auto.pptx",
+        "sha256": "5ea1ef6dab3168648fecdcc17fae5b9a2c7d9912e0788f6b9a918ae8ff761f58",
+        "bytes": 56187
+      },
+      {
+        "path": "deck.pptx",
+        "sha256": "bf99e0697793cf82516f8ca4c0ae5de8bb4bba4f2a45b534337de1abab748791",
+        "bytes": 56218
+      },
+      {
+        "path": "design-preview.mp4",
+        "sha256": "aecf42736a6a55f6967a076d60c0d741d3e2a44d45e776dc55a327adf9ddb990",
+        "bytes": 2446198
+      },
+      {
+        "path": "diagnostic/capture/capture.log",
+        "sha256": "27eb0cd15fc8a235aac80bb500f761a70c4fa016b514afe39877d074c0912fbd",
+        "bytes": 4961
+      },
+      {
+        "path": "diagnostic/capture/editor-before-show.png",
+        "sha256": "7420458a64777a4be9df606f1a6c5473109ee36cc78e6f250ff3af86f421b39e",
+        "bytes": 57435
+      },
+      {
+        "path": "diagnostic/capture/playback-evidence.json",
+        "sha256": "b51ac435c21a3c89e68c0acea394e62863296fa93bdb0dca31641e8032c11bdb",
+        "bytes": 3030
+      },
+      {
+        "path": "diagnostic/capture/player-recording.mp4",
+        "sha256": "88aa48c96181b107490d017d3440671a82a69fd9dd612f8e4f909df4192f7773",
+        "bytes": 84763
+      },
+      {
+        "path": "diagnostic/capture/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "diagnostic/capture/show-start.png",
+        "sha256": "4c28357fb7368015007bd8ef039ad7aaf5b3febdc2590fc84a5db12bddce3021",
+        "bytes": 9852
+      },
+      {
+        "path": "diagnostic/capture/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "diagnostic/capture/xvfb.log",
+        "sha256": "87e9572cf030493a1f7ba83d385129046b224374ca1414911674b30fc44276d7",
+        "bytes": 64
+      },
+      {
+        "path": "diagnostic/deck.manifest.json",
+        "sha256": "d887e8bb878cec39b27b714fb2ab1e3f0c2aa4336132082e9da01e76ccc49a53",
+        "bytes": 237
+      },
+      {
+        "path": "diagnostic/deck.pptx",
+        "sha256": "d6f593ffaf3c818a2207b759208d50f994677dcbeedbaf7133d414781fdb3687",
+        "bytes": 35261
+      },
+      {
+        "path": "diagnostic/input-plan.json",
+        "sha256": "8899bbaf5d0310a6420cd3c5cd490390f0d5117256cc3cd988a3b6bd1fc697b3",
+        "bytes": 65
+      },
+      {
+        "path": "diagnostic/morph-audit.json",
+        "sha256": "c308a09461768e435897a8b5b1e0c3ab6f2453b40661fe0ee8f11c530ffdfedb",
+        "bytes": 45893
+      },
+      {
+        "path": "diagnostic/project.json",
+        "sha256": "a765a0940583debeec312cab3a8fc8d4a78b1eb045be840c8f3a1a1558f66616",
+        "bytes": 1193
+      },
+      {
+        "path": "plans/automatic-input.json",
+        "sha256": "be99e8c1ad6aeadd47bba069beb29fb524d87fdb2b3c0ce78eade959268d7a69",
+        "bytes": 174
+      },
+      {
+        "path": "plans/manual-input.json",
+        "sha256": "73bb01bdd435d9ef3951072f4eb8bf1224b91d197d35e6075b9f221e13347b72",
+        "bytes": 2025
+      },
+      {
+        "path": "playback-evidence-auto.json",
+        "sha256": "c92e189f4b26922d18c233847ebbcefc43bea7d3696e6e44df8c30590d8f7c9b",
+        "bytes": 2951
+      },
+      {
+        "path": "playback-evidence.json",
+        "sha256": "48203eabce1df18cf0501a4b5ec5a7f3ae60460292400b10c29e1566866a7e4b",
+        "bytes": 3564
+      },
+      {
+        "path": "playback-plan.json",
+        "sha256": "73bb01bdd435d9ef3951072f4eb8bf1224b91d197d35e6075b9f221e13347b72",
+        "bytes": 2025
+      },
+      {
+        "path": "player-recording-auto.mp4",
+        "sha256": "31fb7714817da148e9215d80c42316bbf553f4fb5e0ca7e3a0127a7e57305ef3",
+        "bytes": 1326743
+      },
+      {
+        "path": "player-recording.mp4",
+        "sha256": "d5d7b64b512fb333d73143541f29d184325b0115d5369e2058fd37c15ee11acf",
+        "bytes": 1450914
+      },
+      {
+        "path": "project.json",
+        "sha256": "120bbafe06c81e162e8a97c956708be31d537042eb4832bbeb40144a02b6049d",
+        "bytes": 87031
+      },
+      {
+        "path": "qa/actor/actor-03-00000.png",
+        "sha256": "0f85d34ddfba29779fbc117ddee81a096ffefa9b498ba4c467139a91cfec3ad8",
+        "bytes": 74021
+      },
+      {
+        "path": "qa/actor/actor-03-00180.png",
+        "sha256": "1209ccf6a5fa8ad8de597069b600dae4a9161480eb06d06db2de8cc36f4d0d7f",
+        "bytes": 90392
+      },
+      {
+        "path": "qa/actor/actor-03-00360.png",
+        "sha256": "ba0c919a5072988897fbe369be298b35d83a2ffc121e2b4baecff97b38c42cc4",
+        "bytes": 53454
+      },
+      {
+        "path": "qa/actor/actor-03-01375.png",
+        "sha256": "1cc9a1805aedf35d3a2b2a20114b2f7cface7a01c99c0125b1e242671b7029e7",
+        "bytes": 75472
+      },
+      {
+        "path": "qa/actor/actor-03-02750.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/actor/actor-03-04125.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/actor/actor-03-05499.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/actor/actor-04-00000.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/actor/actor-04-00700.png",
+        "sha256": "a1e6543a488207e1d039386df663738c5cd4ac5cbb3a241f1639d8f92b71e1c3",
+        "bytes": 75668
+      },
+      {
+        "path": "qa/actor/actor-04-01375.png",
+        "sha256": "197d98eea5b59d37444ed62f9b78a6e839075e313fc544db670e1aca46faca9f",
+        "bytes": 57031
+      },
+      {
+        "path": "qa/actor/actor-04-01400.png",
+        "sha256": "52e5c41c669f033c6862d83eff731330461e5805182b76641346a3aafe9c1ba3",
+        "bytes": 57236
+      },
+      {
+        "path": "qa/actor/actor-04-02750.png",
+        "sha256": "c59ecb745dec23a62984d18ee2e9a9fc1085d6e85e8741a79c1d8182c65e0660",
+        "bytes": 83308
+      },
+      {
+        "path": "qa/actor/actor-04-04125.png",
+        "sha256": "caaddd0e6c204ff6ed5d5b5f39da4ea66f76e428e765029d043692736349ff8a",
+        "bytes": 83430
+      },
+      {
+        "path": "qa/actor/actor-04-05499.png",
+        "sha256": "caaddd0e6c204ff6ed5d5b5f39da4ea66f76e428e765029d043692736349ff8a",
+        "bytes": 83430
+      },
+      {
+        "path": "qa/actor/motion-audit.json",
+        "sha256": "689e05592d321af4090470832eeb5a3c3d355895c9750a4e86ce0bee8f38c674",
+        "bytes": 213986
+      },
+      {
+        "path": "qa/actor/motion-contact.jpg",
+        "sha256": "97c08558562d4846581bba9aca594d2d2c9ea45cf84acac26c85636d4ac30161",
+        "bytes": 373688
+      },
+      {
+        "path": "qa/auto/audit.json",
+        "sha256": "984a71acb49357a6e0d99e3291b09ab3658c436952ce6ceb62e7dbd59b92fe2d",
+        "bytes": 1781
+      },
+      {
+        "path": "qa/data/scientific-audit.json",
+        "sha256": "722976f252b462ee0a0926cdf09b54d7ce2b4f0281bb911f036ffb9c37496a74",
+        "bytes": 4134
+      },
+      {
+        "path": "qa/desktop-preflight.json",
+        "sha256": "2fa12b69a750c70b25c5049686a7b674decc3a95fca0cd9b64a034fffa320866",
+        "bytes": 966
+      },
+      {
+        "path": "qa/native/audit.json",
+        "sha256": "651009eb731e061520f01db9fa41c641043ec7734c8ec60436c29cdb19917256",
+        "bytes": 15837
+      },
+      {
+        "path": "qa/native/rendered/contact.jpg",
+        "sha256": "9f0911c822bbba214549adaca8af12f41b234d3ed94a307fee1c00a381dd1498",
+        "bytes": 194632
+      },
+      {
+        "path": "qa/native/rendered/deck.pdf",
+        "sha256": "6847024a213e70f0acee95a7b821a92c7ec5865188fd20e76c908bd9a20e9c98",
+        "bytes": 142299
+      },
+      {
+        "path": "qa/native/rendered/slide-01.png",
+        "sha256": "c88b42a99cd471d54cf84c618eec7d3b05d0d78fcf92c39a477568773ace8b39",
+        "bytes": 58386
+      },
+      {
+        "path": "qa/native/rendered/slide-02.png",
+        "sha256": "1daebe5485e9e4f13ac13f5d6617359007c4dc2a8e376b6a7aab0af49f3f0f5c",
+        "bytes": 69305
+      },
+      {
+        "path": "qa/native/rendered/slide-03.png",
+        "sha256": "902e4f52a90e0aeefe183082a774534eed235f5c1d81166fcd88e976c8a4d4ce",
+        "bytes": 71352
+      },
+      {
+        "path": "qa/native/rendered/slide-04.png",
+        "sha256": "1328e20dd6a94b853c82f51b84f0a1ad8a31b13d1cdd0fd4996b35780dee020d",
+        "bytes": 77877
+      },
+      {
+        "path": "qa/native/rendered/slide-05.png",
+        "sha256": "03cdf4b89c4cc8662ec557b6ec20261bba6b6d9b62ee4266a295360b0f847559",
+        "bytes": 76520
+      },
+      {
+        "path": "qa/preview/dynamic-contact.jpg",
+        "sha256": "87d9b4df6b17f4ea1c7d11a0baaa111d4e93887e34d85b5991d71c285cec5b7c",
+        "bytes": 395102
+      },
+      {
+        "path": "qa/preview/preview-audit.json",
+        "sha256": "8e68d570ae0f15cb857f75a304fa02551ff5037c31fbc71ed362249326927817",
+        "bytes": 16477
+      },
+      {
+        "path": "qa/preview/scene-01-00000.png",
+        "sha256": "5f42e85f045586440795b14b960bf6c1aab70c7f93ef08ac4dcc37bd7dfe7e0d",
+        "bytes": 31928
+      },
+      {
+        "path": "qa/preview/scene-01-00100.png",
+        "sha256": "5f42e85f045586440795b14b960bf6c1aab70c7f93ef08ac4dcc37bd7dfe7e0d",
+        "bytes": 31928
+      },
+      {
+        "path": "qa/preview/scene-01-00670.png",
+        "sha256": "7929811a655dd3fc55d0d1cdcab5b6b4fa8050f8648dda5fd0425ea45aac0c36",
+        "bytes": 57056
+      },
+      {
+        "path": "qa/preview/scene-01-00801.png",
+        "sha256": "5000cedaa9872592df66f9899a6058e4684d849c4ec12f53dc6fdb9cbd27bf98",
+        "bytes": 57228
+      },
+      {
+        "path": "qa/preview/scene-01-00990.png",
+        "sha256": "92801f89b6634a89f44c9c9b335cef6b2a68bad6ae83286487679e803acc7c6d",
+        "bytes": 57327
+      },
+      {
+        "path": "qa/preview/scene-01-01420.png",
+        "sha256": "5fbcbe471216fc86969939590cb83a6b0ac21730c5d79caa81917a8f9f370e64",
+        "bytes": 57510
+      },
+      {
+        "path": "qa/preview/scene-01-01851.png",
+        "sha256": "6139c2d9d30fb20a02c311217177bc6ac03fb3d9fa6c8f2879e693cbde0aec8e",
+        "bytes": 57635
+      },
+      {
+        "path": "qa/preview/scene-01-01971.png",
+        "sha256": "bed58352dd58f521520ae6f792e5d7cf309050dc550df110df3dac4e11eabbb9",
+        "bytes": 58533
+      },
+      {
+        "path": "qa/preview/scene-01-02091.png",
+        "sha256": "61b822cfb5a714e3bda0c8b331e11137e7b3e27c39b29d1edba08c2329f9fd90",
+        "bytes": 59336
+      },
+      {
+        "path": "qa/preview/scene-01-02171.png",
+        "sha256": "1f00467daba5fbe65be88a0a4dc21158df1fe08518b226083ac278a6ec60ddf6",
+        "bytes": 59953
+      },
+      {
+        "path": "qa/preview/scene-01-02411.png",
+        "sha256": "6f4d3e0960fd70511309b7d32b2a6fb5fbadeea7f2780590e252611d3b2cf969",
+        "bytes": 59944
+      },
+      {
+        "path": "qa/preview/scene-01-05999.png",
+        "sha256": "6f4d3e0960fd70511309b7d32b2a6fb5fbadeea7f2780590e252611d3b2cf969",
+        "bytes": 59944
+      },
+      {
+        "path": "qa/preview/scene-02-00000.png",
+        "sha256": "9715fa6b5ff8c722b86ea4eefe8ee60fa929ba5a5d0e71242108355d5bfa9065",
+        "bytes": 60025
+      },
+      {
+        "path": "qa/preview/scene-02-00180.png",
+        "sha256": "19d42f5ccbb8f825cedb9ace6c29dd78ca01cef13155f5b77e7c6112f7019a50",
+        "bytes": 64927
+      },
+      {
+        "path": "qa/preview/scene-02-00360.png",
+        "sha256": "7f8ab766f859fb83c39300f50c969923f873a51047ada907976c12f1ce9a2b9f",
+        "bytes": 38070
+      },
+      {
+        "path": "qa/preview/scene-02-00440.png",
+        "sha256": "7f8ab766f859fb83c39300f50c969923f873a51047ada907976c12f1ce9a2b9f",
+        "bytes": 38070
+      },
+      {
+        "path": "qa/preview/scene-02-00460.png",
+        "sha256": "7f8ab766f859fb83c39300f50c969923f873a51047ada907976c12f1ce9a2b9f",
+        "bytes": 38070
+      },
+      {
+        "path": "qa/preview/scene-02-01161.png",
+        "sha256": "c137b25ac50caf473f2541c42f1a4c9bd584b59ad27af8870a0453a4baa57831",
+        "bytes": 66757
+      },
+      {
+        "path": "qa/preview/scene-02-01400.png",
+        "sha256": "cdbf7bbf7adf54cbaeab0d253c69e08baece8acd5b709c5677723f8eef38b9bc",
+        "bytes": 69320
+      },
+      {
+        "path": "qa/preview/scene-02-01550.png",
+        "sha256": "d0394352594b67981113428972bbd5f8e67561662d0739bdc3d56db5c6aa31fd",
+        "bytes": 70179
+      },
+      {
+        "path": "qa/preview/scene-02-01700.png",
+        "sha256": "6ddea9eabdfa5b90e0abc154771dc9b60a15b486aa09b5be6ae834f97aa062f4",
+        "bytes": 71293
+      },
+      {
+        "path": "qa/preview/scene-02-01860.png",
+        "sha256": "6b4d59ce3d0de86c032840b69d83cc028cc99f032a95c88f0358ff0e4a4102a2",
+        "bytes": 73812
+      },
+      {
+        "path": "qa/preview/scene-02-02131.png",
+        "sha256": "e8afbf701c252fd746016829271e3389b4fc6c9c5da84d5ef819a6e002849f94",
+        "bytes": 73741
+      },
+      {
+        "path": "qa/preview/scene-02-06499.png",
+        "sha256": "e8afbf701c252fd746016829271e3389b4fc6c9c5da84d5ef819a6e002849f94",
+        "bytes": 73741
+      },
+      {
+        "path": "qa/preview/scene-03-00000.png",
+        "sha256": "0f85d34ddfba29779fbc117ddee81a096ffefa9b498ba4c467139a91cfec3ad8",
+        "bytes": 74021
+      },
+      {
+        "path": "qa/preview/scene-03-00180.png",
+        "sha256": "1209ccf6a5fa8ad8de597069b600dae4a9161480eb06d06db2de8cc36f4d0d7f",
+        "bytes": 90392
+      },
+      {
+        "path": "qa/preview/scene-03-00360.png",
+        "sha256": "ba0c919a5072988897fbe369be298b35d83a2ffc121e2b4baecff97b38c42cc4",
+        "bytes": 53454
+      },
+      {
+        "path": "qa/preview/scene-03-00440.png",
+        "sha256": "ba0c919a5072988897fbe369be298b35d83a2ffc121e2b4baecff97b38c42cc4",
+        "bytes": 53454
+      },
+      {
+        "path": "qa/preview/scene-03-00460.png",
+        "sha256": "ba0c919a5072988897fbe369be298b35d83a2ffc121e2b4baecff97b38c42cc4",
+        "bytes": 53454
+      },
+      {
+        "path": "qa/preview/scene-03-00780.png",
+        "sha256": "672864eac735f4f8edc423bd5ddb082041b33c2bb12e0435b6e96e7408dd7431",
+        "bytes": 65435
+      },
+      {
+        "path": "qa/preview/scene-03-00810.png",
+        "sha256": "9c28be49b99fb645e706f0c70aff0d4ef17c302533f05611d605770e56325000",
+        "bytes": 70962
+      },
+      {
+        "path": "qa/preview/scene-03-01161.png",
+        "sha256": "06bc4a5cdb37c6e78bb8609f2ce8eeaf7931c2db4acbfb2bdc1eb593ac3cf760",
+        "bytes": 75580
+      },
+      {
+        "path": "qa/preview/scene-03-01281.png",
+        "sha256": "1d4b158bc393529d72724f0f91c319c6de5c41e35cb653ea1c2bf10577b45a88",
+        "bytes": 75531
+      },
+      {
+        "path": "qa/preview/scene-03-01360.png",
+        "sha256": "f8819b44eb52381f7cd4f946c80f9080cc179513e0ef620d77b49e99bc078656",
+        "bytes": 75345
+      },
+      {
+        "path": "qa/preview/scene-03-02261.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/preview/scene-03-05499.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/preview/scene-04-00000.png",
+        "sha256": "9479fd3435be1a13a9ddf9b13cd073d810bf0a807f4455ec6314e1d0cc714c44",
+        "bytes": 75551
+      },
+      {
+        "path": "qa/preview/scene-04-00700.png",
+        "sha256": "a1e6543a488207e1d039386df663738c5cd4ac5cbb3a241f1639d8f92b71e1c3",
+        "bytes": 75668
+      },
+      {
+        "path": "qa/preview/scene-04-01400.png",
+        "sha256": "52e5c41c669f033c6862d83eff731330461e5805182b76641346a3aafe9c1ba3",
+        "bytes": 57236
+      },
+      {
+        "path": "qa/preview/scene-04-01480.png",
+        "sha256": "52e5c41c669f033c6862d83eff731330461e5805182b76641346a3aafe9c1ba3",
+        "bytes": 57236
+      },
+      {
+        "path": "qa/preview/scene-04-01500.png",
+        "sha256": "52e5c41c669f033c6862d83eff731330461e5805182b76641346a3aafe9c1ba3",
+        "bytes": 57236
+      },
+      {
+        "path": "qa/preview/scene-04-01820.png",
+        "sha256": "74b5d3a79c7733d6d364cdd3a12afd387c5da80f3432409a11ddac59a00c626e",
+        "bytes": 73105
+      },
+      {
+        "path": "qa/preview/scene-04-01850.png",
+        "sha256": "4c6eb50b2c2c31702206b9d73116f3b8878201a3363f121815218e4401dfb6bf",
+        "bytes": 78211
+      },
+      {
+        "path": "qa/preview/scene-04-02201.png",
+        "sha256": "7a5a6722f286c502673f837f8ad4e5d2d9b6b39c7212ad13794bd19137e2cfed",
+        "bytes": 83334
+      },
+      {
+        "path": "qa/preview/scene-04-02321.png",
+        "sha256": "38714a7a47ae446e788978fc4fe34f06eff05a50d8f53de26c1045c62695da26",
+        "bytes": 83325
+      },
+      {
+        "path": "qa/preview/scene-04-02400.png",
+        "sha256": "e9b2534ab5e94c15aec61f4a1d5dea8c755ed291c076069fa64b98c73a368992",
+        "bytes": 83342
+      },
+      {
+        "path": "qa/preview/scene-04-03301.png",
+        "sha256": "caaddd0e6c204ff6ed5d5b5f39da4ea66f76e428e765029d043692736349ff8a",
+        "bytes": 83430
+      },
+      {
+        "path": "qa/preview/scene-04-05499.png",
+        "sha256": "caaddd0e6c204ff6ed5d5b5f39da4ea66f76e428e765029d043692736349ff8a",
+        "bytes": 83430
+      },
+      {
+        "path": "qa/preview/scene-05-00000.png",
+        "sha256": "30e01372d2c09c4b5b6f6e7d466b918c949f63fc40ac85aba23b64e4e475712b",
+        "bytes": 83436
+      },
+      {
+        "path": "qa/preview/scene-05-00180.png",
+        "sha256": "77100a60a8019cc045ac0bc1d951cff975a777536ff956a29ec2d6261a5bceca",
+        "bytes": 80215
+      },
+      {
+        "path": "qa/preview/scene-05-00360.png",
+        "sha256": "5a81f2a0b9406204669242a01174e0e72177bea0b204e22a760da2853ffe220d",
+        "bytes": 36842
+      },
+      {
+        "path": "qa/preview/scene-05-00440.png",
+        "sha256": "5a81f2a0b9406204669242a01174e0e72177bea0b204e22a760da2853ffe220d",
+        "bytes": 36842
+      },
+      {
+        "path": "qa/preview/scene-05-00460.png",
+        "sha256": "5a81f2a0b9406204669242a01174e0e72177bea0b204e22a760da2853ffe220d",
+        "bytes": 36842
+      },
+      {
+        "path": "qa/preview/scene-05-01161.png",
+        "sha256": "d1f3b362814989ed08c017cd525a6bc1e78df9953ee44e60fe3ac97739f56505",
+        "bytes": 73370
+      },
+      {
+        "path": "qa/preview/scene-05-01391.png",
+        "sha256": "6a812aa68ac5b52ce99f8fcd6870a648344a933e222b010762dbf18e2cc8c181",
+        "bytes": 74831
+      },
+      {
+        "path": "qa/preview/scene-05-01600.png",
+        "sha256": "f0ca01193d49a39f78ad458d1abd0922c63ff0c4eef2993c1d4e44e8f974c80a",
+        "bytes": 76289
+      },
+      {
+        "path": "qa/preview/scene-05-01741.png",
+        "sha256": "ab795f4834dd8c23116e54db43f6c5db449b34484814f020c5eb424f2da88107",
+        "bytes": 76746
+      },
+      {
+        "path": "qa/preview/scene-05-02635.png",
+        "sha256": "921d4590a8345a52232b7b5e432e935feccab703e3fa4c04a431c7fc2775e574",
+        "bytes": 77086
+      },
+      {
+        "path": "qa/preview/scene-05-02981.png",
+        "sha256": "5d98d080c88ef4e11cb4f750ce01d1c56c849ab81182a7ce74ad74a359a69745",
+        "bytes": 82690
+      },
+      {
+        "path": "qa/preview/scene-05-06499.png",
+        "sha256": "5d98d080c88ef4e11cb4f750ce01d1c56c849ab81182a7ce74ad74a359a69745",
+        "bytes": 82690
+      },
+      {
+        "path": "qa/source-review.json",
+        "sha256": "64ecd0a502aeb3e8b49d062c0b6b686acdcf8fcc05ba50d567b46b23d982591b",
+        "bytes": 1467
+      },
+      {
+        "path": "qa/video/video-0000.png",
+        "sha256": "d6d0ac104070749a3e937ba8e7a657e7af4bd907b60698c09b563886edf12651",
+        "bytes": 115633
+      },
+      {
+        "path": "qa/video/video-0045.png",
+        "sha256": "3162c5c0bd7107c7d3ff4231ec98ce9d9d6f57ff7a3af34c44d6f0bfd5828f82",
+        "bytes": 264648
+      },
+      {
+        "path": "qa/video/video-0052.png",
+        "sha256": "bcecbcbf7d10207f5408783c15dc3fc34b75f997132fe526711747ec01df3fed",
+        "bytes": 267553
+      },
+      {
+        "path": "qa/video/video-0059.png",
+        "sha256": "8f055024f7a8fbca5b178aa97231b61531d5a071f8e6891782d250feb747bf0f",
+        "bytes": 269929
+      },
+      {
+        "path": "qa/video/video-0061.png",
+        "sha256": "fb32dcc1ff23e9d16549dd4efd835bb1bbd3aca1ef9545f2be893a2b2cb9da01",
+        "bytes": 270710
+      },
+      {
+        "path": "qa/video/video-0066.png",
+        "sha256": "5aaa58e6a4c84d91f203d55158feb5254cda78f67c1e101e2f3bbdb7c3e7d2d8",
+        "bytes": 273284
+      },
+      {
+        "path": "qa/video/video-0069.png",
+        "sha256": "ee95af775effec6dfff942afee8b77682d4b3c87f42d6ab6f08dea1c9219c367",
+        "bytes": 274382
+      },
+      {
+        "path": "qa/video/video-0076.png",
+        "sha256": "2a99e2e540c0b8537ebc87c88bc330e4e33930b1fc81ca3e0270b2b3a91f9c2b",
+        "bytes": 275958
+      },
+      {
+        "path": "qa/video/video-0078.png",
+        "sha256": "b5ab4eddabeb0817c0181b96ebfaae058967ebc16459b285ce1deba071f4d2e6",
+        "bytes": 275995
+      },
+      {
+        "path": "qa/video/video-0085.png",
+        "sha256": "16d454c19fd27d0637ad5d254850c9a39e2b34ea762c717a545814c2beb46238",
+        "bytes": 276957
+      },
+      {
+        "path": "qa/video/video-0092.png",
+        "sha256": "2a9821d9a1a483bcd267ca04ca53844563d594b57d9d92877ebb55697e873011",
+        "bytes": 278067
+      },
+      {
+        "path": "qa/video/video-0094.png",
+        "sha256": "610d03d267998ed5b3b719777752112c2c4bcaf48080f21c15b74d8d2ee66034",
+        "bytes": 279177
+      },
+      {
+        "path": "qa/video/video-0102.png",
+        "sha256": "aab348b094b1aad665fbd8371535b0c69fee25cbc388fb70945c055226684dc7",
+        "bytes": 280554
+      },
+      {
+        "path": "qa/video/video-0104.png",
+        "sha256": "92bd0ced46721f940928cf0e4024bba16621ca152596e9577ac6032ecbfda021",
+        "bytes": 280473
+      },
+      {
+        "path": "qa/video/video-0109.png",
+        "sha256": "8604ae7a5706e7eed1d9e432662dd8dabfe98c13fbcfe7b196c3278dc20f08d8",
+        "bytes": 281405
+      },
+      {
+        "path": "qa/video/video-0111.png",
+        "sha256": "5b70d63774ac8af2bc5dc964b832398e3fd85faae93c873f488901c072cd6d6f",
+        "bytes": 281599
+      },
+      {
+        "path": "qa/video/video-0112.png",
+        "sha256": "6005af68d1e04654b710c5e81705e6ef8d711e7b2536b0e64cacc171ec31b9e4",
+        "bytes": 283309
+      },
+      {
+        "path": "qa/video/video-0118.png",
+        "sha256": "a9cb6ff4058e81db0fe508c36a3109227692556f099feceaa76b83c7cb0587a9",
+        "bytes": 287450
+      },
+      {
+        "path": "qa/video/video-0119.png",
+        "sha256": "816c9dea73a49bdde07c97605a8e39a7a11c4fcb89180ab93fe37a5af41d8631",
+        "bytes": 288368
+      },
+      {
+        "path": "qa/video/video-0125.png",
+        "sha256": "5a7711cbefff468a8de7dd259f10db3180c871966feb56fc4335540f88661957",
+        "bytes": 291136
+      },
+      {
+        "path": "qa/video/video-0252.png",
+        "sha256": "fa0144714152f6787866367c7b7b14ee9a85c21aa62357aa63203fca2859c9e4",
+        "bytes": 272676
+      },
+      {
+        "path": "qa/video/video-0359.png",
+        "sha256": "d15bdf389c4a97c417112416c15df65691122bfa01abf9e38dfc93a4483b09e3",
+        "bytes": 276907
+      },
+      {
+        "path": "qa/video/video-0360.png",
+        "sha256": "3536302bd88a2b0ec6f5f364dfe9adce0953276d1e5044ce4cc65292843e090e",
+        "bytes": 273628
+      },
+      {
+        "path": "qa/video/video-0361.png",
+        "sha256": "d436236a3a4b38d4c948d87e97a193e51e0964610ed5b46f12f0ca8145643c09",
+        "bytes": 281329
+      },
+      {
+        "path": "qa/video/video-0371.png",
+        "sha256": "604d45687255e9e0990345c094bb6ed4f52077781d921aba06c41a58986336c0",
+        "bytes": 220707
+      },
+      {
+        "path": "qa/video/video-0633.png",
+        "sha256": "813ebf09736d83c63831b58deb72cebd228209ba9137571bbc0634d598104691",
+        "bytes": 341076
+      },
+      {
+        "path": "qa/video/video-0749.png",
+        "sha256": "e8ec7b2321cdb12a58dd9de3d316c37d479fef50d804926975456b1090852406",
+        "bytes": 341169
+      },
+      {
+        "path": "qa/video/video-0750.png",
+        "sha256": "ff6ccd0eb0fa26e97dc0d903b64b479bb05007348a7b71fda1710879794cdc2a",
+        "bytes": 334973
+      },
+      {
+        "path": "qa/video/video-0751.png",
+        "sha256": "a75ef751067e99e1f2ffc03b6ed1b40dcb0eca22a8147453504a5d7d43af1fd6",
+        "bytes": 371155
+      },
+      {
+        "path": "qa/video/video-0761.png",
+        "sha256": "0931242e6b597923d9282d7d0d54a7611e3f05520c09a69bf848d27d363f90af",
+        "bytes": 315180
+      },
+      {
+        "path": "qa/video/video-0981.png",
+        "sha256": "593bf2a1811ae06b0d62ea010d1f9c5b4b8e7d21ca7e0695379b634b45418c5e",
+        "bytes": 363558
+      },
+      {
+        "path": "qa/video/video-1079.png",
+        "sha256": "b85561a8547a650d812f45d835ec80c6cb0d4481bc270cf51d00f39d598def95",
+        "bytes": 335314
+      },
+      {
+        "path": "qa/video/video-1080.png",
+        "sha256": "9e80fde7f004bf0e74f44adb62292725e2581dfbe5d6c008fd40edf8f07ef630",
+        "bytes": 335295
+      },
+      {
+        "path": "qa/video/video-1081.png",
+        "sha256": "b586fd3e00f0e3645eb3f34fa99f82a81cfa4e27867421837c9f4fa5aecbe455",
+        "bytes": 339077
+      },
+      {
+        "path": "qa/video/video-1122.png",
+        "sha256": "0e8306dc87c14eb263fca9a155e62fa8e7919a7e55d300ca4c8bd63d12b27315",
+        "bytes": 348773
+      },
+      {
+        "path": "qa/video/video-1311.png",
+        "sha256": "6c65c25aab64b56f6cf5e6c4d2d5b2d201b342260dd9eda91ec191524b71adbb",
+        "bytes": 375328
+      },
+      {
+        "path": "qa/video/video-1409.png",
+        "sha256": "9087bf9c9e0efff9fd03ce34434f859685076e6523bf233dbd19ace55b4e9b0a",
+        "bytes": 375335
+      },
+      {
+        "path": "qa/video/video-1410.png",
+        "sha256": "04902e8dfdbe04a3d8f5ce65cb6078f0e470bdf45c20ce132199ffa73cf4f92e",
+        "bytes": 375742
+      },
+      {
+        "path": "qa/video/video-1411.png",
+        "sha256": "0bd6e6bfd4c24cf3aa9c80c1fbb5b152b83d2961b70af9f097c065bde75774d0",
+        "bytes": 391965
+      },
+      {
+        "path": "qa/video/video-1421.png",
+        "sha256": "cb57760143201a4091b748f1e4dcc77e9c9d63adfeebd401028de1b77b49a516",
+        "bytes": 259911
+      },
+      {
+        "path": "qa/video/video-1683.png",
+        "sha256": "c7d9d149921b54b59fd966ad59ae6989d35d23c75c554095639f5bd08f9c0c79",
+        "bytes": 380109
+      },
+      {
+        "path": "qa/video/video-audit.json",
+        "sha256": "f8581bc131b7c9f09612894164bd1408011ecc7e539d4c06bd3ce39cc4455565",
+        "bytes": 4820
+      },
+      {
+        "path": "qa/video/video-contact.jpg",
+        "sha256": "4162946e97e370d9da8e223de0f7ec3c8ec6e1e908f056626e0431eb52edaa92",
+        "bytes": 1029971
+      }
+    ]
+  },
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "d5d7b64b512fb333d73143541f29d184325b0115d5369e2058fd37c15ee11acf",
+      "source_pptx_sha256": "bf99e0697793cf82516f8ca4c0ae5de8bb4bba4f2a45b534337de1abab748791"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "31fb7714817da148e9215d80c42316bbf553f4fb5e0ca7e3a0127a7e57305ef3",
+      "source_pptx_sha256": "5ea1ef6dab3168648fecdcc17fae5b9a2c7d9912e0788f6b9a918ae8ff761f58"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "passed",
+  "automatic_acceptance_status": "passed",
+  "finished_at": "2026-10-15T10:08:56.320754+00:00"
+}
