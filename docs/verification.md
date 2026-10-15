@@ -19,7 +19,7 @@
 - 两页独立项目：[点击录像](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/generic-record/player-recording.mp4) / [自动录像](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/generic-record/player-recording-auto.mp4) / [点击 PPT](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/generic-record/deck.pptx) / [自动 PPT](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/generic-record/deck-auto.pptx)。
 - 实际采集证据、acceptance 原件与关键帧见 [showcase](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/README.md)，逐文件哈希见 [摘录清单](https://github.com/Yingqi-Han/native-motion-ppt/blob/main/showcase/manifest.json)。
 
-showcase 是便于浏览的原样摘录，没有复制全部 QA 依赖，不能作为完整运行目录执行 verify_acceptance.py。完整 HTML 交互报告、对象曲线、诊断、审阅记录、阶段实现快照、日志和独立可校验工程在原始 **wps-v1.6.0-delivery.zip** 中，预备作为本仓库 Release 的单独附件，原文件 SHA 见摘录清单。所有摘录 SHA 与该完整证据中的同名文件保持一致。
+showcase 是便于浏览的原样摘录，没有复制全部 QA 依赖，不能作为完整运行目录执行 verify_acceptance.py。完整 HTML 交互报告、对象曲线、诊断、审阅记录、阶段实现快照、日志和独立可校验工程见 Release 附件 [wps-v1.6.0-delivery.zip](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.6.1/wps-v1.6.0-delivery.zip)。上传后的服务器 SHA 与原件一致：`218b5bf942f80c2ffd59f429814641b4edd71c5ea2e681456bf07a952d0c65b3`。所有摘录 SHA 与该完整证据中的同名文件保持一致。
 
 代码设计视频为 Remotion 预演；此处展示的四份录像均为真实 WPS GUI 屏幕采集。录像保留启动编辑器、短暂黑帧或字体提示，放映阶段另行检查。原始采集 JSON 中的 pending 字段反映采集时状态；最终 automatic/review/final 状态在 acceptance.json 分别记录。
 

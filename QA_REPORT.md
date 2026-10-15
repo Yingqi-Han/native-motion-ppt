@@ -6,6 +6,6 @@
 
 原生导出、桌面录屏、阶段识别、运动检测与 assets 中 58 个现有文件和 v1.6.0 逐字节相同，见 docs/engine-provenance.json。改动限包版本读取、安装/分发脚本及仓库组织，没有将旧录像套用到新的播放行为。
 
-实际 WPS 证据覆盖五页科学示例及独立两页项目的点击、自动翻页、柱底、主体运动和原生 Morph，原始 SHA 与范围见 docs/verification.md 和 showcase/manifest.json。完整原始验收工程预备作为 Release 的独立附件；showcase 只是原样摘录。
+实际 WPS 证据覆盖五页科学示例及独立两页项目的点击、自动翻页、柱底、主体运动和原生 Morph，原始 SHA 与范围见 docs/verification.md 和 showcase/manifest.json。完整原始验收工程已作为 v1.6.1 Release 的独立附件发布，服务器 SHA 与原件相同；showcase 只是原样摘录。
 
-历史 v1.5.0 / v1.6.0 检查记录保存在 docs/history/，其中路径和环境描述保留历史上下文。CI 工作流已配置，远端是否执行及结果需发布后单独核对。本地自动检查不认证 Windows WPS、PowerPoint，也不替代真实 WPS 放映。
+历史 v1.5.0 / v1.6.0 检查记录保存在 docs/history/，其中路径和环境描述保留历史上下文。原始发布提交 48a11bb 的 main/tag CI、源码 Release 和证据附件工作流均已在 GitHub 成功完成：[main 检查](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723339178)、[源码发布](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723444000)、[证据附件](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723695017)。从公开 Release 下载的源码包通过 SHA 和全新安装验证。本地及 CI 自动检查不认证 Windows WPS、PowerPoint，也不替代真实 WPS 放映。
