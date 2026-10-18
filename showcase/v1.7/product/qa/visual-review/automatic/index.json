@@ -1,0 +1,55 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+  "samples": [
+    {
+      "path": "qa/visual-review/automatic/frame-001.png",
+      "frame_index": 206,
+      "timestamp": 6.866667,
+      "sha256": "bb2d530c49bd9d2abcbfa59558a268b1d269ed0a1db455cbe6fd1275ff02c7ef"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-002.png",
+      "frame_index": 218,
+      "timestamp": 7.266667,
+      "sha256": "fbe8ffe56ce161565d7f55717e119f02dad0a2a145de4fdc7f66518e04b59c87"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-003.png",
+      "frame_index": 233,
+      "timestamp": 7.766667,
+      "sha256": "7c947c078367b60ae59adc928220438b32cb7b2076621af0535b6ac691597320"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-004.png",
+      "frame_index": 248,
+      "timestamp": 8.266667,
+      "sha256": "f3dd9be2c30d168427409b2f1d55220e3f65747601d2977efbfd4ddfa8411a35"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-005.png",
+      "frame_index": 263,
+      "timestamp": 8.766667,
+      "sha256": "09e2847dab919e26f0b8324dc5027744053ed50a787c0017f1f3f21736840294"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-006.png",
+      "frame_index": 278,
+      "timestamp": 9.266667,
+      "sha256": "9546db2639b71ff538fc6eae201665925cd83b6999269008455f566eb19c30e8"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-007.png",
+      "frame_index": 468,
+      "timestamp": 15.6,
+      "sha256": "849968f840af8d6e65482d5d822138b40ed93a32ddcda9fe7498756c2c8bbd3e"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-008.png",
+      "frame_index": 769,
+      "timestamp": 25.633333,
+      "sha256": "d0e899c21d761960412da060edbc823c6fb31e43ef62c7c8ba60ab287926026f"
+    }
+  ],
+  "contact": "qa/visual-review/automatic/contact.jpg"
+}

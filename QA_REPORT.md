@@ -1,11 +1,13 @@
-# Native Motion PPT v1.6.1 · 发布检查
+# Native Motion PPT v1.7.0 · 发布检查
 
-2026-10-15 的独立仓库整理版。93 项 Python unittest、11 项 Node 时间线检查均通过；skill 结构验证通过。原有 89 项行为回归继续保留，新增包版本一致性、源码 ZIP 确定性与实际安装、归档篡改拒绝及嵌套输出自打包保护。
+本轮新增统一项目入口、按任务诊断、核心依赖启动流程、产品/进展示例，并修复实播阶段识别与失败报告。117 项 Python unittest、11 项 Node 时间线检查通过，skill 结构验证通过。
 
-本版新增 source-only 分发，实际运行 package_skill.py --source-only 与 verify_delivery.py，验证 ZIP CRC、完整成员清单、逐文件 SHA、版本及解压后的全新安装。源码包和安装器排除 .git、.github、showcase、dist、生成输出、缓存和私有播放器配置。
+隔离环境只安装 requirements-core.txt，实际执行 new、严格 build、preview 和 enhance，检查原稿及已有动画保留、随包字体匹配；确认未安装 NumPy、PyMuPDF、Playwright，未启动 Office 或浏览器。GitHub 的 Linux/Windows 核心任务和 Python 3.10/3.12 完整回归已通过：[检查记录](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/39116916502)。首次跨平台失败记录保留，修复 Windows UTF-8 读取并为中文示例检查安装完整字体，没有跳过失败断言。
 
-原生导出、桌面录屏、阶段识别、运动检测与 assets 中 58 个现有文件和 v1.6.0 逐字节相同，见 docs/engine-provenance.json。改动限包版本读取、安装/分发脚本及仓库组织，没有将旧录像套用到新的播放行为。
+实测从公开 v1.6.1 源码包安装后执行受管理升级，确认新入口字节、旧版备份和本地修改阻止覆盖。升级检查只证明安装器行为。
 
-实际 WPS 证据覆盖五页科学示例及独立两页项目的点击、自动翻页、柱底、主体运动和原生 Morph，原始 SHA 与范围见 docs/verification.md 和 showcase/manifest.json。完整原始验收工程已作为 v1.6.1 Release 的独立附件发布，服务器 SHA 与原件相同；showcase 只是原样摘录。
+两套新示例的真实 WPS 点击/自动录像、原生柱展开、主体运动、Morph 与自动翻页分别检查；最终状态及校验清单见 [实播验证](docs/verification.md)。自动首屏晚展开误漏和旧页面遮罩截断主体的中间结果保留，代码修正后独立复验。失败状态传播另以退出码为 1 的实际子进程做行为回归，合成测试不计作播放器证据。
 
-历史 v1.5.0 / v1.6.0 检查记录保存在 docs/history/，其中路径和环境描述保留历史上下文。原始发布提交 48a11bb 的 main/tag CI、源码 Release 和证据附件工作流均已在 GitHub 成功完成：[main 检查](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723339178)、[源码发布](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723444000)、[证据附件](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/38723695017)。从公开 Release 下载的源码包通过 SHA 和全新安装验证。本地及 CI 自动检查不认证 Windows WPS、PowerPoint，也不替代真实 WPS 放映。
+源码分发执行 source-only 打包和 verify_delivery.py，核对 ZIP CRC、成员清单、SHA、版本与解压后全新安装。实际 WPS 工程另行归档，保留源/PPT/双录像、采集证据、机器检查、结构化视觉审阅、实现快照、报告与可安装工程。
+
+历史 v1.6.1 检查见 [原记录](docs/history/QA_REPORT-v1.6.1.md)，旧引擎来源清单仅解释 v1.6.1，不能认证本轮检测器。CI 与打包检查不认证 Windows WPS 或 Microsoft PowerPoint。

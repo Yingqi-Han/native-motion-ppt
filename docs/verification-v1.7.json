@@ -1,0 +1,378 @@
+{
+  "version": "1.7.0",
+  "player_scope": "Pinned international Linux WPS 11.1.0.11723.XA; not Windows WPS or Microsoft PowerPoint",
+  "runtime_commit": "c75ab840b60fac4a4d3ec9862b63194c95765d6b",
+  "ci_run": "https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/39116916502",
+  "unit_tests": {
+    "python": 117,
+    "node": 11
+  },
+  "core_cli_platforms": [
+    "Linux (local isolated + GitHub CI)",
+    "Windows (GitHub CI)"
+  ],
+  "runs": [
+    {
+      "project": "product",
+      "acceptance_status": "passed",
+      "automatic_acceptance_status": "passed",
+      "checks": {
+        "passed": 22,
+        "failed": 0,
+        "pending": 0
+      },
+      "source_json_sha256": "6c882ec7a826b66c4812c37e355cce4c87b9c0f00eeb075cb980ce43a76cc3bd",
+      "recordings": {
+        "manual": {
+          "video": "player-recording.mp4",
+          "pptx": "deck.pptx",
+          "evidence": "playback-evidence.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+          "source_pptx_sha256": "a030f9ead764a10858b1265de22fde7c1dead86dc9e0e0877f75709a86dcdc59"
+        },
+        "automatic": {
+          "video": "player-recording-auto.mp4",
+          "pptx": "deck-auto.pptx",
+          "evidence": "playback-evidence-auto.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+          "source_pptx_sha256": "e3c2cbbd88c1c06929b17570c40b04daa149feb424e74ea21045537357130165"
+        }
+      },
+      "archive": {
+        "file": "acceptance-delivery.zip",
+        "sha256": "0c3d82573ae54a8dff751e9ba2632fbcbdcc1fee8ab8963b9de240306878a3a1",
+        "bytes": 33661509
+      },
+      "metrics": {
+        "manual": {
+          "duration_seconds": 28.3,
+          "max_bar_baseline_deviation_px": 1.0,
+          "morphs": [
+            {
+              "status": "passed",
+              "distinct_intermediate_poses": 75,
+              "max_center_step_px": 55.5,
+              "first_box": [
+                149,
+                619,
+                369,
+                769
+              ],
+              "last_box": [
+                1190,
+                520,
+                1460,
+                698
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "slide": 1,
+              "object": "product-token",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 1.4,
+              "observed_end": 3.3
+            },
+            {
+              "slide": 1,
+              "object": "revision-bar-0",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 14.0,
+              "observed_start": 4.533333,
+              "observed_end": 5.2
+            },
+            {
+              "slide": 1,
+              "object": "revision-bar-1",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 7.0,
+              "observed_start": 4.666667,
+              "observed_end": 5.3
+            },
+            {
+              "slide": 2,
+              "object": "product-token",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 3.0,
+              "observed_start": 11.266667,
+              "observed_end": 13.733333
+            }
+          ]
+        },
+        "automatic": {
+          "duration_seconds": 26.3,
+          "max_bar_baseline_deviation_px": 1.0,
+          "morphs": [
+            {
+              "status": "passed",
+              "distinct_intermediate_poses": 74,
+              "max_center_step_px": 55.5,
+              "first_box": [
+                149,
+                619,
+                369,
+                769
+              ],
+              "last_box": [
+                1190,
+                520,
+                1460,
+                698
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "slide": 1,
+              "object": "product-token",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 1.366667,
+              "observed_end": 3.266667
+            },
+            {
+              "slide": 1,
+              "object": "revision-bar-0",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 13.0,
+              "observed_start": 2.533333,
+              "observed_end": 3.2
+            },
+            {
+              "slide": 1,
+              "object": "revision-bar-1",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 7.0,
+              "observed_start": 2.7,
+              "observed_end": 3.333333
+            },
+            {
+              "slide": 2,
+              "object": "product-token",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 9.3,
+              "observed_end": 11.733333
+            }
+          ]
+        }
+      }
+    },
+    {
+      "project": "progress",
+      "acceptance_status": "passed",
+      "automatic_acceptance_status": "passed",
+      "checks": {
+        "passed": 22,
+        "failed": 0,
+        "pending": 0
+      },
+      "source_json_sha256": "38323db24e7ed552716907f460339a9813a836a679363cd20be3096b1bbe2dcc",
+      "recordings": {
+        "manual": {
+          "video": "player-recording.mp4",
+          "pptx": "deck.pptx",
+          "evidence": "playback-evidence.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "3f6cb166cb4d1996f6fd17201aa94457ff21d868d4984f0bad7ad6ddc5c4879d",
+          "source_pptx_sha256": "ee9285a2f731d1106c90096164769b0dca00aedbc3776ddd56de19c47c7ae68b"
+        },
+        "automatic": {
+          "video": "player-recording-auto.mp4",
+          "pptx": "deck-auto.pptx",
+          "evidence": "playback-evidence-auto.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "9ed4cf41143bb808806f952ea82992798b427e84fcfeeaafb3cb6e358db99eb7",
+          "source_pptx_sha256": "adf183890d36cc28ad1a525231f839f85cae0d5f3661d20e95a41855a6dff7f6"
+        }
+      },
+      "archive": {
+        "file": "acceptance-delivery.zip",
+        "sha256": "4f4531513e66cabb9fcda4a44276736d511c53537c2568701d2508c252ec9c11",
+        "bytes": 35404795
+      },
+      "metrics": {
+        "manual": {
+          "duration_seconds": 28.3,
+          "max_bar_baseline_deviation_px": 0,
+          "morphs": [
+            {
+              "status": "passed",
+              "distinct_intermediate_poses": 73,
+              "max_center_step_px": 56.0,
+              "first_box": [
+                170,
+                619,
+                310,
+                759
+              ],
+              "last_box": [
+                1240,
+                530,
+                1420,
+                710
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "slide": 1,
+              "object": "delivery-marker",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 1.4,
+              "observed_end": 3.433333
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-0",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 16.0,
+              "observed_start": 4.566667,
+              "observed_end": 5.233333
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-1",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 12.0,
+              "observed_start": 4.7,
+              "observed_end": 5.366667
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-2",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 8.0,
+              "observed_start": 4.866667,
+              "observed_end": 5.5
+            },
+            {
+              "slide": 2,
+              "object": "delivery-marker",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 11.3,
+              "observed_end": 13.733333
+            }
+          ]
+        },
+        "automatic": {
+          "duration_seconds": 26.3,
+          "max_bar_baseline_deviation_px": 0,
+          "morphs": [
+            {
+              "status": "passed",
+              "distinct_intermediate_poses": 76,
+              "max_center_step_px": 57.0,
+              "first_box": [
+                170,
+                619,
+                310,
+                759
+              ],
+              "last_box": [
+                1240,
+                530,
+                1420,
+                710
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "slide": 1,
+              "object": "delivery-marker",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 1.366667,
+              "observed_end": 3.433333
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-0",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 16.0,
+              "observed_start": 2.533333,
+              "observed_end": 3.2
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-1",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 12.0,
+              "observed_start": 2.666667,
+              "observed_end": 3.333333
+            },
+            {
+              "slide": 1,
+              "object": "milestone-bar-2",
+              "kind": "bar",
+              "status": "passed",
+              "max_step_px": 8.0,
+              "observed_start": 2.8,
+              "observed_end": 3.433333
+            },
+            {
+              "slide": 2,
+              "object": "delivery-marker",
+              "kind": "actor",
+              "status": "passed",
+              "max_step_px": 2.0,
+              "observed_start": 9.3,
+              "observed_end": 11.733333
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "same_recording_regression": {
+    "status": "passed",
+    "scope": "Same original WPS recording: phase detector regression only, not a complete acceptance run",
+    "recording_sha256": "914241e988a2d5d4ff52e68e5bd2d319462853961749a05d5c0be0fa7813b264",
+    "before_report_sha256": "0d8c9a5cff057ea24cf97339d6ae94b1b3427c17acc1f6186d8a6d1c7b05c8f3",
+    "after_report_sha256": "8c0b8109b9cb8cf41206def37d227bcd1970ea0490c55f0e4423b70e04e3d8c6",
+    "before_status": "failed",
+    "after_status": "passed",
+    "before_last_box": [
+      1240,
+      578,
+      1420,
+      648
+    ],
+    "after_last_box": [
+      1240,
+      530,
+      1420,
+      710
+    ],
+    "thresholds_widened": false,
+    "source_or_recording_modified": false,
+    "implementation": {
+      "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+      "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+    }
+  },
+  "preview_scope": "Remotion/browser design previews have separate provenance; only WPS screen captures are playback evidence"
+}

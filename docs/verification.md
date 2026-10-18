@@ -1,5 +1,33 @@
 # 验证与实播证据
 
+## v1.7.0：产品介绍与项目进展
+
+2026-10-18，两套新示例在固定国际版 Linux WPS **11.1.0.11723.XA** 完成真实点击/自动放映，并用本版检测器复验。画布 1600×900，采集 30fps；采集帧率不代表播放器重绘率。每套最终 **22 通过、0 失败、0 待检查**，技术自动结果与视觉审阅分别保留。
+
+| 项目 | 产品介绍 | 项目进展 |
+|---|---|---|
+| 页数 / 柱数 | 3 / 2 | 3 / 3 |
+| 点击 / 自动录像 | 28.30 / 26.30 秒 | 28.30 / 26.30 秒 |
+| 柱底最大偏差（点击 / 自动） | 1 / 1px | 0 / 0px |
+| Morph 中间轮廓（点击 / 自动） | 66 / 66 | 73 / 76 |
+| Morph 最大中心步长（点击 / 自动） | 55.5 / 55.5px | 56 / 57px |
+
+每套都检查柱展开、首屏主体运动、跨页 Morph 与到位后有限漂移；自动版仅输入 F5，三页顺序来自实际像素。主文件 Morph 加上无对象动画的隔离实录诊断共同验收。三页的真实联系表、完整页面和 Morph 关键帧经视觉审阅，绑定两份录像及实际帧 SHA。
+
+- 产品：[点击实录](../showcase/v1.7/product/player-recording.mp4) / [自动实录](../showcase/v1.7/product/player-recording-auto.mp4) / [点击 PPT](../showcase/v1.7/product/deck.pptx) / [自动 PPT](../showcase/v1.7/product/deck-auto.pptx) / [最终报告](../showcase/v1.7/product/REPORT.md)。
+- 进展：[点击实录](../showcase/v1.7/progress/player-recording.mp4) / [自动实录](../showcase/v1.7/progress/player-recording-auto.mp4) / [点击 PPT](../showcase/v1.7/progress/deck.pptx) / [自动 PPT](../showcase/v1.7/progress/deck-auto.pptx) / [最终报告](../showcase/v1.7/progress/REPORT.md)。
+- [机器摘要及源/PPT/录像 SHA](verification-v1.7.json) / [摘录逐文件清单](../showcase/v1.7/manifest.json)。摘录缺少完整 QA 依赖，完整校验应解压 Release 工程。
+
+完整工程：[wps-v1.7.0-delivery.zip](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.7.0/wps-v1.7.0-delivery.zip)，70,532,193 字节，SHA-256 `31998859350969e143cd7edb3a90ba1c69f3df4ae9689664c886ed0e9bdd44b3`。内含 product / progress 的独立 acceptance-delivery.zip、完整源/PPT/设计视频/实录/检查/审阅/实现快照，以及本轮回归原件。解压内层 ZIP 后，用其 project/scripts/verify_acceptance.py 检查运行目录。
+
+本轮保留了两类开发中间结果：产品的首屏晚展开使旧窗口漏扫早期主体；进展的旧页文字/网格遮罩把实际 180px 高圆形截成 70px，引发双影误报。前者复用原始录像在新运行检查；后者既对原始录像独立重算阶段（失败 → 通过，录像 SHA 相同），又做完整新录制验收。未改配色、源数据、录像或放宽阈值。原先失败的报告仍是失败原件，不能作为最终通过工程；失败状态传播另有行为回归。
+
+启动编辑器提示、短暂黑/暗帧保留，放映画面单独检查。示例数据与流程均为模拟内容。此处不认证 Windows WPS、Microsoft PowerPoint，复杂文本形变、透明/旋转/遮挡与同色组合仍可能待检查。CLI 的 Linux/Windows CI 只认证核心工作流，详见 [发布检查](../QA_REPORT.md)。历史 v1.6.1 引擎来源清单不代表本轮实现。
+
+---
+
+# 历史：v1.6.0 / v1.6.1
+
 2026-10-15，v1.6.0 在 Debian amd64 的国际版 WPS Presentation Linux **11.1.0.11723.XA** 上完成两套项目的真实点击与自动放映。v1.6.1 是独立仓库和分发整理；原生导出、桌面采集、运动检测与 assets 对应文件和实测版本逐字节一致，见 [引擎来源清单](engine-provenance.json)。包版本读取和分发脚本另行检查。
 
 | 项目 | 五页科学示例 | 独立两页回归 |

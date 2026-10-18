@@ -1,0 +1,126 @@
+{
+  "README.md": {
+    "sha256": "9802d6ca013f96791d5d05e600c493d56916ce37d40e440576861bee7329a0fb",
+    "bytes": 987
+  },
+  "product/REPORT.md": {
+    "sha256": "90f59d421b72e9add18cba15093149647fec57b7571b5e87e47c52ca6c6e371e",
+    "bytes": 3248
+  },
+  "product/acceptance.json": {
+    "sha256": "b6c89278a5cb6a5f34fd2d58fdd924a80f1f5e7a00ef470c52639a61bf54c8ba",
+    "bytes": 42531
+  },
+  "product/deck-auto.pptx": {
+    "sha256": "e3c2cbbd88c1c06929b17570c40b04daa149feb424e74ea21045537357130165",
+    "bytes": 43360
+  },
+  "product/deck.pptx": {
+    "sha256": "a030f9ead764a10858b1265de22fde7c1dead86dc9e0e0877f75709a86dcdc59",
+    "bytes": 43402
+  },
+  "product/playback-evidence-auto.json": {
+    "sha256": "d5c3699ca9ffca1b9cf3df2fc940759159f626f5a10f153b02e23a04ccf25018",
+    "bytes": 2903
+  },
+  "product/playback-evidence.json": {
+    "sha256": "428ad42c0046305769a18fc92181c13615db086f2937077027f3ea10fab7255b",
+    "bytes": 3200
+  },
+  "product/player-recording-auto.mp4": {
+    "sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+    "bytes": 636711
+  },
+  "product/player-recording.mp4": {
+    "sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+    "bytes": 677487
+  },
+  "product/project.json": {
+    "sha256": "6c882ec7a826b66c4812c37e355cce4c87b9c0f00eeb075cb980ce43a76cc3bd",
+    "bytes": 27404
+  },
+  "product/qa/automatic/playback/native-contact.jpg": {
+    "sha256": "ee6a246f5680357d7db054844097257bf26acfce6c9d7b0e080a1d4d8df93a1e",
+    "bytes": 873648
+  },
+  "product/qa/manual/playback/native-contact.jpg": {
+    "sha256": "38e3b8bf8be97a2e131780c92b36822001bdcb0cf339819c2c54ea9a44f3db46",
+    "bytes": 1125465
+  },
+  "product/qa/visual-review/automatic/contact.jpg": {
+    "sha256": "e211f34d8c78034b6b128800d311aa29b1e3e6011ab619f985c961ef77e61495",
+    "bytes": 123147
+  },
+  "product/qa/visual-review/automatic/index.json": {
+    "sha256": "341ff44d6be8de8926aa89870d34f2219b6c152e61ce86a5b68c709bb1db9167",
+    "bytes": 1891
+  },
+  "product/qa/visual-review/manual/contact.jpg": {
+    "sha256": "c95937aa3b3ec40a35480299e6522d3d5b7b835e549ab8a0e3b9a68361a0427a",
+    "bytes": 124665
+  },
+  "product/qa/visual-review/manual/index.json": {
+    "sha256": "8361325a239d3a95daa1155ab8874157dd2c8f798a30bea642edcf650e76d8f5",
+    "bytes": 1857
+  },
+  "progress/REPORT.md": {
+    "sha256": "85622eb8590361043341c6f8c72342d746389231a763a2d26de473bde5eb564b",
+    "bytes": 3249
+  },
+  "progress/acceptance.json": {
+    "sha256": "278b17a141e84088061537f76d6dcdbde6b99aa2c3dd7ea8b4e1245676649f4a",
+    "bytes": 33660
+  },
+  "progress/deck-auto.pptx": {
+    "sha256": "adf183890d36cc28ad1a525231f839f85cae0d5f3661d20e95a41855a6dff7f6",
+    "bytes": 43480
+  },
+  "progress/deck.pptx": {
+    "sha256": "ee9285a2f731d1106c90096164769b0dca00aedbc3776ddd56de19c47c7ae68b",
+    "bytes": 43523
+  },
+  "progress/playback-evidence-auto.json": {
+    "sha256": "0f6dbf6466f11bb134d4d0bbace36bf6d292941950cbd797feefbb69c3585ba1",
+    "bytes": 2921
+  },
+  "progress/playback-evidence.json": {
+    "sha256": "cd32488aaf96983748eb4d1c5a9a1876a720ee5f9a117449c039595cc2de2b7a",
+    "bytes": 3217
+  },
+  "progress/player-recording-auto.mp4": {
+    "sha256": "9ed4cf41143bb808806f952ea82992798b427e84fcfeeaafb3cb6e358db99eb7",
+    "bytes": 562475
+  },
+  "progress/player-recording.mp4": {
+    "sha256": "3f6cb166cb4d1996f6fd17201aa94457ff21d868d4984f0bad7ad6ddc5c4879d",
+    "bytes": 617445
+  },
+  "progress/project.json": {
+    "sha256": "38323db24e7ed552716907f460339a9813a836a679363cd20be3096b1bbe2dcc",
+    "bytes": 30189
+  },
+  "progress/qa/automatic/playback/native-contact.jpg": {
+    "sha256": "5d7faf40ca62cfc2408d790350cd1effabf1da09716b833824c1c9d9959a995b",
+    "bytes": 904291
+  },
+  "progress/qa/manual/playback/native-contact.jpg": {
+    "sha256": "197e2c1ee65c7e1957996977850d900782973cde4ea505b71bb1c9ce6b7f6486",
+    "bytes": 1200463
+  },
+  "progress/qa/visual-review/automatic/contact.jpg": {
+    "sha256": "68d81674bb4f7ce06b0037646ecd8b75dcfea61adf4d13c53e12529b7beab6ae",
+    "bytes": 123025
+  },
+  "progress/qa/visual-review/automatic/index.json": {
+    "sha256": "545dd5865cf16446e6854026ad25637da60995fea79b345d020a346b9f0ac606",
+    "bytes": 1861
+  },
+  "progress/qa/visual-review/manual/contact.jpg": {
+    "sha256": "aefc155e7331759e4bbbbd35e1ff289bd870d9464fed2f4f9005a0556929a5a6",
+    "bytes": 123703
+  },
+  "progress/qa/visual-review/manual/index.json": {
+    "sha256": "87e5765bd8154be852c9f6848f52e0e6de4f45153238249e7a6351829d01a6e7",
+    "bytes": 1837
+  }
+}

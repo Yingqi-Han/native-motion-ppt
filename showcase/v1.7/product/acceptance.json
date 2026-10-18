@@ -1,0 +1,1143 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-18T09:54:24.091904+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/native-motion-ppt/output/v170-runs/product-checked/project.json",
+    "snapshot": "project.json",
+    "sha256": "6c882ec7a826b66c4812c37e355cce4c87b9c0f00eeb075cb980ce43a76cc3bd"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "reused_from_parent": true,
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "reused_from_parent": true,
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "reused_from_parent": true,
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "reused_from_parent": true,
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Reused installation snapshot; check-only launches no player",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 849 actual frames, 4 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/manual/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "3 actual held pages compared with Office references",
+      "evidence": "qa/manual/playback/native-playback-audit.json"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 789 actual frames, 4 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/automatic/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "3 actual held pages compared with Office references",
+      "evidence": "qa/automatic/playback/native-playback-audit.json"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/180f957f844a4fe2c0990b139a0e3731cf635fe12f43505b6ff2bc875af72046.json",
+      "review_note": "已查看原始点击/自动 WPS 录像的完整实际联系表、两份 Morph 关键帧联系表及自动版三页完整画面；本次重检的对应帧与已查看帧逐字节一致。两柱从共同基线展开到 72/36，蓝色圆角矩形跨页保持单一实心主体并移动/放大，标题/旧柱内容单独淡出；第二页主体到位后有限漂移与停留可区分，第三页三张交付卡片和中文可读、无裁切遮挡。自动版按 01/03、02/03、03/03 顺序前进，采集输入只含 F5。保留启动编辑器字体提示与短暂黑/暗帧，实际放映页未见该提示。结论限固定 Linux WPS 和本次模拟内容。"
+    },
+    {
+      "id": "source-preserved",
+      "label": "输入与依赖绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Immutable new run; selected dependency SHA-256 recorded in lineage"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/phases",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-18T09:54:24.124619+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 20.068
+    },
+    {
+      "id": "motion-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-18T09:54:44.194213+00:00",
+      "status": "passed",
+      "log": "logs/motion-manual.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.838
+    },
+    {
+      "id": "frames-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/manual/playback"
+      ],
+      "started_at": "2026-10-18T09:54:52.039414+00:00",
+      "status": "passed",
+      "log": "logs/frames-manual.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 3.455
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-18T09:54:55.497118+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 17.747
+    },
+    {
+      "id": "motion-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-18T09:55:13.248414+00:00",
+      "status": "passed",
+      "log": "logs/motion-automatic.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 10.201
+    },
+    {
+      "id": "frames-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/playback-evidence-auto.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/qa/automatic/playback"
+      ],
+      "started_at": "2026-10-18T09:55:23.461357+00:00",
+      "status": "passed",
+      "log": "logs/frames-automatic.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 3.042
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-18T09:55:26.506266+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 6.761
+    },
+    {
+      "id": "review-frames",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/extract_review_frames.py",
+        "/workspace/native-motion-ppt/output/v170-runs/product-final"
+      ],
+      "started_at": "2026-10-18T09:55:33.270247+00:00",
+      "status": "passed",
+      "log": "logs/review-frames.log",
+      "implementation": {
+        "sha256": "e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d",
+        "snapshot": "implementations/e129aa01481786b0c7e6f6e5d6cc0046802614a8c9bbb53873c144b56440983d.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 6.065
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+      "bytes": 677487,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "428ad42c0046305769a18fc92181c13615db086f2937077027f3ea10fab7255b",
+      "bytes": 3200,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+      "bytes": 636711,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "d5c3699ca9ffca1b9cf3df2fc940759159f626f5a10f153b02e23a04ccf25018",
+      "bytes": 2903,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "6c882ec7a826b66c4812c37e355cce4c87b9c0f00eeb075cb980ce43a76cc3bd",
+      "bytes": 27404,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "a030f9ead764a10858b1265de22fde7c1dead86dc9e0e0877f75709a86dcdc59",
+      "bytes": 43402,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "e3c2cbbd88c1c06929b17570c40b04daa149feb424e74ea21045537357130165",
+      "bytes": 43360,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "a5d97e7c7b4ff7b5e74fbc134b0314af74451faba40b44635ed203ebace64f68",
+      "bytes": 1110535,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "workflow_mode": "check",
+  "requested_target_player": "wps-desktop",
+  "lineage": {
+    "parent_acceptance_sha256": "ec4679b2c71d59f5426f4809d7ddde94b5abdad36dff6b8b1b4f5663846abef7",
+    "parent_manifest_sha256": "93ccbca56672d5696f764b68c303a3433c3f2df86840e49eaf97ceb6dcd6ec42",
+    "mode": "check",
+    "copied": [
+      {
+        "path": "capture/automatic/capture.log",
+        "sha256": "5670a06a3e6999fbad323de70120e4e89bda53e07ca0ed834026d4d844841cda",
+        "bytes": 8325
+      },
+      {
+        "path": "capture/automatic/editor-before-show.png",
+        "sha256": "20913d604cfc61f76ecc34bc0349880d87b91f83e21c0e4b97d236dbd855fa24",
+        "bytes": 96107
+      },
+      {
+        "path": "capture/automatic/playback-evidence.json",
+        "sha256": "d5c3699ca9ffca1b9cf3df2fc940759159f626f5a10f153b02e23a04ccf25018",
+        "bytes": 2903
+      },
+      {
+        "path": "capture/automatic/player-recording.mp4",
+        "sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+        "bytes": 636711
+      },
+      {
+        "path": "capture/automatic/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "capture/automatic/show-start.png",
+        "sha256": "5c7a7b0fc00889cc7887a45b50976ae43fc0cced5adcc76fc9b6460dced60063",
+        "bytes": 64320
+      },
+      {
+        "path": "capture/automatic/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "capture/automatic/xvfb.log",
+        "sha256": "87e9572cf030493a1f7ba83d385129046b224374ca1414911674b30fc44276d7",
+        "bytes": 64
+      },
+      {
+        "path": "capture/manual/capture.log",
+        "sha256": "266b0bf223ab09bfeef22f32c63592d0786247e8ed4ec550d0dd98dae938ec49",
+        "bytes": 8722
+      },
+      {
+        "path": "capture/manual/editor-before-show.png",
+        "sha256": "b92974c80a46ea3c4735558000f1cd0da2180492d4c740eceae55d8e2f04c370",
+        "bytes": 95749
+      },
+      {
+        "path": "capture/manual/playback-evidence.json",
+        "sha256": "428ad42c0046305769a18fc92181c13615db086f2937077027f3ea10fab7255b",
+        "bytes": 3200
+      },
+      {
+        "path": "capture/manual/player-recording.mp4",
+        "sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+        "bytes": 677487
+      },
+      {
+        "path": "capture/manual/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "capture/manual/show-start.png",
+        "sha256": "5a356d8f600c602f91db27e0db878ec2db51d2d9407ee509555dbafdc24c3244",
+        "bytes": 60395
+      },
+      {
+        "path": "capture/manual/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "capture/manual/xvfb.log",
+        "sha256": "e2861dbf17c9cb74d57668ceaa0ec8111c014cd26d10d2d0dffdf37188dac690",
+        "bytes": 81
+      },
+      {
+        "path": "deck-auto.pptx",
+        "sha256": "e3c2cbbd88c1c06929b17570c40b04daa149feb424e74ea21045537357130165",
+        "bytes": 43360
+      },
+      {
+        "path": "deck.pptx",
+        "sha256": "a030f9ead764a10858b1265de22fde7c1dead86dc9e0e0877f75709a86dcdc59",
+        "bytes": 43402
+      },
+      {
+        "path": "design-preview.mp4",
+        "sha256": "a5d97e7c7b4ff7b5e74fbc134b0314af74451faba40b44635ed203ebace64f68",
+        "bytes": 1110535
+      },
+      {
+        "path": "diagnostic/capture/capture.log",
+        "sha256": "0e4376bfa3ff0ac02b044b3f4579896e093e7fc15eece2696a36371146240c07",
+        "bytes": 4945
+      },
+      {
+        "path": "diagnostic/capture/editor-before-show.png",
+        "sha256": "7420458a64777a4be9df606f1a6c5473109ee36cc78e6f250ff3af86f421b39e",
+        "bytes": 57435
+      },
+      {
+        "path": "diagnostic/capture/playback-evidence.json",
+        "sha256": "816375c1e85fe1a16c1917ff5aeaaa7d2975dbd5386a0963d059bf7fa40ab1e9",
+        "bytes": 2985
+      },
+      {
+        "path": "diagnostic/capture/player-recording.mp4",
+        "sha256": "dbbc1a56085aed3bc6c141c85f657ce44a5b6044cec6b149ad0740d6c59b7046",
+        "bytes": 85358
+      },
+      {
+        "path": "diagnostic/capture/player.log",
+        "sha256": "22d29912efa97efadceb23d779372300463f8c6cc88bdace79e3713434c55700",
+        "bytes": 152
+      },
+      {
+        "path": "diagnostic/capture/show-start.png",
+        "sha256": "4c28357fb7368015007bd8ef039ad7aaf5b3febdc2590fc84a5db12bddce3021",
+        "bytes": 9852
+      },
+      {
+        "path": "diagnostic/capture/window-manager.log",
+        "sha256": "6f748c3cd02a858c087697c3afac639205c62b7b206558bd40d1bcbd98165a5c",
+        "bytes": 85
+      },
+      {
+        "path": "diagnostic/capture/xvfb.log",
+        "sha256": "87e9572cf030493a1f7ba83d385129046b224374ca1414911674b30fc44276d7",
+        "bytes": 64
+      },
+      {
+        "path": "diagnostic/deck.manifest.json",
+        "sha256": "ff7b7f62ffafa21ddf4135160d8a99e9d9bd4f5ab3658d32e8dcaee29d87e3bb",
+        "bytes": 222
+      },
+      {
+        "path": "diagnostic/deck.pptx",
+        "sha256": "f629cfa76fdb128727e358e573b68fc6f3a525825457e8f1175fd23b31d1c91c",
+        "bytes": 35261
+      },
+      {
+        "path": "diagnostic/input-plan.json",
+        "sha256": "8899bbaf5d0310a6420cd3c5cd490390f0d5117256cc3cd988a3b6bd1fc697b3",
+        "bytes": 65
+      },
+      {
+        "path": "diagnostic/morph-audit.json",
+        "sha256": "2153f9cacb3e304dde2d4cc82f9210d2890688199f5204794454a1f2137cb8fa",
+        "bytes": 45848
+      },
+      {
+        "path": "diagnostic/project.json",
+        "sha256": "a765a0940583debeec312cab3a8fc8d4a78b1eb045be840c8f3a1a1558f66616",
+        "bytes": 1193
+      },
+      {
+        "path": "plans/automatic-input.json",
+        "sha256": "ccb64447955339548c49b6e5d8d9dc9fc8232ec8808aa45448f4781068ec2342",
+        "bytes": 173
+      },
+      {
+        "path": "plans/manual-input.json",
+        "sha256": "d475ff727477debb740b38210d7174fd74a21e873c2bd8c13d84b3e581c375e4",
+        "bytes": 1306
+      },
+      {
+        "path": "playback-evidence-auto.json",
+        "sha256": "d5c3699ca9ffca1b9cf3df2fc940759159f626f5a10f153b02e23a04ccf25018",
+        "bytes": 2903
+      },
+      {
+        "path": "playback-evidence.json",
+        "sha256": "428ad42c0046305769a18fc92181c13615db086f2937077027f3ea10fab7255b",
+        "bytes": 3200
+      },
+      {
+        "path": "playback-plan.json",
+        "sha256": "d475ff727477debb740b38210d7174fd74a21e873c2bd8c13d84b3e581c375e4",
+        "bytes": 1306
+      },
+      {
+        "path": "player-recording-auto.mp4",
+        "sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+        "bytes": 636711
+      },
+      {
+        "path": "player-recording.mp4",
+        "sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+        "bytes": 677487
+      },
+      {
+        "path": "project.json",
+        "sha256": "6c882ec7a826b66c4812c37e355cce4c87b9c0f00eeb075cb980ce43a76cc3bd",
+        "bytes": 27404
+      },
+      {
+        "path": "qa/auto/audit.json",
+        "sha256": "82884825d73d4a11c90d412fc4b2c9f74ef9abd243317a3dc1f8e334875dde86",
+        "bytes": 1203
+      },
+      {
+        "path": "qa/desktop-preflight.json",
+        "sha256": "2fa12b69a750c70b25c5049686a7b674decc3a95fca0cd9b64a034fffa320866",
+        "bytes": 966
+      },
+      {
+        "path": "qa/native/audit.json",
+        "sha256": "3e088cfec00f4d2e15520ef9ad7b9c702437aada31b84276a5db59c86713ddba",
+        "bytes": 7162
+      },
+      {
+        "path": "qa/native/rendered/contact.jpg",
+        "sha256": "b86110387e5c79d77fe365ecdcbea0538a681294a5b6e4954fe660d5aa88816a",
+        "bytes": 125734
+      },
+      {
+        "path": "qa/native/rendered/deck.pdf",
+        "sha256": "781570e6bdc90009b4bb4622029d20a4babd56c99ef024e90263e05f8d2c48d4",
+        "bytes": 77019
+      },
+      {
+        "path": "qa/native/rendered/slide-01.png",
+        "sha256": "4a6abc7329b1b269a747513ee75e40a67509058710b8778ffe96a828373f617e",
+        "bytes": 74644
+      },
+      {
+        "path": "qa/native/rendered/slide-02.png",
+        "sha256": "585d56629e990ff2d3fb8d6918935f099f913422d20b8b9de80575f77cfac5e6",
+        "bytes": 60974
+      },
+      {
+        "path": "qa/native/rendered/slide-03.png",
+        "sha256": "d20d6790b49fc2a0e7200606ac51cf9e72c9739e05b1da9c9fb505dfac13ade7",
+        "bytes": 90208
+      },
+      {
+        "path": "qa/preview/dynamic-contact.jpg",
+        "sha256": "8f16f58cdfbe2ad4b85dd2bb0b196a7e93f0ff71f1e502dae8613df7f3001d55",
+        "bytes": 241275
+      },
+      {
+        "path": "qa/preview/preview-audit.json",
+        "sha256": "789c381abea7596458d79370f053618ff582213f25bad7118fb2323a3fa84b74",
+        "bytes": 9695
+      },
+      {
+        "path": "qa/preview/scene-01-00000.png",
+        "sha256": "048fee14cf06245f8b676d27989f92ad1f7646bd4f5fefab28440f0a1acd3a96",
+        "bytes": 59022
+      },
+      {
+        "path": "qa/preview/scene-01-00100.png",
+        "sha256": "debdc67f6817f9633fe0f501fb97d8fb4ea980e4a45927edae0c77f02b7c526d",
+        "bytes": 59042
+      },
+      {
+        "path": "qa/preview/scene-01-00621.png",
+        "sha256": "c5693d1e75fd9af6fa0dfb40e6ea11742da2940319e51b9a4ebe8e8cc989ba08",
+        "bytes": 76385
+      },
+      {
+        "path": "qa/preview/scene-01-01000.png",
+        "sha256": "2888a9d6fd1a25063ea60e896530007abc1164099221d2ab6b47bc230216cdde",
+        "bytes": 76343
+      },
+      {
+        "path": "qa/preview/scene-01-01550.png",
+        "sha256": "d1b1f8e9c7bde3880582e73d05c588c3cc3a9f534c04c3cc2b1487fd17c94e79",
+        "bytes": 76524
+      },
+      {
+        "path": "qa/preview/scene-01-02001.png",
+        "sha256": "b9836b42d30e57b3d11c2bdbd9ebe775ea6f239359f7504a0ddc09ff163da7c4",
+        "bytes": 76644
+      },
+      {
+        "path": "qa/preview/scene-01-02100.png",
+        "sha256": "f578b4ce4378fdbe1e7be994dc5404a0c755e63f86a50314ea2f5c24715e72c4",
+        "bytes": 76663
+      },
+      {
+        "path": "qa/preview/scene-01-02220.png",
+        "sha256": "524bd897d0dfae4ece0d6e7508ec8f09d04b7705f4f9874826719a3817b2e65b",
+        "bytes": 77555
+      },
+      {
+        "path": "qa/preview/scene-01-02260.png",
+        "sha256": "c7db9361d3a839e7c44716237ff2bff90256471b2d676ab77fa9ccfea8c39c3f",
+        "bytes": 78816
+      },
+      {
+        "path": "qa/preview/scene-01-02380.png",
+        "sha256": "f04b0f281804cdd9b144878abdc855599d61671b1906b9d0e4fb0729790efd4f",
+        "bytes": 79049
+      },
+      {
+        "path": "qa/preview/scene-01-02541.png",
+        "sha256": "d9c4d4135dfb652e563aba53f47280a7f4648165b24b14dba25a3dd9fc8e29c7",
+        "bytes": 79054
+      },
+      {
+        "path": "qa/preview/scene-01-05999.png",
+        "sha256": "d9c4d4135dfb652e563aba53f47280a7f4648165b24b14dba25a3dd9fc8e29c7",
+        "bytes": 79054
+      },
+      {
+        "path": "qa/preview/scene-02-00000.png",
+        "sha256": "7892c6431f1ff8a708259f114617e7569b92e709ecb953ca363a0b00d2931a24",
+        "bytes": 79155
+      },
+      {
+        "path": "qa/preview/scene-02-00900.png",
+        "sha256": "dfb8db9272e38d57a0ec6c6403585a463d5e8c13e0616302d452225e0979de12",
+        "bytes": 91673
+      },
+      {
+        "path": "qa/preview/scene-02-01800.png",
+        "sha256": "0a620bcefcab1a3245e873611daab56ae292105673038d8c0f7bef65a708c33e",
+        "bytes": 46305
+      },
+      {
+        "path": "qa/preview/scene-02-01880.png",
+        "sha256": "0a620bcefcab1a3245e873611daab56ae292105673038d8c0f7bef65a708c33e",
+        "bytes": 46305
+      },
+      {
+        "path": "qa/preview/scene-02-01900.png",
+        "sha256": "0a620bcefcab1a3245e873611daab56ae292105673038d8c0f7bef65a708c33e",
+        "bytes": 46305
+      },
+      {
+        "path": "qa/preview/scene-02-02150.png",
+        "sha256": "ab3db352e01a58572e8845a794fa7d33b29db2b86f7e5f279a6278cf0284a85d",
+        "bytes": 64100
+      },
+      {
+        "path": "qa/preview/scene-02-02160.png",
+        "sha256": "43cf265de69044a7ed5726b19e3680a805184d29185cd5f84d7c5fe18dc7d5e3",
+        "bytes": 64224
+      },
+      {
+        "path": "qa/preview/scene-02-02421.png",
+        "sha256": "914249c2e3adf52ce5027f38f47af341b967c9f30871ac2ef334480b57f33fb6",
+        "bytes": 64409
+      },
+      {
+        "path": "qa/preview/scene-02-03150.png",
+        "sha256": "57a63603b646b720c8f52ad29822845b98984f52a61525cd1e5cea79cda15dcc",
+        "bytes": 64385
+      },
+      {
+        "path": "qa/preview/scene-02-04151.png",
+        "sha256": "bf156f32d1802ce77e42d1e7d7c048c794a1ee6fd55a59d6d3ea210beeb8b03d",
+        "bytes": 64407
+      },
+      {
+        "path": "qa/preview/scene-02-06799.png",
+        "sha256": "bf156f32d1802ce77e42d1e7d7c048c794a1ee6fd55a59d6d3ea210beeb8b03d",
+        "bytes": 64407
+      },
+      {
+        "path": "qa/preview/scene-03-00000.png",
+        "sha256": "2ee63339dfcb900dcb367475d1dd120f1500cdf9701e3d99fd2cdfe1301b9fcf",
+        "bytes": 64393
+      },
+      {
+        "path": "qa/preview/scene-03-00175.png",
+        "sha256": "bf237ce239c3bde43445f4b1e7d0c1d19226689edbace7847683c8e9c102fd48",
+        "bytes": 62911
+      },
+      {
+        "path": "qa/preview/scene-03-00350.png",
+        "sha256": "9a31eef7f12669dd6e6cbd43df3d470c1959bf0c8cd0f1523b94274800b0ece2",
+        "bytes": 32076
+      },
+      {
+        "path": "qa/preview/scene-03-00430.png",
+        "sha256": "9a31eef7f12669dd6e6cbd43df3d470c1959bf0c8cd0f1523b94274800b0ece2",
+        "bytes": 32076
+      },
+      {
+        "path": "qa/preview/scene-03-00450.png",
+        "sha256": "9a31eef7f12669dd6e6cbd43df3d470c1959bf0c8cd0f1523b94274800b0ece2",
+        "bytes": 32076
+      },
+      {
+        "path": "qa/preview/scene-03-01350.png",
+        "sha256": "cd72f32f2b44a1a327b3cf339df4f67f049a0276383c0b2d404ada7455262fa2",
+        "bytes": 53783
+      },
+      {
+        "path": "qa/preview/scene-03-01580.png",
+        "sha256": "c5ce9b50dcdbba4c7f62ee667548908d622d9db87d1e08e3d43247fad5a9fee6",
+        "bytes": 71860
+      },
+      {
+        "path": "qa/preview/scene-03-01690.png",
+        "sha256": "0d3ad80d21e23fc8bf4a9d9c33b747b32e57275f02beeaf513b0c9ce65aa24a4",
+        "bytes": 84479
+      },
+      {
+        "path": "qa/preview/scene-03-01790.png",
+        "sha256": "9085b59ecc76ed712cf3a48846d1a99eed3522721c37e5ebcfa37693e2a8b6d9",
+        "bytes": 93682
+      },
+      {
+        "path": "qa/preview/scene-03-01920.png",
+        "sha256": "887eb5778982bcd967f5597f87f35f3928f61fe92398f6eb956556052b0062ce",
+        "bytes": 94679
+      },
+      {
+        "path": "qa/preview/scene-03-02131.png",
+        "sha256": "7a20e6b4332d1396d77f7869bef6344d192c6ae81dca4f049a0c4383d39be7fd",
+        "bytes": 93415
+      },
+      {
+        "path": "qa/preview/scene-03-05999.png",
+        "sha256": "7a20e6b4332d1396d77f7869bef6344d192c6ae81dca4f049a0c4383d39be7fd",
+        "bytes": 93415
+      },
+      {
+        "path": "qa/source-review.json",
+        "sha256": "fa0f55fae1fec34219f88d055017cea6376f5f64db5dff4dfbfd0ee10d6bd5e6",
+        "bytes": 967
+      },
+      {
+        "path": "qa/video/video-0000.png",
+        "sha256": "f9f5107ccbe004197297ed5a4d77bc26668c5e2066f1637b050c5ffb64c0e16c",
+        "bytes": 185156
+      },
+      {
+        "path": "qa/video/video-0030.png",
+        "sha256": "e80a873ff6045f601f188e05da9097254a43301094b539e0ca761fae4cc9b3c6",
+        "bytes": 269510
+      },
+      {
+        "path": "qa/video/video-0033.png",
+        "sha256": "a1fb043c3ee8a5c0322a7c949fd71ff22214dd68ac123e97c27342bb61eb9954",
+        "bytes": 271794
+      },
+      {
+        "path": "qa/video/video-0034.png",
+        "sha256": "d08504cb2e07785b4ce86a4d4e6e7fa3193332a5da320b6ef68117064b6d3a9c",
+        "bytes": 271297
+      },
+      {
+        "path": "qa/video/video-0037.png",
+        "sha256": "249bafdc653e20d96f3aa8bdf167a2bbacf1a2153fc3f4c37ef1372ea25416ee",
+        "bytes": 273940
+      },
+      {
+        "path": "qa/video/video-0038.png",
+        "sha256": "4caf8c25ffab8b9c96d70902f059fcf005cdb098791d4b0d1ee0b74cd4d5bf9f",
+        "bytes": 274102
+      },
+      {
+        "path": "qa/video/video-0042.png",
+        "sha256": "02f611a702809158e5c3bdc91bdae88478706ca3a09df264576622c29ea29a42",
+        "bytes": 276142
+      },
+      {
+        "path": "qa/video/video-0046.png",
+        "sha256": "7184932026215ce73825266dd40aca7b11f289cab50bf4dce3475421e84f9ee3",
+        "bytes": 276430
+      },
+      {
+        "path": "qa/video/video-0050.png",
+        "sha256": "fc7d5d00e19f3343cad8ee390c523154fb0047bd37eb9cf9b3bb1ccf6ad28900",
+        "bytes": 277219
+      },
+      {
+        "path": "qa/video/video-0055.png",
+        "sha256": "8117ab22aeba233f5cb1a97b5a73f04022050ea929390dbf208f369ed992c935",
+        "bytes": 278948
+      },
+      {
+        "path": "qa/video/video-0058.png",
+        "sha256": "a09425e5a15e6e19440ebc3ee5e38f40d3ddd1c8e051f65f0066e652bc73b5c9",
+        "bytes": 278994
+      },
+      {
+        "path": "qa/video/video-0060.png",
+        "sha256": "cb3a99c0b9cadb7b2aac6619aafce8a44c8bb272cc2695bb11aa6a927e81d42a",
+        "bytes": 278918
+      },
+      {
+        "path": "qa/video/video-0063.png",
+        "sha256": "005c906b275776712e156a89fe2c9dbcaf8dbe02de9e4b4b7a38f8e16e223806",
+        "bytes": 279492
+      },
+      {
+        "path": "qa/video/video-0067.png",
+        "sha256": "c905263ce02fbb748f0c512a0eda478b721f6ba41ae2edb480c4be6a45c66a66",
+        "bytes": 284277
+      },
+      {
+        "path": "qa/video/video-0126.png",
+        "sha256": "dfdb36af257384e90f531dfd6fb3d72ef99b28b2e12b4c39f1e5e92d8cd63262",
+        "bytes": 288561
+      },
+      {
+        "path": "qa/video/video-0179.png",
+        "sha256": "fadc5da833624cde0840d43c7643659ba8e1edf7d0a8a01f75621dc0fb1d8659",
+        "bytes": 289424
+      },
+      {
+        "path": "qa/video/video-0180.png",
+        "sha256": "a86020af379a3a343a3d6c783373640f5aadfbada3221461b692c15c2fbb0a47",
+        "bytes": 289442
+      },
+      {
+        "path": "qa/video/video-0181.png",
+        "sha256": "05c51c30827c1d913f59ded3dbb9a706ac9b2d800b5c70f7803ffa0198e40794",
+        "bytes": 294107
+      },
+      {
+        "path": "qa/video/video-0207.png",
+        "sha256": "884e61a5de42fbcdf11dafbc7e5ef6a913c2ccf507f9a7da370245f5d9fd3b14",
+        "bytes": 322939
+      },
+      {
+        "path": "qa/video/video-0323.png",
+        "sha256": "3bf9bb96098b39cf930e1fa301fd718a667f0022e0faa13d1b40fbeaae1ddc25",
+        "bytes": 248761
+      },
+      {
+        "path": "qa/video/video-0383.png",
+        "sha256": "b232cc8190f4a2bf0873a58e53565a6b7f9e51b1ce083aa072b264190d9b4b0b",
+        "bytes": 249068
+      },
+      {
+        "path": "qa/video/video-0384.png",
+        "sha256": "f20f3d4b24e5a5bde708a5d461cbd1551d4cbc953b5263e972fe0f672b475e56",
+        "bytes": 248859
+      },
+      {
+        "path": "qa/video/video-0385.png",
+        "sha256": "c9db57159685804341b8f6ffe5b90c5efc11439a859ec15b3541299ad7927adf",
+        "bytes": 253144
+      },
+      {
+        "path": "qa/video/video-0389.png",
+        "sha256": "42990d73192baf8717d4d602ec846e63397de6418bcfe0601d2605564614a44d",
+        "bytes": 176228
+      },
+      {
+        "path": "qa/video/video-0510.png",
+        "sha256": "8504206d57d369d91757cee8826c2b24431a60adf7b2f4406275eb4f2ff193d4",
+        "bytes": 305712
+      },
+      {
+        "path": "qa/video/video-audit.json",
+        "sha256": "ed47876ea5374218d60ab502f1acac6af25c9114980159b4ef28b9802e7a7648",
+        "bytes": 3210
+      },
+      {
+        "path": "qa/video/video-contact.jpg",
+        "sha256": "748505b79dd08cf486475fd5144351aead155c15f995c7747e8ca13567d20f35",
+        "bytes": 693811
+      }
+    ]
+  },
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "970bd08f647d706c952b2b957a7d373124f5e1801e758ca72b2f9ce95c5df577",
+      "source_pptx_sha256": "a030f9ead764a10858b1265de22fde7c1dead86dc9e0e0877f75709a86dcdc59"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "c2a482e55f8daa7dce10c3b617bfff18bdedfc0e4849a434255eace79611d1cf",
+      "source_pptx_sha256": "e3c2cbbd88c1c06929b17570c40b04daa149feb424e74ea21045537357130165"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "passed",
+  "automatic_acceptance_status": "passed",
+  "finished_at": "2026-10-18T09:56:37.673924+00:00"
+}

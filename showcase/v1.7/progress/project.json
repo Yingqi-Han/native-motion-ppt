@@ -1,0 +1,1343 @@
+{
+  "version": 1,
+  "title": "项目进展 · 交付流程示例",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "fps": 30
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "F4F2EA",
+    "foreground": "142B31",
+    "accent": "B76A24"
+  },
+  "slides": [
+    {
+      "id": "progress-overview",
+      "duration": 6000,
+      "clicks": [
+        1000
+      ],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "fade",
+        "duration": 350
+      },
+      "objects": [
+        {
+          "id": "progress-overview-section",
+          "kind": "text",
+          "text": "PROJECT / STATUS",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "progress-overview-page",
+          "kind": "text",
+          "text": "01 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "progress-overview-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-overview-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "progress-heading-a",
+          "kind": "text",
+          "text": "阶段进展，\n用同一尺度比较。",
+          "box": [
+            108,
+            184,
+            650,
+            195
+          ],
+          "size": 66,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-purpose",
+          "kind": "text",
+          "text": "先看已完成的工作，\n再看需要推进的环节。",
+          "box": [
+            112,
+            420,
+            670,
+            105
+          ],
+          "size": 30,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "delivery-marker",
+          "kind": "ellipse",
+          "box": [
+            170,
+            620,
+            140,
+            140
+          ],
+          "fill": "B76A24",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 0,
+              "duration": 2000,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  3.865993248815555,
+                  0
+                ],
+                [
+                  7,
+                  -3.5817220013536515
+                ],
+                [
+                  7,
+                  -8
+                ],
+                [
+                  7,
+                  -12.41827799864635
+                ],
+                [
+                  3.865993248815555,
+                  -16
+                ],
+                [
+                  0,
+                  -16
+                ],
+                [
+                  -3.865993248815555,
+                  -16
+                ],
+                [
+                  -7,
+                  -12.41827799864635
+                ],
+                [
+                  -7,
+                  -8
+                ],
+                [
+                  -7,
+                  -3.5817220013536515
+                ],
+                [
+                  -3.865993248815555,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "progress-marker-caption",
+          "kind": "text",
+          "text": "同一项交付",
+          "box": [
+            120,
+            784,
+            430,
+            45
+          ],
+          "size": 25,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "milestone-grid-0",
+          "kind": "path",
+          "box": [
+            910,
+            650.0,
+            540,
+            0.001
+          ],
+          "d": "M 0 0.0 L 540 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            810,
+            630.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "milestone-grid-1",
+          "kind": "path",
+          "box": [
+            910,
+            575.0,
+            540,
+            0.001
+          ],
+          "d": "M 0 0.0 L 540 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-tick-1",
+          "kind": "text",
+          "text": "25",
+          "box": [
+            810,
+            555.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "milestone-grid-2",
+          "kind": "path",
+          "box": [
+            910,
+            500.0,
+            540,
+            0.001
+          ],
+          "d": "M 0 0.0 L 540 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-tick-2",
+          "kind": "text",
+          "text": "50",
+          "box": [
+            810,
+            480.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "milestone-grid-3",
+          "kind": "path",
+          "box": [
+            910,
+            425.0,
+            540,
+            0.001
+          ],
+          "d": "M 0 0.0 L 540 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-tick-3",
+          "kind": "text",
+          "text": "75",
+          "box": [
+            810,
+            405.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "milestone-grid-4",
+          "kind": "path",
+          "box": [
+            910,
+            350.0,
+            540,
+            0.001
+          ],
+          "d": "M 0 0.0 L 540 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-tick-4",
+          "kind": "text",
+          "text": "100",
+          "box": [
+            810,
+            330.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "milestone-baseline",
+          "kind": "path",
+          "box": [
+            910,
+            650,
+            540,
+            0.001
+          ],
+          "d": "M 0 0 L 540 0",
+          "fill": "none",
+          "stroke": "142B31",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "milestone-unit",
+          "kind": "text",
+          "text": "完成度（%）",
+          "box": [
+            910,
+            225,
+            300,
+            48
+          ],
+          "size": 29,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "milestone-bar-0",
+          "kind": "rect",
+          "box": [
+            962.2,
+            395.0,
+            75.6,
+            255.0
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 0,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "milestone-category-0",
+          "kind": "text",
+          "text": "设计",
+          "box": [
+            919.0,
+            676,
+            162.0,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "milestone-value-0",
+          "kind": "text",
+          "text": "85",
+          "box": [
+            905.0,
+            329.0,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1100,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "milestone-bar-1",
+          "kind": "rect",
+          "box": [
+            1142.2,
+            470.0,
+            75.6,
+            180.0
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 120,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "milestone-category-1",
+          "kind": "text",
+          "text": "联调",
+          "box": [
+            1099.0,
+            676,
+            162.0,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "milestone-value-1",
+          "kind": "text",
+          "text": "60",
+          "box": [
+            1085.0,
+            404.0,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1220,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "milestone-bar-2",
+          "kind": "rect",
+          "box": [
+            1322.2,
+            545.0,
+            75.6,
+            105.0
+          ],
+          "fill": "A8512E",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 240,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "milestone-category-2",
+          "kind": "text",
+          "text": "验收",
+          "box": [
+            1279.0,
+            676,
+            162.0,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "milestone-value-2",
+          "kind": "text",
+          "text": "35",
+          "box": [
+            1265.0,
+            479.0,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1340,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "progress-flow",
+      "duration": 6800,
+      "clicks": [],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "morph",
+        "duration": 1800
+      },
+      "objects": [
+        {
+          "id": "progress-flow-section",
+          "kind": "text",
+          "text": "PROJECT / DELIVERY",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "progress-flow-page",
+          "kind": "text",
+          "text": "02 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "progress-flow-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-flow-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "progress-heading-b",
+          "kind": "text",
+          "text": "让交付沿着\n同一条路径前进。",
+          "box": [
+            108,
+            180,
+            1350,
+            195
+          ],
+          "size": 66,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-stage-0",
+          "kind": "text",
+          "text": "设计确认",
+          "box": [
+            120,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "progress-link-0",
+          "kind": "path",
+          "box": [
+            420,
+            620,
+            240,
+            0.001
+          ],
+          "d": "M 0 0 L 240 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-stage-1",
+          "kind": "text",
+          "text": "接口联调",
+          "box": [
+            640,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "progress-link-1",
+          "kind": "path",
+          "box": [
+            940,
+            620,
+            240,
+            0.001
+          ],
+          "d": "M 0 0 L 240 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-stage-2",
+          "kind": "text",
+          "text": "验收发布",
+          "box": [
+            1160,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "delivery-marker",
+          "kind": "ellipse",
+          "box": [
+            1240,
+            530,
+            180,
+            180
+          ],
+          "fill": "B76A24",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 350,
+              "duration": 2000,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  3.865993248815555,
+                  0
+                ],
+                [
+                  7,
+                  -3.5817220013536515
+                ],
+                [
+                  7,
+                  -8
+                ],
+                [
+                  7,
+                  -12.41827799864635
+                ],
+                [
+                  3.865993248815555,
+                  -16
+                ],
+                [
+                  0,
+                  -16
+                ],
+                [
+                  -3.865993248815555,
+                  -16
+                ],
+                [
+                  -7,
+                  -12.41827799864635
+                ],
+                [
+                  -7,
+                  -8
+                ],
+                [
+                  -7,
+                  -3.5817220013536515
+                ],
+                [
+                  -3.865993248815555,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "progress-flow-note",
+          "kind": "text",
+          "text": "每一步都有明确输入、负责人和可核对的结束状态。",
+          "box": [
+            112,
+            755,
+            1380,
+            55
+          ],
+          "size": 28,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        }
+      ]
+    },
+    {
+      "id": "progress-actions",
+      "duration": 6000,
+      "clicks": [
+        1000
+      ],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "fade",
+        "duration": 350
+      },
+      "objects": [
+        {
+          "id": "progress-actions-section",
+          "kind": "text",
+          "text": "PROJECT / NEXT ACTIONS",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "progress-actions-page",
+          "kind": "text",
+          "text": "03 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "progress-actions-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-actions-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "progress-heading-c",
+          "kind": "text",
+          "text": "下一步，把依赖说清楚。",
+          "box": [
+            108,
+            184,
+            1380,
+            110
+          ],
+          "size": 64,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-next-subtitle",
+          "kind": "text",
+          "text": "围绕实际阻碍分配行动，避免只列完成百分比。",
+          "box": [
+            112,
+            315,
+            1380,
+            55
+          ],
+          "size": 30,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "progress-row-line-0",
+          "kind": "path",
+          "box": [
+            108,
+            529,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-topic-0",
+          "kind": "text",
+          "text": "范围收敛",
+          "box": [
+            120,
+            453,
+            350,
+            62
+          ],
+          "size": 35,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-owner-0",
+          "kind": "text",
+          "text": "产品",
+          "box": [
+            590,
+            453,
+            230,
+            62
+          ],
+          "size": 33,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-action-0",
+          "kind": "text",
+          "text": "确认边界与验收标准",
+          "box": [
+            930,
+            453,
+            550,
+            62
+          ],
+          "size": 33,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-row-line-1",
+          "kind": "path",
+          "box": [
+            108,
+            647,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-topic-1",
+          "kind": "text",
+          "text": "联调窗口",
+          "box": [
+            120,
+            571,
+            350,
+            62
+          ],
+          "size": 35,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 150,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-owner-1",
+          "kind": "text",
+          "text": "研发",
+          "box": [
+            590,
+            571,
+            230,
+            62
+          ],
+          "size": 33,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 150,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-action-1",
+          "kind": "text",
+          "text": "锁定接口及可用时间",
+          "box": [
+            930,
+            571,
+            550,
+            62
+          ],
+          "size": 33,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 150,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-row-line-2",
+          "kind": "path",
+          "box": [
+            108,
+            765,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "progress-topic-2",
+          "kind": "text",
+          "text": "发布依赖",
+          "box": [
+            120,
+            689,
+            350,
+            62
+          ],
+          "size": 35,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 300,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-owner-2",
+          "kind": "text",
+          "text": "测试",
+          "box": [
+            590,
+            689,
+            230,
+            62
+          ],
+          "size": 33,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 300,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "progress-action-2",
+          "kind": "text",
+          "text": "核对版本与回归记录",
+          "box": [
+            930,
+            689,
+            550,
+            62
+          ],
+          "size": 33,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 300,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

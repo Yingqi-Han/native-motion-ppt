@@ -1,5 +1,7 @@
 # 实际 WPS 展示证据
 
+v1.7 新示例见 [产品/进展实播](v1.7/README.md)，使用独立清单，不改写下列历史证据。
+
 science-check/ 和 generic-record/ 来自 2026-10-15 的实际 WPS Linux 验收，文件按字节原样保留。查看 [验证说明](../docs/verification.md) 和 [SHA 清单](manifest.json)。
 
 每个目录提供点击/自动 MP4、对应可编辑 PPTX、源 JSON、采集证据、最终 acceptance.json，以及两组真实 Morph/停留关键帧。这里是摘录，完整运行的其他 QA、审阅文件及实现快照保存在原始交付 ZIP 中。

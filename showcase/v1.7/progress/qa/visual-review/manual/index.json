@@ -1,0 +1,55 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "3f6cb166cb4d1996f6fd17201aa94457ff21d868d4984f0bad7ad6ddc5c4879d",
+  "samples": [
+    {
+      "path": "qa/visual-review/manual/frame-001.png",
+      "frame_index": 267,
+      "timestamp": 8.9,
+      "sha256": "f0ae294a1dd6504b23e3379aad71aaf58574b3143e3fcac124eda872adc7f47a"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-002.png",
+      "frame_index": 279,
+      "timestamp": 9.3,
+      "sha256": "8ece5c6308869b10c0863dc6b6dc27d7b8d046141e62a6ff6f283965d751c3e6"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-003.png",
+      "frame_index": 294,
+      "timestamp": 9.8,
+      "sha256": "f918b4a23765805353077e1c37581da25043d665c402f07bffffee11604f4240"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-004.png",
+      "frame_index": 309,
+      "timestamp": 10.3,
+      "sha256": "4bc4660362fbca3141e9f1abdeb33864707e603b7f17b93189cf4760617d7540"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-005.png",
+      "frame_index": 324,
+      "timestamp": 10.8,
+      "sha256": "d8b1f9907e6eb1673975b7285d15208528ff1ba2e200eb6e61c3f229f88de1b1"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-006.png",
+      "frame_index": 339,
+      "timestamp": 11.3,
+      "sha256": "bfb18054a664792f91af1642bbd82c1224d49b5b62423a44d8ad999a5ccd6660"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-007.png",
+      "frame_index": 546,
+      "timestamp": 18.2,
+      "sha256": "0b94dae0b846fee7998f94878482f88a0d8a32eef512454b299b85b46254ef63"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-008.png",
+      "frame_index": 829,
+      "timestamp": 27.633333,
+      "sha256": "6756d34b5400dd9e8a376f78df81ee89827709f4d4a9c0b42aad6573b1f80b1b"
+    }
+  ],
+  "contact": "qa/visual-review/manual/contact.jpg"
+}
