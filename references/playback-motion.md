@@ -40,3 +40,5 @@ python scripts/serve_report.py <运行目录> --port 3021
 
 
 v1.6.0 的 check_playback_phases.py 从真实参考匹配和像素轮廓推导阶段计划；check_native_motion.py 可用 --phases 消费已绑定的阶段证据，保留 raw_status/raw_issues 与分段后的结果。源颜色/静态框限定搜索，不产生录像坐标。状态和只检查复验见 acceptance.md。
+
+v1.7.0 修正自动首屏晚展开导致的扫描窗口截断：稳定参考用于确认页面身份，首屏分析窗口则从与实际 F5 记录相交或之后的首个画面活动区间开始，覆盖早期主体和数据柱。媒体 PTS 与输入 wall-clock 有启动偏移，因此这表示保守分析窗口，不声称是播放器内部的精确入场时间。新版阶段记录绑定采集 JSON 的 SHA 和实际 show-key 时间；没有足够活动证据时保持待检查。旧录像的复算写入新的 check 运行，原始待检结果继续保留。

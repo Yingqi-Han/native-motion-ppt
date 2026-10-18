@@ -1,0 +1,1216 @@
+{
+  "version": 1,
+  "title": "产品介绍 · 原生演示示例",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "fps": 30
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "F4F2EA",
+    "foreground": "142B31",
+    "accent": "4460DA"
+  },
+  "slides": [
+    {
+      "id": "product-compare",
+      "duration": 6000,
+      "clicks": [
+        1000
+      ],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "fade",
+        "duration": 350
+      },
+      "objects": [
+        {
+          "id": "product-compare-section",
+          "kind": "text",
+          "text": "PRODUCT / EDITABLE PRESENTATION",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "product-compare-page",
+          "kind": "text",
+          "text": "01 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "product-compare-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "product-compare-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "product-heading-a",
+          "kind": "text",
+          "text": "内容的变化，\n在同一页看清。",
+          "box": [
+            108,
+            184,
+            770,
+            195
+          ],
+          "size": 66,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-purpose",
+          "kind": "text",
+          "text": "用原生对象组织信息，\n让每次修改都能继续编辑。",
+          "box": [
+            112,
+            420,
+            720,
+            105
+          ],
+          "size": 30,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "product-token",
+          "kind": "rect",
+          "box": [
+            150,
+            620,
+            220,
+            150
+          ],
+          "radius": 18,
+          "fill": "4460DA",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 0,
+              "duration": 2000,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  4.4182779986463485,
+                  0
+                ],
+                [
+                  8,
+                  -3.134006751184445
+                ],
+                [
+                  8,
+                  -7
+                ],
+                [
+                  8,
+                  -10.865993248815554
+                ],
+                [
+                  4.4182779986463485,
+                  -14
+                ],
+                [
+                  0,
+                  -14
+                ],
+                [
+                  -4.4182779986463485,
+                  -14
+                ],
+                [
+                  -8,
+                  -10.865993248815554
+                ],
+                [
+                  -8,
+                  -7
+                ],
+                [
+                  -8,
+                  -3.134006751184445
+                ],
+                [
+                  -4.4182779986463485,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "product-token-caption",
+          "kind": "text",
+          "text": "一个可编辑主体",
+          "box": [
+            120,
+            790,
+            440,
+            44
+          ],
+          "size": 25,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "revision-grid-0",
+          "kind": "path",
+          "box": [
+            1000,
+            650.0,
+            450,
+            0.001
+          ],
+          "d": "M 0 0.0 L 450 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            900,
+            630.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "revision-grid-1",
+          "kind": "path",
+          "box": [
+            1000,
+            575.0,
+            450,
+            0.001
+          ],
+          "d": "M 0 0.0 L 450 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-tick-1",
+          "kind": "text",
+          "text": "25",
+          "box": [
+            900,
+            555.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "revision-grid-2",
+          "kind": "path",
+          "box": [
+            1000,
+            500.0,
+            450,
+            0.001
+          ],
+          "d": "M 0 0.0 L 450 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-tick-2",
+          "kind": "text",
+          "text": "50",
+          "box": [
+            900,
+            480.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "revision-grid-3",
+          "kind": "path",
+          "box": [
+            1000,
+            425.0,
+            450,
+            0.001
+          ],
+          "d": "M 0 0.0 L 450 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-tick-3",
+          "kind": "text",
+          "text": "75",
+          "box": [
+            900,
+            405.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "revision-grid-4",
+          "kind": "path",
+          "box": [
+            1000,
+            350.0,
+            450,
+            0.001
+          ],
+          "d": "M 0 0.0 L 450 0.0",
+          "fill": "none",
+          "stroke": "D2DCD6",
+          "stroke_width": 1.5,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-tick-4",
+          "kind": "text",
+          "text": "100",
+          "box": [
+            900,
+            330.0,
+            75,
+            44
+          ],
+          "size": 27,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "revision-baseline",
+          "kind": "path",
+          "box": [
+            1000,
+            650,
+            450,
+            0.001
+          ],
+          "d": "M 0 0 L 450 0",
+          "fill": "none",
+          "stroke": "142B31",
+          "stroke_width": 2,
+          "role": "decoration"
+        },
+        {
+          "id": "revision-unit",
+          "kind": "text",
+          "text": "示例耗时",
+          "box": [
+            1000,
+            225,
+            300,
+            48
+          ],
+          "size": 29,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "revision-bar-0",
+          "kind": "rect",
+          "box": [
+            1065.25,
+            434.0,
+            94.5,
+            216.0
+          ],
+          "fill": "00766A",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 0,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "revision-category-0",
+          "kind": "text",
+          "text": "拆散重做",
+          "box": [
+            1011.25,
+            676,
+            202.5,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "revision-value-0",
+          "kind": "text",
+          "text": "72",
+          "box": [
+            1017.5,
+            368.0,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1100,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "revision-bar-1",
+          "kind": "rect",
+          "box": [
+            1290.25,
+            542.0,
+            94.5,
+            108.0
+          ],
+          "fill": "B35735",
+          "role": "data",
+          "animations": [
+            {
+              "kind": "enter",
+              "effect": "wipe",
+              "direction": "up",
+              "at": 120,
+              "duration": 1100,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "revision-category-1",
+          "kind": "text",
+          "text": "保留对象",
+          "box": [
+            1236.25,
+            676,
+            202.5,
+            55
+          ],
+          "size": 32,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "revision-value-1",
+          "kind": "text",
+          "text": "36",
+          "box": [
+            1242.5,
+            476.0,
+            190,
+            54
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "data",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1220,
+              "duration": 320,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-connect",
+      "duration": 6800,
+      "clicks": [],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "morph",
+        "duration": 1800
+      },
+      "objects": [
+        {
+          "id": "product-connect-section",
+          "kind": "text",
+          "text": "PRODUCT / SAME OBJECT",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "product-connect-page",
+          "kind": "text",
+          "text": "02 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "product-connect-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "product-connect-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "product-heading-b",
+          "kind": "text",
+          "text": "同一份内容，\n延续同一个主体。",
+          "box": [
+            108,
+            180,
+            1350,
+            195
+          ],
+          "size": 66,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-flow-step-0",
+          "kind": "text",
+          "text": "源内容",
+          "box": [
+            120,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "product-flow-link-0",
+          "kind": "path",
+          "box": [
+            420,
+            610,
+            240,
+            0.001
+          ],
+          "d": "M 0 0 L 240 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "product-flow-step-1",
+          "kind": "text",
+          "text": "动作编排",
+          "box": [
+            640,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "product-flow-link-1",
+          "kind": "path",
+          "box": [
+            940,
+            610,
+            240,
+            0.001
+          ],
+          "d": "M 0 0 L 240 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 3,
+          "role": "decoration"
+        },
+        {
+          "id": "product-flow-step-2",
+          "kind": "text",
+          "text": "原生输出",
+          "box": [
+            1160,
+            420,
+            360,
+            65
+          ],
+          "size": 37,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "align": "center"
+        },
+        {
+          "id": "product-token",
+          "kind": "rect",
+          "box": [
+            1190,
+            520,
+            270,
+            180
+          ],
+          "radius": 20,
+          "fill": "4460DA",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "move",
+              "at": 350,
+              "duration": 2000,
+              "path": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  4.4182779986463485,
+                  0
+                ],
+                [
+                  8,
+                  -3.134006751184445
+                ],
+                [
+                  8,
+                  -7
+                ],
+                [
+                  8,
+                  -10.865993248815554
+                ],
+                [
+                  4.4182779986463485,
+                  -14
+                ],
+                [
+                  0,
+                  -14
+                ],
+                [
+                  -4.4182779986463485,
+                  -14
+                ],
+                [
+                  -8,
+                  -10.865993248815554
+                ],
+                [
+                  -8,
+                  -7
+                ],
+                [
+                  -8,
+                  -3.134006751184445
+                ],
+                [
+                  -4.4182779986463485,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "accel": 0.25,
+              "decel": 0.25,
+              "ambient": true
+            }
+          ]
+        },
+        {
+          "id": "product-flow-note",
+          "kind": "text",
+          "text": "位置与尺度跨页衔接，动作结束后留出阅读时间。",
+          "box": [
+            112,
+            755,
+            1380,
+            55
+          ],
+          "size": 28,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        }
+      ]
+    },
+    {
+      "id": "product-deliver",
+      "duration": 6000,
+      "clicks": [
+        1000
+      ],
+      "background": "F4F2EA",
+      "transition": {
+        "kind": "fade",
+        "duration": 350
+      },
+      "objects": [
+        {
+          "id": "product-deliver-section",
+          "kind": "text",
+          "text": "PRODUCT / HANDOFF",
+          "box": [
+            108,
+            62,
+            900,
+            40
+          ],
+          "size": 22,
+          "fill": "142B31",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "product-deliver-page",
+          "kind": "text",
+          "text": "03 / 03",
+          "box": [
+            1335,
+            62,
+            160,
+            40
+          ],
+          "size": 22,
+          "fill": "526763",
+          "font": "Space Grotesk SemiBold",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "product-deliver-rule",
+          "kind": "path",
+          "box": [
+            108,
+            116,
+            1384,
+            0.001
+          ],
+          "d": "M 0 0 L 1384 0",
+          "fill": "none",
+          "stroke": "CCD8D1",
+          "stroke_width": 1.3,
+          "role": "decoration"
+        },
+        {
+          "id": "product-deliver-disclaimer",
+          "kind": "text",
+          "text": "模拟数据与流程示意，仅用于演示；请替换为核实后的内容。",
+          "box": [
+            108,
+            844,
+            1380,
+            36
+          ],
+          "size": 21,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "product-heading-c",
+          "kind": "text",
+          "text": "交付之后，仍能继续修改。",
+          "box": [
+            108,
+            184,
+            1370,
+            110
+          ],
+          "size": 64,
+          "fill": "142B31",
+          "font": "Noto Serif CJK SC",
+          "role": "title",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-three-note",
+          "kind": "text",
+          "text": "让内容、动作和检查记录一起留下。",
+          "box": [
+            112,
+            315,
+            1360,
+            58
+          ],
+          "size": 30,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "product-card-0",
+          "kind": "rect",
+          "box": [
+            108,
+            442,
+            435,
+            320
+          ],
+          "radius": 12,
+          "fill": "FFFFFF",
+          "role": "decoration",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-feature-0",
+          "kind": "text",
+          "text": "保留原生对象",
+          "box": [
+            136,
+            488,
+            375,
+            65
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 0,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-detail-0",
+          "kind": "text",
+          "text": "文字、图形与动画\n可以分别编辑。",
+          "box": [
+            136,
+            590,
+            375,
+            115
+          ],
+          "size": 30,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-card-1",
+          "kind": "rect",
+          "box": [
+            583,
+            442,
+            435,
+            320
+          ],
+          "radius": 12,
+          "fill": "FFFFFF",
+          "role": "decoration",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 130,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-feature-1",
+          "kind": "text",
+          "text": "按讲解展开",
+          "box": [
+            611,
+            488,
+            375,
+            65
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 130,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-detail-1",
+          "kind": "text",
+          "text": "用少量语义点击\n组织信息顺序。",
+          "box": [
+            611,
+            590,
+            375,
+            115
+          ],
+          "size": 30,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 230,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-card-2",
+          "kind": "rect",
+          "box": [
+            1058,
+            442,
+            435,
+            320
+          ],
+          "radius": 12,
+          "fill": "FFFFFF",
+          "role": "decoration",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 260,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-feature-2",
+          "kind": "text",
+          "text": "按版本复核",
+          "box": [
+            1086,
+            488,
+            375,
+            65
+          ],
+          "size": 38,
+          "fill": "142B31",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 260,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "product-detail-2",
+          "kind": "text",
+          "text": "源稿、PPT 与录像\n各自绑定校验值。",
+          "box": [
+            1086,
+            590,
+            375,
+            115
+          ],
+          "size": 30,
+          "fill": "526763",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 360,
+              "duration": 420,
+              "click": 1,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

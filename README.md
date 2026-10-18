@@ -6,7 +6,7 @@ An agent skill for editable animated PowerPoint, shared JSON/Remotion previews, 
 
 [下载 v1.6.1 安装包](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.6.1/native-motion-ppt-v1.6.1.zip) · [完整 WPS 实播验收工程](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.6.1/wps-v1.6.0-delivery.zip) · [Release 与校验清单](https://github.com/Yingqi-Han/native-motion-ppt/releases/tag/v1.6.1)
 
-当前发布版 **v1.6.1**，MIT 许可。支持分步动画、逐字出现、运动路径、缩放/旋转、跨页 Morph，以及点击/自动双版本。WPS 实播结论限 Linux 11.1.0.11723；[范围与真实录像](docs/verification.md) 分别记录，Windows WPS 和 Microsoft PowerPoint 尚未实测。
+当前源码 **v1.7.0**，MIT 许可。新增 `nmp.py` 项目入口、按任务的环境诊断、最小依赖启动流程和产品/项目进展示例。支持分步动画、逐字出现、运动路径、缩放/旋转、跨页 Morph，以及点击/自动双版本。WPS 实播结论限 Linux 11.1.0.11723；[范围与真实录像](docs/verification.md) 分别记录，Windows WPS 和 Microsoft PowerPoint 尚未实测。
 
 ## 安装
 
@@ -18,29 +18,31 @@ python scripts/install_skill.py --workspace /path/to/your/project
 
 安装到目标项目的 `.agents/skills/native-motion-ppt`。升级时加 `--upgrade`，安装器核对受管理文件并备份旧版，发现本地修改会保留并停止覆盖。也可直接使用本仓库的 [SKILL.md](SKILL.md)。
 
-Python 3.10+；先安装依赖：
+Python 3.10+；原生导出与预览工程生成只需核心依赖：
 
 ```bash
-python -m pip install -r requirements.txt
-python scripts/doctor.py
+python -m pip install -r requirements-core.txt
+python scripts/nmp.py doctor --for build
 ```
 
-浏览器预览采样需要 Chromium 和 Playwright；Remotion 视频需要 Node.js 20+。实际页面渲染需 LibreOffice，真实 WPS 验收另需对应 GUI 工具链、官方 WPS 和完整字体。依赖说明见 [工作流程](references/workflow.md) 和 [WPS 安装与实播](references/wps-playback.md)。
+需要浏览器抽帧、视频和真实放映时再安装 `requirements.txt`。浏览器采样需要 Chromium 和 Playwright；Remotion 视频需要 Node.js 20+。静态页面渲染需 LibreOffice，真实 WPS 验收另需 GUI 工具链、官方 WPS 和完整字体。`doctor --for preview/render/browser/video/analysis/playback/acceptance` 分别给出缺项和修复命令；完整说明见 [第一次使用](references/first-project.md)。
 
 ## 从最小示例开始
 
 ```bash
-python scripts/motion_ppt.py validate examples/minimal.json
-python scripts/motion_ppt.py build examples/minimal.json --out output/deck.pptx
-python scripts/motion_ppt.py build examples/minimal.json --out output/deck-auto.pptx --auto
-python scripts/motion_ppt.py preview examples/minimal.json --out output/preview --remotion
+python scripts/nmp.py new output/my-first-deck
+python scripts/nmp.py build output/my-first-deck
+python scripts/nmp.py preview output/my-first-deck
 ```
 
-文字、图形、组合和动画均保留为原生对象。JSON 使用设计像素和毫秒；默认画布 1920×1080，导出时换算为 PPT 单位。修改源 JSON 后重新生成。
+`new`、`--help` 和 `doctor` 在尚未安装第三方包时也能运行。默认最小项目使用随包的 Latin 字体；中文示例另需完整 Noto CJK。修改新项目中的 project.json 后重新 build，新的独立输出目录会同时包含点击版与自动版，不覆盖旧文件。build 成功只认证导出和结构检查，真实播放仍待录制。文字、图形、组合和动画保留为原生对象；JSON 单位为设计像素和毫秒。
 
 | 示例 | 用途 |
 |---|---|
-| [minimal.json](examples/minimal.json) | 最小原生动画与预览 |
+| [starter-minimal.json](examples/starter-minimal.json) | `new` 默认；仅用随包字体启动 |
+| [product-intro.json](examples/product-intro.json) | `new --template product`；产品介绍、柱图与跨页主体 |
+| [project-update.json](examples/project-update.json) | `new --template progress`；进展、流程与行动依赖 |
+| [minimal.json](examples/minimal.json) | 保留的中文最小原生示例 |
 | [demo.json](examples/demo.json) | 六镜头、组合图形和连续运动 |
 | [scientific.json](examples/scientific.json) | 五页模拟数据图表与科学流程 |
 | [wps-generic-regression.json](examples/wps-generic-regression.json) | 独立两页、无页码、柱图与 Morph 回归 |
@@ -51,16 +53,16 @@ python scripts/motion_ppt.py preview examples/minimal.json --out output/preview 
 按 [WPS 实播准备](references/wps-playback.md) 安装并完成首次 GUI 检查，再运行：
 
 ```bash
-python scripts/accept_project.py examples/scientific.json \
-  --out output/runs --profile science --target-player wps-desktop \
-  --desktop-tools-root "$HOME/.local/share/native-motion-ppt/desktop" \
+python scripts/nmp.py new output/my-product --template product
+python scripts/nmp.py accept output/my-product --player wps \
+  --tools-root "$HOME/.local/share/native-motion-ppt/desktop" \
   --wps-root "$HOME/.local/share/native-motion-ppt/wps" \
   --wps-profile "$HOME/.local/share/native-motion-ppt/wps-profile"
 ```
 
 生成点击/自动 PPT、设计视频、两份实际 WPS 录屏、关键帧、对象运动检查、HTML 报告和完整项目 ZIP。缺少所选播放器时保持待检查；视觉审阅绑定实际录像和帧的 SHA，审阅后最终验收才可通过。`--strict` 让待检查必需项返回退出码 2，失败返回 1。
 
-修改检查器后可用 `--resume <旧运行> --mode check` 复算原录像；需要重新采集时用 `--mode record` 并传播放器路径。两者都创建新目录。改变源数据后运行完整 full。命令、状态和结构化审阅见 [验收流程](references/acceptance.md)。
+修改检查器后可用 `nmp.py accept --resume <旧运行> --mode check` 复算原录像；需要重新采集时用 `--mode record` 并传播放器路径。check 不要求播放器、浏览器或重新渲染，两者均创建新目录。改变源数据后运行完整 full。高级 `accept_project.py` 入口继续可用；命令、状态和结构化审阅见 [验收流程](references/acceptance.md)。
 
 代码预演由浏览器/Remotion 生成，真实放映录像来自指定 GUI 播放器。两者来源分别记载；采集帧率不等同于播放器重绘率。
 
@@ -68,23 +70,23 @@ python scripts/accept_project.py examples/scientific.json \
 
 ```bash
 python scripts/motion_ppt.py inspect input.pptx --out output/inventory.json
-python scripts/motion_ppt.py enhance input.pptx --plan plan.json --out output/enhanced.pptx
-python scripts/motion_ppt.py check output/enhanced.pptx --out output/qa --allow-images --render
+python scripts/nmp.py enhance input.pptx --plan plan.json --out output/enhanced.pptx
 ```
 
-语义分组计划、已有动画保留规则和能力边界见 [SKILL.md](SKILL.md)。图表使用可编辑形状，不带可自动同步的 Excel 图表工作簿。模拟数据只用于演示。
+增强入口保留原稿和已有动画，完成结构检查并生成独立报告，实际播放状态仍待验证。语义分组计划与能力边界见 [SKILL.md](SKILL.md)。图表使用可编辑形状，不带可自动同步的 Excel 图表工作簿。模拟数据只用于演示。
 
 ## 开发与发布
 
 ```bash
 python -m unittest discover -s tests -v
 node --test tests/test_timeline.mjs
+python tests/smoke_core_cli.py --isolated
 python scripts/validate_skill.py
 python scripts/package_skill.py --source-only --out dist
 python scripts/verify_delivery.py dist
 ```
 
-源码发布包无需预先生成演示工程；包含清单、SHA 校验和全新安装验证。GitHub 的 CI 运行同样检查，版本标签触发源码发布。完整项目交付使用 `accept_project.py`；旧多示例打包方式仍保留，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+源码发布包无需预先生成演示工程；包含清单、SHA 校验和全新安装验证。CI 检查 Python 3.10/3.12，并在 Linux/Windows 的干净核心依赖环境验证项目创建、双版导出、预览生成及已有动画保留；这些检查不认证 Windows WPS。版本标签触发源码发布。完整项目交付使用 accept；旧多示例打包方式仍保留，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 | 目录 | 内容 |
 |---|---|

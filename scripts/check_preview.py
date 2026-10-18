@@ -4,10 +4,11 @@ import argparse,hashlib,json,math,shutil
 from pathlib import Path
 from PIL import Image,ImageDraw
 from playwright.sync_api import sync_playwright
+from native_motion.browser import browser_path
 from native_motion.review import sample_times
 def main():
     p=argparse.ArgumentParser();p.add_argument("--url",required=True);p.add_argument("--out",required=True);p.add_argument("--studio")
-    p.add_argument("--max-samples",type=int,default=12);p.add_argument("--browser-executable",default=shutil.which("chromium"))
+    p.add_argument("--max-samples",type=int,default=12);p.add_argument("--browser-executable",default=browser_path())
     a=p.parse_args();out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
     errors=[];records=[];shots=[];warnings=[]
     with sync_playwright() as pw:

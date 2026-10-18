@@ -8,6 +8,7 @@ import math
 import shutil
 import statistics
 from pathlib import Path
+from native_motion.browser import browser_path
 
 from playwright.sync_api import sync_playwright
 
@@ -40,7 +41,7 @@ def main():
         errors.append("Figure metadata is stale relative to its data source")
     data=list(csv.DictReader(source.open(encoding="utf-8")))
     with sync_playwright() as pw:
-        browser=pw.chromium.launch(headless=True,executable_path=shutil.which("chromium"))
+        browser=pw.chromium.launch(headless=True,executable_path=browser_path())
         page=browser.new_page(viewport={"width":1680,"height":1100})
         page.on("pageerror",lambda e:errors.append(str(e)))
         page.goto(args.url,wait_until="networkidle");page.wait_for_function("window.NM?.ready")

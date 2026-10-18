@@ -11,6 +11,7 @@ import subprocess
 import sys
 import threading
 from pathlib import Path
+from native_motion.browser import browser_path
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -43,7 +44,7 @@ def render_design(base,name,py,port,destination=None,legacy_alias=True):
         run("npm","ci","--no-audit","--no-fund",cwd=project)
         stamp.write_text(signature)
     run("npm","run","typecheck",cwd=project)
-    browser=shutil.which("chromium")
+    browser=browser_path()
     extra=["--browser-executable="+browser] if browser else []
     destination=Path(destination) if destination else base/(name+"-design-preview.mp4")
     stage=destination.with_name(destination.stem+".rendering.mp4")

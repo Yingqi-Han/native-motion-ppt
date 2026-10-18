@@ -8,6 +8,7 @@ import math
 import shutil
 import subprocess
 from pathlib import Path
+from native_motion.browser import browser_path
 
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 from playwright.sync_api import sync_playwright
@@ -19,7 +20,7 @@ def main():
     parser.add_argument("--url",required=True)
     parser.add_argument("--out",required=True)
     parser.add_argument("--max-rmse",type=float,default=5)
-    parser.add_argument("--browser-executable",default=shutil.which("chromium"))
+    parser.add_argument("--browser-executable",default=browser_path())
     args=parser.parse_args()
     output=Path(args.out)
     output.mkdir(parents=True,exist_ok=True)

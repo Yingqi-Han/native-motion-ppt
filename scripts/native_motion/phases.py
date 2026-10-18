@@ -5,7 +5,7 @@ from PIL import Image,ImageDraw,ImageFilter
 from .playback_motion import stable_runs,intervals,thumbnail_score,colored_box
 
 
-def classify_pages(times,frames,references,manual_plan=None):
+def classify_pages(times,frames,references,manual_plan=None,show_key_seconds=None):
     """Use all-page independent references, not a hardcoded folio, palette or timestamp."""
     scores=np.empty((len(frames),len(references),2),dtype=float);activity=[];previous=None
     for i,frame in enumerate(frames):
@@ -54,7 +54,21 @@ def classify_pages(times,frames,references,manual_plan=None):
         if manual_plan:starts.append(manual_plan['pages'][j]['page_input_seconds']);continue
         if j==0:
             candidates=[e for e in events if e['start']<p['stable_interval_seconds'][0]]
-            starts.append(candidates[-1]['start'] if candidates else max(0,p['stable_interval_seconds'][0]-.3));continue
+            if show_key_seconds is not None:
+                # Late reveals can be the last activity before the full reference
+                # matches. Keep the first observed interval intersecting/after the
+                # real F5 input, so earlier actor and bar motion is still scanned.
+                # The interval may begin just before the wall-clock key because
+                # media PTS and input-wall clocks have a small startup offset.
+                after_key=[e for e in candidates if e['end']>=show_key_seconds]
+                if after_key:
+                    starts.append(after_key[0]['start'])
+                    p['entry_window_basis']='first_observed_activity_intersecting_or_after_recorded_F5'
+                else:
+                    starts.append(None);p.update(status='pending',reason='No observed first-page entry activity after the actual show key')
+            else:
+                starts.append(candidates[-1]['start'] if candidates else max(0,p['stable_interval_seconds'][0]-.3))
+            continue
         prev=pages[j-1]
         if prev['status']!='passed':starts.append(None);continue
         candidates=[e for e in events if e['end']>=prev['stable_interval_seconds'][1]-.15 and e['start']<p['stable_interval_seconds'][0]]

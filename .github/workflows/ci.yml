@@ -7,12 +7,18 @@ permissions:
 jobs:
   portable-skill:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
           cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-core.txt
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -24,5 +30,21 @@ jobs:
       - run: python scripts/verify_delivery.py dist
       - uses: actions/upload-artifact@v4
         with:
-          name: installable-skill
+          name: installable-skill-py${{ matrix.python-version }}
           path: dist/
+  core-cli:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -S scripts/nmp.py --help
+      - run: python tests/smoke_core_cli.py --isolated --out core-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-cli-${{ matrix.os }}
+          path: core-smoke.json

@@ -163,6 +163,7 @@ def check(args):
         if phase.get('origin')!='measurement_of_actual_desktop_recording' or any(phase.get(k)!=v for k,v in {
             'recording_sha256':sha(video),'source_pptx_sha256':sha(pptx),'source_json_sha256':sha(args.spec)}.items()):raise ValueError('Phase evidence belongs to another source/recording')
         if any(plan.get(k)!=phase.get(k) for k in ['recording_sha256','source_pptx_sha256','source_json_sha256']):raise ValueError('Observed plan does not bind the phase evidence')
+        if phase.get('format_version',1)>=2 and any(d.get('playback_evidence_sha256')!=sha(args.evidence) for d in [phase,plan]):raise ValueError('Phase/plan input evidence belongs to another capture')
     stream=meta["streams"][0];vw,vh=stream["width"],stream["height"]
     if (vw,vh)!=(doc["canvas"]["width"],doc["canvas"]["height"]):raise ValueError("Motion measurement requires capture and source canvas dimensions to match; no letterbox inference")
     if len(prs.slides)!=len(doc["slides"]) or [p["slide"] for p in plan["pages"]]!=list(range(1,len(prs.slides)+1)):

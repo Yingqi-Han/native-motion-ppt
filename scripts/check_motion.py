@@ -5,6 +5,7 @@ import json
 import math
 import shutil
 from pathlib import Path
+from native_motion.browser import browser_path
 
 from PIL import Image, ImageDraw
 from playwright.sync_api import sync_playwright
@@ -34,7 +35,7 @@ def main():
     parser.add_argument("--out", required=True)
     parser.add_argument("--max-step", type=float, default=8,
                         help="Maximum center movement in design pixels per frame")
-    parser.add_argument("--browser-executable", default=shutil.which("chromium"))
+    parser.add_argument("--browser-executable", default=browser_path())
     args = parser.parse_args()
     output = Path(args.out)
     output.mkdir(parents=True, exist_ok=True)

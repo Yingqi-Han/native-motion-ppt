@@ -3,7 +3,7 @@ name: native-motion-ppt
 description: 制作、美化、重做原生可编辑动态 PPT；添加分步动画、逐字出现、运动路径、缩放旋转与 Morph。共用数据生成 Remotion 设计视频及 PPTX，一键真实放映录屏、抽帧检查、验收与交付。Use for native animated PowerPoint, editable motion slides, shared Remotion/PPT workflows and real playback acceptance.
 ---
 
-# Native Motion PPT · v1.6.1
+# Native Motion PPT · v1.7.0
 
 把内容、版式和运动一起设计。交付能继续编辑的 PPTX，动画由 PowerPoint 对象、时序与转场完成。
 
@@ -15,6 +15,21 @@ description: 制作、美化、重做原生可编辑动态 PPT；添加分步动
 - **视频与 PPT 双输出：** 先用同一份 JSON 制作设计视频，再导出对应原生 PPT，最后在目标桌面播放器放映核对。设计视频必须标为代码预演；只有实际放映录屏才能标为 PPT 播放视频。
 
 用户已提供主题、方向或参考时，直接推进。不要反复询问是否继续；沿用已授权的目标。保留用户原稿，输出新文件。
+
+## 新用户项目入口
+
+优先使用 `scripts/nmp.py`，说明见 [第一次使用](references/first-project.md)。帮助、创建和诊断不加载第三方依赖；导出与预览生成使用 requirements-core.txt，完整验收再使用 requirements.txt。
+
+```bash
+python scripts/nmp.py new output/my-project --template product
+python scripts/nmp.py doctor --for build
+python scripts/nmp.py build output/my-project
+python scripts/nmp.py preview output/my-project
+```
+
+默认 minimal 使用随包字体；product、progress 和 science 是可修改的内容/动作示例。模板用于启动与复现，不替代受众分析、数据核对和视觉设计。原生导出成功后仍须实际播放，build-report 中的 desktop_playback 保持 pending。
+
+完整流程用 `nmp.py accept <项目> --player wps`，播放器路径、实际字体、所需依赖按阶段预检；复验用 `accept --resume <旧运行> --mode record/check`。`enhance` 对已有 PPT 做保护原稿的增强和结构检查。高级脚本和下述参数继续保留。
 
 ## 一键制作与验收
 
@@ -52,8 +67,8 @@ python scripts/accept_project.py --resume output/runs/previous --mode check
 
 1. 找到本 SKILL.md 所在目录；下文脚本路径均相对该目录。
 2. 阅读 [工作流程](references/workflow.md)。制作新页面时再读 [设计与运动](references/design-and-motion.md)；编辑 JSON 时读 [数据格式](references/data-contract.md)。
-3. Python 3.10+。依赖见 requirements.txt；核心使用 python-pptx、lxml、jsonschema、fonttools。实际页面检查另需 LibreOffice；动态采样需 Playwright 和 Chromium。视频端需 Node.js 20+ 与生成项目自己的 npm 依赖。
-4. 先运行 doctor.py。缺少某项时完成其他独立工作，报告实际验证范围，不能把“生成了文件”写成“检查了放映”。
+3. Python 3.10+。核心依赖见 requirements-core.txt，完整依赖见 requirements.txt。实际页面检查另需 LibreOffice；动态采样需 Playwright 和 Chromium。视频端需 Node.js 20+ 与生成项目自己的 npm 依赖。
+4. 先运行 `nmp.py doctor --for <任务>`，需要真实播放器时指定 --player 与源项目。缺少某项时按修复命令处理或完成其他独立工作，报告实际验证范围，不能把“生成了文件”写成“检查了放映”。
 
 ## 新建 / 重做
 
@@ -173,7 +188,7 @@ python scripts/check_preview.py --url http://localhost:3020/preview.html --out o
 
 ## 能力边界
 
-v1.6.1 支持文字、矩形与圆角、圆/椭圆、线、多边形、M/L/C/Q/Z 原生复合曲线、组合对象；淡入淡出、整对象擦除入场/退场、直线和多段三次曲线路径、旋转、缩放、短标题逐字、重复与自动往返；淡切、推移、擦除、Morph。包含一键制作、Linux GUI放映录屏、真录像检查与可追溯验收。
+v1.7.0 支持文字、矩形与圆角、圆/椭圆、线、多边形、M/L/C/Q/Z 原生复合曲线、组合对象；淡入淡出、整对象擦除入场/退场、直线和多段三次曲线路径、旋转、缩放、短标题逐字、重复与自动往返；淡切、推移、擦除、Morph。包含分层依赖诊断、项目入口、Linux GUI放映录屏、真录像检查与可追溯验收。
 
 安装已有版本时使用 install_skill.py --workspace <目录> --upgrade。只更新安装记录中未被修改的文件，自动保存旧版；发现用户修改时保留原文件并停止覆盖。没有记录的旧版本先核对来源并保存副本。
 

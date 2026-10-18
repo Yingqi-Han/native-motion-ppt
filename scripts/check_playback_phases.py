@@ -19,11 +19,14 @@ def check(args):
     plan=json.loads(Path(args.plan).read_text()) if args.plan else None
     if args.mode=='manual' and plan is None:raise ValueError('Manual mode requires the actual input plan')
     meta,times=probe(video);stream=meta['streams'][0]
+    show_keys=[a.get('at_wall_seconds') for a in evidence['actions'] if a['key']=='F5']
+    if len(show_keys)!=1 or isinstance(show_keys[0],bool) or not isinstance(show_keys[0],(float,int)) or not math.isfinite(show_keys[0]) or not 0<=show_keys[0]<times[-1]:raise ValueError('Capture evidence requires one valid actual F5 wall-clock timestamp')
+    show_key=float(show_keys[0])
     if (stream['width'],stream['height'])!=(doc['canvas']['width'],doc['canvas']['height']):raise ValueError('Capture/source dimensions differ')
     refs=[np.array(Image.open(Path(args.references)/f'slide-{i+1:02}.png').convert('RGB').resize((320,180)).filter(ImageFilter.GaussianBlur(1.2))) for i in range(len(doc['slides']))]
     frames=[]
     for _,_,p in decode(video,'scale=320:180:flags=area',(320,180),range(len(times)),times):frames.append(np.array(Image.fromarray(p).filter(ImageFilter.GaussianBlur(1.2))))
-    pages,starts,activity,events=classify_pages(times,frames,refs,plan if args.mode=='manual' else None)
+    pages,starts,activity,events=classify_pages(times,frames,refs,plan if args.mode=='manual' else None,show_key if args.mode=='automatic' else None)
     trustworthy=all(p['status']=='passed' for p in pages) and all(t is not None for t in starts)
     end=times[-1]-.05
     observed={'origin':'measurement_of_actual_desktop_recording','mode':args.mode,'show_after':1,'seconds':float(meta['format']['duration']),
@@ -60,11 +63,12 @@ def check(args):
             a,b=m['observed_transition_seconds'];observed['observed_landmarks'] +=[a+(b-a)*f for f in [0,.25,.5,.75,1]]
     observed['observed_landmarks']=sorted(set(observed['observed_landmarks']))
     bindings={'recording_sha256':sha(video),'source_pptx_sha256':sha(args.pptx),'source_json_sha256':sha(args.spec),
+              'playback_evidence_sha256':sha(args.evidence),'actual_show_key_seconds':show_key,
               'planned_input_sha256':sha(args.plan) if args.plan else None}
     observed.update(bindings)
     states=[p['status'] for p in pages]+[m['status'] for m in morphs]+[u['status'] for u in uncovered]
     status='failed' if 'failed' in states else 'pending' if 'pending' in states or not trustworthy else 'passed'
-    report={'format_version':1,'origin':'measurement_of_actual_desktop_recording','status':status,'mode':args.mode,**bindings,
+    report={'format_version':2,'origin':'measurement_of_actual_desktop_recording','status':status,'mode':args.mode,**bindings,
             'pages':pages,'page_starts':starts,'activity_intervals':events,'morphs':morphs,'uncovered_morphs':uncovered,
             'capture_frames':len(times),'plan_status':'passed' if trustworthy else 'pending',
             'scope':'Full-page independent references and actual activity identify pages. PPT boxes/colors bound contour search, not motion evaluation. Only supported isolated contours are certified; ambiguous/occluded/text Morph stays pending.'}

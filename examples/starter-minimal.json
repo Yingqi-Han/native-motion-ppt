@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "title": "My first editable motion deck",
+  "canvas": {"width": 1600, "height": 900, "fps": 30},
+  "theme": {"font": "Space Grotesk SemiBold", "latin_font": "Space Grotesk SemiBold", "background": "EEF3F7", "foreground": "203047", "accent": "4460DA"},
+  "slides": [
+    {
+      "id": "first-idea", "duration": 5000,
+      "transition": {"kind": "fade", "duration": 350},
+      "objects": [
+        {"id": "first-heading", "kind": "text", "text": "Make the idea move.", "box": [108, 250, 1240, 150], "size": 96, "role": "title", "animations": [{"kind": "enter", "at": 120, "duration": 500, "from": [0, 18]}]},
+        {"id": "first-note", "kind": "text", "text": "Edit project.json, then build both manual and automatic PPTX.", "box": [112, 450, 1240, 70], "size": 32, "role": "body"},
+        {"id": "editable-object", "kind": "rect", "box": [1160, 610, 180, 120], "fill": "4460DA", "role": "visual"}
+      ]
+    },
+    {
+      "id": "keep-editing", "duration": 6000,
+      "transition": {"kind": "morph", "duration": 1400},
+      "objects": [
+        {"id": "second-heading", "kind": "text", "text": "Keep every object editable.", "box": [108, 220, 1380, 140], "size": 78, "role": "title", "animations": [{"kind": "enter", "at": 100, "duration": 500, "from": [0, 14]}]},
+        {"id": "second-note", "kind": "text", "text": "Preview the design. Verify real playback separately.", "box": [112, 410, 1380, 70], "size": 34, "role": "body"},
+        {"id": "editable-object", "kind": "rect", "box": [140, 560, 270, 180], "fill": "4460DA", "role": "visual"}
+      ]
+    }
+  ]
+}

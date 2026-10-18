@@ -15,7 +15,8 @@ def main():
  for reference in re.findall(r"\]\(([^)]+)\)",text):
   if "://" not in reference and not (ROOT/reference).is_file():errors.append("Missing reference: "+reference)
  required=["agents/openai.yaml","assets/spec.schema.json","examples/demo.json","examples/minimal.json","assets/fonts/SpaceGrotesk-SemiBold.ttf",
- "assets/remotion/src/index.tsx","scripts/motion_ppt.py","scripts/install_skill.py","README.md","LICENSE"]
+ "assets/remotion/src/index.tsx","scripts/motion_ppt.py","scripts/nmp.py","scripts/install_skill.py","requirements-core.txt",
+ "references/first-project.md","examples/starter-minimal.json","examples/product-intro.json","examples/project-update.json","README.md","LICENSE"]
  for path in required:
   if not (ROOT/path).is_file():errors.append("Missing "+path)
  for p in (ROOT/"scripts").rglob("*.py"):

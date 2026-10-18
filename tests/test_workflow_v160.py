@@ -6,7 +6,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from native_motion.players import recording_command,preflight,player_matches
 from native_motion.acceptance import Ledger,sha,save
-from native_motion.evidence import verify_reviews
+from native_motion.evidence import verify_reviews,verify_dual_recordings
 from native_motion.phases import analyse_morph,classify_pages,morph_candidates,contour
 from native_motion.desktop_workflow import execute_resume
 from native_motion.model import normalize
@@ -56,6 +56,30 @@ class PhaseTests(unittest.TestCase):
   x0,y0,x1,y1=c['roi'];p=np.full((y1-y0,x1-x0,3),240,dtype=np.uint8);p[20-y0:40-y0,20-x0:40-x0]=[0,118,106]
   self.assertIsNotNone(contour(p,c))
 
+ def test_late_first_page_reveal_does_not_cut_earlier_motion(self):
+  base=np.full((180,320,3),235,dtype=np.uint8);base[20:40,25:135]=[20,40,50]
+  final=base.copy();final[60:160,175:300]=[0,100,120]
+  frames=[];times=[i/30 for i in range(180)]
+  for t in times:
+   if t<1:frame=np.full_like(base,80)
+   elif t<1.3:frame=(base.astype(float)*((t-1)/.3)+80*(1-(t-1)/.3)).astype(np.uint8)
+   elif t<3:frame=base.copy()
+   elif t<3.4:
+    q=(t-3)/.4;frame=(base.astype(float)*(1-q)+final.astype(float)*q).astype(np.uint8)
+   else:frame=final.copy()
+   frames.append(frame)
+  _,legacy,_,_=classify_pages(times,frames,[final])
+  pages,starts,_,_=classify_pages(times,frames,[final],show_key_seconds=1.)
+  self.assertGreater(legacy[0],2.8)
+  self.assertLess(starts[0],1.3)
+  self.assertEqual(pages[0]['status'],'passed')
+  self.assertIn('recorded_F5',pages[0]['entry_window_basis'])
+
+ def test_first_page_without_post_show_activity_remains_pending(self):
+  frame=np.full((180,320,3),230,dtype=np.uint8);times=[i/30 for i in range(90)]
+  pages,starts,_,_=classify_pages(times,[frame]*90,[frame],show_key_seconds=.5)
+  self.assertEqual(pages[0]['status'],'pending');self.assertIsNone(starts[0])
+
 class ReviewTests(unittest.TestCase):
  def fixture(self,p):
   ledger=Ledger(p,{'sha256':'unit'});(p/'v.mp4').write_bytes(b'unit fixture, not video');(p/'frame.png').write_bytes(b'unit frame');(p/'scan.json').write_text('{}')
@@ -79,6 +103,21 @@ class ReviewTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as tmp:
    l=Ledger(tmp,{});l.check('technical','Technical','passed');l.check('visual-review','Visual','pending');l.finish()
    self.assertEqual(l.data['automatic_acceptance_status'],'passed');self.assertEqual(l.data['acceptance_status'],'pending')
+
+ def test_phase_entry_binds_the_exact_capture_input_and_show_key(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);save(root/'project.json',{});proof=root/'playback-evidence-auto.json'
+   save(proof,{'actions':[{'key':'F5','at_wall_seconds':1.0}]})
+   recordings={'automatic':{'recording_sha256':'unit-video','source_pptx_sha256':'unit-pptx','evidence':proof.name}}
+   phase={'format_version':2,'origin':'measurement_of_actual_desktop_recording','recording_sha256':'unit-video','source_pptx_sha256':'unit-pptx',
+          'source_json_sha256':sha(root/'project.json'),'playback_evidence_sha256':sha(proof),'actual_show_key_seconds':1.0,'status':'passed'}
+   path=root/'qa/automatic/phases/phase-audit.json';save(path,phase);data={'recordings':recordings,'requested_target_player':'wps-desktop','checks':[]}
+   with patch('native_motion.evidence.inspect_recordings',return_value=recordings):
+    verify_dual_recordings(root,data)
+    save(proof,{'actions':[{'key':'F5','at_wall_seconds':1.2}]})
+    with self.assertRaisesRegex(ValueError,'input evidence changed'):verify_dual_recordings(root,data)
+    phase['playback_evidence_sha256']=sha(proof);save(path,phase)
+    with self.assertRaisesRegex(ValueError,'show key differs'):verify_dual_recordings(root,data)
 
 class RerunTests(unittest.TestCase):
  def test_check_only_copies_approved_dependencies_into_new_run(self):

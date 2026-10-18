@@ -7,14 +7,16 @@ ROOT=Path(__file__).resolve().parents[2]
 @lru_cache(maxsize=64)
 def resolve_font(family,bold=False):
     query=family+(":style=Bold" if bold else "")
+    packaged=ROOT/"assets/fonts/SpaceGrotesk-SemiBold.ttf"
     try:
         r=subprocess.run(["fc-match","-f","%{file}\n%{family}\n%{style}\n%{index}",query],capture_output=True,text=True,timeout=5)
         ls=r.stdout.splitlines();file=Path(ls[0])
         if file.is_file():
             resolved=ls[1];matched=family.casefold() in [f.strip().casefold() for f in resolved.split(",")]
+            if not matched and family=="Space Grotesk SemiBold" and packaged.is_file():
+                return {"path":str(packaged),"family":family,"style":"SemiBold","index":0,"matched":True}
             return {"path":str(file),"family":resolved,"style":ls[2],"index":int(ls[3])%65536,"matched":matched}
     except (FileNotFoundError,subprocess.TimeoutExpired,IndexError,ValueError):pass
-    packaged=ROOT/"assets/fonts/SpaceGrotesk-SemiBold.ttf"
     if family=="Space Grotesk SemiBold" and packaged.exists():
         return {"path":str(packaged),"family":family,"style":"SemiBold","index":0,"matched":True}
     return None

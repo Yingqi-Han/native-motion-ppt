@@ -45,6 +45,11 @@ def verify_dual_recordings(root,data):
                 if check and check.get('automatic_status',check['status'])!=d['status']:raise ValueError('Automatic motion state contradicts actual measurements')
             if path.name=='phase-audit.json':
                 if d['source_json_sha256']!=sha(root/'project.json'):raise ValueError('Phase source changed')
+                if d.get('format_version',1)>=2:
+                    proof_path=root/r['evidence']
+                    if d.get('playback_evidence_sha256')!=sha(proof_path):raise ValueError('Phase playback input evidence changed')
+                    proof=json.loads(proof_path.read_text());keys=[a['at_wall_seconds'] for a in proof['actions'] if a['key']=='F5']
+                    if len(keys)!=1 or d.get('actual_show_key_seconds')!=keys[0]:raise ValueError('Phase actual show key differs from capture input')
                 if name=='manual' and d['planned_input_sha256']!=sha(root/'plans/manual-input.json'):raise ValueError('Phase manual input plan changed')
                 check=rows.get('native-phases-'+name)
                 if check and check.get('automatic_status',check['status'])!=d['status']:raise ValueError('Phase state contradicts measurements')
