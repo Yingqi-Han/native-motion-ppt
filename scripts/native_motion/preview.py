@@ -13,14 +13,14 @@ def generate(doc,output,remotion=False):
     for name in ("preview.html","timeline.mjs"):shutil.copy2(ROOT/"assets"/name,output/name)
     manifest=bundle_fonts(doc,output)
     (output/"fonts.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
-    html=(output/"preview.html").read_text()
+    html=(output/"preview.html").read_text(encoding="utf-8")
     (output/"preview.html").write_text(html.replace("</head>",'<link rel="stylesheet" href="./fonts.css"></head>'),encoding="utf-8")
     if remotion:
         project=output/"remotion";project.mkdir(exist_ok=True)
         shutil.copytree(ROOT/"assets/remotion",project,dirs_exist_ok=True)
         for name in ("document.json","fonts.json","timeline.mjs"):shutil.copy2(output/name,project/"src"/name)
         shutil.copytree(output/"fonts",project/"public/fonts",dirs_exist_ok=True)
-        css=(output/"fonts.css").read_text()
+        css=(output/"fonts.css").read_text(encoding="utf-8")
         (project/"public/fonts.css").write_text(css.replace('./fonts/','/fonts/'),encoding="utf-8")
     return output/"preview.html"
 

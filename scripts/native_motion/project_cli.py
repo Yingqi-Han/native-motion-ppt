@@ -32,7 +32,7 @@ def source_path(value):
     path = Path(value).expanduser().resolve()
     if path.is_dir():
         config_file = path / 'nmp.json'
-        config = json.loads(config_file.read_text()) if config_file.is_file() else {}
+        config = json.loads(config_file.read_text(encoding='utf-8')) if config_file.is_file() else {}
         if config and (config.get('format_version') != 1 or config.get('source') != 'project.json'):
             raise ValueError('Unsupported project configuration; expected format_version=1 and source=project.json')
         path = path / 'project.json'
@@ -167,7 +167,7 @@ def accept(args, spec):
         profile = args.profile
         config = spec.parent / 'nmp.json'
         if not profile and config.is_file():
-            profile = json.loads(config.read_text()).get('profile')
+            profile = json.loads(config.read_text(encoding='utf-8')).get('profile')
         profile = profile or 'generic'
         if profile not in ('generic', 'science'):
             raise ValueError('Unknown project profile')
@@ -280,7 +280,7 @@ def main(argv=None):
             if not args.player and not args.resume:
                 args.player = 'wps'
             if args.resume and args.mode == 'record' and not args.player:
-                previous = json.loads((Path(args.resume).expanduser() / 'acceptance.json').read_text())
+                previous = json.loads((Path(args.resume).expanduser() / 'acceptance.json').read_text(encoding='utf-8'))
                 canonical = previous.get('requested_target_player')
                 args.player = next((k for k, v in PLAYERS.items() if v == canonical), None)
                 if not args.player:

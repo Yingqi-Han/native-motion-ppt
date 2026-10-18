@@ -14,6 +14,26 @@ MODES={'manual':('deck.pptx','player-recording.mp4','playback-evidence.json'),
 def read(p):return json.loads(Path(p).read_text())
 
 
+def measured_command(root,ledger,command,ident,params,report_path,check_id,label,detail):
+    """Keep a completed measurement's state even when its CLI exits nonzero."""
+    failure=None
+    try:command(ident,*params)
+    except RuntimeError as exc:failure=exc
+    path=Path(report_path)
+    if not path.is_file():
+        if failure:raise failure
+        raise ValueError('Measurement report missing: '+str(path))
+    report=read(path)
+    ledger.check(check_id,label,report['status'],str(path.relative_to(root)),detail)
+    if failure:
+        if check_id.startswith('native-phases-') and any(
+            item['status']=='failed' for item in report.get('morphs',[])+report.get('uncovered_morphs',[])):
+            ledger.check('morph-playback','Morph 实际播放','failed',str(path.relative_to(root)),
+                         'Failed raw Morph measurement retained; fix and retest')
+        raise failure
+    return report
+
+
 def plans(doc,guard=2.5,hold=2):
     automatic={'mode':'automatic','show_after':1,'click_at':[],
                'seconds':1+sum(s['duration']+s['transition']['duration'] for s in doc['slides'])/1000+max(hold,2)+2,
@@ -77,18 +97,19 @@ def run_desktop(root,ledger,args,doc,mode='full'):
         phase_out=root/'qa'/name/'phases';phase_params=['scripts/check_playback_phases.py',root/video,'--pptx',root/deck,'--evidence',root/proof,
             '--spec',root/'project.json','--references',root/'qa/native/rendered','--mode',name,'--out',phase_out]
         if name=='manual':phase_params+=['--plan',root/'plans/manual-input.json']
-        command('phases-'+name,*phase_params)
-        phase=read(phase_out/'phase-audit.json')
-        check('native-phases-'+name,name+' 页面与运动阶段',phase['status'],str((phase_out/'phase-audit.json').relative_to(root)),
+        phase=measured_command(root,ledger,command,'phases-'+name,phase_params,phase_out/'phase-audit.json',
+              'native-phases-'+name,name+' 页面与运动阶段',
               'Pages observed by independent reference matching; Morph arrival measured from source-bounded contours')
         morph_states +=[m['status'] for m in phase['morphs']]+[u['status'] for u in phase['uncovered_morphs']]
         if phase['plan_status']!='passed':
             for ident,label in [('native-motion','对象运动'),('native-held-pages','到位画面')]:check(ident+'-'+name,name+' '+label,'pending',detail='Page identity/phase evidence insufficient')
             continue
         observed=phase_out/'observed-playback-plan.json';motion_out=root/'qa'/name/'motion'
-        command('motion-'+name,'scripts/check_native_motion.py',root/video,'--pptx',root/deck,'--evidence',root/proof,'--spec',root/'project.json',
-                '--plan',observed,'--references',root/'qa/native/rendered','--out',motion_out,'--max-step',args.max_step,'--phases',phase_out/'phase-audit.json')
-        measured=read(motion_out/'native-motion-playback-audit.json')
+        measured=measured_command(root,ledger,command,'motion-'+name,
+                ['scripts/check_native_motion.py',root/video,'--pptx',root/deck,'--evidence',root/proof,'--spec',root/'project.json',
+                 '--plan',observed,'--references',root/'qa/native/rendered','--out',motion_out,'--max-step',args.max_step,'--phases',phase_out/'phase-audit.json'],
+                motion_out/'native-motion-playback-audit.json','native-motion-'+name,name+' 实播对象运动',
+                'Raw object-motion measurement retained, including failures')
         from .phase_timeline import timeline
         events=timeline(phase,measured);events.update(phase_audit_sha256=sha(phase_out/'phase-audit.json'),motion_audit_sha256=sha(motion_out/'native-motion-playback-audit.json'))
         save(root/'qa'/name/'observed-phases.json',events)

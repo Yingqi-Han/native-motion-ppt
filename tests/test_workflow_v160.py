@@ -8,7 +8,7 @@ from native_motion.players import recording_command,preflight,player_matches
 from native_motion.acceptance import Ledger,sha,save
 from native_motion.evidence import verify_reviews,verify_dual_recordings
 from native_motion.phases import analyse_morph,classify_pages,morph_candidates,contour
-from native_motion.desktop_workflow import execute_resume
+from native_motion.desktop_workflow import execute_resume,measured_command
 from native_motion.model import normalize
 
 class BackendTests(unittest.TestCase):
@@ -49,6 +49,16 @@ class PhaseTests(unittest.TestCase):
   c={'roi':[0,0,100,60],'palette':[[0,118,106]],'background':[244,242,234],'excluded_text_boxes':[]}
   p=np.full((60,100,3),[244,242,234],dtype=np.uint8);p[20:40,10:30]=[0,118,106];p[25:35,70:85]=[0,118,106]
   self.assertEqual(contour(p,c,seed=[20,30]),[10,20,30,40])
+ def test_absent_old_page_labels_do_not_cut_simple_shape_pixels(self):
+  for kind in ['rect','ellipse']:
+   c={'kind':kind,'roi':[0,0,100,80],'palette':[[190,84,52]],'background':[244,242,234],
+      'excluded_text_boxes':[[15,20,70,15]],'excluded_decoration_boxes':[[0,40,100,5]],
+      'source_boxes':[[20,10,40,50],[20,10,40,50]]}
+   p=np.full((80,100,3),[244,242,234],dtype=np.uint8)
+   yy,xx=np.indices((80,100));mask=(xx>=20)&(xx<60)&(yy>=10)&(yy<60)
+   if kind=='ellipse':mask &= ((xx-39.5)/20)**2+((yy-34.5)/25)**2<=1
+   p[mask]=[190,84,52]
+   self.assertEqual(contour(p,c,endpoint_box=[20,10,40,50]),[20,10,60,60])
  def test_palette_includes_visible_stroke_when_gradient_endpoint_absent(self):
   doc=normalize({'version':1,'slides':[{'objects':[{'id':'probe','kind':'group','box':[10,10,40,40],'objects':[{'id':'line','kind':'rect','box':[0,0,40,40],'fill':'00766A'},{'id':'center','kind':'ellipse','box':[10,10,10,10],'fill':'BE5434'}]}]},
     {'transition':{'kind':'morph','duration':800},'objects':[{'id':'probe','kind':'group','box':[200,10,60,60],'objects':[{'id':'line','kind':'rect','box':[0,0,60,60],'fill':'00766A'},{'id':'center','kind':'ellipse','box':[10,10,10,10],'fill':'BE5434'}]}]}]})
@@ -79,6 +89,20 @@ class PhaseTests(unittest.TestCase):
   frame=np.full((180,320,3),230,dtype=np.uint8);times=[i/30 for i in range(90)]
   pages,starts,_,_=classify_pages(times,[frame]*90,[frame],show_key_seconds=.5)
   self.assertEqual(pages[0]['status'],'pending');self.assertIsNone(starts[0])
+
+class FailureReportingTests(unittest.TestCase):
+ def test_failed_cli_measurement_remains_failed_in_canonical_check(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   p=Path(tmp);ledger=Ledger(p,{'sha256':'synthetic fixture, not playback'})
+   report=p/'phase.json'
+   code="import pathlib,sys;pathlib.Path(sys.argv[1]).write_text('{\"status\":\"failed\",\"morphs\":[{\"status\":\"failed\"}]}');sys.exit(1)"
+   def command(ident,*params):ledger.command(ident,[sys.executable,*params])
+   with self.assertRaisesRegex(RuntimeError,'Stage phases-manual exited 1'):
+    measured_command(p,ledger,command,'phases-manual',['-c',code,report],report,'native-phases-manual','Phases','Raw result')
+   self.assertEqual(report.read_text(),'{"status":"failed","morphs":[{"status":"failed"}]}')
+   rows={r['id']:r for r in ledger.data['checks']}
+   self.assertEqual(rows['native-phases-manual']['status'],'failed')
+   self.assertEqual(rows['morph-playback']['status'],'failed')
 
 class ReviewTests(unittest.TestCase):
  def fixture(self,p):

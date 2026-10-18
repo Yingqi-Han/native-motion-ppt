@@ -146,7 +146,13 @@ def contour(frame,candidate,endpoint_box=None,seed=None):
         x,y,w,h=endpoint_box;allowed=np.zeros_like(mask)
         a=max(0,math.floor(x-x0-4));b=max(0,math.floor(y-y0-4));c=min(x1-x0,math.ceil(x+w-x0+4));d=min(y1-y0,math.ceil(y+h-y0+4))
         allowed[b:d,a:c]=True;mask &= allowed
-    for x,y,w,h in [*candidate['excluded_text_boxes'],*candidate.get('excluded_decoration_boxes',[])]:
+    # Simple shapes use a saturated-color component. Source boxes from either
+    # page may cover a *future* position after their contents have faded away;
+    # erasing those entire boxes would cut real pixels out of the moving shape.
+    # Multi-part groups still need exclusions to isolate their shared palette.
+    exclusions=([*candidate['excluded_text_boxes'],*candidate.get('excluded_decoration_boxes',[])]
+                if candidate.get('kind')=='group' else [])
+    for x,y,w,h in exclusions:
         a=max(0,math.floor(x-x0));b=max(0,math.floor(y-y0));c=min(x1-x0,math.ceil(x+w-x0));d=min(y1-y0,math.ceil(y+h-y0))
         if c>a and d>b:mask[b:d,a:c]=False
     yy,xx=np.nonzero(mask)
