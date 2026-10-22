@@ -260,6 +260,12 @@ def main(argv=None):
             result = {'output': str(out), 'report': str(out/'diagnostics.html'),
                       'status': report['status'], 'acceptance_status': report['acceptance_status'],
                       'diagnostic_integrity': report['diagnostic_integrity'], 'findings': len(report['findings'])}
+            try:
+                shared=Path(os.path.commonpath([root,out]))
+                if shared!=Path(shared.anchor):
+                    result['serve_argv']=[sys.executable,str(ROOT/'scripts/serve_report.py'),str(shared),'--entry',(out/'diagnostics.html').relative_to(shared).as_posix()]
+            except ValueError:
+                result['serve_note']='Keep the report and recordings under one project folder/volume for local video serving'
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return 0 if report['diagnostic_integrity'] == 'passed' else 2
         elif args.command in ('build', 'preview'):

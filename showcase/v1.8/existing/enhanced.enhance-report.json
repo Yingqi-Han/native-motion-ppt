@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "origin": "native_pptx_enhancement",
+  "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+  "output_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+  "native_audit": {
+    "file": "/workspace/native-motion-ppt/output/v180-existing/enhanced.pptx",
+    "sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+    "native_only": false,
+    "media_parts": 1,
+    "slides": [
+      {
+        "slide": 1,
+        "sp": 11,
+        "grpSp": 0,
+        "pic": 0,
+        "animEffect": 6,
+        "animMotion": 0,
+        "animRot": 0,
+        "animScale": 0,
+        "iterate": 0,
+        "wipe_effects": 0,
+        "click_groups": 2,
+        "loop_effects": 0,
+        "morph": 0
+      },
+      {
+        "slide": 2,
+        "sp": 13,
+        "grpSp": 1,
+        "pic": 1,
+        "animEffect": 3,
+        "animMotion": 0,
+        "animRot": 0,
+        "animScale": 0,
+        "iterate": 0,
+        "wipe_effects": 0,
+        "click_groups": 2,
+        "loop_effects": 0,
+        "morph": 0
+      },
+      {
+        "slide": 3,
+        "sp": 7,
+        "grpSp": 0,
+        "pic": 0,
+        "animEffect": 1,
+        "animMotion": 1,
+        "animRot": 0,
+        "animScale": 0,
+        "iterate": 0,
+        "wipe_effects": 0,
+        "click_groups": 1,
+        "loop_effects": 0,
+        "morph": 0
+      }
+    ],
+    "issues": [],
+    "scope": "Package, XML, object identities and animation references. Not a Microsoft PowerPoint playback test."
+  },
+  "plan_sha256": "51a2101f187cf748a42b2e38bcbfb1ef1b3c9b70472f2ab525082283970eb3af",
+  "preservation": {
+    "status": "passed",
+    "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+    "output_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+    "changed_timing_parts": [
+      "ppt/slides/slide1.xml",
+      "ppt/slides/slide2.xml"
+    ],
+    "unchanged_package_parts": 50,
+    "layout_and_relationships_preserved": true,
+    "scope": "ZIP member bytes and canonical slide XML outside p:timing; does not certify playback or visual quality"
+  },
+  "desktop_playback": {
+    "status": "pending",
+    "reason": "Real desktop playback has not been recorded"
+  }
+}

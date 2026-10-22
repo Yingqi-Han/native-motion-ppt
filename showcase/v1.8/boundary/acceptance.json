@@ -1,0 +1,859 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-22T08:08:32.895219+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/native-motion-ppt/examples/diagnostic-boundaries.json",
+    "snapshot": "project.json",
+    "sha256": "4c8151af114c040265a39341834adf5ca34079b1642c54441cd930c3f9741f3e"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Required player, tools and fonts are ready; real GUI still checked through recording",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 实播对象运动",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 570 actual frames, 2 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/manual/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "2 actual held pages compared with Office references",
+      "evidence": "qa/manual/playback/native-playback-audit.json"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 实播对象运动",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 575 actual frames, 2 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/automatic/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "2 actual held pages compared with Office references",
+      "evidence": "qa/automatic/playback/native-playback-audit.json"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/6288d79e8c308dbd89cbbbe2c44c854a31ae2ae13e65532243a7098552e43c6d.json",
+      "review_note": "已查看本次点击/自动实际停留与 Morph 分段帧：绿色主体保持单一实心轮廓并跨页移位/放大，中文标题与说明可读无裁切。圆形没有可判断角度的方向线索；文字主体有位置变化但当前追踪器未覆盖其 Morph。因此只通过本项画面质量审阅，unsupported-transform、morph-unsupported-geometry 及其他原始待检均保留，不声称这些对象自动验收通过。模拟几何不代表业务数据，结论限固定 Linux WPS。"
+    },
+    {
+      "id": "source-preserved",
+      "label": "原稿与证据绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "原稿与输入副本校验值保持一致"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "source-review",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "review",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/source-review.json"
+      ],
+      "started_at": "2026-10-22T08:08:33.137262+00:00",
+      "status": "passed",
+      "log": "logs/source-review.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.486
+    },
+    {
+      "id": "preview-generate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "preview",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/preview",
+        "--remotion"
+      ],
+      "started_at": "2026-10-22T08:08:33.623730+00:00",
+      "status": "passed",
+      "log": "logs/preview-generate.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.492
+    },
+    {
+      "id": "preview-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_preview.py",
+        "--url",
+        "http://localhost:45991/preview.html",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/preview"
+      ],
+      "started_at": "2026-10-22T08:08:35.120979+00:00",
+      "status": "passed",
+      "log": "logs/preview-check.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 5.052
+    },
+    {
+      "id": "design-render",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/render_project.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/design-preview.mp4"
+      ],
+      "started_at": "2026-10-22T08:08:40.438382+00:00",
+      "status": "passed",
+      "log": "logs/design-render.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 49.654
+    },
+    {
+      "id": "native-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx"
+      ],
+      "started_at": "2026-10-22T08:09:30.093991+00:00",
+      "status": "passed",
+      "log": "logs/native-build.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.469
+    },
+    {
+      "id": "native-auto-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--auto"
+      ],
+      "started_at": "2026-10-22T08:09:30.563653+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-build.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.469
+    },
+    {
+      "id": "native-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native",
+        "--render",
+        "--import-check",
+        "--office-tools-root",
+        "/workspace/.tools/ppt-desktop"
+      ],
+      "started_at": "2026-10-22T08:09:31.033175+00:00",
+      "status": "passed",
+      "log": "logs/native-check.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.524
+    },
+    {
+      "id": "native-auto-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/auto"
+      ],
+      "started_at": "2026-10-22T08:09:33.558240+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-check.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.168
+    },
+    {
+      "id": "record-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/capture/manual",
+        "--seconds",
+        "19.0",
+        "--show-after",
+        "1.0",
+        "--width",
+        "1600",
+        "--height",
+        "900",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "9.5"
+      ],
+      "started_at": "2026-10-22T08:09:33.768396+00:00",
+      "status": "passed",
+      "log": "logs/record-manual.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 26.196
+    },
+    {
+      "id": "record-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/capture/automatic",
+        "--seconds",
+        "19.15",
+        "--show-after",
+        "1",
+        "--width",
+        "1600",
+        "--height",
+        "900",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile"
+      ],
+      "started_at": "2026-10-22T08:09:59.965474+00:00",
+      "status": "passed",
+      "log": "logs/record-automatic.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 26.319
+    },
+    {
+      "id": "morph-probe-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/deck.pptx"
+      ],
+      "started_at": "2026-10-22T08:10:26.285798+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-build.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.219
+    },
+    {
+      "id": "record-morph-probe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/capture",
+        "--seconds",
+        "9",
+        "--show-after",
+        "1",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "60",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "4"
+      ],
+      "started_at": "2026-10-22T08:10:26.505879+00:00",
+      "status": "passed",
+      "log": "logs/record-morph-probe.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 16.106
+    },
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/phases",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-22T08:10:42.616852+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 13.475
+    },
+    {
+      "id": "motion-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-22T08:10:56.092908+00:00",
+      "status": "passed",
+      "log": "logs/motion-manual.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 5.497
+    },
+    {
+      "id": "frames-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/manual/playback"
+      ],
+      "started_at": "2026-10-22T08:11:01.594543+00:00",
+      "status": "passed",
+      "log": "logs/frames-manual.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.388
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-22T08:11:03.985419+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 13.282
+    },
+    {
+      "id": "motion-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-22T08:11:17.269758+00:00",
+      "status": "passed",
+      "log": "logs/motion-automatic.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 5.475
+    },
+    {
+      "id": "frames-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/playback-evidence-auto.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/qa/automatic/playback"
+      ],
+      "started_at": "2026-10-22T08:11:22.752873+00:00",
+      "status": "passed",
+      "log": "logs/frames-automatic.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.214
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-22T08:11:24.968704+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 6.841
+    },
+    {
+      "id": "review-frames",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/extract_review_frames.py",
+        "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated"
+      ],
+      "started_at": "2026-10-22T08:11:31.812493+00:00",
+      "status": "passed",
+      "log": "logs/review-frames.log",
+      "implementation": {
+        "sha256": "882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59",
+        "snapshot": "implementations/882350de773dad6857fe5722d63cf8ea4a279aa4c4ea2d3cb1652e674d49db59.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 3.308
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "15ac4a6feee90cc32bab2a18d04994ab8456387d6dfedbd49c651e3ebf01a73e",
+      "bytes": 402174,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "5ed5f5d94d84658395faa927c4ae5abeb6b2f9ffc8eb0b7160f42e71679f0624",
+      "bytes": 2989,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "170b11e2fdbfc9f94dc74d127e4a0fd561f998b13650165b9717428def04fe63",
+      "bytes": 397255,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "491bd5656dcb8f51bb7a7028f7f154d1a257db478cf2e0d44fad4034d10d31e0",
+      "bytes": 2927,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "4c8151af114c040265a39341834adf5ca34079b1642c54441cd930c3f9741f3e",
+      "bytes": 6861,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "3610f66f6f3f5b4b7ef0c5e20410d7337a5eb6e4e5db952b013f258a93e4224c",
+      "bytes": 37599,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "127a40d3fc3cfa705f2cab835ae804b4bf81e22161556382f2d61d87145a2737",
+      "bytes": 37607,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "52d5fb1ed6635f9773c9c1c2d54055f365cc8beea376b7477bf4fa18876bd2e1",
+      "bytes": 500160,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "requested_target_player": "wps-desktop",
+  "workflow_mode": "full",
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "15ac4a6feee90cc32bab2a18d04994ab8456387d6dfedbd49c651e3ebf01a73e",
+      "source_pptx_sha256": "3610f66f6f3f5b4b7ef0c5e20410d7337a5eb6e4e5db952b013f258a93e4224c"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "170b11e2fdbfc9f94dc74d127e4a0fd561f998b13650165b9717428def04fe63",
+      "source_pptx_sha256": "127a40d3fc3cfa705f2cab835ae804b4bf81e22161556382f2d61d87145a2737"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "pending",
+  "automatic_acceptance_status": "pending",
+  "finished_at": "2026-10-22T08:29:30.953697+00:00"
+}

@@ -1,0 +1,247 @@
+{
+  "version": "1.8.0",
+  "player_scope": "Pinned international Linux WPS 11.1.0.11723.XA; Windows core CI is separate from desktop playback",
+  "tests": {
+    "python": 139,
+    "node": 11
+  },
+  "existing": {
+    "format_version": 1,
+    "status": "passed",
+    "scope": "Existing-PPT appearance/context and preservation only; not a general native-motion acceptance run",
+    "fixture": "Repository-authored simulated three-page deck; not customer content",
+    "player": "WPS Office Presentation (Linux)",
+    "version": "WPS Office package 11.1.0.11723.XA",
+    "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+    "enhanced_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+    "plan_sha256": "51a2101f187cf748a42b2e38bcbfb1ef1b3c9b70472f2ab525082283970eb3af",
+    "recordings": {
+      "source": "87295292347499e2db3c4e414ef79bd847d63337f989fdf4ce4507a625872251",
+      "enhanced": "ec1486583f16cc015f36042b05fb3f4605f7a36f9e85294debc5befd8a0402c0"
+    },
+    "preservation": {
+      "status": "passed",
+      "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+      "output_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+      "changed_timing_parts": [
+        "ppt/slides/slide1.xml",
+        "ppt/slides/slide2.xml"
+      ],
+      "unchanged_package_parts": 50,
+      "layout_and_relationships_preserved": true,
+      "scope": "ZIP member bytes and canonical slide XML outside p:timing; does not certify playback or visual quality"
+    },
+    "reveal_probes": 5,
+    "persistent_context_probes": 6,
+    "native_static_pages_equal": true,
+    "visual_review_sha256": "a0c548bddbbffd4e02e8c1880b327124552286a7bef5ff9cd97f805c72998ee2",
+    "playback_audit_sha256": "f6e86e530227403ea1e8b68271504ac525020db2aac5848f8295290b0641bf28",
+    "implementation": {
+      "sha256": "abd9a5d8b4d854b49369a6e08a0f889c8ffa582470aebacbfe59752e85f1b007",
+      "snapshot": "implementations/abd9a5d8b4d854b49369a6e08a0f889c8ffa582470aebacbfe59752e85f1b007.zip"
+    },
+    "crop_regression": {
+      "before_status": "failed",
+      "after_status": "passed",
+      "same_recording_and_inputs": true,
+      "same_thresholds": true,
+      "before_report_sha256": "d57b15857af9fc4d1aa00aa1b32c331dfe19a474f5d2f19907a2363946a26ca0",
+      "after_report_sha256": "f6e86e530227403ea1e8b68271504ac525020db2aac5848f8295290b0641bf28",
+      "fix": "Preserve crop aspect ratio; normalize documented one-pixel PDF height rounding. Do not stretch a text line to the full descriptor height."
+    }
+  },
+  "acceptance_runs": [
+    {
+      "name": "normal_recheck",
+      "acceptance_status": "passed",
+      "automatic_acceptance_status": "passed",
+      "pipeline_status": "completed",
+      "checks": {
+        "passed": 22,
+        "failed": 0,
+        "pending": 0
+      },
+      "recordings": {
+        "manual": {
+          "video": "player-recording.mp4",
+          "pptx": "deck.pptx",
+          "evidence": "playback-evidence.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "3f6cb166cb4d1996f6fd17201aa94457ff21d868d4984f0bad7ad6ddc5c4879d",
+          "source_pptx_sha256": "ee9285a2f731d1106c90096164769b0dca00aedbc3776ddd56de19c47c7ae68b"
+        },
+        "automatic": {
+          "video": "player-recording-auto.mp4",
+          "pptx": "deck-auto.pptx",
+          "evidence": "playback-evidence-auto.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "9ed4cf41143bb808806f952ea82992798b427e84fcfeeaafb3cb6e358db99eb7",
+          "source_pptx_sha256": "adf183890d36cc28ad1a525231f839f85cae0d5f3661d20e95a41855a6dff7f6"
+        }
+      },
+      "diagnostic_integrity": "passed",
+      "findings": []
+    },
+    {
+      "name": "unidentified_page_context",
+      "acceptance_status": "pending",
+      "automatic_acceptance_status": "pending",
+      "pipeline_status": "completed",
+      "checks": {
+        "passed": 13,
+        "failed": 0,
+        "pending": 9
+      },
+      "recordings": {
+        "manual": {
+          "video": "player-recording.mp4",
+          "pptx": "deck.pptx",
+          "evidence": "playback-evidence.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "d4d356247a3bbd9378ee6bfb1f1d9075bcf0b2fdd22e10bf84674779e657f3c9",
+          "source_pptx_sha256": "0b8feae5952422682da554bd8186e7c7fcec4ebb91a0e5e646496e2da2706121"
+        },
+        "automatic": {
+          "video": "player-recording-auto.mp4",
+          "pptx": "deck-auto.pptx",
+          "evidence": "playback-evidence-auto.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "96c4e88a4fe3a657ac644ce6c3e26cf0b80410ea0aa1d91937965ad5d4e5db6a",
+          "source_pptx_sha256": "f32647164923b1cba522f0b23604ff0fd23085e49bd0aace6ebeaeb4e2743713"
+        }
+      },
+      "diagnostic_integrity": "passed",
+      "findings": [
+        {
+          "code": "page-ambiguous",
+          "mode": "manual",
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "morph-unsupported-geometry",
+          "mode": "manual",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "page-ambiguous",
+          "mode": "automatic",
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "morph-unsupported-geometry",
+          "mode": "automatic",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "check-native-motion-manual",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "check-native-held-pages-manual",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "check-native-motion-automatic",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "check-native-held-pages-automatic",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "check-morph-playback",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "check-automatic-advance",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        },
+        {
+          "code": "visual-review-required",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "name": "unsupported_boundaries",
+      "acceptance_status": "pending",
+      "automatic_acceptance_status": "pending",
+      "pipeline_status": "completed",
+      "checks": {
+        "passed": 17,
+        "failed": 0,
+        "pending": 5
+      },
+      "recordings": {
+        "manual": {
+          "video": "player-recording.mp4",
+          "pptx": "deck.pptx",
+          "evidence": "playback-evidence.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "15ac4a6feee90cc32bab2a18d04994ab8456387d6dfedbd49c651e3ebf01a73e",
+          "source_pptx_sha256": "3610f66f6f3f5b4b7ef0c5e20410d7337a5eb6e4e5db952b013f258a93e4224c"
+        },
+        "automatic": {
+          "video": "player-recording-auto.mp4",
+          "pptx": "deck-auto.pptx",
+          "evidence": "playback-evidence-auto.json",
+          "player": "WPS Office Presentation (Linux)",
+          "recording_sha256": "170b11e2fdbfc9f94dc74d127e4a0fd561f998b13650165b9717428def04fe63",
+          "source_pptx_sha256": "127a40d3fc3cfa705f2cab835ae804b4bf81e22161556382f2d61d87145a2737"
+        }
+      },
+      "diagnostic_integrity": "passed",
+      "findings": [
+        {
+          "code": "morph-unsupported-geometry",
+          "mode": "manual",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "unsupported-transform",
+          "mode": "manual",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "morph-unsupported-geometry",
+          "mode": "automatic",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "unsupported-transform",
+          "mode": "automatic",
+          "location_basis": "page_context_only",
+          "status": "pending"
+        },
+        {
+          "code": "check-morph-playback",
+          "mode": null,
+          "location_basis": "not_observed",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "complete_delivery": "Release wps-v1.8.0-delivery.zip; exact member/archive SHA values are in its manifest and per-run archive.json"
+}

@@ -5,6 +5,7 @@ import functools
 import http.server
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 
 class ReportHandler(http.server.SimpleHTTPRequestHandler):
@@ -48,11 +49,19 @@ def server(root,port=0):
     return http.server.ThreadingHTTPServer(("127.0.0.1",port),functools.partial(ReportHandler,directory=str(Path(root).resolve())))
 
 
+def report_entry(root,entry):
+    root=Path(root).resolve();path=(root/entry).resolve()
+    if not path.is_relative_to(root) or not path.is_file():raise ValueError('Entry must be an existing file inside the served project directory')
+    return path.relative_to(root).as_posix()
+
+
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("run");parser.add_argument("--port",type=int,default=3021)
+    parser.add_argument('--entry',default='report.html',help='Relative report path, e.g. diagnosis/diagnostics.html under a shared project root')
     args=parser.parse_args();root=Path(args.run).resolve()
-    if not (root/"report.html").is_file():raise SystemExit("Provide the delivery/run directory containing report.html")
+    try:entry=report_entry(root,args.entry)
+    except ValueError as exc:raise SystemExit(str(exc))
     with server(root,args.port) as http:
-        print(f"http://localhost:{http.server_port}/report.html",flush=True)
+        print(f"http://localhost:{http.server_port}/{quote(entry)}",flush=True)
         try:http.serve_forever()
         except KeyboardInterrupt:pass

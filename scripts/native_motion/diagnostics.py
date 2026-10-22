@@ -194,6 +194,9 @@ def write_diagnostics(root, output, report):
         href = os.path.relpath(inside(root, name), output).replace(os.sep, '/')
         videos.append(f'<div><h2>{"点击实录" if mode=="manual" else "自动实录"}</h2><video id="video-{mode}" src="{esc(href)}" controls preload="metadata"></video></div>')
     cards = []
+    category_labels={'unsupported':'当前算法未覆盖','not_observed':'尚无可靠观测','capture':'采集需复查',
+                     'measured_issue':'原始测量提示','evidence':'证据绑定问题','review':'需要复核'}
+    state_labels={'passed':'通过','failed':'失败','pending':'待检查'}
     for finding in report['findings']:
         mode = finding['mode'];t = finding['timestamp'];context = finding['context_interval_seconds'];seek = ''
         if mode in report['videos'] and (t is not None or context):
@@ -201,7 +204,9 @@ def write_diagnostics(root, output, report):
             label = f'{t:.3f}s · 原始帧 {finding["frame_index"]}' if t is not None else f'页面上下文 {context[0]:.3f}–{context[1]:.3f}s（非异常时刻）'
             seek = f'<button data-mode="{mode}" data-at="{at}">{esc(label)}</button>'
         href = os.path.relpath(inside(root, finding['source_report']), output).replace(os.sep, '/')
-        cards.append(f'<article><strong>{esc(finding["code"])}</strong> · {esc(finding["status"])} · {esc(finding["category"])}<p>页 {esc(finding["slide"])} · 对象 {esc(finding["object"])} {seek}</p><p>{esc(finding["message"])}</p><p>{esc(finding["suggestion"])}</p><a href="{esc(href)}">原始检查记录</a></article>')
+        location='第 '+str(finding['slide'])+' 页' if finding['slide'] is not None else '整体验收'
+        if finding['object'] is not None:location+=' · 对象 '+str(finding['object'])
+        cards.append(f'<article><strong>{esc(category_labels.get(finding["category"],finding["category"]))}</strong> · {esc(state_labels.get(finding["status"],finding["status"]))}<p>{esc(location)} {seek}</p><p>{esc(finding["message"])}</p><p>{esc(finding["suggestion"])}</p><small>{esc(finding["code"])}</small> · <a href="{esc(href)}">原始检查记录</a></article>')
     document='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>验收问题与复验建议</title><style>body{max-width:1100px;margin:40px auto;padding:0 20px;background:#f4f2ea;color:#173330;font:15px/1.65 system-ui}video{width:100%;background:#102326}.videos{display:grid;grid-template-columns:1fr 1fr;gap:20px}article{border-top:1px solid #cad5cc;padding:18px 0}button{font:inherit;cursor:pointer;background:#e0eadf;border:1px solid #b4c7bc;padding:5px 10px}a{color:#00766a}strong{overflow-wrap:anywhere}@media(max-width:700px){.videos{grid-template-columns:1fr}}</style><h1>验收问题与复验建议</h1><p>原始最终状态：'''+esc(report['acceptance_status'])+'；原始自动状态：'+esc(report['automatic_acceptance_status'])+'；解释文件依赖完整性：'+esc(report['diagnostic_integrity'])+'''。</p><p>此报告解释已有结果，不改变验收状态。可定位的时间来自实际测量；页面上下文只帮助回看，没有时间证据时不生成定位按钮。</p><section class="videos">'''+''.join(videos)+'</section>'+(''.join(cards) or '<p>本次没有需要解释的失败或待检项；原始检查范围仍以验收报告为准。</p>')+'''<script>document.querySelectorAll('button[data-at]').forEach(button=>button.onclick=()=>{const video=document.getElementById('video-'+button.dataset.mode);const at=Number(button.dataset.at);if(video&&Number.isFinite(at)&&at>=0){video.currentTime=Math.max(0,at-.2);video.scrollIntoView({block:'center'});}});</script></html>'''
     (output/'diagnostics.html').write_text(document, encoding='utf-8')
     (output/'diagnostics.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

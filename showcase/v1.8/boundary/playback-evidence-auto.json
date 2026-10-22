@@ -1,0 +1,72 @@
+{
+  "origin": "native_desktop_screen_capture",
+  "is_pptx_playback_recording": true,
+  "player": "WPS Office Presentation (Linux)",
+  "version": "WPS Office package 11.1.0.11723.XA",
+  "installed_vendor_package": {
+    "player": "WPS Office Presentation (Linux)",
+    "package_version": "11.1.0.11723.XA",
+    "version_scope": "Verified vendor package metadata; GUI About still to check",
+    "package_sha256": "fe6326210f69d94efdbf2728914d293036be391b93a614f58cd0e1ff1d4923b3",
+    "package_bytes": 318892996,
+    "vendor_url": "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11723/wps-office_11.1.0.11723.XA_amd64.deb",
+    "executable": "/workspace/.tools/wps-desktop/root/opt/kingsoft/wps-office/office6/wpp",
+    "executable_sha256": "97008cc6b1f4ab93e491b6474af82f026324f052583d1949765e2396fc9e774b",
+    "library_paths": [
+      "/workspace/.tools/wps-desktop/root/opt/kingsoft/wps-office/office6",
+      "/workspace/.tools/wps-desktop/root/opt/kingsoft/wps-office/office6/qt/lib",
+      "/workspace/.tools/wps-desktop/deps/usr/lib/x86_64-linux-gnu"
+    ],
+    "package_fields": {
+      "Package": "wps-office",
+      "Version": "11.1.0.11723.XA",
+      "Architecture": "amd64"
+    },
+    "missing_startup_libraries": [],
+    "status": "installed_pending_gui_test",
+    "system_packages_changed": false,
+    "native_playback_tested": false
+  },
+  "system": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "recorded_at": "2026-10-22T08:10:23.157917+00:00",
+  "virtual_display": "Xvfb :91",
+  "capture_requested": {
+    "width": 1600,
+    "height": 900,
+    "fps": 30
+  },
+  "actual_video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 900,
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "575"
+      }
+    ],
+    "format": {
+      "duration": "19.166667"
+    }
+  },
+  "source_pptx": "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/deck-auto.pptx",
+  "source_pptx_sha256": "127a40d3fc3cfa705f2cab835ae804b4bf81e22161556382f2d61d87145a2737",
+  "opened_copy": "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/capture/automatic/input/deck-auto.pptx",
+  "opened_copy_sha256": "127a40d3fc3cfa705f2cab835ae804b4bf81e22161556382f2d61d87145a2737",
+  "recording": "/workspace/native-motion-ppt/output/v180-runs/boundary-calibrated/capture/automatic/player-recording.mp4",
+  "recording_sha256": "170b11e2fdbfc9f94dc74d127e4a0fd561f998b13650165b9717428def04fe63",
+  "actions": [
+    {
+      "at_wall_seconds": 1.0089966279997498,
+      "key": "F5"
+    }
+  ],
+  "gui_checkpoints": [
+    "editor-before-show.png",
+    "show-start.png"
+  ],
+  "status": "recorded_pending_visual_review",
+  "scope": "Actual selected GUI on a private X display. Installed package version is distinct from GUI About. Linux playback does not certify Windows, other builds or native Morph."
+}

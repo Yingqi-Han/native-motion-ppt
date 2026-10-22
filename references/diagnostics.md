@@ -6,6 +6,8 @@ python scripts/nmp.py diagnose output/runs/previous --out output/diagnosis
 
 适用于 v1.6+ 的双录制验收结构。帮助与诊断只用 Python 标准库；不要求播放器、浏览器或科学计算依赖。默认输出是旧运行的同级新目录，禁止将独立诊断写入原运行。新 full / record / check 运行在最终报告中自动加入 qa/diagnostics 链接。
 
+浏览器视频定位使用支持 HTTP 字节范围的本地报告服务器。完整运行用 `python scripts/serve_report.py <运行目录>` 后点击诊断链接；独立诊断的 CLI 结果提供 serve_argv，或显式执行 `python scripts/serve_report.py <共同项目父目录> --entry diagnosis/diagnostics.html`。入口必须在所服务目录内；本地服务只监听 127.0.0.1。普通静态服务器的媒体定位能力需要另行确认。
+
 diagnostics.json 保留原始 acceptance_status / automatic_acceptance_status、每项的 failed / pending、源报告路径及 SHA。diagnostic_integrity 表示解释所依赖的文件绑定是否一致，不是播放通过状态。原始报告、录像或源文件替换后，旧解释失效。verifier 会核对自动交付中的解释依赖。
 
 - unsupported：现有算法不覆盖旋转、透明、复杂几何或无独立色轮廓等。重跑同一算法不会扩大覆盖；需要新的追踪方法或绑定实际帧的独立审阅。

@@ -1,13 +1,13 @@
-# Native Motion PPT v1.7.0 · 发布检查
+# Native Motion PPT v1.8.0 · 发布检查
 
-本轮新增统一项目入口、按任务诊断、核心依赖启动流程、产品/进展示例，并修复实播阶段识别与失败报告。117 项 Python unittest、11 项 Node 时间线检查通过，skill 结构验证通过。
+本轮完善现成 PPT 的布局辅助分组草案、源 SHA 绑定、逐成员保留校验，以及失败/待检原因和录像定位。139 项 Python unittest、11 项 Node 时间线检查；skill 结构、源码分发与全新安装分别验证。
 
-隔离环境只安装 requirements-core.txt，实际执行 new、严格 build、preview 和 enhance，检查原稿及已有动画保留、随包字体匹配；确认未安装 NumPy、PyMuPDF、Playwright，未启动 Office 或浏览器。GitHub 的 Linux/Windows 核心任务和 Python 3.10/3.12 完整回归已通过：[检查记录](https://github.com/Yingqi-Han/native-motion-ppt/actions/runs/39116916502)。首次跨平台失败记录保留，修复 Windows UTF-8 读取并为中文示例检查安装完整字体，没有跳过失败断言。
+干净核心环境实际执行 new/build/preview、现成 PPT plan/enhance：检查源 SHA、两页新增分组、原生父组合、已有动画整页与非目标成员保留；未安装 NumPy、PyMuPDF、Playwright，未启动 Office。Linux/Windows CI 测试核心行为，不认证 Windows WPS。
 
-实测从公开 v1.6.1 源码包安装后执行受管理升级，确认新入口字节、旧版备份和本地修改阻止覆盖。升级检查只证明安装器行为。
+仓库自制三页源 PPT 和增强稿均真实 WPS 录制。静态三页逐像素一致，只有两个时序成员变化，其他 50 个包成员按字节保留；实际录像中 4 次新增展开、1 次原有点击和 6 个上下文探针通过。审阅绑定原版/增强版录像与实际帧。增强检查只认证整体出现和上下文，不扩张到任意路径或文本 Morph。
 
-两套新示例的真实 WPS 点击/自动录像、原生柱展开、主体运动、Morph 与自动翻页分别检查；最终状态及校验清单见 [实播验证](docs/verification.md)。自动首屏晚展开误漏和旧页面遮罩截断主体的中间结果保留，代码修正后独立复验。失败状态传播另以退出码为 1 的实际子进程做行为回归，合成测试不计作播放器证据。
+正常项目复用原始 WPS 录像在新目录复验，22 项通过。边界项目独立录制点击/自动版本，可测主体通过，文字 Morph 与旋转仍保留 5 项待检。页面无法可靠识别的旧录像复算后流程完成、9 项待检，抽取的是明确标记的上下文。原来的抽帧失败日志与原始结果仍保留。
 
-源码分发执行 source-only 打包和 verify_delivery.py，核对 ZIP CRC、成员清单、SHA、版本与解压后全新安装。实际 WPS 工程另行归档，保留源/PPT/双录像、采集证据、机器检查、结构化视觉审阅、实现快照、报告与可安装工程。
+修复了窄文本裁剪被拉伸和 PDF 一像素高度舍入造成的比较误报。前后使用相同原始录像与输入，静态及出现阈值未放宽；缺失内容、错误内容、提前出现、采集绑定替换、旧解释失效等负向检查保留。浏览器另验证诊断页加载双视频与定位，字节范围服务提供媒体寻址；UI 截图不是 WPS 实播证据。
 
-历史 v1.6.1 检查见 [原记录](docs/history/QA_REPORT-v1.6.1.md)，旧引擎来源清单仅解释 v1.6.1，不能认证本轮检测器。CI 与打包检查不认证 Windows WPS 或 Microsoft PowerPoint。
+完整范围、原始 SHA 与对应附件见 [实播验证](docs/verification.md) 和 [机器摘要](docs/verification-v1.8.json)。历史 v1.7 原报告保存在 docs/history/，旧通过结论不套用到新稿。Windows WPS、Microsoft PowerPoint 与真实客户业务样本尚无新增结论。

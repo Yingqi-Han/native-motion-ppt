@@ -4,7 +4,7 @@
 
 An agent skill for editable animated PowerPoint, shared JSON/Remotion previews, and evidence-backed desktop playback acceptance.
 
-[下载 v1.7.0 安装包](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.7.0/native-motion-ppt-v1.7.0.zip) · [完整 WPS 实播验收工程](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.7.0/wps-v1.7.0-delivery.zip) · [Release 与校验清单](https://github.com/Yingqi-Han/native-motion-ppt/releases/tag/v1.7.0)
+[下载 v1.8.0 安装包](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.8.0/native-motion-ppt-v1.8.0.zip) · [完整 WPS 实播验收工程](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.8.0/wps-v1.8.0-delivery.zip) · [Release 与校验清单](https://github.com/Yingqi-Han/native-motion-ppt/releases/tag/v1.8.0)
 
 当前源码 **v1.8.0**，MIT 许可。新增现成 PPT 的分组草案、源文件绑定与逐成员保留校验，以及可定位的待检原因说明。支持分步动画、逐字出现、运动路径、缩放/旋转、跨页 Morph，以及点击/自动双版本。WPS 实播结论限 Linux 11.1.0.11723；[范围与真实录像](docs/verification.md) 分别记录，Windows WPS 和 Microsoft PowerPoint 尚未实测。
 

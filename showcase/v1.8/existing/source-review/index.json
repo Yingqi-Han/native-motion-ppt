@@ -1,0 +1,36 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "87295292347499e2db3c4e414ef79bd847d63337f989fdf4ce4507a625872251",
+  "samples": [
+    {
+      "path": "frame-001.png",
+      "frame_index": 75,
+      "timestamp": 2.5,
+      "sha256": "82ff2ac2fed8d489b8e754fd19fc87c650ca9f55ba19013cac7961fac2f4b9b4"
+    },
+    {
+      "path": "frame-002.png",
+      "frame_index": 225,
+      "timestamp": 7.5,
+      "sha256": "e9f72f980440dd03db0f72967c884e0a9028008057f27981a1042b4c826d5091"
+    },
+    {
+      "path": "frame-003.png",
+      "frame_index": 336,
+      "timestamp": 11.2,
+      "sha256": "30088bd48534eb2e20adc09ab53545e191969533749809b08a3167591557823e"
+    },
+    {
+      "path": "frame-004.png",
+      "frame_index": 456,
+      "timestamp": 15.2,
+      "sha256": "38c2e1ec35714a6d5af41246c1629ef34ec96fcffe34ce7345cf7a4a01db8caa"
+    },
+    {
+      "path": "frame-005.png",
+      "frame_index": 516,
+      "timestamp": 17.2,
+      "sha256": "38c2e1ec35714a6d5af41246c1629ef34ec96fcffe34ce7345cf7a4a01db8caa"
+    }
+  ]
+}

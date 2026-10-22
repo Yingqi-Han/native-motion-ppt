@@ -1,0 +1,628 @@
+{
+  "format_version": 2,
+  "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+  "planning_status": "reviewed_for_this_simulated_fixture",
+  "max_clicks": 2,
+  "animation": {
+    "effect": "fade",
+    "duration_ms": 450,
+    "stagger_ms": 100
+  },
+  "slides": [
+    {
+      "slide": 1,
+      "groups": [
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "units": [
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "slide": 2,
+      "groups": [
+        [
+          7
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "units": [
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          17
+        ],
+        [
+          16
+        ]
+      ]
+    }
+  ],
+  "review": [
+    {
+      "slide": 1,
+      "status": "proposed",
+      "reason": "Check argument order and keep chart annotations with their data; layout rules cannot infer the intended narrative",
+      "objects": [
+        {
+          "id": 2,
+          "name": "!!section-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "EXISTING PPT / SIMULATED REGRESSION",
+          "box_emu": [
+            685800,
+            393700,
+            7493000,
+            266700
+          ],
+          "max_font_size_pt": 11.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small top text; proposed persistent header/page label, check actual meaning"
+        },
+        {
+          "id": 3,
+          "name": "!!page-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "01 / 03",
+          "box_emu": [
+            8445500,
+            393700,
+            1079500,
+            266700
+          ],
+          "max_font_size_pt": 11.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small top text; proposed persistent header/page label, check actual meaning"
+        },
+        {
+          "id": 4,
+          "name": "!!title-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "把同一个论点，一起展开。",
+          "box_emu": [
+            685800,
+            1130300,
+            8763000,
+            698500
+          ],
+          "max_font_size_pt": 32.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "title",
+          "reason": "Native title placeholder or short prominent text in the top area"
+        },
+        {
+          "id": 5,
+          "name": "!!footer-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "仓库自制模拟样本：用于验证现成 PPT 增强，不代表客户业务内容。",
+          "box_emu": [
+            685800,
+            5359400,
+            8763000,
+            228600
+          ],
+          "max_font_size_pt": 10.5,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small bottom text; proposed persistent caption/footer, check actual meaning"
+        },
+        {
+          "id": 6,
+          "name": "!!intro-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "先保留页面上下文，再按两个信息块展开。",
+          "box_emu": [
+            711200,
+            1968500,
+            8572500,
+            349250
+          ],
+          "max_font_size_pt": 15.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 7,
+          "name": "!!card-0",
+          "kind": "AUTO_SHAPE (1)",
+          "native_type": "AUTO_SHAPE",
+          "text": "",
+          "box_emu": [
+            685800,
+            2667000,
+            4191000,
+            2095500
+          ],
+          "max_font_size_pt": null,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "visual",
+          "reason": "Whole native shape/image; source picture bytes remain unchanged"
+        },
+        {
+          "id": 8,
+          "name": "!!argument-0",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "保留现有版式",
+          "box_emu": [
+            927100,
+            3009900,
+            3683000,
+            412750
+          ],
+          "max_font_size_pt": 21.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 9,
+          "name": "!!evidence-0",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "标题、文字、图片和备注\n继续留在原文件结构里。",
+          "box_emu": [
+            927100,
+            3746500,
+            3683000,
+            698500
+          ],
+          "max_font_size_pt": 15.5,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 10,
+          "name": "!!card-1",
+          "kind": "AUTO_SHAPE (1)",
+          "native_type": "AUTO_SHAPE",
+          "text": "",
+          "box_emu": [
+            5257800,
+            2667000,
+            4191000,
+            2095500
+          ],
+          "max_font_size_pt": null,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "visual",
+          "reason": "Whole native shape/image; source picture bytes remain unchanged"
+        },
+        {
+          "id": 11,
+          "name": "!!argument-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "按内容块出现",
+          "box_emu": [
+            5499100,
+            3009900,
+            3683000,
+            412750
+          ],
+          "max_font_size_pt": 21.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 12,
+          "name": "!!evidence-1",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "背景、论点与说明\n属于同一次点击。",
+          "box_emu": [
+            5499100,
+            3746500,
+            3683000,
+            698500
+          ],
+          "max_font_size_pt": 15.5,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        }
+      ]
+    },
+    {
+      "slide": 2,
+      "status": "proposed",
+      "reason": "Check argument order and keep chart annotations with their data; layout rules cannot infer the intended narrative",
+      "objects": [
+        {
+          "id": 2,
+          "name": "!!section-2",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "EXISTING PPT / SIMULATED REGRESSION",
+          "box_emu": [
+            685800,
+            393700,
+            7493000,
+            266700
+          ],
+          "max_font_size_pt": 11.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small top text; proposed persistent header/page label, check actual meaning"
+        },
+        {
+          "id": 3,
+          "name": "!!page-2",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "02 / 03",
+          "box_emu": [
+            8445500,
+            393700,
+            1079500,
+            266700
+          ],
+          "max_font_size_pt": 11.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small top text; proposed persistent header/page label, check actual meaning"
+        },
+        {
+          "id": 4,
+          "name": "!!title-2",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "图表与说明，保持关联。",
+          "box_emu": [
+            685800,
+            1130300,
+            8763000,
+            698500
+          ],
+          "max_font_size_pt": 32.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "title",
+          "reason": "Native title placeholder or short prominent text in the top area"
+        },
+        {
+          "id": 5,
+          "name": "!!footer-2",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "仓库自制模拟样本：用于验证现成 PPT 增强，不代表客户业务内容。",
+          "box_emu": [
+            685800,
+            5359400,
+            8763000,
+            228600
+          ],
+          "max_font_size_pt": 10.5,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "context",
+          "reason": "Small bottom text; proposed persistent caption/footer, check actual meaning"
+        },
+        {
+          "id": 6,
+          "name": "!!intro-2",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "图表作为一个原生组合出现，图片与说明一起出现。",
+          "box_emu": [
+            711200,
+            1968500,
+            8763000,
+            349250
+          ],
+          "max_font_size_pt": 15.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 7,
+          "name": "!!chart-group",
+          "kind": "GROUP (6)",
+          "native_type": "GROUP",
+          "text": "",
+          "box_emu": [
+            857250,
+            2603500,
+            4127500,
+            2222500
+          ],
+          "max_font_size_pt": null,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "children": [
+            {
+              "id": 8,
+              "name": "!!chart-axis",
+              "kind": "LINE (9)",
+              "native_type": "LINE",
+              "text": "",
+              "box_emu": [
+                317500,
+                1714500,
+                3556000,
+                6350
+              ],
+              "max_font_size_pt": null,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 9,
+              "name": "!!chart-label",
+              "kind": "TEXT_BOX (17)",
+              "native_type": "TEXT_BOX",
+              "text": "模拟完成度（%）",
+              "box_emu": [
+                317500,
+                0,
+                3619500,
+                285750
+              ],
+              "max_font_size_pt": 13.5,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 10,
+              "name": "!!bar-0",
+              "kind": "AUTO_SHAPE (1)",
+              "native_type": "AUTO_SHAPE",
+              "text": "",
+              "box_emu": [
+                952500,
+                571500,
+                603250,
+                1143000
+              ],
+              "max_font_size_pt": null,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 11,
+              "name": "!!value-0",
+              "kind": "TEXT_BOX (17)",
+              "native_type": "TEXT_BOX",
+              "text": "60",
+              "box_emu": [
+                889000,
+                285750,
+                730250,
+                266700
+              ],
+              "max_font_size_pt": 14.0,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 12,
+              "name": "!!label-0",
+              "kind": "TEXT_BOX (17)",
+              "native_type": "TEXT_BOX",
+              "text": "方案 A",
+              "box_emu": [
+                825500,
+                1873250,
+                889000,
+                285750
+              ],
+              "max_font_size_pt": 12.5,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 13,
+              "name": "!!bar-1",
+              "kind": "AUTO_SHAPE (1)",
+              "native_type": "AUTO_SHAPE",
+              "text": "",
+              "box_emu": [
+                2413000,
+                1047750,
+                603250,
+                666750
+              ],
+              "max_font_size_pt": null,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 14,
+              "name": "!!value-1",
+              "kind": "TEXT_BOX (17)",
+              "native_type": "TEXT_BOX",
+              "text": "35",
+              "box_emu": [
+                2349500,
+                762000,
+                730250,
+                266700
+              ],
+              "max_font_size_pt": 14.0,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            },
+            {
+              "id": 15,
+              "name": "!!label-1",
+              "kind": "TEXT_BOX (17)",
+              "native_type": "TEXT_BOX",
+              "text": "方案 B",
+              "box_emu": [
+                2286000,
+                1873250,
+                889000,
+                285750
+              ],
+              "max_font_size_pt": 12.5,
+              "rotation": 0.0,
+              "placeholder": null,
+              "is_chart": false,
+              "is_table": false
+            }
+          ],
+          "role": "visual",
+          "reason": "Existing native group remains one atomic target; child IDs are not flattened"
+        },
+        {
+          "id": 16,
+          "name": "!!picture-caption",
+          "kind": "TEXT_BOX (17)",
+          "native_type": "TEXT_BOX",
+          "text": "保留原始图片字节\n只给原生对象添加淡入。",
+          "box_emu": [
+            6000750,
+            4000500,
+            3175000,
+            635000
+          ],
+          "max_font_size_pt": 15.0,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "body",
+          "reason": "Whole text box; paragraph content and formatting stay unchanged"
+        },
+        {
+          "id": 17,
+          "name": "original-picture",
+          "kind": "PICTURE (13)",
+          "native_type": "PICTURE",
+          "text": "",
+          "box_emu": [
+            6921500,
+            2667000,
+            1524000,
+            1143000
+          ],
+          "max_font_size_pt": null,
+          "rotation": 0.0,
+          "placeholder": null,
+          "is_chart": false,
+          "is_table": false,
+          "role": "visual",
+          "reason": "Whole native shape/image; source picture bytes remain unchanged"
+        }
+      ]
+    },
+    {
+      "slide": 3,
+      "status": "preserved",
+      "reason": "Existing animation: entire slide is preserved byte-for-byte",
+      "objects": []
+    }
+  ],
+  "scope": "Layout-assisted draft, not a semantic or playback verdict. Inspect actual slides and edit groups before applying. Existing animated slides stay unchanged.",
+  "applied_review": {
+    "reviewer": "Codex",
+    "basis": "Viewed all three actual Office-rendered source PPT pages, not the layout map alone",
+    "note": "Keep title/header/page/footer/intro context visible; each card is one click, chart stays one native group, picture and caption share one click, pre-existing animated third page preserved",
+    "evidence": [
+      "source-qa/rendered/slide-01.png",
+      "source-qa/rendered/slide-02.png",
+      "source-qa/rendered/slide-03.png"
+    ]
+  }
+}

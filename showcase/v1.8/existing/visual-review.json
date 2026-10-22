@@ -1,0 +1,30 @@
+{
+  "reviewer": "Codex visual inspection of actual WPS frame sheets and full source/context page",
+  "recordings": {
+    "source": "87295292347499e2db3c4e414ef79bd847d63337f989fdf4ce4507a625872251",
+    "enhanced": "ec1486583f16cc015f36042b05fb3f4605f7a36f9e85294debc5befd8a0402c0"
+  },
+  "note": "已查看原版五个实际探针和增强版十三个实际探针及完整第一页。原版前两页内容静态可见，第三页原有点击前隐藏/点击后显示。增强版第一点击只出现左卡、第二次出现右卡；第二页图表组合保持标签与坐标关联，图片与说明在第二点击出现；标题、页码、说明上下文持续可见。第三页原有点击继续有效。中文字可读、未见裁切或遮挡。原有图片、备注与动画的逐成员保留由字节校验另证；本审阅不认证任意路径、角度或文本 Morph。仓库自制模拟样本，固定国际版 Linux WPS。",
+  "evidence": [
+    {
+      "path": "source-review/contact.jpg",
+      "sha256": "7d2134d2eb089663b642eaf33001662b5a992f567fec1c6774c3fc2a0b355f00"
+    },
+    {
+      "path": "source-review/index.json",
+      "sha256": "e6a87e4749b1b5e63440e5e352a7e91f0c2c34a2e16fd3169fbff5733a367aa0"
+    },
+    {
+      "path": "playback-qa-final/contact.jpg",
+      "sha256": "3886d5714650a0a5c366a1598519737668ffe1bfa473cf6c639103f03a93fab4"
+    },
+    {
+      "path": "playback-qa-final/enhancement-playback-audit.json",
+      "sha256": "f6e86e530227403ea1e8b68271504ac525020db2aac5848f8295290b0641bf28"
+    },
+    {
+      "path": "playback-qa-final/page-01-context.png",
+      "sha256": "90bb18d4bac79341565811d8b60f25596f5c566b0a8009d807cf539310f7f2c4"
+    }
+  ]
+}

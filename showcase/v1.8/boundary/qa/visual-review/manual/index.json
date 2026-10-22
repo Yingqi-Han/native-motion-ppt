@@ -1,0 +1,57 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "15ac4a6feee90cc32bab2a18d04994ab8456387d6dfedbd49c651e3ebf01a73e",
+  "samples": [
+    {
+      "path": "qa/visual-review/manual/frame-001.png",
+      "frame_index": 267,
+      "timestamp": 8.9,
+      "sha256": "8ec26769fac2ed5575a3bca9b49442564847f92ebc60ec1853abc0a41d026aa4"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-002.png",
+      "frame_index": 279,
+      "timestamp": 9.3,
+      "sha256": "7d576749034f3816929205f4ab5a21a8fccf51d99220693a00f9560bf3f97932"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-003.png",
+      "frame_index": 294,
+      "timestamp": 9.8,
+      "sha256": "e3e880e61ccb4872836e7aa21ea120a607dd19f9bf72de0b45dfccd5bc986828"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-004.png",
+      "frame_index": 309,
+      "timestamp": 10.3,
+      "sha256": "51e47af3e34213539f357e5d88aa9c48855191094f88eb9a8c789addbb4ed4f2"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-005.png",
+      "frame_index": 324,
+      "timestamp": 10.8,
+      "sha256": "03c021bc2c53fd4d7cc424d1b2c29d42075aa8d6e2a571369d2255566746eda7"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-006.png",
+      "frame_index": 339,
+      "timestamp": 11.3,
+      "sha256": "539ac7702ce02a8c6abd78668adb57ccf40f87a79beb23e70466f6ae6160486d"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-007.png",
+      "frame_index": 522,
+      "timestamp": 17.4,
+      "sha256": "af663dc872e054c3c20d24de92810c109f81f57ec9462d77dd41d52d5a3df655"
+    },
+    {
+      "path": "qa/visual-review/manual/frame-008.png",
+      "frame_index": 550,
+      "timestamp": 18.333333,
+      "sha256": "af663dc872e054c3c20d24de92810c109f81f57ec9462d77dd41d52d5a3df655"
+    }
+  ],
+  "contact": "qa/visual-review/manual/contact.jpg",
+  "selection_basis": "measured_phase_or_held_probes",
+  "scope": "Context-only samples do not establish page identity, arrival, motion or acceptance"
+}

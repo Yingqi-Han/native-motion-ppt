@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "status": "passed",
+  "scope": "Existing-PPT appearance/context and preservation only; not a general native-motion acceptance run",
+  "fixture": "Repository-authored simulated three-page deck; not customer content",
+  "player": "WPS Office Presentation (Linux)",
+  "version": "WPS Office package 11.1.0.11723.XA",
+  "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+  "enhanced_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+  "plan_sha256": "51a2101f187cf748a42b2e38bcbfb1ef1b3c9b70472f2ab525082283970eb3af",
+  "recordings": {
+    "source": "87295292347499e2db3c4e414ef79bd847d63337f989fdf4ce4507a625872251",
+    "enhanced": "ec1486583f16cc015f36042b05fb3f4605f7a36f9e85294debc5befd8a0402c0"
+  },
+  "preservation": {
+    "status": "passed",
+    "source_pptx_sha256": "11b590ceeefb76cc7d1b4a448e8f7e05f0add2b582fa61ac1f8305ba71de6752",
+    "output_pptx_sha256": "bd9e38688c7f2a6638429b09a8e70954e00de94040f1a5debceb14505e095426",
+    "changed_timing_parts": [
+      "ppt/slides/slide1.xml",
+      "ppt/slides/slide2.xml"
+    ],
+    "unchanged_package_parts": 50,
+    "layout_and_relationships_preserved": true,
+    "scope": "ZIP member bytes and canonical slide XML outside p:timing; does not certify playback or visual quality"
+  },
+  "reveal_probes": 5,
+  "persistent_context_probes": 6,
+  "native_static_pages_equal": true,
+  "visual_review_sha256": "a0c548bddbbffd4e02e8c1880b327124552286a7bef5ff9cd97f805c72998ee2",
+  "playback_audit_sha256": "f6e86e530227403ea1e8b68271504ac525020db2aac5848f8295290b0641bf28",
+  "implementation": {
+    "sha256": "abd9a5d8b4d854b49369a6e08a0f889c8ffa582470aebacbfe59752e85f1b007",
+    "snapshot": "implementations/abd9a5d8b4d854b49369a6e08a0f889c8ffa582470aebacbfe59752e85f1b007.zip"
+  },
+  "crop_regression": {
+    "before_status": "failed",
+    "after_status": "passed",
+    "same_recording_and_inputs": true,
+    "same_thresholds": true,
+    "before_report_sha256": "d57b15857af9fc4d1aa00aa1b32c331dfe19a474f5d2f19907a2363946a26ca0",
+    "after_report_sha256": "f6e86e530227403ea1e8b68271504ac525020db2aac5848f8295290b0641bf28",
+    "fix": "Preserve crop aspect ratio; normalize documented one-pixel PDF height rounding. Do not stretch a text line to the full descriptor height."
+  }
+}

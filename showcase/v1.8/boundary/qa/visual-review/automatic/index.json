@@ -1,0 +1,63 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "170b11e2fdbfc9f94dc74d127e4a0fd561f998b13650165b9717428def04fe63",
+  "samples": [
+    {
+      "path": "qa/visual-review/automatic/frame-001.png",
+      "frame_index": 205,
+      "timestamp": 6.833333,
+      "sha256": "0f02c9dfa294fc7b0a08343fcbfa6f22b9740be22953b078183759edb1588b76"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-002.png",
+      "frame_index": 212,
+      "timestamp": 7.066667,
+      "sha256": "0f02c9dfa294fc7b0a08343fcbfa6f22b9740be22953b078183759edb1588b76"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-003.png",
+      "frame_index": 217,
+      "timestamp": 7.233333,
+      "sha256": "d18aee859325cab85f9e5693e6de445c1c3274285e9faa11c08b95c740c9b5de"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-004.png",
+      "frame_index": 232,
+      "timestamp": 7.733333,
+      "sha256": "ef1372c9ede6e2a28f4bda4847a2b1ba85c694d963fa668f1987fc9f68dfc28a"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-005.png",
+      "frame_index": 247,
+      "timestamp": 8.233333,
+      "sha256": "53e404bc67b490a29eb0c793a354f8f41ea7a935e908704230d7a11baf6376e2"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-006.png",
+      "frame_index": 263,
+      "timestamp": 8.766667,
+      "sha256": "f5bec722d3789bb16bccdd96da8f55fbe0f684b64a46fa538b17190a8c6648ab"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-007.png",
+      "frame_index": 278,
+      "timestamp": 9.266667,
+      "sha256": "be69d5929f8bc27af7fca84a9f2abab345cf6d79023259fc82294e1c0caf8896"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-008.png",
+      "frame_index": 555,
+      "timestamp": 18.5,
+      "sha256": "daf8eee6d464ab2658066823867f31c4726fcc405b710b757e1fb502ead27f12"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-009.png",
+      "frame_index": 563,
+      "timestamp": 18.766667,
+      "sha256": "daf8eee6d464ab2658066823867f31c4726fcc405b710b757e1fb502ead27f12"
+    }
+  ],
+  "contact": "qa/visual-review/automatic/contact.jpg",
+  "selection_basis": "measured_phase_or_held_probes",
+  "scope": "Context-only samples do not establish page identity, arrival, motion or acceptance"
+}

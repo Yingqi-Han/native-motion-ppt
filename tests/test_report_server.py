@@ -7,10 +7,17 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from serve_report import server
+from serve_report import server,report_entry
 
 
 class RangeTests(unittest.TestCase):
+    def test_entry_is_confined_to_the_selected_project(self):
+        with tempfile.TemporaryDirectory() as folder:
+            base=Path(folder);root=base/'project';(root/'diagnosis').mkdir(parents=True)
+            (root/'diagnosis/diagnostics.html').write_text('report');(base/'outside.html').write_text('outside')
+            self.assertEqual(report_entry(root,'diagnosis/diagnostics.html'),'diagnosis/diagnostics.html')
+            with self.assertRaises(ValueError):report_entry(root,'../outside.html')
+            with self.assertRaises(ValueError):report_entry(root,'missing.html')
     def request(self,range_header):
         with tempfile.TemporaryDirectory() as folder:
             Path(folder,"video.mp4").write_bytes(bytes(range(100)))

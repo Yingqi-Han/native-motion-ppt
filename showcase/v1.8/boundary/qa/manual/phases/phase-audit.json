@@ -1,0 +1,1409 @@
+{
+  "format_version": 2,
+  "origin": "measurement_of_actual_desktop_recording",
+  "status": "pending",
+  "mode": "manual",
+  "recording_sha256": "15ac4a6feee90cc32bab2a18d04994ab8456387d6dfedbd49c651e3ebf01a73e",
+  "source_pptx_sha256": "3610f66f6f3f5b4b7ef0c5e20410d7337a5eb6e4e5db952b013f258a93e4224c",
+  "source_json_sha256": "4c8151af114c040265a39341834adf5ca34079b1642c54441cd930c3f9741f3e",
+  "playback_evidence_sha256": "5ed5f5d94d84658395faa927c4ae5abeb6b2f9ffc8eb0b7160f42e71679f0624",
+  "actual_show_key_seconds": 1.0112649679999777,
+  "planned_input_sha256": "197c84f28e3c0219ab90a885e16b2669e0f5f38ca3ed5499884609765ea722ca",
+  "pages": [
+    {
+      "slide": 1,
+      "status": "passed",
+      "stable_interval_seconds": [
+        3.633333,
+        9.266667
+      ],
+      "held_timestamp": 8.9,
+      "held_frame_index": 267,
+      "reference_rmse": 2.4421796798706055,
+      "reference_tile_rmse": 6.2735114097595215
+    },
+    {
+      "slide": 2,
+      "status": "passed",
+      "stable_interval_seconds": [
+        13.566667,
+        17.766667
+      ],
+      "held_timestamp": 17.4,
+      "held_frame_index": 522,
+      "reference_rmse": 2.446021318435669,
+      "reference_tile_rmse": 6.3006463050842285
+    }
+  ],
+  "page_starts": [
+    1.0,
+    9.5
+  ],
+  "activity_intervals": [
+    {
+      "start": 0.933333,
+      "end": 1.433333,
+      "first_frame": 28,
+      "last_frame": 43,
+      "changed_frames": 12
+    },
+    {
+      "start": 1.733333,
+      "end": 3.6,
+      "first_frame": 52,
+      "last_frame": 108,
+      "changed_frames": 40
+    },
+    {
+      "start": 9.433333,
+      "end": 11.333333,
+      "first_frame": 283,
+      "last_frame": 340,
+      "changed_frames": 49
+    },
+    {
+      "start": 11.633333,
+      "end": 13.533333,
+      "first_frame": 349,
+      "last_frame": 406,
+      "changed_frames": 40
+    }
+  ],
+  "morphs": [
+    {
+      "slide": 2,
+      "object": "measurable",
+      "kind": "rect",
+      "roi": [
+        128,
+        548,
+        1432,
+        742
+      ],
+      "palette": [
+        [
+          0,
+          118,
+          106
+        ]
+      ],
+      "background": [
+        244,
+        242,
+        234
+      ],
+      "excluded_text_boxes": [
+        [
+          108,
+          160,
+          1380,
+          110
+        ],
+        [
+          112,
+          300,
+          1380,
+          60
+        ],
+        [
+          108,
+          844,
+          1380,
+          36
+        ],
+        [
+          110,
+          400,
+          950,
+          65
+        ],
+        [
+          108,
+          160,
+          1380,
+          110
+        ],
+        [
+          112,
+          300,
+          1380,
+          60
+        ],
+        [
+          108,
+          844,
+          1380,
+          36
+        ],
+        [
+          610,
+          370,
+          950,
+          65
+        ]
+      ],
+      "excluded_decoration_boxes": [],
+      "source_boxes": [
+        [
+          140,
+          580,
+          150,
+          130
+        ],
+        [
+          1190,
+          560,
+          230,
+          170
+        ]
+      ],
+      "status": "passed",
+      "issues": [],
+      "distinct_intermediate_poses": 72,
+      "settled_seconds": 11.3,
+      "max_center_step_px": 56.0,
+      "center_distance_px": 1090.0,
+      "max_capture_gap_seconds": 0.033333999999999975,
+      "first_box": [
+        140,
+        580,
+        290,
+        708
+      ],
+      "last_box": [
+        1190,
+        560,
+        1420,
+        728
+      ],
+      "observed_transition_seconds": [
+        9.3,
+        11.3
+      ],
+      "records": [
+        {
+          "frame_index": 279,
+          "timestamp": 9.3,
+          "box": [
+            140,
+            580,
+            290,
+            708
+          ]
+        },
+        {
+          "frame_index": 280,
+          "timestamp": 9.333333,
+          "box": [
+            140,
+            580,
+            290,
+            708
+          ]
+        },
+        {
+          "frame_index": 281,
+          "timestamp": 9.366667,
+          "box": [
+            140,
+            580,
+            290,
+            708
+          ]
+        },
+        {
+          "frame_index": 282,
+          "timestamp": 9.4,
+          "box": [
+            140,
+            580,
+            290,
+            708
+          ]
+        },
+        {
+          "frame_index": 283,
+          "timestamp": 9.433333,
+          "box": [
+            140,
+            580,
+            290,
+            708
+          ]
+        },
+        {
+          "frame_index": 284,
+          "timestamp": 9.466667,
+          "box": [
+            139,
+            579,
+            290,
+            710
+          ]
+        },
+        {
+          "frame_index": 285,
+          "timestamp": 9.5,
+          "box": [
+            140,
+            579,
+            291,
+            710
+          ]
+        },
+        {
+          "frame_index": 286,
+          "timestamp": 9.533333,
+          "box": [
+            142,
+            579,
+            293,
+            710
+          ]
+        },
+        {
+          "frame_index": 287,
+          "timestamp": 9.566667,
+          "box": [
+            146,
+            579,
+            297,
+            710
+          ]
+        },
+        {
+          "frame_index": 288,
+          "timestamp": 9.6,
+          "box": [
+            151,
+            579,
+            303,
+            710
+          ]
+        },
+        {
+          "frame_index": 289,
+          "timestamp": 9.633333,
+          "box": [
+            157,
+            580,
+            309,
+            710
+          ]
+        },
+        {
+          "frame_index": 290,
+          "timestamp": 9.666667,
+          "box": [
+            166,
+            580,
+            317,
+            710
+          ]
+        },
+        {
+          "frame_index": 291,
+          "timestamp": 9.7,
+          "box": [
+            166,
+            578,
+            317,
+            710
+          ]
+        },
+        {
+          "frame_index": 292,
+          "timestamp": 9.733333,
+          "box": [
+            174,
+            578,
+            327,
+            711
+          ]
+        },
+        {
+          "frame_index": 293,
+          "timestamp": 9.766667,
+          "box": [
+            184,
+            578,
+            338,
+            711
+          ]
+        },
+        {
+          "frame_index": 294,
+          "timestamp": 9.8,
+          "box": [
+            197,
+            578,
+            352,
+            711
+          ]
+        },
+        {
+          "frame_index": 295,
+          "timestamp": 9.833333,
+          "box": [
+            211,
+            578,
+            367,
+            710
+          ]
+        },
+        {
+          "frame_index": 296,
+          "timestamp": 9.866667,
+          "box": [
+            227,
+            577,
+            384,
+            712
+          ]
+        },
+        {
+          "frame_index": 297,
+          "timestamp": 9.9,
+          "box": [
+            227,
+            577,
+            384,
+            712
+          ]
+        },
+        {
+          "frame_index": 298,
+          "timestamp": 9.933333,
+          "box": [
+            246,
+            577,
+            404,
+            712
+          ]
+        },
+        {
+          "frame_index": 299,
+          "timestamp": 9.966667,
+          "box": [
+            268,
+            577,
+            427,
+            712
+          ]
+        },
+        {
+          "frame_index": 300,
+          "timestamp": 10.0,
+          "box": [
+            290,
+            576,
+            452,
+            713
+          ]
+        },
+        {
+          "frame_index": 301,
+          "timestamp": 10.033333,
+          "box": [
+            316,
+            576,
+            480,
+            713
+          ]
+        },
+        {
+          "frame_index": 302,
+          "timestamp": 10.066667,
+          "box": [
+            316,
+            576,
+            480,
+            713
+          ]
+        },
+        {
+          "frame_index": 303,
+          "timestamp": 10.1,
+          "box": [
+            344,
+            575,
+            511,
+            714
+          ]
+        },
+        {
+          "frame_index": 304,
+          "timestamp": 10.133333,
+          "box": [
+            376,
+            575,
+            545,
+            714
+          ]
+        },
+        {
+          "frame_index": 305,
+          "timestamp": 10.166667,
+          "box": [
+            410,
+            574,
+            581,
+            715
+          ]
+        },
+        {
+          "frame_index": 306,
+          "timestamp": 10.2,
+          "box": [
+            448,
+            573,
+            622,
+            716
+          ]
+        },
+        {
+          "frame_index": 307,
+          "timestamp": 10.233333,
+          "box": [
+            488,
+            573,
+            665,
+            717
+          ]
+        },
+        {
+          "frame_index": 308,
+          "timestamp": 10.266667,
+          "box": [
+            531,
+            572,
+            712,
+            717
+          ]
+        },
+        {
+          "frame_index": 309,
+          "timestamp": 10.3,
+          "box": [
+            531,
+            572,
+            712,
+            717
+          ]
+        },
+        {
+          "frame_index": 310,
+          "timestamp": 10.333333,
+          "box": [
+            579,
+            572,
+            764,
+            719
+          ]
+        },
+        {
+          "frame_index": 311,
+          "timestamp": 10.366667,
+          "box": [
+            632,
+            570,
+            819,
+            718
+          ]
+        },
+        {
+          "frame_index": 312,
+          "timestamp": 10.4,
+          "box": [
+            686,
+            570,
+            877,
+            720
+          ]
+        },
+        {
+          "frame_index": 313,
+          "timestamp": 10.433333,
+          "box": [
+            737,
+            568,
+            934,
+            721
+          ]
+        },
+        {
+          "frame_index": 314,
+          "timestamp": 10.466667,
+          "box": [
+            785,
+            567,
+            985,
+            722
+          ]
+        },
+        {
+          "frame_index": 315,
+          "timestamp": 10.5,
+          "box": [
+            785,
+            567,
+            985,
+            722
+          ]
+        },
+        {
+          "frame_index": 316,
+          "timestamp": 10.533333,
+          "box": [
+            831,
+            566,
+            1034,
+            723
+          ]
+        },
+        {
+          "frame_index": 317,
+          "timestamp": 10.566667,
+          "box": [
+            871,
+            565,
+            1078,
+            724
+          ]
+        },
+        {
+          "frame_index": 318,
+          "timestamp": 10.6,
+          "box": [
+            909,
+            564,
+            1118,
+            725
+          ]
+        },
+        {
+          "frame_index": 319,
+          "timestamp": 10.633333,
+          "box": [
+            944,
+            564,
+            1157,
+            725
+          ]
+        },
+        {
+          "frame_index": 320,
+          "timestamp": 10.666667,
+          "box": [
+            976,
+            563,
+            1191,
+            726
+          ]
+        },
+        {
+          "frame_index": 321,
+          "timestamp": 10.7,
+          "box": [
+            976,
+            563,
+            1191,
+            726
+          ]
+        },
+        {
+          "frame_index": 322,
+          "timestamp": 10.733333,
+          "box": [
+            1006,
+            563,
+            1222,
+            726
+          ]
+        },
+        {
+          "frame_index": 323,
+          "timestamp": 10.766667,
+          "box": [
+            1032,
+            562,
+            1251,
+            727
+          ]
+        },
+        {
+          "frame_index": 324,
+          "timestamp": 10.8,
+          "box": [
+            1056,
+            562,
+            1277,
+            727
+          ]
+        },
+        {
+          "frame_index": 325,
+          "timestamp": 10.833333,
+          "box": [
+            1078,
+            561,
+            1300,
+            728
+          ]
+        },
+        {
+          "frame_index": 326,
+          "timestamp": 10.866667,
+          "box": [
+            1096,
+            561,
+            1320,
+            728
+          ]
+        },
+        {
+          "frame_index": 327,
+          "timestamp": 10.9,
+          "box": [
+            1096,
+            561,
+            1320,
+            728
+          ]
+        },
+        {
+          "frame_index": 328,
+          "timestamp": 10.933333,
+          "box": [
+            1113,
+            562,
+            1338,
+            728
+          ]
+        },
+        {
+          "frame_index": 329,
+          "timestamp": 10.966667,
+          "box": [
+            1128,
+            560,
+            1354,
+            728
+          ]
+        },
+        {
+          "frame_index": 330,
+          "timestamp": 11.0,
+          "box": [
+            1141,
+            560,
+            1368,
+            729
+          ]
+        },
+        {
+          "frame_index": 331,
+          "timestamp": 11.033333,
+          "box": [
+            1152,
+            560,
+            1380,
+            729
+          ]
+        },
+        {
+          "frame_index": 332,
+          "timestamp": 11.066667,
+          "box": [
+            1152,
+            560,
+            1380,
+            729
+          ]
+        },
+        {
+          "frame_index": 333,
+          "timestamp": 11.1,
+          "box": [
+            1161,
+            560,
+            1390,
+            728
+          ]
+        },
+        {
+          "frame_index": 334,
+          "timestamp": 11.133333,
+          "box": [
+            1169,
+            560,
+            1398,
+            728
+          ]
+        },
+        {
+          "frame_index": 335,
+          "timestamp": 11.166667,
+          "box": [
+            1176,
+            559,
+            1406,
+            730
+          ]
+        },
+        {
+          "frame_index": 336,
+          "timestamp": 11.2,
+          "box": [
+            1181,
+            559,
+            1411,
+            730
+          ]
+        },
+        {
+          "frame_index": 337,
+          "timestamp": 11.233333,
+          "box": [
+            1185,
+            559,
+            1415,
+            730
+          ]
+        },
+        {
+          "frame_index": 338,
+          "timestamp": 11.266667,
+          "box": [
+            1185,
+            559,
+            1415,
+            730
+          ]
+        },
+        {
+          "frame_index": 339,
+          "timestamp": 11.3,
+          "box": [
+            1188,
+            559,
+            1419,
+            730
+          ]
+        },
+        {
+          "frame_index": 340,
+          "timestamp": 11.333333,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 341,
+          "timestamp": 11.366667,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 342,
+          "timestamp": 11.4,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 343,
+          "timestamp": 11.433333,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 344,
+          "timestamp": 11.466667,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 345,
+          "timestamp": 11.5,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 346,
+          "timestamp": 11.533333,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 347,
+          "timestamp": 11.566667,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 348,
+          "timestamp": 11.6,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 349,
+          "timestamp": 11.633333,
+          "box": [
+            1190,
+            560,
+            1420,
+            730
+          ]
+        },
+        {
+          "frame_index": 350,
+          "timestamp": 11.666667,
+          "box": [
+            1190,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 351,
+          "timestamp": 11.7,
+          "box": [
+            1190,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 352,
+          "timestamp": 11.733333,
+          "box": [
+            1190,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 353,
+          "timestamp": 11.766667,
+          "box": [
+            1190,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 354,
+          "timestamp": 11.8,
+          "box": [
+            1190,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 355,
+          "timestamp": 11.833333,
+          "box": [
+            1192,
+            560,
+            1422,
+            728
+          ]
+        },
+        {
+          "frame_index": 356,
+          "timestamp": 11.866667,
+          "box": [
+            1192,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 357,
+          "timestamp": 11.9,
+          "box": [
+            1192,
+            560,
+            1420,
+            728
+          ]
+        },
+        {
+          "frame_index": 358,
+          "timestamp": 11.933333,
+          "box": [
+            1192,
+            560,
+            1422,
+            728
+          ]
+        },
+        {
+          "frame_index": 359,
+          "timestamp": 11.966667,
+          "box": [
+            1194,
+            560,
+            1422,
+            728
+          ]
+        },
+        {
+          "frame_index": 360,
+          "timestamp": 12.0,
+          "box": [
+            1194,
+            558,
+            1424,
+            728
+          ]
+        },
+        {
+          "frame_index": 361,
+          "timestamp": 12.033333,
+          "box": [
+            1194,
+            558,
+            1424,
+            726
+          ]
+        },
+        {
+          "frame_index": 362,
+          "timestamp": 12.066667,
+          "box": [
+            1196,
+            558,
+            1424,
+            726
+          ]
+        },
+        {
+          "frame_index": 363,
+          "timestamp": 12.1,
+          "box": [
+            1196,
+            558,
+            1424,
+            726
+          ]
+        },
+        {
+          "frame_index": 364,
+          "timestamp": 12.133333,
+          "box": [
+            1196,
+            556,
+            1426,
+            726
+          ]
+        },
+        {
+          "frame_index": 365,
+          "timestamp": 12.166667,
+          "box": [
+            1196,
+            556,
+            1426,
+            724
+          ]
+        },
+        {
+          "frame_index": 366,
+          "timestamp": 12.2,
+          "box": [
+            1196,
+            554,
+            1426,
+            724
+          ]
+        },
+        {
+          "frame_index": 367,
+          "timestamp": 12.233333,
+          "box": [
+            1196,
+            554,
+            1426,
+            723
+          ]
+        },
+        {
+          "frame_index": 368,
+          "timestamp": 12.266667,
+          "box": [
+            1196,
+            552,
+            1426,
+            722
+          ]
+        },
+        {
+          "frame_index": 369,
+          "timestamp": 12.3,
+          "box": [
+            1196,
+            552,
+            1426,
+            722
+          ]
+        },
+        {
+          "frame_index": 370,
+          "timestamp": 12.333333,
+          "box": [
+            1196,
+            552,
+            1426,
+            720
+          ]
+        },
+        {
+          "frame_index": 371,
+          "timestamp": 12.366667,
+          "box": [
+            1196,
+            550,
+            1426,
+            720
+          ]
+        },
+        {
+          "frame_index": 372,
+          "timestamp": 12.4,
+          "box": [
+            1196,
+            550,
+            1424,
+            718
+          ]
+        },
+        {
+          "frame_index": 373,
+          "timestamp": 12.433333,
+          "box": [
+            1196,
+            548,
+            1424,
+            718
+          ]
+        },
+        {
+          "frame_index": 374,
+          "timestamp": 12.466667,
+          "box": [
+            1194,
+            548,
+            1424,
+            716
+          ]
+        },
+        {
+          "frame_index": 375,
+          "timestamp": 12.5,
+          "box": [
+            1194,
+            548,
+            1424,
+            716
+          ]
+        },
+        {
+          "frame_index": 376,
+          "timestamp": 12.533333,
+          "box": [
+            1192,
+            548,
+            1422,
+            716
+          ]
+        },
+        {
+          "frame_index": 377,
+          "timestamp": 12.566667,
+          "box": [
+            1192,
+            548,
+            1420,
+            716
+          ]
+        },
+        {
+          "frame_index": 378,
+          "timestamp": 12.6,
+          "box": [
+            1190,
+            548,
+            1418,
+            716
+          ]
+        },
+        {
+          "frame_index": 379,
+          "timestamp": 12.633333,
+          "box": [
+            1188,
+            548,
+            1416,
+            716
+          ]
+        },
+        {
+          "frame_index": 380,
+          "timestamp": 12.666667,
+          "box": [
+            1186,
+            548,
+            1416,
+            716
+          ]
+        },
+        {
+          "frame_index": 381,
+          "timestamp": 12.7,
+          "box": [
+            1186,
+            548,
+            1416,
+            716
+          ]
+        },
+        {
+          "frame_index": 382,
+          "timestamp": 12.733333,
+          "box": [
+            1186,
+            548,
+            1415,
+            716
+          ]
+        },
+        {
+          "frame_index": 383,
+          "timestamp": 12.766667,
+          "box": [
+            1184,
+            548,
+            1414,
+            718
+          ]
+        },
+        {
+          "frame_index": 384,
+          "timestamp": 12.8,
+          "box": [
+            1184,
+            550,
+            1412,
+            718
+          ]
+        },
+        {
+          "frame_index": 385,
+          "timestamp": 12.833333,
+          "box": [
+            1184,
+            550,
+            1412,
+            720
+          ]
+        },
+        {
+          "frame_index": 386,
+          "timestamp": 12.866667,
+          "box": [
+            1184,
+            552,
+            1412,
+            720
+          ]
+        },
+        {
+          "frame_index": 387,
+          "timestamp": 12.9,
+          "box": [
+            1184,
+            552,
+            1412,
+            720
+          ]
+        },
+        {
+          "frame_index": 388,
+          "timestamp": 12.933333,
+          "box": [
+            1184,
+            552,
+            1412,
+            722
+          ]
+        },
+        {
+          "frame_index": 389,
+          "timestamp": 12.966667,
+          "box": [
+            1184,
+            554,
+            1412,
+            722
+          ]
+        },
+        {
+          "frame_index": 390,
+          "timestamp": 13.0,
+          "box": [
+            1184,
+            554,
+            1412,
+            724
+          ]
+        },
+        {
+          "frame_index": 391,
+          "timestamp": 13.033333,
+          "box": [
+            1184,
+            556,
+            1412,
+            724
+          ]
+        },
+        {
+          "frame_index": 392,
+          "timestamp": 13.066667,
+          "box": [
+            1184,
+            556,
+            1412,
+            724
+          ]
+        },
+        {
+          "frame_index": 393,
+          "timestamp": 13.1,
+          "box": [
+            1184,
+            556,
+            1414,
+            726
+          ]
+        },
+        {
+          "frame_index": 394,
+          "timestamp": 13.133333,
+          "box": [
+            1184,
+            558,
+            1414,
+            726
+          ]
+        },
+        {
+          "frame_index": 395,
+          "timestamp": 13.166667,
+          "box": [
+            1186,
+            558,
+            1414,
+            728
+          ]
+        },
+        {
+          "frame_index": 396,
+          "timestamp": 13.2,
+          "box": [
+            1186,
+            558,
+            1416,
+            728
+          ]
+        },
+        {
+          "frame_index": 397,
+          "timestamp": 13.233333,
+          "box": [
+            1186,
+            560,
+            1416,
+            728
+          ]
+        },
+        {
+          "frame_index": 398,
+          "timestamp": 13.266667,
+          "box": [
+            1188,
+            560,
+            1416,
+            728
+          ]
+        },
+        {
+          "frame_index": 399,
+          "timestamp": 13.3,
+          "box": [
+            1188,
+            560,
+            1416,
+            728
+          ]
+        }
+      ]
+    }
+  ],
+  "uncovered_morphs": [
+    {
+      "slide": 2,
+      "object": "shared-text",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    }
+  ],
+  "capture_frames": 570,
+  "plan_status": "passed",
+  "scope": "Full-page independent references and actual activity identify pages. PPT boxes/colors bound contour search, not motion evaluation. Only supported isolated contours are certified; ambiguous/occluded/text Morph stays pending."
+}
