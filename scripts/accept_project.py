@@ -67,6 +67,11 @@ def finalize_run(root,visual_note=None,review_payload=None):
     """Bind optional visual review, then verify and seal a consistent delivery."""
     from verify_acceptance import verify
     root=Path(root).resolve();ledger=Ledger.restore(root)
+    def refresh_report():
+        if ledger.data.get('format_version',1)>=2:
+            from native_motion.diagnostics import collect_diagnostics,write_diagnostics
+            write_diagnostics(root,root/'qa/diagnostics',collect_diagnostics(root))
+        write_report(root,ledger.data)
     if review_payload:
         ledger.review(review_payload)
     if visual_note and ledger.data.get('format_version',1)>=2:
@@ -79,15 +84,15 @@ def finalize_run(root,visual_note=None,review_payload=None):
             raise ValueError("Visual review cannot be attached to a replaced recording")
         ledger.check("visual-review","实际画面审阅","passed","qa/playback/native-contact.jpg",visual_note,required=False,
                      reviewed_recording_sha256=proof["recording_sha256"],reviewed_at=datetime.now(timezone.utc).isoformat())
-    ledger.finish();write_report(root,ledger.data);package_run(root)
+    ledger.finish();refresh_report();package_run(root)
     try:
         verify(root)
         ledger.check("delivery-integrity","交付包与源码校验","passed","manifest.json","ZIP、清单校验值及独立目录的新安装检查通过")
     except Exception as error:
         ledger.check("delivery-integrity","交付包与源码校验","failed",detail=str(error))
-        ledger.finish();write_report(root,ledger.data);package_run(root)
+        ledger.finish();refresh_report();package_run(root)
         raise
-    ledger.finish();write_report(root,ledger.data);archive=package_run(root)
+    ledger.finish();refresh_report();archive=package_run(root)
     verify(root)
     return archive
 

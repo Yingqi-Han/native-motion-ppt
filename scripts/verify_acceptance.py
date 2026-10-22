@@ -38,6 +38,10 @@ def verify(root):
         auto_failed=any(c.get('automatic_status',c['status'])=='failed' for c in checks) or any(s['status']!='passed' for s in data['stages'])
         auto_pending=any(c.get('automatic_status',c['status'])=='pending' and c['required'] and not c.get('review_only',False) for c in checks)
         if data.get('automatic_acceptance_status')!=('failed' if auto_failed else 'pending' if auto_pending else 'passed'):raise ValueError('Automatic summary contradicts raw check states')
+        diagnostic=root/'qa/diagnostics/diagnostics.json'
+        if diagnostic.is_file():
+            from native_motion.diagnostics import verify_diagnostics
+            verify_diagnostics(root,diagnostic)
     if data.get('format_version',1)<2 and target and target["status"]=="passed" and data.get("requested_target_player")!="impress-desktop":
         raise ValueError("Impress capture cannot certify another target player")
     for artifact in data["artifacts"]:

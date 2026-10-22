@@ -28,7 +28,7 @@ def classify_pages(times,frames,references,manual_plan=None,show_key_seconds=Non
         else:valid &= np.array(times)>previous_end+.05
         runs=stable_runs(times,valid.tolist())
         if not runs:
-            pages.append({'slide':j+1,'status':'pending','reason':'No unambiguous stable reference match for this page'});continue
+            pages.append({'slide':j+1,'status':'pending','reason':'No unambiguous stable reference match for this page','reason_code':'page-ambiguous'});continue
         a,b=runs[-1] if manual_plan else runs[0]
         pick=max(a,b-round(.35/max(.001,float(np.median(np.diff(times))))))
         pages.append({'slide':j+1,'status':'passed','stable_interval_seconds':[times[a],times[b]],'held_timestamp':times[pick],
@@ -65,7 +65,7 @@ def classify_pages(times,frames,references,manual_plan=None,show_key_seconds=Non
                     starts.append(after_key[0]['start'])
                     p['entry_window_basis']='first_observed_activity_intersecting_or_after_recorded_F5'
                 else:
-                    starts.append(None);p.update(status='pending',reason='No observed first-page entry activity after the actual show key')
+                    starts.append(None);p.update(status='pending',reason='No observed first-page entry activity after the actual show key',reason_code='page-entry-unobserved')
             else:
                 starts.append(candidates[-1]['start'] if candidates else max(0,p['stable_interval_seconds'][0]-.3))
             continue
@@ -73,7 +73,7 @@ def classify_pages(times,frames,references,manual_plan=None,show_key_seconds=Non
         if prev['status']!='passed':starts.append(None);continue
         candidates=[e for e in events if e['end']>=prev['stable_interval_seconds'][1]-.15 and e['start']<p['stable_interval_seconds'][0]]
         starts.append(candidates[0]['start'] if candidates else None)
-        if not candidates:p.update(status='pending',reason='The arriving page matched, but transition onset could not be observed')
+        if not candidates:p.update(status='pending',reason='The arriving page matched, but transition onset could not be observed',reason_code='page-entry-unobserved')
     return pages,starts,activity,events
 
 
@@ -109,7 +109,9 @@ def morph_candidates(doc):
             elif o['rotation'] or a['rotation'] or o['opacity']!=1 or a['opacity']!=1:reason='Rotated/translucent Morph is outside contour tracking'
             palette=color_palette(o,list(bytes.fromhex(slide['background'])))
             if not palette:reason=reason or 'No isolated saturated source contour; requires visual review'
-            if reason:uncovered.append({'slide':i+1,'object':o['id'],'status':'pending','reason':reason});continue
+            if reason:
+                code='morph-unsupported-geometry' if o['kind'] not in {'rect','ellipse','group'} or a['kind']!=o['kind'] else 'morph-unsupported-transform' if o['rotation'] or a['rotation'] or o['opacity']!=1 or a['opacity']!=1 else 'morph-no-isolated-color'
+                uncovered.append({'slide':i+1,'object':o['id'],'status':'pending','reason':reason,'reason_code':code});continue
             b0,b1=a['box'],o['box'];pad=12
             roi=[max(0,math.floor(min(b0[0],b1[0])-pad)),max(0,math.floor(min(b0[1],b1[1])-pad)),
                  min(w,math.ceil(max(b0[0]+b0[2],b1[0]+b1[2])+pad)),min(h,math.ceil(max(b0[1]+b0[3],b1[1]+b1[3])+pad))]
@@ -123,7 +125,7 @@ def morph_candidates(doc):
                             x,y,ww,hh=other['box'];pad=max(2,other.get('stroke_width',0));decoration_exclusions.append([x-pad,y-pad,ww+2*pad,hh+2*pad])
             result.append({'slide':i+1,'object':o['id'],'kind':o['kind'],'roi':roi,'palette':palette,'background':list(bytes.fromhex(slide['background'])),
                            'excluded_text_boxes':exclusions,'excluded_decoration_boxes':decoration_exclusions,'source_boxes':[b0,b1]})
-        if not changed:uncovered.append({'slide':i+1,'status':'pending','reason':'No geometrically changed shared Morph object; visual review required'})
+        if not changed:uncovered.append({'slide':i+1,'status':'pending','reason':'No geometrically changed shared Morph object; visual review required','reason_code':'morph-no-shared-motion'})
     return result,uncovered
 
 
@@ -189,7 +191,7 @@ def contour(frame,candidate,endpoint_box=None,seed=None):
 def analyse_morph(records,first_box,last_box,minimum_poses=10):
     """Contour states and arrival plateau are observed, never interpolated from source timing."""
     result={'status':'pending','issues':[],'distinct_intermediate_poses':0,'settled_seconds':None}
-    if not first_box or not last_box:return {**result,'reason':'Endpoint contours unavailable'}
+    if not first_box or not last_box:return {**result,'reason':'Endpoint contours unavailable','reason_code':'morph-endpoints-unobserved'}
     def near(a,b):return max(abs(x-y) for x,y in zip(a,b))<=4
     visible=[r for r in records if r.get('box')]
     intermediate=[r for r in visible if not near(r['box'],first_box) and not near(r['box'],last_box)]
@@ -199,12 +201,13 @@ def analyse_morph(records,first_box,last_box,minimum_poses=10):
     if invalid:result['issues'].append({'code':'morph-double-image','timestamp':invalid[0]['timestamp'],'severity':'failed','message':'Contour spans both endpoints or exceeds endpoint size envelope; inspect dissolve/double image'})
     if distinct<minimum_poses:
         result['reason']='Insufficient measured intermediate poses; native Morph cannot be certified'
+        result['reason_code']='morph-poses-insufficient'
         if invalid:result['status']='failed'
         return result
     dt=float(np.median(np.diff([r['timestamp'] for r in records])))
     valid=[r.get('box') is not None and near(r['box'],last_box) for r in records]
     runs=stable_runs([r['timestamp'] for r in records],valid,minimum=.12)
-    if not runs:result['reason']='No observed arrival plateau; local drift phase remains unsegmented';return result
+    if not runs:result.update(reason='No observed arrival plateau; local drift phase remains unsegmented',reason_code='morph-arrival-unobserved');return result
     settle=records[runs[0][0]]['timestamp'];moving=[r for r in visible if r['timestamp']<=settle]
     boxes=np.array([r['box'] for r in moving],dtype=float)
     centers=(boxes[:,:2]+boxes[:,2:])/2

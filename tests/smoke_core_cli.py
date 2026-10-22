@@ -43,9 +43,28 @@ def smoke(python, workspace):
         for name in before.namelist():
             if name.startswith('ppt/slides/slide') and name.endswith('.xml'):
                 assert before.read(name) == after.read(name), 'Existing layout and animation must be preserved'
+    fixture=workspace/'existing source.pptx'
+    subprocess.run([str(python),str(ROOT/'scripts/create_existing_demo.py'),'--out',str(fixture)],capture_output=True,text=True,encoding='utf-8',check=True)
+    fixture_bytes=fixture.read_bytes()
+    proposal=run('plan',fixture,'--max-clicks','2','--out',workspace/'proposal')
+    plan=json.loads(Path(proposal['plan']).read_text(encoding='utf-8'))
+    assert plan['source_pptx_sha256']==hashlib.sha256(fixture_bytes).hexdigest()
+    assert proposal['proposed_slides']==2
+    result=workspace/'existing enhanced.pptx'
+    run('enhance',fixture,'--plan',proposal['plan'],'--out',result,json_output=False)
+    report=json.loads(result.with_suffix('.enhance-report.json').read_text(encoding='utf-8'))
+    assert report['status']=='passed' and report['preservation']['layout_and_relationships_preserved']
+    assert fixture.read_bytes()==fixture_bytes
+    with zipfile.ZipFile(fixture) as before,zipfile.ZipFile(result) as after:
+        assert set(before.namelist())==set(after.namelist())
+        allowed=set(report['preservation']['changed_timing_parts'])
+        assert len(allowed)==2
+        for name in before.namelist():
+            if name not in allowed:assert before.read(name)==after.read(name),name
     return {'status': 'passed', 'platform': sys.platform, 'python': subprocess.check_output([str(python), '--version'], text=True).strip(),
             'core_only': True, 'source_preserved': True, 'source_sha256': hashlib.sha256(original).hexdigest(),
             'preview_fonts_match': True, 'manual_auto_and_existing_ppt_export': 'passed', 'existing_animations_preserved': True,
+            'sha_bound_existing_plan': True, 'existing_package_parts_preserved': True,
             'desktop_playback': 'not executed', 'scope': 'Portable CLI/export/preview generation only; no WPS or PowerPoint compatibility claim'}
 
 

@@ -3,7 +3,7 @@ name: native-motion-ppt
 description: 制作、美化、重做原生可编辑动态 PPT；添加分步动画、逐字出现、运动路径、缩放旋转与 Morph。共用数据生成 Remotion 设计视频及 PPTX，一键真实放映录屏、抽帧检查、验收与交付。Use for native animated PowerPoint, editable motion slides, shared Remotion/PPT workflows and real playback acceptance.
 ---
 
-# Native Motion PPT · v1.7.0
+# Native Motion PPT · v1.8.0
 
 把内容、版式和运动一起设计。交付能继续编辑的 PPTX，动画由 PowerPoint 对象、时序与转场完成。
 
@@ -113,6 +113,16 @@ python scripts/motion_ppt.py review output/timed.json --out output/review.json
 
 ## 给现有 PPT 加动画
 
+优先使用 [现有 PPT 方案与保留规则](references/existing-ppt.md)：
+
+```bash
+python scripts/nmp.py plan input.pptx --out output/plan
+# 查看实际幻灯片和 plan-review.html，核对并编辑 plan.json 的分组
+python scripts/nmp.py enhance input.pptx --plan output/plan/plan.json --out output/enhanced.pptx
+```
+
+plan 是布局辅助草案，不声称理解业务语义。代理可在已授权任务内查看实际页面、修订分组并继续，不必另行请求执行许可。标题、脚注和不确定对象默认静态，原生组不拆开；新增动作为整体淡入。方案绑定源 PPT 的 SHA，源文件改变后须重新生成。增强只修改目标页的 p:timing，逐成员核对其他 ZIP 内容与目标页非时序 XML；已有动画整页按字节保留。
+
 ```bash
 python scripts/motion_ppt.py inspect input.pptx --out output/inventory.json
 python scripts/motion_ppt.py enhance input.pptx --plan plan.json --out output/enhanced.pptx
@@ -142,6 +152,8 @@ Remotion 项目在 output/preview/remotion：安装其 package.json 的依赖，
 用户要求视频交付时再运行 npm run render。系统 Chromium 路径可用 Remotion 的 --browser-executable 参数替换。
 
 ## 真实播放器检查
+
+失败/待检原因可用 `python scripts/nmp.py diagnose <验收运行> --out output/diagnosis` 生成独立解释。新验收报告也会自动链接问题列表。区分当前不支持、未观察到、采集缺口和测得异常；有实际时间才提供异常跳转，页面上下文明确另标。解释不修改原始 verdict，也不通过放宽阈值消除待检。见 [验收诊断](references/diagnostics.md)。
 
 WPS Linux 的官方包安装、首次启动、环境隔离与实播入口已经在 11.1.0.11723.XA 实测。按 [WPS 实播](references/wps-playback.md) 执行 `install_wps.py` → `prepare_wps.py` → `record_wps.py`；点击版、自动版分别录制，再运行对象与原生 Morph 检查。原生 Morph 的隔离诊断必须没有对象动画，并从实心中间姿态排除淡切。不要将本次 Linux 结论扩大到其他版本。
 
@@ -188,7 +200,7 @@ python scripts/check_preview.py --url http://localhost:3020/preview.html --out o
 
 ## 能力边界
 
-v1.7.0 支持文字、矩形与圆角、圆/椭圆、线、多边形、M/L/C/Q/Z 原生复合曲线、组合对象；淡入淡出、整对象擦除入场/退场、直线和多段三次曲线路径、旋转、缩放、短标题逐字、重复与自动往返；淡切、推移、擦除、Morph。包含分层依赖诊断、项目入口、Linux GUI放映录屏、真录像检查与可追溯验收。
+v1.8.0 支持文字、矩形与圆角、圆/椭圆、线、多边形、M/L/C/Q/Z 原生复合曲线、组合对象；淡入淡出、整对象擦除入场/退场、直线和多段三次曲线路径、旋转、缩放、短标题逐字、重复与自动往返；淡切、推移、擦除、Morph。包含现成 PPT 方案与保留校验、分层依赖诊断、项目入口、Linux GUI放映录屏、真录像检查与可追溯验收。
 
 安装已有版本时使用 install_skill.py --workspace <目录> --upgrade。只更新安装记录中未被修改的文件，自动保存旧版；发现用户修改时保留原文件并停止覆盖。没有记录的旧版本先核对来源并保存副本。
 

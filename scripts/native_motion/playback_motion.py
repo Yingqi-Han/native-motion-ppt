@@ -62,7 +62,7 @@ def analyse_trace(records,kind="actor",intent="free",max_step=24,noise=.8,pause=
     visible=[r for r in records if r.get("box") is not None]
     result={"visible_frames":len(visible),"status":"pending","issues":[],"observed_intervals":[],"kinematics":[]}
     if len(visible)<6:
-        result["reason"]="可靠可见帧不足，不能判断运动";return result
+        result.update(reason="可靠可见帧不足，不能判断运动",reason_code='visibility-insufficient');return result
     times=np.array([r["timestamp"] for r in visible],dtype=float)
     if np.any(np.diff(times)<=0):raise ValueError("Actual timestamps must strictly increase")
     boxes=np.array([r["box"] for r in visible],dtype=float)
@@ -78,7 +78,7 @@ def analyse_trace(records,kind="actor",intent="free",max_step=24,noise=.8,pause=
     result.update(observed_intervals=events,distinct_poses=len(set(map(tuple,values))),
                   max_step_px=float(steps.max()),position_extent_px=np.ptp(values,axis=0).tolist())
     if not events or np.ptp(primary,axis=0).max()<3:
-        result["reason"]="录像中没有足够的可测位移；静止画面不能证明动画通过";return result
+        result.update(reason="录像中没有足够的可测位移；静止画面不能证明动画通过",reason_code='motion-not-observed');return result
     begin,end=events[0]["first_frame"],events[-1]["last_frame"]
     duration=times[end]-times[begin]
     result.update(observed_start=float(times[begin]),observed_end=float(times[end]),observed_duration=float(duration))

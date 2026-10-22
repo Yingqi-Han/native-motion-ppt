@@ -1,5 +1,5 @@
 """Native DrawingML geometry and PresentationML timing; no media embedding."""
-import copy, math, zipfile
+import copy, math, os, tempfile, zipfile
 from pathlib import Path
 from lxml import etree
 from pptx import Presentation
@@ -306,39 +306,38 @@ def build(doc, destination, auto=False):
     return mapping
 
 def inventory(source):
-    p=Presentation(source)
-    return {"file":str(Path(source).resolve()),"slides":[
-        {"slide":i+1,"has_animation":s._element.find("p:timing",NS) is not None,
-         "objects":[{"id":sh.shape_id,"name":sh.name,"kind":str(sh.shape_type),"text":getattr(sh,"text",""),
-          "box_emu":[sh.left,sh.top,sh.width,sh.height]} for sh in s.shapes]}
-        for i,s in enumerate(p.slides)]}
+    from .existing import inspect_existing
+    return inspect_existing(source)
 
 def enhance(source,destination,clicks=2,replace=False,plan=None):
     """Preserve art and unrelated package parts; skip animated slides by default."""
-    p=Presentation(source);counts=[]
+    from .existing import inspect_existing,validate_plan,verify_changes
+    destination=Path(destination)
+    if destination.exists() or destination.is_symlink():raise ValueError('Choose a new output; existing files were preserved')
+    original=inventory(source);p=Presentation(source);counts=[];modified={}
     if clicks<1:raise ValueError("clicks must be >= 1")
-    plans={}
-    for item in (plan or {}).get("slides",[]):
-        num=item["slide"]
-        if not isinstance(num,int) or not 1<=num<=len(p.slides) or num in plans:
-            raise ValueError("Plan has an invalid/duplicate slide number")
-        plans[num]=item["groups"]
+    plans=validate_plan(plan,original) if plan is not None else {}
+    settings=(plan or {}).get('animation',{})
     for si,s in enumerate(p.slides,1):
         if s._element.find("p:timing",NS) is not None and not replace:
             counts.append({"skipped":"existing animation"});continue
         if plan is not None:
             if si not in plans:
                 counts.append({"skipped":"not in plan"});continue
+            if not plans[si]:
+                counts.append({'added':0,'click_groups':0});continue
             targets={sh.shape_id:sh for sh in s.shapes};used=set();a=Animator(s)
             for ci,group in enumerate(plans[si],1):
                 if not group:raise ValueError("Plan groups must be nonempty")
                 for j,sid in enumerate(group):
                     if sid not in targets or sid in used:raise ValueError("Plan target is missing or repeated")
                     used.add(sid)
-                    e={"kind":"enter","at":j*100,"duration":450,"click":ci,"loop":False,
-                       "auto_reverse":True,"by_letter":False,"letter_delay":35,"accel":.1,"decel":.65,"from":[0,18]}
+                    e={"kind":"enter","at":j*settings.get('stagger_ms',100),"duration":settings.get('duration_ms',450),"click":ci,"loop":False,
+                       "auto_reverse":True,"by_letter":False,"letter_delay":35,"accel":.1,"decel":.65,
+                       "from":[0,0] if plan.get('format_version',1)>=2 else [0,18]}
                     a.add(targets[sid],e,{"width":p.slide_width/UNIT,"height":p.slide_height/UNIT})
-            a.finish();counts.append({"added":len(used),"click_groups":len(plans[si])});continue
+            a.finish();modified[str(s.part.partname).lstrip('/')]=copy.deepcopy(s._element.find('p:timing',NS))
+            counts.append({"added":len(used),"click_groups":len(plans[si])});continue
         content=[sh for sh in s.shapes if getattr(sh,"has_text_frame",False) and sh.text.strip()]
         if not content:counts.append({"added":0});continue
         # The largest text near the top is the heading; keep it visible.
@@ -350,6 +349,31 @@ def enhance(source,destination,clicks=2,replace=False,plan=None):
                "auto_reverse":True,"by_letter":False,"letter_delay":35,"accel":.1,"decel":.65,"from":[0,18]}
             a.add(sh,e,{"width":p.slide_width/UNIT,"height":p.slide_height/UNIT})
         a.finish();counts.append({"added":len(body),"click_groups":math.ceil(len(body)/block)})
-    Path(destination).parent.mkdir(parents=True,exist_ok=True);p.save(destination)
+        if body:modified[str(s.part.partname).lstrip('/')]=copy.deepcopy(s._element.find('p:timing',NS))
+    # Copy every unrelated part directly from the original ZIP. Re-saving an
+    # arbitrary presentation through python-pptx may rewrite/drop unknown parts.
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    fd,name=tempfile.mkstemp(prefix='.nmp-enhance-',suffix='.pptx',dir=destination.parent);os.close(fd);stage=Path(name)
+    try:
+        with zipfile.ZipFile(source) as before,zipfile.ZipFile(stage,'w') as after:
+            if any(n.startswith('_xmlsignatures/') for n in before.namelist()):raise ValueError('Signed PPTX cannot be edited while preserving its signature')
+            after.comment=before.comment
+            for item in before.infolist():
+                data=before.read(item.filename)
+                if item.filename in modified:
+                    root=etree.fromstring(data);old=root.find('p:timing',NS);node=modified[item.filename]
+                    if old is not None:
+                        if node is not None:node.tail=old.tail;old.addprevious(node)
+                        root.remove(old)
+                    elif node is not None:
+                        ext=root.find('p:extLst',NS)
+                        if ext is None:root.append(node)
+                        else:ext.addprevious(node)
+                    data=etree.tostring(root,xml_declaration=True,encoding='UTF-8',standalone=True)
+                after.writestr(copy.copy(item),data)
+        verify_changes(source,stage,set(modified))
+        if inventory(source)['source_pptx_sha256']!=original['source_pptx_sha256']:raise ValueError('Source PPTX changed during enhancement')
+        os.link(stage,destination)
+    finally:stage.unlink(missing_ok=True)
     return counts
 

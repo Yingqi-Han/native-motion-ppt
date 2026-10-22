@@ -214,6 +214,10 @@ def main(argv=None):
         cmd.add_argument('project'); cmd.add_argument('--out')
         if name == 'build':
             cmd.add_argument('--strict', action='store_true', help='Also reject source review warnings')
+    planning = commands.add_parser('plan', help='Draft SHA-bound groups for an existing PPTX; inspect actual slides before applying')
+    planning.add_argument('pptx'); planning.add_argument('--out'); planning.add_argument('--max-clicks', type=int, default=3)
+    diagnosis = commands.add_parser('diagnose', help='Explain raw failed/pending checks without changing their verdicts')
+    diagnosis.add_argument('run'); diagnosis.add_argument('--out')
     enhance = commands.add_parser('enhance', help='Add animation to an existing PPT; preserve input and existing animation')
     enhance.add_argument('pptx'); enhance.add_argument('--out', required=True); enhance.add_argument('--plan')
     acceptance = commands.add_parser('accept', help='Run full acceptance or immutable record/check reruns')
@@ -230,6 +234,34 @@ def main(argv=None):
             report = collect(PLAYERS.get(args.player), spec=source_path(args.spec) if args.spec else None, **options(args))
             print_report(report, args.stage, args.json)
             return 0 if report['stages'][args.stage]['status'] == 'passed' else 2
+        elif args.command == 'plan':
+            source = Path(args.pptx).expanduser().resolve()
+            if not source.is_file() or source.suffix.lower() != '.pptx':
+                raise ValueError('Input must be an existing PPTX')
+            if not ready('build', args):
+                return 2
+            from .existing import make_plan, write_plan_report
+            inventory, plan = make_plan(source, args.max_clicks)
+            out = output_dir(source, 'plan', args.out)
+            save(out/'inventory.json', inventory); save(out/'plan.json', plan)
+            write_plan_report(out, inventory, plan)
+            result = {'output': str(out), 'plan': str(out/'plan.json'), 'review': str(out/'plan-review.html'),
+                      'planning_status': plan['planning_status'], 'source_pptx_sha256': plan['source_pptx_sha256'],
+                      'proposed_slides': len(plan['slides']), 'scope': plan['scope']}
+        elif args.command == 'diagnose':
+            from .diagnostics import collect_diagnostics, write_diagnostics
+            root = Path(args.run).expanduser().resolve()
+            destination = Path(args.out).expanduser().resolve() if args.out else root.parent/('diagnose-'+root.name+'-'+uuid.uuid4().hex[:6])
+            if destination == root or root in destination.parents:
+                raise ValueError('Choose a new output outside the original run; its evidence is preserved')
+            report = collect_diagnostics(root)
+            out = output_dir(root/'acceptance.json', 'diagnose', destination)
+            write_diagnostics(root, out, report)
+            result = {'output': str(out), 'report': str(out/'diagnostics.html'),
+                      'status': report['status'], 'acceptance_status': report['acceptance_status'],
+                      'diagnostic_integrity': report['diagnostic_integrity'], 'findings': len(report['findings'])}
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if report['diagnostic_integrity'] == 'passed' else 2
         elif args.command in ('build', 'preview'):
             spec = source_path(args.project)
             if not ready(args.command, args, spec):
@@ -254,6 +286,7 @@ def main(argv=None):
             if not ready('build', args):
                 return 2
             source_sha = sha(source)
+            plan_sha = sha(Path(args.plan).expanduser().resolve()) if args.plan else None
             command = [sys.executable, str(ROOT / 'scripts/motion_ppt.py'), 'enhance', str(source), '--out', str(output)]
             if args.plan:
                 command += ['--plan', str(Path(args.plan).expanduser().resolve())]
@@ -262,11 +295,18 @@ def main(argv=None):
             if code:
                 return code
             from .qa import audit
+            from .existing import inspect_existing, verify_changes
             native = audit(output, strict=False)
             if sha(source) != source_sha:
                 raise ValueError('Input PPTX changed during enhancement')
+            before = inspect_existing(source)
+            allowed = {s['part'] for s in before['slides'] if not s['has_animation']}
+            preservation = verify_changes(source, output, allowed)
+            if args.plan and sha(Path(args.plan).expanduser().resolve()) != plan_sha:
+                raise ValueError('Plan changed during enhancement')
             report = {'status': 'failed' if native['issues'] else 'passed', 'origin': 'native_pptx_enhancement',
                       'source_pptx_sha256': source_sha, 'output_pptx_sha256': sha(output), 'native_audit': native,
+                      'plan_sha256': plan_sha, 'preservation': preservation,
                       'desktop_playback': {'status': 'pending', 'reason': 'Real desktop playback has not been recorded'}}
             save(report_file, report)
             print(json.dumps({'output': str(output), 'report': str(report_file), 'status': report['status']}, ensure_ascii=False, indent=2))

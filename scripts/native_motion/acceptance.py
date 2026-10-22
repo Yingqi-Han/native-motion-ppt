@@ -212,6 +212,9 @@ def write_report(root,data):
     for mode,label in [('manual','点击版'),('automatic','自动版')]:
         path=root/'qa'/mode/'motion/native-motion-playback-audit.json'
         if path.is_file():motion+=f'<p>{label}：<a href="qa/{mode}/motion/motion-report.html">对象曲线与录像</a> · <a href="qa/{mode}/phases/phase-audit.json">实际阶段与 Morph</a> · <a href="qa/{mode}/observed-phases.json">入场／页内运动／停留时间线</a></p>'
+    if (root/'qa/diagnostics/diagnostics.html').is_file():
+        motion+='<h2>问题与复验建议</h2><p><a href="qa/diagnostics/diagnostics.html">查看失败、待检原因与实际片段定位</a>。解释报告保留原始状态；没有测得的时间不生成异常定位。</p>'
+        markdown +=['','[问题、待检原因与复验建议](qa/diagnostics/diagnostics.html)']
     source=esc(data["source"]["sha256"][:16]);status=data.get("acceptance_status","pending");auto_status=data.get('automatic_acceptance_status',status)
     counts={key:sum(c["status"]==key for c in data["checks"]) for key in STATES}
     page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>制作与验收</title><style>

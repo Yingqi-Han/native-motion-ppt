@@ -97,7 +97,8 @@ def eligible(doc,prs):
             elif bar and (obj.get("gradient") or obj["fill"]=="none" or mover):reason="数据柱包含渐变或并行位移，需要单独标定"
             elif obj["kind"] not in {"rect","ellipse","group"}:reason="当前追踪器支持隔离矩形、椭圆与组合几何"
             if reason:
-                uncovered.append({"slide":si,"object":obj["id"],"status":"pending","reason":reason});continue
+                code='unsupported-transform' if transform else 'unsupported-opacity-rotation' if obj['opacity']!=1 or obj['rotation'] else 'unsupported-bar-composition' if bar else 'unsupported-geometry'
+                uncovered.append({"slide":si,"object":obj["id"],"status":"pending","reason":reason,'reason_code':code});continue
             shape=shapes.get(obj["id"])
             if shape is None:raise ValueError("Source object missing from PPTX: "+obj["id"])
             actual=[shape.left*doc["canvas"]["width"]/prs.slide_width,shape.top*doc["canvas"]["height"]/prs.slide_height,
@@ -137,7 +138,7 @@ def observe_pages(video,times,plan,references,out):
                and times[r[0]]>max(p["click_at_seconds"],default=p["page_input_seconds"])+.2 for r in rows]
         runs=stable_runs(local_times,valid)
         if not runs:
-            pages.append({"slide":p["slide"],"status":"pending","reason":"没有找到足够长且与该页参考一致的稳定画面"});continue
+            pages.append({"slide":p["slide"],"status":"pending","reason":"没有找到足够长且与该页参考一致的稳定画面",'reason_code':'page-not-calibrated'});continue
         a,b=runs[-1];pick=max(a,b-round(.35/max(.001,np.median(np.diff(local_times)))))
         index=rows[pick][0];p["held_probe_seconds"]=times[index]
         # Broad input windows assign page identity; actual activity supplies landmarks.
@@ -179,7 +180,7 @@ def check(args):
         if not objects:continue
         identified=pages[page["slide"]-1]
         if identified["status"]!="passed":
-            uncovered +=[{"slide":page["slide"],"object":o["object"],"status":"pending","reason":"该页尚未取得可信的实际到位标定"} for o in objects];continue
+            uncovered +=[{"slide":page["slide"],"object":o["object"],"status":"pending","reason":"该页尚未取得可信的实际到位标定",'reason_code':'page-not-calibrated'} for o in objects];continue
         reference_path=out/f"held-{page['slide']:02}.png"
         reference=np.array(frame_at(video,identified["held_frame_index"],reference_path))
         for obj in objects:
