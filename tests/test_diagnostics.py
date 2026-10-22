@@ -1,5 +1,6 @@
 """Synthetic binding tests; dummy movie bytes and fixtures are never playback evidence."""
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -38,6 +39,7 @@ class DiagnosticTests(unittest.TestCase):
             self.assertEqual(report['acceptance_status'],'failed');self.assertEqual(report['diagnostic_integrity'],'passed')
             issue=next(f for f in report['findings'] if f['code']=='position-jump')
             self.assertEqual((issue['timestamp'],issue['frame_index']),(2.,60))
+            self.assertEqual(issue['category'],'measured_issue')
             unknown=next(f for f in report['findings'] if f['code']=='unsupported-transform')
             self.assertIsNone(unknown['timestamp']);self.assertEqual(unknown['location_basis'],'page_context_only')
             self.assertEqual(unknown['category'],'unsupported')
@@ -72,6 +74,16 @@ class DiagnosticTests(unittest.TestCase):
             root=Path(tmp);self.fixture(root);data=json.loads((root/'acceptance.json').read_text());data['recordings']['manual']['evidence']='../private.json'
             self.write(root/'acceptance.json',data);report=collect_diagnostics(root)
             self.assertEqual(report['diagnostic_integrity'],'failed');self.assertEqual(report['videos'],{})
+
+    def test_public_diagnose_runs_without_site_packages_and_preserves_run(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp);root=folder/'run';root.mkdir();self.fixture(root);original=(root/'acceptance.json').read_bytes()
+            result=subprocess.run([sys.executable,'-S',str(ROOT/'scripts/nmp.py'),'diagnose',str(root),'--out',str(folder/'explanation')],capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(json.loads(result.stdout)['acceptance_status'],'failed')
+            self.assertEqual((root/'acceptance.json').read_bytes(),original)
+            rejected=subprocess.run([sys.executable,'-S',str(ROOT/'scripts/nmp.py'),'diagnose',str(root),'--out',str(root/'derived')],capture_output=True,text=True)
+            self.assertEqual(rejected.returncode,2);self.assertFalse((root/'derived').exists())
 
 
 if __name__=='__main__':unittest.main()

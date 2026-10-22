@@ -6,7 +6,7 @@ An agent skill for editable animated PowerPoint, shared JSON/Remotion previews, 
 
 [下载 v1.7.0 安装包](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.7.0/native-motion-ppt-v1.7.0.zip) · [完整 WPS 实播验收工程](https://github.com/Yingqi-Han/native-motion-ppt/releases/download/v1.7.0/wps-v1.7.0-delivery.zip) · [Release 与校验清单](https://github.com/Yingqi-Han/native-motion-ppt/releases/tag/v1.7.0)
 
-当前源码 **v1.7.0**，MIT 许可。新增 `nmp.py` 项目入口、按任务的环境诊断、最小依赖启动流程和产品/项目进展示例。支持分步动画、逐字出现、运动路径、缩放/旋转、跨页 Morph，以及点击/自动双版本。WPS 实播结论限 Linux 11.1.0.11723；[范围与真实录像](docs/verification.md) 分别记录，Windows WPS 和 Microsoft PowerPoint 尚未实测。
+当前源码 **v1.8.0**，MIT 许可。新增现成 PPT 的分组草案、源文件绑定与逐成员保留校验，以及可定位的待检原因说明。支持分步动画、逐字出现、运动路径、缩放/旋转、跨页 Morph，以及点击/自动双版本。WPS 实播结论限 Linux 11.1.0.11723；[范围与真实录像](docs/verification.md) 分别记录，Windows WPS 和 Microsoft PowerPoint 尚未实测。
 
 ## 安装
 
@@ -64,16 +64,19 @@ python scripts/nmp.py accept output/my-product --player wps \
 
 修改检查器后可用 `nmp.py accept --resume <旧运行> --mode check` 复算原录像；需要重新采集时用 `--mode record` 并传播放器路径。check 不要求播放器、浏览器或重新渲染，两者均创建新目录。改变源数据后运行完整 full。高级 `accept_project.py` 入口继续可用；命令、状态和结构化审阅见 [验收流程](references/acceptance.md)。
 
+失败或待检时可运行 `python scripts/nmp.py diagnose <验收目录> --out output/diagnosis`，查看原因、建议和真实片段定位。新验收报告自动提供该入口；解释不改原始状态，无时间证据时不生成异常跳转。详见 [验收诊断](references/diagnostics.md)。
+
 代码预演由浏览器/Remotion 生成，真实放映录像来自指定 GUI 播放器。两者来源分别记载；采集帧率不等同于播放器重绘率。
 
 ## 编辑现有 PPT
 
 ```bash
-python scripts/motion_ppt.py inspect input.pptx --out output/inventory.json
-python scripts/nmp.py enhance input.pptx --plan plan.json --out output/enhanced.pptx
+python scripts/nmp.py plan input.pptx --max-clicks 3 --out output/plan
+# 查看实际页面，核对并编辑 output/plan/plan.json
+python scripts/nmp.py enhance input.pptx --plan output/plan/plan.json --out output/enhanced.pptx
 ```
 
-增强入口保留原稿和已有动画，完成结构检查并生成独立报告，实际播放状态仍待验证。语义分组计划与能力边界见 [SKILL.md](SKILL.md)。图表使用可编辑形状，不带可自动同步的 Excel 图表工作簿。模拟数据只用于演示。
+布局规则先提出可审阅草案，保留标题、上下文与不确定对象，原生组合不拆开。计划绑定源 SHA；增强只改选中页的动画时序，核对其他包成员、非时序 XML 和已有动画按原样保留。生成报告的实际播放状态仍待验证。规则与范围见 [现有 PPT](references/existing-ppt.md)。图表使用可编辑形状，不带可自动同步的 Excel 图表工作簿。模拟数据只用于演示。
 
 ## 开发与发布
 

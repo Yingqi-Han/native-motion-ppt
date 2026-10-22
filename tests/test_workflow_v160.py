@@ -10,6 +10,7 @@ from native_motion.evidence import verify_reviews,verify_dual_recordings
 from native_motion.phases import analyse_morph,classify_pages,morph_candidates,contour
 from native_motion.desktop_workflow import execute_resume,measured_command
 from native_motion.model import normalize
+from extract_review_frames import review_indices
 
 class BackendTests(unittest.TestCase):
  def test_wps_target_dispatches_real_wps(self):
@@ -22,6 +23,14 @@ class BackendTests(unittest.TestCase):
   self.assertFalse(player_matches('wps-desktop',{'player':'LibreOffice Impress','origin':'native_desktop_screen_capture','is_pptx_playback_recording':True}))
 
 class PhaseTests(unittest.TestCase):
+ def test_missing_held_report_uses_only_explicitly_labelled_review_context(self):
+  times=[i/30 for i in range(300)]
+  indices,basis=review_indices({'pages':[{'status':'pending'}],'morphs':[]},None,times,1.)
+  self.assertEqual(basis,'context_only_not_page_identity');self.assertEqual(len(indices),5)
+  self.assertTrue(all(times[i]>=1.6 for i in indices))
+ def test_real_phase_probe_is_preserved_without_a_held_report(self):
+  indices,basis=review_indices({'pages':[{'held_frame_index':45}],'morphs':[]},None,[i/30 for i in range(90)],1.)
+  self.assertEqual(indices,[45]);self.assertEqual(basis,'measured_phase_or_held_probes')
  def test_auto_identical_pages_remain_ambiguous(self):
   frame=np.full((180,320,3),230,dtype=np.uint8);times=[i/30 for i in range(90)]
   pages,_,_,_=classify_pages(times,[frame]*90,[frame,frame])

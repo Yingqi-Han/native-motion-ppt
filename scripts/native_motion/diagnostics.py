@@ -39,6 +39,8 @@ def explanation(code):
         return 'not_observed', '回看主体变化和到位平台，核对原生动画、同名对象及转场；静止或姿态不足不能证明运动通过。'
     if code == 'capture-gap':
         return 'capture', '检查录屏负载、丢帧和遮挡，使用新目录重新采集；不能从缺口直接认定播放器跳变。'
+    if code in {'baseline-drift','rebound','position-jump','size-jump','morph-double-image','morph-step'}:
+        return 'measured_issue', '对照真实帧检查测得变化及遮挡；保留原阈值与原始扫描。失败项修复后新录/复测，不能用审阅覆盖失败。'
     return 'review', '回看相应真实片段及原始检查记录；失败项修复后重录/复测，待检项保留具体范围。'
 
 
