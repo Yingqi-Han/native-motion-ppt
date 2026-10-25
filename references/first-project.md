@@ -10,6 +10,15 @@ python scripts/nmp.py doctor --for build
 
 默认 minimal 使用随包的 Space Grotesk 字体和英文内容，避免第一次导出依赖系统中文字体。`--template product`、`--template progress` 和 `--template science` 提供中文通用示例；它们需要完整 Noto Sans CJK SC 和 Noto Serif CJK SC。模拟数据与文案都需要根据实际项目替换。
 
+希望从连续主体与跨页编排开始时，用 `--template cinematic`：
+
+```bash
+python scripts/nmp.py new output/my-motion-study --template cinematic
+python scripts/nmp.py build output/my-motion-study --strict
+```
+
+该模板使用 Noto Sans CJK SC 与随包 Latin 字体。三页依次为扇形聚拢、同名形状变为柱形、局部图表扩展到全画面并突出最高值。第二、三页保留同一组模拟数值，按各页共同尺度与零基线呈现。它是完整页面重新设计的起点，不会自动把任意现有 PPT 变为这种效果。修改数值时，应同步修改第二、三页相应柱高、标签与尺度；当前 JSON 不会自动计算数据关联。
+
 ## 只导出原生 PPT
 
 ```bash

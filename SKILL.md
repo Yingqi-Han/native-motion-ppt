@@ -16,6 +16,8 @@ description: 制作、美化、重做原生可编辑动态 PPT；添加分步动
 
 用户已提供主题、方向或参考时，直接推进。不要反复询问是否继续；沿用已授权的目标。保留用户原稿，输出新文件。
 
+用户反馈“动画一般”“不惊艳”时，先按[设计与运动](references/design-and-motion.md)制作 15—25 秒的视觉样片：一个明确主体、一处有意义的动作接续或跨页重组、可辨认的节奏和停留，再用目标播放器实播展示。基础淡入的验收通过不能代替视觉质量；“惊艳”保留为用户的审美判断。原创例子见 `examples/cinematic-focus.json`，它走重做路线，现成 PPT 的保护增强仍只加整体淡入。
+
 ## 新用户项目入口
 
 优先使用 `scripts/nmp.py`，说明见 [第一次使用](references/first-project.md)。帮助、创建和诊断不加载第三方依赖；导出与预览生成使用 requirements-core.txt，完整验收再使用 requirements.txt。
@@ -28,6 +30,8 @@ python scripts/nmp.py preview output/my-project
 ```
 
 默认 minimal 使用随包字体；product、progress 和 science 是可修改的内容/动作示例。模板用于启动与复现，不替代受众分析、数据核对和视觉设计。原生导出成功后仍须实际播放，build-report 中的 desktop_playback 保持 pending。
+
+`--template cinematic` 提供三页连续主体样片：聚拢 → 原生 Morph 变为数据柱 → 同一图表扩展到全幅并突出最高值。用 `python scripts/nmp.py new output/motion-study --template cinematic` 创建可编辑项目。模板使用明确标注的模拟数据；改数值时要同步对应页几何和标签，不能只改数字或把镜头重排误作数值变化。
 
 完整流程用 `nmp.py accept <项目> --player wps`，播放器路径、实际字体、所需依赖按阶段预检；复验用 `accept --resume <旧运行> --mode record/check`。`enhance` 对已有 PPT 做保护原稿的增强和结构检查。高级脚本和下述参数继续保留。
 

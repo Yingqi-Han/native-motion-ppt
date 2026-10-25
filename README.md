@@ -42,6 +42,8 @@ python scripts/nmp.py preview output/my-first-deck
 | [starter-minimal.json](examples/starter-minimal.json) | `new` 默认；仅用随包字体启动 |
 | [product-intro.json](examples/product-intro.json) | `new --template product`；产品介绍、柱图与跨页主体 |
 | [project-update.json](examples/project-update.json) | `new --template progress`；进展、流程与行动依赖 |
+| [cinematic-focus-zoom.json](examples/cinematic-focus-zoom.json) | `new --template cinematic`；扇形聚拢、连续 Morph、全幅图表聚焦 |
+| [cinematic-focus.json](examples/cinematic-focus.json) | 保留的三页视觉样片；主体重组与固定基线展开 |
 | [minimal.json](examples/minimal.json) | 保留的中文最小原生示例 |
 | [demo.json](examples/demo.json) | 六镜头、组合图形和连续运动 |
 | [scientific.json](examples/scientific.json) | 五页模拟数据图表与科学流程 |

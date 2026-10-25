@@ -33,6 +33,31 @@ class FirstRunTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(load(folder / 'project.json')['title'], '产品介绍 · 原生演示示例')
 
+    def test_cinematic_starter_is_dependency_free_and_preserves_shared_data(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)/'motion project'
+            result = self.cli('new', str(folder), '--template', 'cinematic')
+            self.assertEqual(result.returncode, 0, result.stderr)
+            source = folder/'project.json'
+            original = source.read_bytes()
+            doc = json.loads(original)
+            self.assertEqual(json.loads((folder/'nmp.json').read_text())['profile'], 'generic')
+            self.assertEqual([s['transition']['kind'] for s in doc['slides']], ['none', 'morph', 'morph'])
+            values = [28, 39, 47, 61, 74, 88]
+            for slide in doc['slides'][1:]:
+                bars = [next(o for o in slide['objects'] if o['id'] == f'blade-{i}') for i in range(6)]
+                bottoms = [o['box'][1]+o['box'][3] for o in bars]
+                self.assertLess(max(bottoms)-min(bottoms), 1e-8)
+                scale = bars[0]['box'][3]/values[0]
+                for i, bar in enumerate(bars):
+                    self.assertAlmostEqual(bar['box'][3], values[i]*scale)
+                    self.assertFalse(bar.get('animations'))
+                    self.assertEqual(next(o['text'] for o in slide['objects'] if o['id'] == f'value-{i}'), str(values[i]))
+            built = export(source, Path(temporary)/'native')
+            self.assertEqual(built['status'], 'passed')
+            self.assertEqual(built['desktop_playback']['status'], 'pending')
+            self.assertEqual(source.read_bytes(), original)
+
     def test_missing_dependencies_produce_repairs_without_traceback(self):
         result = self.cli('doctor', '--for', 'acceptance', '--player', 'wps', '--json')
         self.assertEqual(result.returncode, 2)

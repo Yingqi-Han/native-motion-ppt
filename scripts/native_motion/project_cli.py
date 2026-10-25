@@ -14,7 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATES = {'minimal': ('starter-minimal.json', 'generic'), 'product': ('product-intro.json', 'generic'),
-             'progress': ('project-update.json', 'generic'), 'science': ('scientific.json', 'science')}
+             'progress': ('project-update.json', 'generic'), 'science': ('scientific.json', 'science'),
+             'cinematic': ('cinematic-focus-zoom.json', 'generic')}
 PLAYERS = {'wps': 'wps-desktop', 'impress': 'impress-desktop', 'powerpoint': 'powerpoint-desktop'}
 
 
