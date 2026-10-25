@@ -1,0 +1,1787 @@
+{
+  "version": 1,
+  "title": "聚焦 / 连续原生 Morph 视觉样片",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "fps": 30
+  },
+  "theme": {
+    "font": "Noto Sans CJK SC",
+    "latin_font": "Space Grotesk SemiBold",
+    "background": "F4EFE6",
+    "foreground": "26231F",
+    "accent": "F1714D"
+  },
+  "slides": [
+    {
+      "id": "focus",
+      "duration": 5500,
+      "background": "F4EFE6",
+      "transition": {
+        "kind": "none",
+        "duration": 0
+      },
+      "objects": [
+        {
+          "id": "brand",
+          "kind": "text",
+          "text": "NATIVE / MOTION STUDY",
+          "box": [
+            96,
+            58,
+            900,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "folio-1",
+          "kind": "text",
+          "text": "01 / 03",
+          "box": [
+            1340,
+            58,
+            164,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "note-1",
+          "kind": "text",
+          "text": "原创动效样片 · 图表为模拟数据",
+          "box": [
+            96,
+            834,
+            1100,
+            36
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "orbit",
+          "kind": "ellipse",
+          "box": [
+            775,
+            150,
+            730,
+            585
+          ],
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "opening-kicker",
+          "kind": "text",
+          "text": "01 / 先把目光聚拢",
+          "box": [
+            100,
+            177,
+            630,
+            48
+          ],
+          "size": 26,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 100,
+              "duration": 450,
+              "click": 0,
+              "from": [
+                0,
+                14
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "opening-title",
+          "kind": "text",
+          "text": "让信息，\n精彩地转身。",
+          "box": [
+            96,
+            252,
+            690,
+            270
+          ],
+          "size": 88,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "title",
+          "bold": true,
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 160,
+              "duration": 850,
+              "click": 0,
+              "from": [
+                0,
+                42
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "opening-caption",
+          "kind": "text",
+          "text": "让动作接续内容，\n让变化值得被看见。",
+          "box": [
+            102,
+            607,
+            630,
+            100
+          ],
+          "size": 30,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "body",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1100,
+              "duration": 520,
+              "click": 0,
+              "from": [
+                0,
+                18
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-0",
+          "kind": "rect",
+          "box": [
+            956.9608891606094,
+            323.22854001425947,
+            92,
+            410
+          ],
+          "fill": "C2583E",
+          "radius": 24,
+          "rotation": -50,
+          "gradient": {
+            "from": "C2583E",
+            "to": "F5A87F",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 80,
+              "duration": 1050,
+              "click": 0,
+              "from": [
+                -114.9066664678467,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "blade-1",
+          "kind": "rect",
+          "box": [
+            1011.5,
+            277.4647922241901,
+            92,
+            410
+          ],
+          "fill": "B64932",
+          "radius": 24,
+          "rotation": -30,
+          "gradient": {
+            "from": "B64932",
+            "to": "ED865D",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 165,
+              "duration": 1095,
+              "click": 0,
+              "from": [
+                -74.99999999999999,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "blade-2",
+          "kind": "rect",
+          "box": [
+            1078.4021235782793,
+            253.11441063249737,
+            92,
+            410
+          ],
+          "fill": "DF6C45",
+          "radius": 24,
+          "rotation": -10,
+          "gradient": {
+            "from": "DF6C45",
+            "to": "FFD0A0",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 250,
+              "duration": 1140,
+              "click": 0,
+              "from": [
+                -26.04722665003955,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "blade-3",
+          "kind": "rect",
+          "box": [
+            1149.5978764217207,
+            253.11441063249737,
+            92,
+            410
+          ],
+          "fill": "C85033",
+          "radius": 24,
+          "rotation": 10,
+          "gradient": {
+            "from": "C85033",
+            "to": "F79268",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 335,
+              "duration": 1185,
+              "click": 0,
+              "from": [
+                26.04722665003955,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "blade-4",
+          "kind": "rect",
+          "box": [
+            1216.5,
+            277.4647922241901,
+            92,
+            410
+          ],
+          "fill": "EB8054",
+          "radius": 24,
+          "rotation": 30,
+          "gradient": {
+            "from": "EB8054",
+            "to": "FFD4AA",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 1230,
+              "click": 0,
+              "from": [
+                74.99999999999999,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "blade-5",
+          "kind": "rect",
+          "box": [
+            1271.0391108393906,
+            323.22854001425947,
+            92,
+            410
+          ],
+          "fill": "B44730",
+          "radius": 24,
+          "rotation": 50,
+          "gradient": {
+            "from": "B44730",
+            "to": "EF8B60",
+            "angle": 0
+          },
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 505,
+              "duration": 1275,
+              "click": 0,
+              "from": [
+                114.9066664678467,
+                110
+              ],
+              "accel": 0.08,
+              "decel": 0.72
+            }
+          ]
+        },
+        {
+          "id": "hinge",
+          "kind": "ellipse",
+          "box": [
+            1136,
+            636,
+            48,
+            48
+          ],
+          "fill": "26231F",
+          "role": "visual",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1350,
+              "duration": 300,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "hero-tag",
+          "kind": "text",
+          "text": "六个原生形状 / 下一页继续",
+          "box": [
+            935,
+            750,
+            580,
+            40
+          ],
+          "size": 23,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 1600,
+              "duration": 400,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        }
+      ],
+      "notes": "原创图形：六片形状分步聚拢，停稳后再翻页。"
+    },
+    {
+      "id": "perspective",
+      "duration": 6500,
+      "background": "F4EFE6",
+      "transition": {
+        "kind": "morph",
+        "duration": 1800
+      },
+      "objects": [
+        {
+          "id": "brand",
+          "kind": "text",
+          "text": "NATIVE / MOTION STUDY",
+          "box": [
+            96,
+            58,
+            900,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "folio-2",
+          "kind": "text",
+          "text": "02 / 03",
+          "box": [
+            1340,
+            58,
+            164,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "note-2",
+          "kind": "text",
+          "text": "原创动效样片 · 图表为模拟数据",
+          "box": [
+            96,
+            834,
+            1100,
+            36
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "morph-kicker",
+          "kind": "text",
+          "text": "02 / 再让形状给出证据",
+          "box": [
+            100,
+            177,
+            600,
+            48
+          ],
+          "size": 26,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "morph-title",
+          "kind": "text",
+          "text": "同一组形状，\n换一个视角。",
+          "box": [
+            96,
+            252,
+            620,
+            270
+          ],
+          "size": 82,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "title",
+          "bold": true
+        },
+        {
+          "id": "morph-caption",
+          "kind": "text",
+          "text": "扇形转为数据柱。\n位置、比例与方向跨页接续。",
+          "box": [
+            102,
+            607,
+            600,
+            100
+          ],
+          "size": 28,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "grid-0",
+          "kind": "path",
+          "box": [
+            790,
+            680.0,
+            710,
+            0.01
+          ],
+          "d": "M 0 0 L 710 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            735,
+            662.0,
+            44,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "grid-50",
+          "kind": "path",
+          "box": [
+            790,
+            440.0,
+            710,
+            0.01
+          ],
+          "d": "M 0 0 L 710 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "tick-50",
+          "kind": "text",
+          "text": "50",
+          "box": [
+            735,
+            422.0,
+            44,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "grid-100",
+          "kind": "path",
+          "box": [
+            790,
+            200.0,
+            710,
+            0.01
+          ],
+          "d": "M 0 0 L 710 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "tick-100",
+          "kind": "text",
+          "text": "100",
+          "box": [
+            735,
+            182.0,
+            44,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "blade-0",
+          "kind": "rect",
+          "box": [
+            815,
+            545.6,
+            72,
+            134.4
+          ],
+          "fill": "C2583E",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "C2583E",
+            "to": "F5A87F",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-0",
+          "kind": "rect",
+          "box": [
+            801,
+            493.6,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-0",
+          "kind": "text",
+          "text": "28",
+          "box": [
+            805,
+            495.6,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 350,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-0",
+          "kind": "text",
+          "text": "01",
+          "box": [
+            805,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-1",
+          "kind": "rect",
+          "box": [
+            927,
+            492.8,
+            72,
+            187.2
+          ],
+          "fill": "B64932",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "B64932",
+            "to": "ED865D",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-1",
+          "kind": "rect",
+          "box": [
+            913,
+            440.8,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-1",
+          "kind": "text",
+          "text": "39",
+          "box": [
+            917,
+            442.8,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 420,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-1",
+          "kind": "text",
+          "text": "02",
+          "box": [
+            917,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-2",
+          "kind": "rect",
+          "box": [
+            1039,
+            454.4,
+            72,
+            225.6
+          ],
+          "fill": "DF6C45",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "DF6C45",
+            "to": "FFD0A0",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-2",
+          "kind": "rect",
+          "box": [
+            1025,
+            402.4,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-2",
+          "kind": "text",
+          "text": "47",
+          "box": [
+            1029,
+            404.4,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 490,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-2",
+          "kind": "text",
+          "text": "03",
+          "box": [
+            1029,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-3",
+          "kind": "rect",
+          "box": [
+            1151,
+            387.2,
+            72,
+            292.8
+          ],
+          "fill": "C85033",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "C85033",
+            "to": "F79268",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-3",
+          "kind": "rect",
+          "box": [
+            1137,
+            335.2,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-3",
+          "kind": "text",
+          "text": "61",
+          "box": [
+            1141,
+            337.2,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 560,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-3",
+          "kind": "text",
+          "text": "04",
+          "box": [
+            1141,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-4",
+          "kind": "rect",
+          "box": [
+            1263,
+            324.8,
+            72,
+            355.2
+          ],
+          "fill": "EB8054",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "EB8054",
+            "to": "FFD4AA",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-4",
+          "kind": "rect",
+          "box": [
+            1249,
+            272.8,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-4",
+          "kind": "text",
+          "text": "74",
+          "box": [
+            1253,
+            274.8,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 630,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-4",
+          "kind": "text",
+          "text": "05",
+          "box": [
+            1253,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "blade-5",
+          "kind": "rect",
+          "box": [
+            1375,
+            257.6,
+            72,
+            422.4
+          ],
+          "fill": "B44730",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "B44730",
+            "to": "EF8B60",
+            "angle": 0
+          },
+          "role": "visual"
+        },
+        {
+          "id": "value-backing-5",
+          "kind": "rect",
+          "box": [
+            1361,
+            205.60000000000002,
+            100,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-5",
+          "kind": "text",
+          "text": "88",
+          "box": [
+            1365,
+            207.60000000000002,
+            92,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 700,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "category-5",
+          "kind": "text",
+          "text": "06",
+          "box": [
+            1365,
+            706,
+            92,
+            42
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "animations": [
+            {
+              "kind": "enter",
+              "at": 450,
+              "duration": 360,
+              "click": 0,
+              "from": [
+                0,
+                0
+              ],
+              "accel": 0.1,
+              "decel": 0.65
+            }
+          ]
+        },
+        {
+          "id": "chart-unit",
+          "kind": "text",
+          "text": "模拟指标 / 0—100",
+          "box": [
+            790,
+            135,
+            700,
+            44
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption",
+          "align": "right"
+        }
+      ],
+      "notes": "同名原生矩形由扇形转为柱形。模拟数据28/39/47/61/74/88。"
+    },
+    {
+      "id": "full-frame-focus",
+      "duration": 6500,
+      "background": "F4EFE6",
+      "transition": {
+        "kind": "morph",
+        "duration": 1800
+      },
+      "objects": [
+        {
+          "id": "brand",
+          "kind": "text",
+          "text": "NATIVE / MOTION STUDY",
+          "box": [
+            96,
+            58,
+            900,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Space Grotesk SemiBold",
+          "role": "label"
+        },
+        {
+          "id": "folio-3",
+          "kind": "text",
+          "text": "03 / 03",
+          "box": [
+            1340,
+            58,
+            164,
+            36
+          ],
+          "size": 20,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "note-3",
+          "kind": "text",
+          "text": "原创动效样片 · 图表为模拟数据",
+          "box": [
+            96,
+            834,
+            1100,
+            36
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption"
+        },
+        {
+          "id": "focus-kicker",
+          "kind": "text",
+          "text": "03 / 把比较展开，把重点留下",
+          "box": [
+            100,
+            113,
+            650,
+            44
+          ],
+          "size": 25,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label"
+        },
+        {
+          "id": "focus-title",
+          "kind": "text",
+          "text": "把目光，\n交给最重要的数。",
+          "box": [
+            96,
+            178,
+            640,
+            200
+          ],
+          "size": 70,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "title",
+          "bold": true
+        },
+        {
+          "id": "focus-caption",
+          "kind": "text",
+          "text": "六项保持同一比例，重点留给 88。",
+          "box": [
+            100,
+            392,
+            650,
+            45
+          ],
+          "size": 25,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "body"
+        },
+        {
+          "id": "chart-unit",
+          "kind": "text",
+          "text": "模拟指标 / 0—100",
+          "box": [
+            790,
+            135,
+            700,
+            44
+          ],
+          "size": 22,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "caption",
+          "align": "right"
+        },
+        {
+          "id": "grid-0",
+          "kind": "path",
+          "box": [
+            96,
+            740.0,
+            1404,
+            0.01
+          ],
+          "d": "M 0 0 L 1404 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "focus-tick-0",
+          "kind": "text",
+          "text": "0",
+          "box": [
+            35,
+            722.0,
+            45,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "grid-50",
+          "kind": "path",
+          "box": [
+            810,
+            480.0,
+            690,
+            0.01
+          ],
+          "d": "M 0 0 L 690 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "focus-tick-50",
+          "kind": "text",
+          "text": "50",
+          "box": [
+            35,
+            462.0,
+            45,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "grid-100",
+          "kind": "path",
+          "box": [
+            810,
+            220.0,
+            690,
+            0.01
+          ],
+          "d": "M 0 0 L 690 0.0",
+          "fill": "none",
+          "stroke": "DAD0C4",
+          "stroke_width": 1.2,
+          "role": "decoration"
+        },
+        {
+          "id": "focus-tick-100",
+          "kind": "text",
+          "text": "100",
+          "box": [
+            35,
+            202.0,
+            45,
+            38
+          ],
+          "size": 20,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "right"
+        },
+        {
+          "id": "blade-0",
+          "kind": "rect",
+          "box": [
+            96,
+            594.4,
+            150,
+            145.6
+          ],
+          "fill": "A99B8B",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "A99B8B",
+            "to": "D8CCBD",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-0",
+          "kind": "rect",
+          "box": [
+            82,
+            542.4,
+            178,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-0",
+          "kind": "text",
+          "text": "28",
+          "box": [
+            86,
+            544.4,
+            170,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": false
+        },
+        {
+          "id": "category-0",
+          "kind": "text",
+          "text": "01",
+          "box": [
+            86,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "blade-1",
+          "kind": "rect",
+          "box": [
+            326,
+            537.2,
+            150,
+            202.8
+          ],
+          "fill": "A99B8B",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "A99B8B",
+            "to": "D8CCBD",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-1",
+          "kind": "rect",
+          "box": [
+            312,
+            485.20000000000005,
+            178,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-1",
+          "kind": "text",
+          "text": "39",
+          "box": [
+            316,
+            487.20000000000005,
+            170,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": false
+        },
+        {
+          "id": "category-1",
+          "kind": "text",
+          "text": "02",
+          "box": [
+            316,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "blade-2",
+          "kind": "rect",
+          "box": [
+            556,
+            495.6,
+            150,
+            244.4
+          ],
+          "fill": "A99B8B",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "A99B8B",
+            "to": "D8CCBD",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-2",
+          "kind": "rect",
+          "box": [
+            542,
+            443.6,
+            178,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-2",
+          "kind": "text",
+          "text": "47",
+          "box": [
+            546,
+            445.6,
+            170,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": false
+        },
+        {
+          "id": "category-2",
+          "kind": "text",
+          "text": "03",
+          "box": [
+            546,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "blade-3",
+          "kind": "rect",
+          "box": [
+            786,
+            422.8,
+            150,
+            317.2
+          ],
+          "fill": "A99B8B",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "A99B8B",
+            "to": "D8CCBD",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-3",
+          "kind": "rect",
+          "box": [
+            772,
+            370.8,
+            178,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-3",
+          "kind": "text",
+          "text": "61",
+          "box": [
+            776,
+            372.8,
+            170,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": false
+        },
+        {
+          "id": "category-3",
+          "kind": "text",
+          "text": "04",
+          "box": [
+            776,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "blade-4",
+          "kind": "rect",
+          "box": [
+            1016,
+            355.2,
+            150,
+            384.8
+          ],
+          "fill": "A99B8B",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "A99B8B",
+            "to": "D8CCBD",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-4",
+          "kind": "rect",
+          "box": [
+            1002,
+            303.2,
+            178,
+            48
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-4",
+          "kind": "text",
+          "text": "74",
+          "box": [
+            1006,
+            305.2,
+            170,
+            44
+          ],
+          "size": 30,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": false
+        },
+        {
+          "id": "category-4",
+          "kind": "text",
+          "text": "05",
+          "box": [
+            1006,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        },
+        {
+          "id": "blade-5",
+          "kind": "rect",
+          "box": [
+            1246,
+            282.4,
+            150,
+            457.6
+          ],
+          "fill": "B44730",
+          "radius": 24,
+          "rotation": 0,
+          "gradient": {
+            "from": "B44730",
+            "to": "EF8B60",
+            "angle": 0
+          },
+          "role": "data"
+        },
+        {
+          "id": "value-backing-5",
+          "kind": "rect",
+          "box": [
+            1227,
+            176.39999999999998,
+            188,
+            100
+          ],
+          "fill": "F4EFE6",
+          "role": "decoration"
+        },
+        {
+          "id": "value-5",
+          "kind": "text",
+          "text": "88",
+          "box": [
+            1231,
+            178.39999999999998,
+            180,
+            96
+          ],
+          "size": 76,
+          "fill": "26231F",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center",
+          "bold": true
+        },
+        {
+          "id": "category-5",
+          "kind": "text",
+          "text": "06",
+          "box": [
+            1236,
+            770,
+            170,
+            42
+          ],
+          "size": 24,
+          "fill": "6E645B",
+          "font": "Noto Sans CJK SC",
+          "role": "label",
+          "align": "center"
+        }
+      ],
+      "notes": "与上一页相同的六项模拟数据和原生对象。全幅重排时所有柱共享零基线与相同尺度，突出第六项88。不是新增测量或真实三维镜头。"
+    }
+  ]
+}

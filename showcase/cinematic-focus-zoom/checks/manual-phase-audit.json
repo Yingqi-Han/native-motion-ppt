@@ -1,0 +1,1840 @@
+{
+  "format_version": 2,
+  "origin": "measurement_of_actual_desktop_recording",
+  "status": "pending",
+  "mode": "manual",
+  "recording_sha256": "5157ab8ace8afb256e72c18cd338886ea88e1d0017096b783454cdbd205eaea7",
+  "source_pptx_sha256": "1299bf3251e07ab40794cc8b58b32c32390b50c2b192488e587100b5ec81cc11",
+  "source_json_sha256": "a071874560bdf6637cd6de6fceeb075be81a0090ccc234c209d0c9a1efa842f6",
+  "playback_evidence_sha256": "76b557c1a8074023d438c38f68dc126354e429be62c05e2e914088920f0d315c",
+  "actual_show_key_seconds": 1.0077753419999453,
+  "planned_input_sha256": "cbbf2d1cd5467805da843b55c38989846abc5be3f02433c929fa8867bac895a8",
+  "pages": [
+    {
+      "slide": 1,
+      "status": "passed",
+      "stable_interval_seconds": [
+        2.933333,
+        8.766667
+      ],
+      "held_timestamp": 8.4,
+      "held_frame_index": 252,
+      "reference_rmse": 5.2297749519348145,
+      "reference_tile_rmse": 13.511757850646973
+    },
+    {
+      "slide": 2,
+      "status": "passed",
+      "stable_interval_seconds": [
+        11.833333,
+        17.766667
+      ],
+      "held_timestamp": 17.4,
+      "held_frame_index": 522,
+      "reference_rmse": 3.453009605407715,
+      "reference_tile_rmse": 7.328818321228027
+    },
+    {
+      "slide": 3,
+      "status": "passed",
+      "stable_interval_seconds": [
+        19.833333,
+        26.766667
+      ],
+      "held_timestamp": 26.4,
+      "held_frame_index": 792,
+      "reference_rmse": 3.3686084747314453,
+      "reference_tile_rmse": 7.223771095275879
+    }
+  ],
+  "page_starts": [
+    1.0,
+    9.0,
+    18.0
+  ],
+  "activity_intervals": [
+    {
+      "start": 0.933333,
+      "end": 2.9,
+      "first_frame": 28,
+      "last_frame": 87,
+      "changed_frames": 47
+    },
+    {
+      "start": 8.966667,
+      "end": 10.833333,
+      "first_frame": 269,
+      "last_frame": 325,
+      "changed_frames": 46
+    },
+    {
+      "start": 11.233333,
+      "end": 11.8,
+      "first_frame": 337,
+      "last_frame": 354,
+      "changed_frames": 13
+    },
+    {
+      "start": 17.966667,
+      "end": 19.8,
+      "first_frame": 539,
+      "last_frame": 594,
+      "changed_frames": 46
+    }
+  ],
+  "morphs": [
+    {
+      "slide": 3,
+      "object": "blade-5",
+      "kind": "rect",
+      "roi": [
+        1234,
+        245,
+        1459,
+        752
+      ],
+      "palette": [
+        [
+          180,
+          71,
+          48
+        ]
+      ],
+      "background": [
+        244,
+        239,
+        230
+      ],
+      "excluded_text_boxes": [
+        [
+          96,
+          58,
+          900,
+          36
+        ],
+        [
+          1340,
+          58,
+          164,
+          36
+        ],
+        [
+          96,
+          834,
+          1100,
+          36
+        ],
+        [
+          100,
+          177,
+          600,
+          48
+        ],
+        [
+          96,
+          252,
+          620,
+          270
+        ],
+        [
+          102,
+          607,
+          600,
+          100
+        ],
+        [
+          735,
+          662.0,
+          44,
+          38
+        ],
+        [
+          735,
+          422.0,
+          44,
+          38
+        ],
+        [
+          735,
+          182.0,
+          44,
+          38
+        ],
+        [
+          805,
+          495.6,
+          92,
+          44
+        ],
+        [
+          805,
+          706,
+          92,
+          42
+        ],
+        [
+          917,
+          442.8,
+          92,
+          44
+        ],
+        [
+          917,
+          706,
+          92,
+          42
+        ],
+        [
+          1029,
+          404.4,
+          92,
+          44
+        ],
+        [
+          1029,
+          706,
+          92,
+          42
+        ],
+        [
+          1141,
+          337.2,
+          92,
+          44
+        ],
+        [
+          1141,
+          706,
+          92,
+          42
+        ],
+        [
+          1253,
+          274.8,
+          92,
+          44
+        ],
+        [
+          1253,
+          706,
+          92,
+          42
+        ],
+        [
+          1365,
+          207.60000000000002,
+          92,
+          44
+        ],
+        [
+          1365,
+          706,
+          92,
+          42
+        ],
+        [
+          790,
+          135,
+          700,
+          44
+        ],
+        [
+          96,
+          58,
+          900,
+          36
+        ],
+        [
+          1340,
+          58,
+          164,
+          36
+        ],
+        [
+          96,
+          834,
+          1100,
+          36
+        ],
+        [
+          100,
+          113,
+          650,
+          44
+        ],
+        [
+          96,
+          178,
+          640,
+          200
+        ],
+        [
+          100,
+          392,
+          650,
+          45
+        ],
+        [
+          790,
+          135,
+          700,
+          44
+        ],
+        [
+          35,
+          722.0,
+          45,
+          38
+        ],
+        [
+          35,
+          462.0,
+          45,
+          38
+        ],
+        [
+          35,
+          202.0,
+          45,
+          38
+        ],
+        [
+          86,
+          544.4,
+          170,
+          44
+        ],
+        [
+          86,
+          770,
+          170,
+          42
+        ],
+        [
+          316,
+          487.20000000000005,
+          170,
+          44
+        ],
+        [
+          316,
+          770,
+          170,
+          42
+        ],
+        [
+          546,
+          445.6,
+          170,
+          44
+        ],
+        [
+          546,
+          770,
+          170,
+          42
+        ],
+        [
+          776,
+          372.8,
+          170,
+          44
+        ],
+        [
+          776,
+          770,
+          170,
+          42
+        ],
+        [
+          1006,
+          305.2,
+          170,
+          44
+        ],
+        [
+          1006,
+          770,
+          170,
+          42
+        ],
+        [
+          1231,
+          178.39999999999998,
+          180,
+          96
+        ],
+        [
+          1236,
+          770,
+          170,
+          42
+        ]
+      ],
+      "excluded_decoration_boxes": [
+        [
+          788,
+          678.0,
+          714,
+          4.01
+        ],
+        [
+          788,
+          438.0,
+          714,
+          4.01
+        ],
+        [
+          788,
+          198.0,
+          714,
+          4.01
+        ],
+        [
+          94,
+          738.0,
+          1408,
+          4.01
+        ],
+        [
+          808,
+          478.0,
+          694,
+          4.01
+        ],
+        [
+          808,
+          218.0,
+          394,
+          4.01
+        ]
+      ],
+      "source_boxes": [
+        [
+          1375,
+          257.6,
+          72,
+          422.4
+        ],
+        [
+          1246,
+          282.4,
+          150,
+          457.6
+        ]
+      ],
+      "status": "pending",
+      "issues": [
+        {
+          "code": "morph-double-image",
+          "timestamp": 18.666667,
+          "severity": "failed",
+          "message": "Contour spans both endpoints or exceeds endpoint size envelope; inspect dissolve/double image"
+        }
+      ],
+      "distinct_intermediate_poses": 42,
+      "settled_seconds": null,
+      "reason": "No observed arrival plateau; local drift phase remains unsegmented",
+      "reason_code": "morph-arrival-unobserved",
+      "records": [
+        {
+          "frame_index": 534,
+          "timestamp": 17.8,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 535,
+          "timestamp": 17.833333,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 536,
+          "timestamp": 17.866667,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 537,
+          "timestamp": 17.9,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 538,
+          "timestamp": 17.933333,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 539,
+          "timestamp": 17.966667,
+          "box": [
+            1375,
+            258,
+            1447,
+            679
+          ]
+        },
+        {
+          "frame_index": 540,
+          "timestamp": 18.0,
+          "box": [
+            1374,
+            258,
+            1446,
+            681
+          ]
+        },
+        {
+          "frame_index": 541,
+          "timestamp": 18.033333,
+          "box": [
+            1374,
+            258,
+            1445,
+            680
+          ]
+        },
+        {
+          "frame_index": 542,
+          "timestamp": 18.066667,
+          "box": [
+            1374,
+            258,
+            1446,
+            680
+          ]
+        },
+        {
+          "frame_index": 543,
+          "timestamp": 18.1,
+          "box": [
+            1374,
+            259,
+            1446,
+            680
+          ]
+        },
+        {
+          "frame_index": 544,
+          "timestamp": 18.133333,
+          "box": [
+            1373,
+            259,
+            1446,
+            680
+          ]
+        },
+        {
+          "frame_index": 545,
+          "timestamp": 18.166667,
+          "box": [
+            1372,
+            258,
+            1446,
+            682
+          ]
+        },
+        {
+          "frame_index": 546,
+          "timestamp": 18.2,
+          "box": [
+            1371,
+            258,
+            1446,
+            682
+          ]
+        },
+        {
+          "frame_index": 547,
+          "timestamp": 18.233333,
+          "box": [
+            1371,
+            258,
+            1445,
+            682
+          ]
+        },
+        {
+          "frame_index": 548,
+          "timestamp": 18.266667,
+          "box": [
+            1370,
+            258,
+            1445,
+            683
+          ]
+        },
+        {
+          "frame_index": 549,
+          "timestamp": 18.3,
+          "box": [
+            1369,
+            259,
+            1443,
+            682
+          ]
+        },
+        {
+          "frame_index": 550,
+          "timestamp": 18.333333,
+          "box": [
+            1367,
+            259,
+            1444,
+            683
+          ]
+        },
+        {
+          "frame_index": 551,
+          "timestamp": 18.366667,
+          "box": [
+            1366,
+            259,
+            1443,
+            685
+          ]
+        },
+        {
+          "frame_index": 552,
+          "timestamp": 18.4,
+          "box": [
+            1364,
+            259,
+            1442,
+            686
+          ]
+        },
+        {
+          "frame_index": 553,
+          "timestamp": 18.433333,
+          "box": [
+            1364,
+            259,
+            1442,
+            686
+          ]
+        },
+        {
+          "frame_index": 554,
+          "timestamp": 18.466667,
+          "box": [
+            1362,
+            260,
+            1441,
+            687
+          ]
+        },
+        {
+          "frame_index": 555,
+          "timestamp": 18.5,
+          "box": [
+            1359,
+            260,
+            1440,
+            688
+          ]
+        },
+        {
+          "frame_index": 556,
+          "timestamp": 18.533333,
+          "box": [
+            1356,
+            261,
+            1439,
+            689
+          ]
+        },
+        {
+          "frame_index": 557,
+          "timestamp": 18.566667,
+          "box": [
+            1353,
+            261,
+            1438,
+            691
+          ]
+        },
+        {
+          "frame_index": 558,
+          "timestamp": 18.6,
+          "box": [
+            1350,
+            262,
+            1436,
+            691
+          ]
+        },
+        {
+          "frame_index": 559,
+          "timestamp": 18.633333,
+          "box": [
+            1350,
+            262,
+            1436,
+            691
+          ]
+        },
+        {
+          "frame_index": 560,
+          "timestamp": 18.666667,
+          "box": [
+            1346,
+            263,
+            1435,
+            694
+          ]
+        },
+        {
+          "frame_index": 561,
+          "timestamp": 18.7,
+          "box": [
+            1342,
+            263,
+            1434,
+            696
+          ]
+        },
+        {
+          "frame_index": 562,
+          "timestamp": 18.733333,
+          "box": [
+            1337,
+            264,
+            1432,
+            698
+          ]
+        },
+        {
+          "frame_index": 563,
+          "timestamp": 18.766667,
+          "box": [
+            1332,
+            265,
+            1430,
+            700
+          ]
+        },
+        {
+          "frame_index": 564,
+          "timestamp": 18.8,
+          "box": [
+            1327,
+            266,
+            1428,
+            703
+          ]
+        },
+        {
+          "frame_index": 565,
+          "timestamp": 18.833333,
+          "box": [
+            1327,
+            266,
+            1428,
+            703
+          ]
+        },
+        {
+          "frame_index": 566,
+          "timestamp": 18.866667,
+          "box": [
+            1321,
+            267,
+            1426,
+            705
+          ]
+        },
+        {
+          "frame_index": 567,
+          "timestamp": 18.9,
+          "box": [
+            1315,
+            268,
+            1423,
+            708
+          ]
+        },
+        {
+          "frame_index": 568,
+          "timestamp": 18.933333,
+          "box": [
+            1308,
+            270,
+            1421,
+            711
+          ]
+        },
+        {
+          "frame_index": 569,
+          "timestamp": 18.966667,
+          "box": [
+            1302,
+            271,
+            1418,
+            714
+          ]
+        },
+        {
+          "frame_index": 570,
+          "timestamp": 19.0,
+          "box": [
+            1296,
+            273,
+            1416,
+            717
+          ]
+        },
+        {
+          "frame_index": 571,
+          "timestamp": 19.033333,
+          "box": [
+            1296,
+            273,
+            1416,
+            717
+          ]
+        },
+        {
+          "frame_index": 572,
+          "timestamp": 19.066667,
+          "box": [
+            1290,
+            273,
+            1414,
+            720
+          ]
+        },
+        {
+          "frame_index": 573,
+          "timestamp": 19.1,
+          "box": [
+            1285,
+            274,
+            1412,
+            722
+          ]
+        },
+        {
+          "frame_index": 574,
+          "timestamp": 19.133333,
+          "box": [
+            1280,
+            275,
+            1410,
+            724
+          ]
+        },
+        {
+          "frame_index": 575,
+          "timestamp": 19.166667,
+          "box": [
+            1276,
+            275,
+            1408,
+            726
+          ]
+        },
+        {
+          "frame_index": 576,
+          "timestamp": 19.2,
+          "box": [
+            1272,
+            276,
+            1406,
+            728
+          ]
+        },
+        {
+          "frame_index": 577,
+          "timestamp": 19.233333,
+          "box": [
+            1272,
+            276,
+            1406,
+            728
+          ]
+        },
+        {
+          "frame_index": 578,
+          "timestamp": 19.266667,
+          "box": [
+            1268,
+            277,
+            1405,
+            730
+          ]
+        },
+        {
+          "frame_index": 579,
+          "timestamp": 19.3,
+          "box": [
+            1265,
+            278,
+            1403,
+            732
+          ]
+        },
+        {
+          "frame_index": 580,
+          "timestamp": 19.333333,
+          "box": [
+            1262,
+            278,
+            1402,
+            733
+          ]
+        },
+        {
+          "frame_index": 581,
+          "timestamp": 19.366667,
+          "box": [
+            1259,
+            279,
+            1402,
+            734
+          ]
+        },
+        {
+          "frame_index": 582,
+          "timestamp": 19.4,
+          "box": [
+            1257,
+            279,
+            1400,
+            735
+          ]
+        },
+        {
+          "frame_index": 583,
+          "timestamp": 19.433333,
+          "box": [
+            1257,
+            279,
+            1400,
+            735
+          ]
+        },
+        {
+          "frame_index": 584,
+          "timestamp": 19.466667,
+          "box": [
+            1255,
+            280,
+            1400,
+            735
+          ]
+        },
+        {
+          "frame_index": 585,
+          "timestamp": 19.5,
+          "box": [
+            1253,
+            280,
+            1399,
+            736
+          ]
+        },
+        {
+          "frame_index": 586,
+          "timestamp": 19.533333,
+          "box": [
+            1251,
+            280,
+            1398,
+            738
+          ]
+        },
+        {
+          "frame_index": 587,
+          "timestamp": 19.566667,
+          "box": [
+            1250,
+            281,
+            1398,
+            738
+          ]
+        },
+        {
+          "frame_index": 588,
+          "timestamp": 19.6,
+          "box": [
+            1249,
+            281,
+            1397,
+            739
+          ]
+        },
+        {
+          "frame_index": 589,
+          "timestamp": 19.633333,
+          "box": [
+            1249,
+            281,
+            1397,
+            739
+          ]
+        },
+        {
+          "frame_index": 590,
+          "timestamp": 19.666667,
+          "box": [
+            1248,
+            281,
+            1397,
+            739
+          ]
+        },
+        {
+          "frame_index": 591,
+          "timestamp": 19.7,
+          "box": [
+            1247,
+            281,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 592,
+          "timestamp": 19.733333,
+          "box": [
+            1246,
+            281,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 593,
+          "timestamp": 19.766667,
+          "box": [
+            1246,
+            281,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 594,
+          "timestamp": 19.8,
+          "box": [
+            1245,
+            281,
+            1396,
+            741
+          ]
+        },
+        {
+          "frame_index": 595,
+          "timestamp": 19.833333,
+          "box": [
+            1245,
+            281,
+            1396,
+            741
+          ]
+        },
+        {
+          "frame_index": 596,
+          "timestamp": 19.866667,
+          "box": [
+            1246,
+            282,
+            1396,
+            741
+          ]
+        },
+        {
+          "frame_index": 597,
+          "timestamp": 19.9,
+          "box": [
+            1246,
+            282,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 598,
+          "timestamp": 19.933333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 599,
+          "timestamp": 19.966667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 600,
+          "timestamp": 20.0,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 601,
+          "timestamp": 20.033333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 602,
+          "timestamp": 20.066667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 603,
+          "timestamp": 20.1,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 604,
+          "timestamp": 20.133333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 605,
+          "timestamp": 20.166667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 606,
+          "timestamp": 20.2,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 607,
+          "timestamp": 20.233333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 608,
+          "timestamp": 20.266667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 609,
+          "timestamp": 20.3,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 610,
+          "timestamp": 20.333333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 611,
+          "timestamp": 20.366667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 612,
+          "timestamp": 20.4,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 613,
+          "timestamp": 20.433333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 614,
+          "timestamp": 20.466667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 615,
+          "timestamp": 20.5,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 616,
+          "timestamp": 20.533333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 617,
+          "timestamp": 20.566667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 618,
+          "timestamp": 20.6,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 619,
+          "timestamp": 20.633333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 620,
+          "timestamp": 20.666667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 621,
+          "timestamp": 20.7,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 622,
+          "timestamp": 20.733333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 623,
+          "timestamp": 20.766667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 624,
+          "timestamp": 20.8,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 625,
+          "timestamp": 20.833333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 626,
+          "timestamp": 20.866667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 627,
+          "timestamp": 20.9,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 628,
+          "timestamp": 20.933333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 629,
+          "timestamp": 20.966667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 630,
+          "timestamp": 21.0,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 631,
+          "timestamp": 21.033333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 632,
+          "timestamp": 21.066667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 633,
+          "timestamp": 21.1,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 634,
+          "timestamp": 21.133333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 635,
+          "timestamp": 21.166667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 636,
+          "timestamp": 21.2,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 637,
+          "timestamp": 21.233333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 638,
+          "timestamp": 21.266667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 639,
+          "timestamp": 21.3,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 640,
+          "timestamp": 21.333333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 641,
+          "timestamp": 21.366667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 642,
+          "timestamp": 21.4,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 643,
+          "timestamp": 21.433333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 644,
+          "timestamp": 21.466667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 645,
+          "timestamp": 21.5,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 646,
+          "timestamp": 21.533333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 647,
+          "timestamp": 21.566667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 648,
+          "timestamp": 21.6,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 649,
+          "timestamp": 21.633333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 650,
+          "timestamp": 21.666667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 651,
+          "timestamp": 21.7,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 652,
+          "timestamp": 21.733333,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 653,
+          "timestamp": 21.766667,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        },
+        {
+          "frame_index": 654,
+          "timestamp": 21.8,
+          "box": [
+            1246,
+            283,
+            1396,
+            740
+          ]
+        }
+      ]
+    }
+  ],
+  "uncovered_morphs": [
+    {
+      "slide": 2,
+      "object": "blade-0",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 2,
+      "object": "blade-1",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 2,
+      "object": "blade-2",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 2,
+      "object": "blade-3",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 2,
+      "object": "blade-4",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 2,
+      "object": "blade-5",
+      "status": "pending",
+      "reason": "Rotated/translucent Morph is outside contour tracking",
+      "reason_code": "morph-unsupported-transform"
+    },
+    {
+      "slide": 3,
+      "object": "grid-0",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "grid-50",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "grid-100",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "blade-0",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "value-0",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-0",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "blade-1",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "value-1",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-1",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "blade-2",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "value-2",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-2",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "blade-3",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "value-3",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-3",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "blade-4",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "value-4",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-4",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "value-5",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    },
+    {
+      "slide": 3,
+      "object": "category-5",
+      "status": "pending",
+      "reason": "Text/complex geometry Morph requires separate template tracking",
+      "reason_code": "morph-unsupported-geometry"
+    }
+  ],
+  "capture_frames": 840,
+  "plan_status": "passed",
+  "scope": "Full-page independent references and actual activity identify pages. PPT boxes/colors bound contour search, not motion evaluation. Only supported isolated contours are certified; ambiguous/occluded/text Morph stays pending."
+}

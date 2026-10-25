@@ -1,0 +1,21 @@
+{
+  "reviewer": "Codex actual-WPS visual review",
+  "recordings": {
+    "manual": "5157ab8ace8afb256e72c18cd338886ea88e1d0017096b783454cdbd205eaea7",
+    "automatic": "909f9083b9ce94cd7f86d60cb0d722343771b90d7d71f8cdb876bd4ff9c342ed"
+  },
+  "reviews": [
+    {
+      "check_id": "visual-review",
+      "status": "passed",
+      "note": "Reviewed both real WPS contact sheets and extra actual frames around both Morph transitions. The opaque label-backing cuts visible in rejected focus-zoom-v1 at automatic 7.8 seconds are absent in this new recording. Six blades visibly become six columns; the same six values then spread into a full-width chart, five columns become muted and 88 becomes the focal value. Numeric glyphs remain unobstructed, common baseline and proportional bar heights are preserved in held pages. Manual paging and F5-only automatic playback both reach all three pages. This is visual review only; unsupported gradient/text trajectory checks remain pending and aesthetics is not automatically certified.",
+      "evidence": [
+        "qa/cinematic-review/frames/automatic/contact.jpg",
+        "qa/cinematic-review/frames/manual/contact.jpg",
+        "qa/cinematic-review/frames/automatic/frame-03.png",
+        "qa/cinematic-review/frames/automatic/frame-07.png",
+        "qa/cinematic-review/frames/automatic/frame-08.png"
+      ]
+    }
+  ]
+}

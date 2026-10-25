@@ -1,0 +1,17 @@
+{
+  "reviewer": "Codex visual review",
+  "recordings": {
+    "manual": "65857259bedb5106bfb998e20c0f7b56992e0978e1a7a0ae5d7bf4659c1b48e1",
+    "automatic": "2b4cab3cab32e8ec4435ce62e65058d5ea2b4c3dd37df36d592e26bacd6cec35"
+  },
+  "reviews": [
+    {
+      "check_id": "visual-review",
+      "status": "failed",
+      "note": "Actual automatic frame at 7.8 seconds shows opaque label backings clipping the tops of moving orange bars during the first Morph. Static pages do not expose this artifact. Requires layout revision and fresh real playback; do not mark this run visually passed.",
+      "evidence": [
+        "qa/visual-review-issue/automatic-7.8s.png"
+      ]
+    }
+  ]
+}

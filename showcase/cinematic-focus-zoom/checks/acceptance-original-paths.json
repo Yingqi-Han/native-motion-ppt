@@ -1,0 +1,861 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-25T18:08:16.555353+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/native-motion-ppt/output/cinematic-next-v2/project/project.json",
+    "snapshot": "project.json",
+    "sha256": "a071874560bdf6637cd6de6fceeb075be81a0090ccc234c209d0c9a1efa842f6"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Required player, tools and fonts are ready; real GUI still checked through recording",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 840 actual frames, 0 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/manual/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "3 actual held pages compared with Office references",
+      "evidence": "qa/manual/playback/native-playback-audit.json"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 实播对象运动",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Measured 813 actual frames, 0 objects; raw scans and phase-separated results retained",
+      "evidence": "qa/automatic/motion/native-motion-playback-audit.json"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 真实到位页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "3 actual held pages compared with Office references",
+      "evidence": "qa/automatic/playback/native-playback-audit.json"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/210d587e3869141321d2e3db2215d6844779305890420b6275e0896e881bdc4f.json",
+      "review_note": "Reviewed both real WPS contact sheets and extra actual frames around both Morph transitions. The opaque label-backing cuts visible in rejected focus-zoom-v1 at automatic 7.8 seconds are absent in this new recording. Six blades visibly become six columns; the same six values then spread into a full-width chart, five columns become muted and 88 becomes the focal value. Numeric glyphs remain unobstructed, common baseline and proportional bar heights are preserved in held pages. Manual paging and F5-only automatic playback both reach all three pages. This is visual review only; unsupported gradient/text trajectory checks remain pending and aesthetics is not automatically certified."
+    },
+    {
+      "id": "source-preserved",
+      "label": "原稿与证据绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "原稿与输入副本校验值保持一致"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "source-review",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "review",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/source-review.json"
+      ],
+      "started_at": "2026-10-25T18:08:16.796600+00:00",
+      "status": "passed",
+      "log": "logs/source-review.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.435
+    },
+    {
+      "id": "preview-generate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "preview",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/preview",
+        "--remotion"
+      ],
+      "started_at": "2026-10-25T18:08:17.232314+00:00",
+      "status": "passed",
+      "log": "logs/preview-generate.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.124
+    },
+    {
+      "id": "preview-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_preview.py",
+        "--url",
+        "http://localhost:37081/preview.html",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/preview"
+      ],
+      "started_at": "2026-10-25T18:08:18.359098+00:00",
+      "status": "passed",
+      "log": "logs/preview-check.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 6.521
+    },
+    {
+      "id": "design-render",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/render_project.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/design-preview.mp4"
+      ],
+      "started_at": "2026-10-25T18:08:25.241730+00:00",
+      "status": "passed",
+      "log": "logs/design-render.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 63.372
+    },
+    {
+      "id": "native-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx"
+      ],
+      "started_at": "2026-10-25T18:09:28.615188+00:00",
+      "status": "passed",
+      "log": "logs/native-build.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.468
+    },
+    {
+      "id": "native-auto-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--auto"
+      ],
+      "started_at": "2026-10-25T18:09:29.084402+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-build.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.47
+    },
+    {
+      "id": "native-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native",
+        "--render",
+        "--import-check",
+        "--office-tools-root",
+        "/workspace/.tools/ppt-desktop"
+      ],
+      "started_at": "2026-10-25T18:09:29.554693+00:00",
+      "status": "passed",
+      "log": "logs/native-check.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.832
+    },
+    {
+      "id": "native-auto-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/auto"
+      ],
+      "started_at": "2026-10-25T18:09:32.386731+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-check.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.168
+    },
+    {
+      "id": "record-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/capture/manual",
+        "--seconds",
+        "28.0",
+        "--show-after",
+        "1.0",
+        "--width",
+        "1600",
+        "--height",
+        "900",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "9.0",
+        "--click-at",
+        "18.0"
+      ],
+      "started_at": "2026-10-25T18:09:32.590420+00:00",
+      "status": "passed",
+      "log": "logs/record-manual.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 35.125
+    },
+    {
+      "id": "record-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/capture/automatic",
+        "--seconds",
+        "27.1",
+        "--show-after",
+        "1",
+        "--width",
+        "1600",
+        "--height",
+        "900",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile"
+      ],
+      "started_at": "2026-10-25T18:10:07.717083+00:00",
+      "status": "passed",
+      "log": "logs/record-automatic.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 34.262
+    },
+    {
+      "id": "morph-probe-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/deck.pptx"
+      ],
+      "started_at": "2026-10-25T18:10:41.980205+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-build.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.232
+    },
+    {
+      "id": "record-morph-probe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/capture",
+        "--seconds",
+        "9",
+        "--show-after",
+        "1",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "60",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "4"
+      ],
+      "started_at": "2026-10-25T18:10:42.212825+00:00",
+      "status": "passed",
+      "log": "logs/record-morph-probe.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 16.168
+    },
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/phases",
+        "--plan",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-25T18:10:58.384485+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 12.06
+    },
+    {
+      "id": "motion-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-25T18:11:10.445491+00:00",
+      "status": "passed",
+      "log": "logs/motion-manual.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 4.212
+    },
+    {
+      "id": "frames-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/manual/playback"
+      ],
+      "started_at": "2026-10-25T18:11:14.660861+00:00",
+      "status": "passed",
+      "log": "logs/frames-manual.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.997
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-25T18:11:17.659896+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 12.036
+    },
+    {
+      "id": "motion-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_motion.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/project.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/phases/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/motion",
+        "--max-step",
+        "24",
+        "--phases",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/phases/phase-audit.json"
+      ],
+      "started_at": "2026-10-25T18:11:29.697762+00:00",
+      "status": "passed",
+      "log": "logs/motion-automatic.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 4.134
+    },
+    {
+      "id": "frames-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_playback.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/playback-evidence-auto.json",
+        "--plan",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/motion/observed-playback-plan.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/native/rendered",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/qa/automatic/playback"
+      ],
+      "started_at": "2026-10-25T18:11:33.835375+00:00",
+      "status": "passed",
+      "log": "logs/frames-automatic.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 3.112
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-25T18:11:36.949440+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.292
+    },
+    {
+      "id": "review-frames",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/extract_review_frames.py",
+        "/workspace/native-motion-ppt/output/cinematic-next-runs/focus-zoom-v2"
+      ],
+      "started_at": "2026-10-25T18:11:44.244792+00:00",
+      "status": "passed",
+      "log": "logs/review-frames.log",
+      "implementation": {
+        "sha256": "76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3",
+        "snapshot": "implementations/76dcf35ddabd81ddcd381b1469aff34ae6e8991324759d1bd467b839572d80e3.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 4.765
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "5157ab8ace8afb256e72c18cd338886ea88e1d0017096b783454cdbd205eaea7",
+      "bytes": 994263,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "76b557c1a8074023d438c38f68dc126354e429be62c05e2e914088920f0d315c",
+      "bytes": 3080,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "909f9083b9ce94cd7f86d60cb0d722343771b90d7d71f8cdb876bd4ff9c342ed",
+      "bytes": 956326,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "e0efb6beb92196c366e0a668f6e29b1a80074eeb977a8f6a6570a2cbdb891535",
+      "bytes": 2939,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "a071874560bdf6637cd6de6fceeb075be81a0090ccc234c209d0c9a1efa842f6",
+      "bytes": 36281,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "1299bf3251e07ab40794cc8b58b32c32390b50c2b192488e587100b5ec81cc11",
+      "bytes": 44013,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "c08d46806c8d8ffb5d39c738771feadec180fc30cd11923daf68d4722897355f",
+      "bytes": 44030,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "2d5124136afa2962aaa9f3a85fb4ceb2381a4b8163860d8dfb959b100a470ce7",
+      "bytes": 1619511,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "requested_target_player": "wps-desktop",
+  "workflow_mode": "full",
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "5157ab8ace8afb256e72c18cd338886ea88e1d0017096b783454cdbd205eaea7",
+      "source_pptx_sha256": "1299bf3251e07ab40794cc8b58b32c32390b50c2b192488e587100b5ec81cc11"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "909f9083b9ce94cd7f86d60cb0d722343771b90d7d71f8cdb876bd4ff9c342ed",
+      "source_pptx_sha256": "c08d46806c8d8ffb5d39c738771feadec180fc30cd11923daf68d4722897355f"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "pending",
+  "automatic_acceptance_status": "pending",
+  "finished_at": "2026-10-25T18:16:10.860459+00:00"
+}

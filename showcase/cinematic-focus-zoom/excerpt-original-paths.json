@@ -1,0 +1,12 @@
+{
+  "origin": "excerpt_of_actual_WPS_screen_capture",
+  "source_recording": "../../player-recording-auto.mp4",
+  "source_recording_sha256": "909f9083b9ce94cd7f86d60cb0d722343771b90d7d71f8cdb876bd4ff9c342ed",
+  "start_seconds": 1.2,
+  "end_seconds": 23.2,
+  "duration_seconds": 22,
+  "speed": 1,
+  "interpolated_frames": false,
+  "operation": "Temporal trim and H264 reencode; source recording retained unchanged",
+  "output_sha256": "b26663559290736d03c22c41188e1f8ad4a5ba15006b221397cc24039a3c7f09"
+}

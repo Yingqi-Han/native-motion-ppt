@@ -1,0 +1,183 @@
+{
+  "origin": "measurement_of_actual_desktop_recording",
+  "recording_sha256": "909f9083b9ce94cd7f86d60cb0d722343771b90d7d71f8cdb876bd4ff9c342ed",
+  "source_pptx_sha256": "c08d46806c8d8ffb5d39c738771feadec180fc30cd11923daf68d4722897355f",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 900,
+        "avg_frame_rate": "30/1",
+        "nb_frames": "813"
+      }
+    ],
+    "format": {
+      "duration": "27.100000"
+    }
+  },
+  "held_pages": [
+    {
+      "slide": 1,
+      "status": "passed",
+      "reason": "Held full-page layout compared at 320×180 with blur; small glyph identity is outside this check",
+      "requested_time": 6.0,
+      "actual_timestamp": 6.0,
+      "frame_index": 180,
+      "image": "native-0005.png",
+      "best_reference_slide": 1,
+      "rmse": 5.387914072770236,
+      "max_tile_rmse": 13.587593060773685,
+      "worst_tile": {
+        "box": [
+          240,
+          72,
+          280,
+          108
+        ],
+        "rmse": 13.587593060773685
+      }
+    },
+    {
+      "slide": 2,
+      "status": "passed",
+      "reason": "Held full-page layout compared at 320×180 with blur; small glyph identity is outside this check",
+      "requested_time": 14.466667,
+      "actual_timestamp": 14.466667,
+      "frame_index": 434,
+      "image": "native-0012.png",
+      "best_reference_slide": 2,
+      "rmse": 3.61271865928017,
+      "max_tile_rmse": 7.207233377861645,
+      "worst_tile": {
+        "box": [
+          200,
+          108,
+          240,
+          144
+        ],
+        "rmse": 7.207233377861645
+      }
+    },
+    {
+      "slide": 3,
+      "status": "passed",
+      "reason": "Held full-page layout compared at 320×180 with blur; small glyph identity is outside this check",
+      "requested_time": 26.433333,
+      "actual_timestamp": 26.433333,
+      "frame_index": 793,
+      "image": "native-0017.png",
+      "best_reference_slide": 3,
+      "rmse": 3.628303092815336,
+      "max_tile_rmse": 7.140747704391871,
+      "worst_tile": {
+        "box": [
+          240,
+          72,
+          280,
+          108
+        ],
+        "rmse": 7.140747704391871
+      }
+    }
+  ],
+  "samples": [
+    {
+      "frame_index": 6,
+      "actual_timestamp": 0.2,
+      "image": "native-0001.png"
+    },
+    {
+      "frame_index": 28,
+      "actual_timestamp": 0.933333,
+      "image": "native-0002.png"
+    },
+    {
+      "frame_index": 33,
+      "actual_timestamp": 1.1,
+      "image": "native-0003.png"
+    },
+    {
+      "frame_index": 86,
+      "actual_timestamp": 2.866667,
+      "image": "native-0004.png"
+    },
+    {
+      "frame_index": 180,
+      "actual_timestamp": 6.0,
+      "image": "native-0005.png"
+    },
+    {
+      "frame_index": 191,
+      "actual_timestamp": 6.366667,
+      "image": "native-0006.png"
+    },
+    {
+      "frame_index": 198,
+      "actual_timestamp": 6.6,
+      "image": "native-0007.png"
+    },
+    {
+      "frame_index": 203,
+      "actual_timestamp": 6.766667,
+      "image": "native-0008.png"
+    },
+    {
+      "frame_index": 253,
+      "actual_timestamp": 8.433333,
+      "image": "native-0009.png"
+    },
+    {
+      "frame_index": 267,
+      "actual_timestamp": 8.9,
+      "image": "native-0010.png"
+    },
+    {
+      "frame_index": 282,
+      "actual_timestamp": 9.4,
+      "image": "native-0011.png"
+    },
+    {
+      "frame_index": 434,
+      "actual_timestamp": 14.466667,
+      "image": "native-0012.png"
+    },
+    {
+      "frame_index": 444,
+      "actual_timestamp": 14.8,
+      "image": "native-0013.png"
+    },
+    {
+      "frame_index": 451,
+      "actual_timestamp": 15.033333,
+      "image": "native-0014.png"
+    },
+    {
+      "frame_index": 456,
+      "actual_timestamp": 15.2,
+      "image": "native-0015.png"
+    },
+    {
+      "frame_index": 506,
+      "actual_timestamp": 16.866667,
+      "image": "native-0016.png"
+    },
+    {
+      "frame_index": 793,
+      "actual_timestamp": 26.433333,
+      "image": "native-0017.png"
+    },
+    {
+      "frame_index": 803,
+      "actual_timestamp": 26.766667,
+      "image": "native-0018.png"
+    }
+  ],
+  "thresholds": {
+    "global_rmse": 8,
+    "tile_rmse": 18
+  },
+  "errors": [],
+  "scope": "Actual capture timestamps and pixels. Held page resemblance and observed landmarks; not an OCR, fine-glyph, aesthetic or Morph-motion certification"
+}

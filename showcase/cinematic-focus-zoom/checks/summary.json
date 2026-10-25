@@ -1,0 +1,148 @@
+{
+  "format_version": 1,
+  "status": "pending",
+  "source_commit": "53b9afc",
+  "template": "cinematic",
+  "fixture": "Original repository-authored simulated data",
+  "counts": {
+    "passed": 19,
+    "failed": 0,
+    "pending": 3
+  },
+  "source_json_sha256": "a071874560bdf6637cd6de6fceeb075be81a0090ccc234c209d0c9a1efa842f6",
+  "checks": [
+    {
+      "id": "source-review",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "preview",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "design-video",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-structure",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "static-pages",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-import",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "motion-advice",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "desktop-preflight",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "target-player",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "desktop-recording-manual",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-phases-manual",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-motion-manual",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-held-pages-manual",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-phases-automatic",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-motion-automatic",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "morph-playback",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null
+    },
+    {
+      "id": "automatic-advance",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "visual-review",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed"
+    },
+    {
+      "id": "source-preserved",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    },
+    {
+      "id": "delivery-integrity",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null
+    }
+  ],
+  "scope": "Evidence excerpt, not a complete verify_acceptance run. Original reports/evidence retain their original workspace paths. See README for path mapping. Complex gradient/text Morph automation remains pending; visual review is separate. Full original run remains available in the task delivery."
+}
