@@ -56,5 +56,16 @@ class VideoFirstTests(unittest.TestCase):
         self.assertEqual(len(points),13)
         self.assertTrue(all(y==0 for x,y in points))
 
+    def test_retimed_video_maps_new_scene_boundaries_and_sample_frames(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp);video,story,quality,lock=self.fixture(folder)
+            story.write_bytes((ROOT/'examples/science-video/sound-refined.json').read_bytes())
+            d=json.loads(quality.read_text());d['story_sha256']=digest(story);quality.write_text(json.dumps(d))
+            seal(video,story,quality,lock);create(lock,folder/'ppt')
+            mapping=json.loads((folder/'ppt/video-to-ppt.json').read_text())['mapping']
+            self.assertEqual(mapping[5]['video_start_seconds'],42)
+            self.assertEqual(mapping[-1]['video_end_seconds'],66)
+            self.assertEqual(mapping[2]['representative_frame'],570)
+
 
 if __name__=='__main__':unittest.main()

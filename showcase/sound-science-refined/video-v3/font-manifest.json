@@ -1,0 +1,16 @@
+[
+  {
+    "family": "Noto Sans CJK SC",
+    "style": "Regular",
+    "index": 2,
+    "subset": "NotoSansSC-Regular.woff",
+    "sha256": "7c7d23c57536ffc105678c111532b7766d007f55536cf2dfdab45f461a8f865f"
+  },
+  {
+    "family": "Noto Sans CJK SC",
+    "style": "Bold",
+    "index": 2,
+    "subset": "NotoSansSC-Bold.woff",
+    "sha256": "7a6a06948479675533766cb4d3e64e0e680535e763100cc4ea1f647baa01f0ad"
+  }
+]

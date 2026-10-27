@@ -1,0 +1,158 @@
+{
+  "format_version": 1,
+  "origin": "offline_synthetic_narration",
+  "engine": "sherpa-onnx",
+  "engine_version": "2.0.1",
+  "speaker_id": 0,
+  "speed": 1.0,
+  "model_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-melo-tts-zh_en.tar.bz2",
+  "model_sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d",
+  "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+  "clips": [
+    {
+      "scene": "question",
+      "text": "声音传过来，空气也会一路跑过来吗？盯住这个橙色标记。",
+      "duration_seconds": 4.858820861678004,
+      "sample_rate": 44100,
+      "sha256": "7373c77bd7672d847494843c0b07e0aa2584ca30a2948758008bee862eb12e2a",
+      "cues": [
+        {
+          "text": "声音传过来，空气也会一路跑过来吗？",
+          "start_seconds": 0.0,
+          "end_seconds": 3.030204081632653
+        },
+        {
+          "text": "盯住这个橙色标记。",
+          "start_seconds": 3.210204081632653,
+          "end_seconds": 4.858820861678004
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "parcel",
+      "text": "它在平衡位置附近，来回振动。图示是空气团的平均运动，没有画出热运动。",
+      "duration_seconds": 6.437777777777778,
+      "sample_rate": 44100,
+      "sha256": "c093573a0d98d415ff36f0368d05e5792ba00fd890419fd0211cb53b604b88d2",
+      "cues": [
+        {
+          "text": "它在平衡位置附近，来回振动。",
+          "start_seconds": 0.0,
+          "end_seconds": 2.6006349206349206
+        },
+        {
+          "text": "图示是空气团的平均运动，没有画出热运动。",
+          "start_seconds": 2.780634920634921,
+          "end_seconds": 6.437777777777778
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "compression",
+      "text": "向右走的是压缩区。相邻的空气接力振动，把疏密变化传向前方。",
+      "duration_seconds": 5.613469387755102,
+      "sample_rate": 44100,
+      "sha256": "ba96b496b436441e2d8f8baf907d618fb16280d2f3411d634c76b49d74caf97f",
+      "cues": [
+        {
+          "text": "向右走的是压缩区。",
+          "start_seconds": 0.0,
+          "end_seconds": 1.6370068027210884
+        },
+        {
+          "text": "相邻的空气接力振动，把疏密变化传向前方。",
+          "start_seconds": 1.8170068027210884,
+          "end_seconds": 5.613469387755102
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "parallel",
+      "text": "空气的振动方向，与声波的传播方向平行。这就是空气中的纵波。",
+      "duration_seconds": 5.532199546485261,
+      "sample_rate": 44100,
+      "sha256": "e4676f21f91c94641e2eb5809b3fba0dd956ee7335acc804f02a4544e37cb78b",
+      "cues": [
+        {
+          "text": "空气的振动方向，与声波的传播方向平行。",
+          "start_seconds": 0.0,
+          "end_seconds": 3.5874829931972787
+        },
+        {
+          "text": "这就是空气中的纵波。",
+          "start_seconds": 3.767482993197279,
+          "end_seconds": 5.532199546485261
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "frequency",
+      "text": "波速近似不变时，频率翻倍，波长减半。先听二百二十赫兹，再听四百四十赫兹。",
+      "duration_seconds": 6.918049886621315,
+      "sample_rate": 44100,
+      "sha256": "5197cba79d6ce596b96b2c9338c7f94e28e7a72621361b4091a013fa144a51da",
+      "cues": [
+        {
+          "text": "波速近似不变时，频率翻倍，波长减半。",
+          "start_seconds": 0.0,
+          "end_seconds": 3.1970068027210883
+        },
+        {
+          "text": "先听二百二十赫兹，再听四百四十赫兹。",
+          "start_seconds": 3.3770068027210884,
+          "end_seconds": 6.918049886621315
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "wavelength",
+      "text": "二十摄氏度时，空气中的声速约为每秒三百四十三米。波长等于声速除以频率。三百四十三除以四百四十，约等于零点七八米。",
+      "duration_seconds": 10.309750566893424,
+      "sample_rate": 44100,
+      "sha256": "ec7242fbe9af55e69cd0d457690dbc155e878bd9aec0ac5975418dc274ec5825",
+      "cues": [
+        {
+          "text": "二十摄氏度时，空气中的声速约为每秒三百四十三米。",
+          "start_seconds": 0.0,
+          "end_seconds": 4.249251700680272
+        },
+        {
+          "text": "波长等于声速除以频率。",
+          "start_seconds": 4.429251700680272,
+          "end_seconds": 6.379727891156462
+        },
+        {
+          "text": "三百四十三除以四百四十，约等于零点七八米。",
+          "start_seconds": 6.559727891156463,
+          "end_seconds": 10.309750566893424
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    },
+    {
+      "scene": "recap",
+      "text": "所以，传过去的是振动。空气只在附近往复，声波把能量传向远方。",
+      "duration_seconds": 5.578639455782313,
+      "sample_rate": 44100,
+      "sha256": "224a8d40cf0ae88e47dac597e93fd69e38efc28bf2ebc18bae75088843410c85",
+      "cues": [
+        {
+          "text": "所以，传过去的是振动。",
+          "start_seconds": 0.0,
+          "end_seconds": 1.8575963718820863
+        },
+        {
+          "text": "空气只在附近往复，声波把能量传向远方。",
+          "start_seconds": 2.037596371882086,
+          "end_seconds": 5.578639455782313
+        }
+      ],
+      "cue_timing": "independently_synthesized_sentence_sample_boundaries"
+    }
+  ]
+}

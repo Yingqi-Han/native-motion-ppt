@@ -1,0 +1,718 @@
+{
+  "format_version": 2,
+  "origin": "measurement_of_actual_desktop_recording",
+  "status": "pending",
+  "mode": "automatic",
+  "recording_sha256": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf",
+  "source_pptx_sha256": "248a2f2c8ab7527f69e53b442899675b92e0376ead32eb30a59cd708a463b95e",
+  "source_json_sha256": "8db19c8054c6c3b07ea336a22ba6cfe3a0b6c0eeea6efdbf2228a8c41aeacbca",
+  "playback_evidence_sha256": "8a933d060d7725e92d2e0bc8aa489048ffef4d4f0cb2cbc3ce13d4c4d606f56b",
+  "actual_show_key_seconds": 1.0087735279994376,
+  "planned_input_sha256": null,
+  "pages": [
+    {
+      "slide": 1,
+      "status": "passed",
+      "stable_interval_seconds": [
+        1.566667,
+        9.7
+      ],
+      "held_timestamp": 9.333333,
+      "held_frame_index": 280,
+      "reference_rmse": 2.014274835586548,
+      "reference_tile_rmse": 3.124018430709839,
+      "entry_window_basis": "first_observed_activity_intersecting_or_after_recorded_F5"
+    },
+    {
+      "slide": 2,
+      "status": "passed",
+      "stable_interval_seconds": [
+        14.533333,
+        19.433333
+      ],
+      "held_timestamp": 19.066667,
+      "held_frame_index": 572,
+      "reference_rmse": 2.054476499557495,
+      "reference_tile_rmse": 3.0450704097747803
+    },
+    {
+      "slide": 3,
+      "status": "passed",
+      "stable_interval_seconds": [
+        23.533333,
+        29.2
+      ],
+      "held_timestamp": 28.833333,
+      "held_frame_index": 865,
+      "reference_rmse": 2.1147587299346924,
+      "reference_tile_rmse": 3.396859884262085
+    },
+    {
+      "slide": 4,
+      "status": "passed",
+      "stable_interval_seconds": [
+        30.6,
+        38.866667
+      ],
+      "held_timestamp": 38.5,
+      "held_frame_index": 1155,
+      "reference_rmse": 2.12937331199646,
+      "reference_tile_rmse": 3.182671546936035
+    },
+    {
+      "slide": 5,
+      "status": "passed",
+      "stable_interval_seconds": [
+        39.366667,
+        47.433333
+      ],
+      "held_timestamp": 47.066667,
+      "held_frame_index": 1412,
+      "reference_rmse": 2.0457229614257812,
+      "reference_tile_rmse": 3.1664838790893555
+    },
+    {
+      "slide": 6,
+      "status": "pending",
+      "reason": "No unambiguous stable reference match for this page",
+      "reason_code": "page-ambiguous"
+    },
+    {
+      "slide": 7,
+      "status": "passed",
+      "stable_interval_seconds": [
+        56.533333,
+        64.6
+      ],
+      "held_timestamp": 64.233333,
+      "held_frame_index": 1927,
+      "reference_rmse": 2.0894203186035156,
+      "reference_tile_rmse": 3.4554708003997803
+    },
+    {
+      "slide": 8,
+      "status": "passed",
+      "stable_interval_seconds": [
+        65.066667,
+        74.033333
+      ],
+      "held_timestamp": 73.666667,
+      "held_frame_index": 2210,
+      "reference_rmse": 3.32869291305542,
+      "reference_tile_rmse": 8.088400840759277
+    }
+  ],
+  "page_starts": [
+    0.933333,
+    9.7,
+    19.433333,
+    29.2,
+    38.866667,
+    null,
+    null,
+    64.6
+  ],
+  "activity_intervals": [
+    {
+      "start": 0.933333,
+      "end": 1.533333,
+      "first_frame": 28,
+      "last_frame": 46,
+      "changed_frames": 14
+    },
+    {
+      "start": 9.7,
+      "end": 14.5,
+      "first_frame": 291,
+      "last_frame": 435,
+      "changed_frames": 108
+    },
+    {
+      "start": 19.433333,
+      "end": 21.066667,
+      "first_frame": 583,
+      "last_frame": 632,
+      "changed_frames": 34
+    },
+    {
+      "start": 22.733333,
+      "end": 23.5,
+      "first_frame": 682,
+      "last_frame": 705,
+      "changed_frames": 18
+    },
+    {
+      "start": 29.2,
+      "end": 30.566667,
+      "first_frame": 876,
+      "last_frame": 917,
+      "changed_frames": 30
+    },
+    {
+      "start": 38.866667,
+      "end": 39.333333,
+      "first_frame": 1166,
+      "last_frame": 1180,
+      "changed_frames": 12
+    },
+    {
+      "start": 47.433333,
+      "end": 47.866667,
+      "first_frame": 1423,
+      "last_frame": 1436,
+      "changed_frames": 11
+    },
+    {
+      "start": 50.5,
+      "end": 50.733333,
+      "first_frame": 1515,
+      "last_frame": 1522,
+      "changed_frames": 6
+    },
+    {
+      "start": 51.1,
+      "end": 51.733333,
+      "first_frame": 1533,
+      "last_frame": 1552,
+      "changed_frames": 16
+    },
+    {
+      "start": 56.033333,
+      "end": 56.5,
+      "first_frame": 1681,
+      "last_frame": 1695,
+      "changed_frames": 12
+    },
+    {
+      "start": 64.6,
+      "end": 65.033333,
+      "first_frame": 1938,
+      "last_frame": 1951,
+      "changed_frames": 11
+    }
+  ],
+  "morphs": [],
+  "uncovered_morphs": [
+    {
+      "slide": 2,
+      "object": "air-column-0",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-1",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-2",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-3",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-4",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-5",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-6",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-7",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-8",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-9",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-10",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-11",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-12",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-13",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-14",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-15",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-16",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-17",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-18",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-19",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-20",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-21",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-22",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-23",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 2,
+      "object": "air-column-24",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-0",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-1",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-2",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-3",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-4",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-5",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-6",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-7",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-8",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-9",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-10",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-11",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-12",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-13",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-14",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-15",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-16",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-17",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-18",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-19",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-20",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-21",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-22",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-23",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 3,
+      "object": "air-column-24",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-0",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-1",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-2",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-3",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-4",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-5",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-6",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-7",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-8",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-9",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-10",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-11",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-12",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-13",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-14",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-15",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-16",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-17",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-18",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-19",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-21",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-22",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-23",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    },
+    {
+      "slide": 4,
+      "object": "air-column-24",
+      "status": "pending",
+      "reason": "No isolated saturated source contour; requires visual review",
+      "reason_code": "morph-no-isolated-color"
+    }
+  ],
+  "capture_frames": 2222,
+  "plan_status": "pending",
+  "scope": "Full-page independent references and actual activity identify pages. PPT boxes/colors bound contour search, not motion evaluation. Only supported isolated contours are certified; ambiguous/occluded/text Morph stays pending."
+}

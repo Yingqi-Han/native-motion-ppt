@@ -1,0 +1,9 @@
+{
+  "origin": "original_authored_science_animation",
+  "is_pptx_playback_recording": false,
+  "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+  "narration_manifest_sha256": "5824b3264600e378e73d3c9ea857deb18fd42d7545bfaa6d1a8de70e3b89a3e5",
+  "duration_seconds": 66.0,
+  "caption_timing": "Independently synthesized sentence sample boundaries; not word-forced alignment.",
+  "ppt_started": false
+}

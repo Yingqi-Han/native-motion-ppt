@@ -1,0 +1,51 @@
+{
+  "previous_video": "previous/sound-explainer.mp4",
+  "previous_sha256": "56aeab930502c5931834cf7f63ce23ff58b0a1546fa663a26906fe8228146eee",
+  "issues": [
+    {
+      "id": "cut-jump",
+      "evidence": "before-edit-check/edit-quality.json",
+      "old_steps_px": [
+        107.45321167176395,
+        118.97748463857302
+      ],
+      "fix": "One continuous world/camera with smooth velocity and acceleration; retain 3px adjacent-frame bound."
+    },
+    {
+      "id": "progress-reset",
+      "evidence": "before-edit-check/edit-quality.json",
+      "fix": "Progress uses global film time."
+    },
+    {
+      "id": "caption-audio",
+      "fix": "Each sentence is synthesized separately, its measured sample boundaries become Caption JSON and control semantic reveals. Silence has no fallback summary."
+    },
+    {
+      "id": "visibility",
+      "fix": "Keep longitudinal-wave particles at usable contrast and give the answer label an opaque background."
+    },
+    {
+      "id": "pace-listening",
+      "old_formula_to_next_voice_silence_seconds": 5.643167,
+      "fix": "66-second edit, narrative calculation, labelled 220/440Hz listening windows."
+    }
+  ],
+  "candidate_history": [
+    {
+      "candidate": "video-v1",
+      "status": "failed",
+      "report": "video-qa-v1/video-quality.json",
+      "reason": "Outgoing camera samples measured 3.31px/frame, above unchanged3px limit; answer label overlapped particles."
+    },
+    {
+      "candidate": "video-v2",
+      "status": "superseded_before_completion",
+      "reason": "Moved to camera easing with continuous acceleration."
+    },
+    {
+      "candidate": "video-v3",
+      "status": "passed",
+      "report": "video-qa-final/video-quality.json"
+    }
+  ]
+}

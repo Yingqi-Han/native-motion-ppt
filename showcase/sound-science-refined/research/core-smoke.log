@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "platform": "linux",
+  "python": "Python 3.12.14",
+  "core_only": true,
+  "source_preserved": true,
+  "source_sha256": "dcadb2ff7e4d2b81890e5c7cc81e82a48dea68647132d505bb071fad0a506608",
+  "preview_fonts_match": true,
+  "manual_auto_and_existing_ppt_export": "passed",
+  "existing_animations_preserved": true,
+  "sha_bound_existing_plan": true,
+  "existing_package_parts_preserved": true,
+  "desktop_playback": "not executed",
+  "scope": "Portable CLI/export/preview generation only; no WPS or PowerPoint compatibility claim"
+}

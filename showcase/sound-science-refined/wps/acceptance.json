@@ -1,0 +1,761 @@
+{
+  "format_version": 2,
+  "started_at": "2026-10-27T09:17:19.079315+00:00",
+  "pipeline_status": "completed",
+  "source": {
+    "original": "/workspace/native-motion-ppt/output/sound-video-refined/ppt-final/project.json",
+    "snapshot": "project.json",
+    "sha256": "8db19c8054c6c3b07ea336a22ba6cfe3a0b6c0eeea6efdbf2228a8c41aeacbca"
+  },
+  "checks": [
+    {
+      "id": "source-review",
+      "label": "源数据、排版和时序",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "0 个错误，0 个提示；包含遮挡和动作截断检查",
+      "evidence": "qa/source-review.json"
+    },
+    {
+      "id": "preview",
+      "label": "代码预演关键帧",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "按动作和转场采样；这是代码画面",
+      "evidence": "qa/preview/preview-audit.json"
+    },
+    {
+      "id": "design-video",
+      "label": "设计视频导出",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Remotion 渲染并解码对照源画面；不是 PPT 录屏",
+      "evidence": "qa/video/video-audit.json"
+    },
+    {
+      "id": "native-structure",
+      "label": "原生文件结构",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "对象、动画目标、媒体数量；手动与自动版分别检查",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "static-pages",
+      "label": "实际静态页面",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "全部 Office 页面、可检查字形的文本框与画布边界",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "native-import",
+      "label": "原生动画导入",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "实际 Impress 导入计数与时序；不等同于放映",
+      "evidence": "qa/native/audit.json"
+    },
+    {
+      "id": "motion-advice",
+      "label": "源几何编排建议（非实播结论）",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": false,
+      "detail": "Advice generated without editing source; playback and narration remain independent",
+      "evidence": "qa/motion-advice.json"
+    },
+    {
+      "id": "desktop-preflight",
+      "label": "目标播放器依赖与字体",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Required player, tools and fonts are ready; real GUI still checked through recording",
+      "evidence": "qa/desktop-preflight.json"
+    },
+    {
+      "id": "target-player",
+      "label": "目标播放器覆盖",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Both manual and automatic captures prove actual WPS Office Presentation (Linux); package/GUI scope remains explicit",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "desktop-recording-manual",
+      "label": "manual 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence.json"
+    },
+    {
+      "id": "native-phases-manual",
+      "label": "manual 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/manual/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-manual",
+      "label": "manual 对象运动",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": false,
+      "required": true,
+      "detail": "Page identity/phase evidence insufficient",
+      "review": "reviews/8ad4cc91f5f676ba514c8146b9496b7e2b0b128f2ae2fb1f0ecc67e5212864d5.json",
+      "review_note": "针对本次修订PPT的真实录像像素测量：第2页橙色标记水平往复约84.5/84.9px，手动/自动纵向变化约0.30/0.24px。已查看两份往复连续帧与第3/6页箭头、公式揭示前后帧。结论覆盖局部标记运动与语义揭示，不扩大为全部成组粒子的Morph自动验证。"
+    },
+    {
+      "id": "native-held-pages-manual",
+      "label": "manual 到位画面",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": false,
+      "required": true,
+      "detail": "Page identity/phase evidence insufficient",
+      "review": "reviews/1e08a648954bf8a0ec15700337af33edefb93db1916a6e1faf50d2103193fe69.json",
+      "review_note": "查看本次录像的八页稳定全景；第6页0.78米公式已独立补帧查看，文字、单位、箭头和原生图形正常，未见越界、残留或遮挡。原始页面匹配器对第6页仍为pending，不改写该原始测量。"
+    },
+    {
+      "id": "desktop-recording-automatic",
+      "label": "automatic 真实录屏",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "WPS Office package 11.1.0.11723.XA",
+      "evidence": "playback-evidence-auto.json"
+    },
+    {
+      "id": "native-phases-automatic",
+      "label": "automatic 页面与运动阶段",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Pages observed by independent reference matching; Morph arrival measured from source-bounded contours",
+      "evidence": "qa/automatic/phases/phase-audit.json"
+    },
+    {
+      "id": "native-motion-automatic",
+      "label": "automatic 对象运动",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": false,
+      "required": true,
+      "detail": "Page identity/phase evidence insufficient",
+      "review": "reviews/61cf72ebe13a7a83af6c455498c7ef2b7aa1d86f87334c3baced0aa510a74554.json",
+      "review_note": "针对本次修订PPT的真实录像像素测量：第2页橙色标记水平往复约84.5/84.9px，手动/自动纵向变化约0.30/0.24px。已查看两份往复连续帧与第3/6页箭头、公式揭示前后帧。结论覆盖局部标记运动与语义揭示，不扩大为全部成组粒子的Morph自动验证。"
+    },
+    {
+      "id": "native-held-pages-automatic",
+      "label": "automatic 到位画面",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": false,
+      "required": true,
+      "detail": "Page identity/phase evidence insufficient",
+      "review": "reviews/3f7e62e067a789a4786cc99fd4e413fe267b9d757cee85c0afdbc8925e83ee3a.json",
+      "review_note": "查看本次录像的八页稳定全景；第6页0.78米公式已独立补帧查看，文字、单位、箭头和原生图形正常，未见越界、残留或遮挡。原始页面匹配器对第6页仍为pending，不改写该原始测量。"
+    },
+    {
+      "id": "morph-playback",
+      "label": "Morph 实际播放",
+      "status": "pending",
+      "automatic_status": "pending",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "Isolated no-object-animation probe AND all supported main-deck transitions measured",
+      "evidence": "diagnostic/morph-audit.json"
+    },
+    {
+      "id": "automatic-advance",
+      "label": "自动动作与翻页",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": false,
+      "required": true,
+      "detail": "Only F5 was sent; all page identities must be observed in order",
+      "evidence": "qa/automatic/phases/phase-audit.json",
+      "review": "reviews/5af8ca70a9c42ef4e1c397ea9158116433c1e8ebde154900b61d4a2ae5f28a55.json",
+      "review_note": "输入计划与采集证据均记录只发送F5，没有翻页按键。自动版实际录像顺序出现01到08页，包括通用匹配器待检的第6页；按8、18、28、38、46、55、63、71秒逐帧复核，第3/6页语义揭示也自动完成。"
+    },
+    {
+      "id": "visual-review",
+      "label": "实际画面与讲解质量审阅",
+      "status": "passed",
+      "automatic_status": "pending",
+      "reviewed_status": "passed",
+      "review_only": true,
+      "required": true,
+      "detail": "Review both current recordings and actual frames; attach structured SHA-bound review. Machine checks do not prove aesthetics.",
+      "review": "reviews/b5deeeea504ad0037e95c98e9e3a6ae4b5fb7803d2f71e84c831b2bffe67a865.json",
+      "review_note": "已查看本次新版PPT两份真实WPS录像的八页全景、三段转场中间帧、局部往复序列、箭头/公式揭示前后帧。更新后的标题与字幕、440Hz、20°C、343m/s、0.78米和两个方向表达清楚，未见越界或单位错误。第3页为教学定格，连续传播见独立科普成片。组合Morph与通用阶段自动待检保留。"
+    },
+    {
+      "id": "source-preserved",
+      "label": "原稿与证据绑定",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "原稿与输入副本校验值保持一致"
+    },
+    {
+      "id": "delivery-integrity",
+      "label": "交付包与源码校验",
+      "status": "passed",
+      "automatic_status": "passed",
+      "reviewed_status": null,
+      "review_only": false,
+      "required": true,
+      "detail": "ZIP、清单校验值及独立目录的新安装检查通过",
+      "evidence": "manifest.json"
+    }
+  ],
+  "stages": [
+    {
+      "id": "source-review",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "review",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/source-review.json"
+      ],
+      "started_at": "2026-10-27T09:17:19.451631+00:00",
+      "status": "passed",
+      "log": "logs/source-review.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.592
+    },
+    {
+      "id": "preview-generate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "preview",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/preview",
+        "--remotion"
+      ],
+      "started_at": "2026-10-27T09:17:20.044825+00:00",
+      "status": "passed",
+      "log": "logs/preview-generate.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.726
+    },
+    {
+      "id": "preview-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_preview.py",
+        "--url",
+        "http://localhost:36701/preview.html",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/preview"
+      ],
+      "started_at": "2026-10-27T09:17:21.772954+00:00",
+      "status": "passed",
+      "log": "logs/preview-check.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 10.963
+    },
+    {
+      "id": "design-render",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/render_project.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/design-preview.mp4"
+      ],
+      "started_at": "2026-10-27T09:17:32.997299+00:00",
+      "status": "passed",
+      "log": "logs/design-render.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 247.026
+    },
+    {
+      "id": "native-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck.pptx"
+      ],
+      "started_at": "2026-10-27T09:21:40.024745+00:00",
+      "status": "passed",
+      "log": "logs/native-build.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.174
+    },
+    {
+      "id": "native-auto-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck-auto.pptx",
+        "--auto"
+      ],
+      "started_at": "2026-10-27T09:21:41.199356+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-build.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.173
+    },
+    {
+      "id": "native-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/native",
+        "--render",
+        "--import-check",
+        "--office-tools-root",
+        "/workspace/.tools/ppt-desktop"
+      ],
+      "started_at": "2026-10-27T09:21:42.372595+00:00",
+      "status": "passed",
+      "log": "logs/native-check.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 5.7
+    },
+    {
+      "id": "native-auto-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "check",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/auto"
+      ],
+      "started_at": "2026-10-27T09:21:48.073474+00:00",
+      "status": "passed",
+      "log": "logs/native-auto-check.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.22
+    },
+    {
+      "id": "record-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/capture/manual",
+        "--seconds",
+        "84.0",
+        "--show-after",
+        "1.0",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "11.5",
+        "--click-at",
+        "22.0",
+        "--click-at",
+        "26.2",
+        "--click-at",
+        "32.5",
+        "--click-at",
+        "43.0",
+        "--click-at",
+        "53.5",
+        "--click-at",
+        "58.5",
+        "--click-at",
+        "64.0",
+        "--click-at",
+        "74.5"
+      ],
+      "started_at": "2026-10-27T09:21:48.340525+00:00",
+      "status": "passed",
+      "log": "logs/record-manual.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 91.771
+    },
+    {
+      "id": "record-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck-auto.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/capture/automatic",
+        "--seconds",
+        "74.05",
+        "--show-after",
+        "1",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "30",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile"
+      ],
+      "started_at": "2026-10-27T09:23:20.113167+00:00",
+      "status": "passed",
+      "log": "logs/record-automatic.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 81.426
+    },
+    {
+      "id": "morph-probe-build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/motion_ppt.py",
+        "build",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/project.json",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/deck.pptx"
+      ],
+      "started_at": "2026-10-27T09:24:41.541503+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-build.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.273
+    },
+    {
+      "id": "record-morph-probe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/record_wps.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/deck.pptx",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/capture",
+        "--seconds",
+        "9",
+        "--show-after",
+        "1",
+        "--width",
+        "1920",
+        "--height",
+        "1080",
+        "--fps",
+        "60",
+        "--tools-root",
+        "/workspace/.tools/ppt-desktop",
+        "--wps-root",
+        "/workspace/.tools/wps-desktop",
+        "--wps-profile",
+        "/workspace/.tools/wps-gui-profile",
+        "--click-at",
+        "4"
+      ],
+      "started_at": "2026-10-27T09:24:41.815886+00:00",
+      "status": "passed",
+      "log": "logs/record-morph-probe.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 16.745
+    },
+    {
+      "id": "phases-manual",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/playback-evidence.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/native/rendered",
+        "--mode",
+        "manual",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/manual/phases",
+        "--plan",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/plans/manual-input.json"
+      ],
+      "started_at": "2026-10-27T09:24:58.567617+00:00",
+      "status": "passed",
+      "log": "logs/phases-manual.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 17.913
+    },
+    {
+      "id": "phases-automatic",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_playback_phases.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/player-recording-auto.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/deck-auto.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/playback-evidence-auto.json",
+        "--spec",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/project.json",
+        "--references",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/native/rendered",
+        "--mode",
+        "automatic",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/qa/automatic/phases"
+      ],
+      "started_at": "2026-10-27T09:25:16.483791+00:00",
+      "status": "passed",
+      "log": "logs/phases-automatic.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 16.507
+    },
+    {
+      "id": "morph-probe-check",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/check_native_morph.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/capture/player-recording.mp4",
+        "--pptx",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/deck.pptx",
+        "--evidence",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/capture/playback-evidence.json",
+        "--start",
+        "3",
+        "--end",
+        "7",
+        "--out",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps/diagnostic/morph-audit.json"
+      ],
+      "started_at": "2026-10-27T09:25:32.994796+00:00",
+      "status": "passed",
+      "log": "logs/morph-probe-check.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 6.866
+    },
+    {
+      "id": "review-frames",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/extract_review_frames.py",
+        "/workspace/native-motion-ppt/output/sound-video-refined/ppt-runs/sound-refined-wps"
+      ],
+      "started_at": "2026-10-27T09:25:39.863266+00:00",
+      "status": "passed",
+      "log": "logs/review-frames.log",
+      "implementation": {
+        "sha256": "e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8",
+        "snapshot": "implementations/e9c6f174c49b7fc7404971e613b9bbf594848a96cdf8d1856af761f0c2bb18b8.zip"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 15.166
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "player-recording.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "c179e3822be2a2a52a96a23863ee959373a072291749c377410c39af7b86e62c",
+      "bytes": 2568811,
+      "is_pptx_playback_recording": true,
+      "mode": "manual"
+    },
+    {
+      "path": "playback-evidence.json",
+      "kind": "native_playback_evidence",
+      "sha256": "0b125aff89b7202f5eea1d9b4872c8db5d3091d3fec4ee2b930381bce8cf04de",
+      "bytes": 3670,
+      "mode": "manual"
+    },
+    {
+      "path": "player-recording-auto.mp4",
+      "kind": "native_desktop_screen_capture",
+      "sha256": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf",
+      "bytes": 2529295,
+      "is_pptx_playback_recording": true,
+      "mode": "automatic"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "kind": "native_playback_evidence",
+      "sha256": "8a933d060d7725e92d2e0bc8aa489048ffef4d4f0cb2cbc3ce13d4c4d606f56b",
+      "bytes": 2981,
+      "mode": "automatic"
+    },
+    {
+      "path": "project.json",
+      "kind": "editable_source",
+      "sha256": "8db19c8054c6c3b07ea336a22ba6cfe3a0b6c0eeea6efdbf2228a8c41aeacbca",
+      "bytes": 354156,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck.pptx",
+      "kind": "native_manual_pptx",
+      "sha256": "dad8f2ca441878a98912ae95d095462d1c7ecd7aadd41f03ef7bcf3c899f04df",
+      "bytes": 76842,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "deck-auto.pptx",
+      "kind": "native_auto_pptx",
+      "sha256": "248a2f2c8ab7527f69e53b442899675b92e0376ead32eb30a59cd708a463b95e",
+      "bytes": 76885,
+      "is_pptx_playback_recording": false
+    },
+    {
+      "path": "design-preview.mp4",
+      "kind": "code_generated_design_preview",
+      "sha256": "a8e73596082823d06347c0df3fab9b169fcfe5fed3bcee2d16801ba46839643d",
+      "bytes": 3952792,
+      "is_pptx_playback_recording": false
+    }
+  ],
+  "scope": "Code design, native file, actual desktop playback and target-player coverage are independent",
+  "requested_target_player": "wps-desktop",
+  "workflow_mode": "full",
+  "recordings": {
+    "manual": {
+      "video": "player-recording.mp4",
+      "pptx": "deck.pptx",
+      "evidence": "playback-evidence.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "c179e3822be2a2a52a96a23863ee959373a072291749c377410c39af7b86e62c",
+      "source_pptx_sha256": "dad8f2ca441878a98912ae95d095462d1c7ecd7aadd41f03ef7bcf3c899f04df"
+    },
+    "automatic": {
+      "video": "player-recording-auto.mp4",
+      "pptx": "deck-auto.pptx",
+      "evidence": "playback-evidence-auto.json",
+      "player": "WPS Office Presentation (Linux)",
+      "recording_sha256": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf",
+      "source_pptx_sha256": "248a2f2c8ab7527f69e53b442899675b92e0376ead32eb30a59cd708a463b95e"
+    }
+  },
+  "actual_player": "WPS Office Presentation (Linux)",
+  "acceptance_status": "pending",
+  "automatic_acceptance_status": "pending",
+  "finished_at": "2026-10-27T09:28:31.475620+00:00"
+}

@@ -1,5 +1,7 @@
 # 实际 WPS 展示证据
 
+[声音科普修订版](sound-science-refined/README.md)：修复切镜跳位与字幕估时，66秒主片与新版PPT实播分别留证；保留原74秒版。
+
 原创科普主片与对应 PPT 见 [声音：先视频后 PPT](sound-science-video-first/README.md)，主片与真实 WPS 录屏分别标记。
 
 v1.7 新示例见 [产品/进展实播](v1.7/README.md)，使用独立清单，不改写下列历史证据。

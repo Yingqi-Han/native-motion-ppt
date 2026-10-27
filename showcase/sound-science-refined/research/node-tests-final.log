@@ -1,0 +1,21 @@
+✔ tracking camera starts and ends at the original world coordinates (1.331791ms)
+✔ tagged parcel has no cut-induced position jump (0.287083ms)
+✔ a future re-entrance does not hide an already visible object (2.226218ms)
+✔ a delayed scale leaves the initial size intact (1.679743ms)
+✔ distinct dotted and underscored IDs have distinct gradient IDs (1.602259ms)
+✔ chained cubic motion follows every arc and remains tangent-continuous (0.366079ms)
+✔ closed cubic cycles have no position or velocity jump at their seam (3.300991ms)
+✔ Morph starts from the outgoing animated pose including its correct local clock (2.278926ms)
+✔ Morph hands off to incoming animation without a jump (1.067973ms)
+✔ paired native scale and translation keep a bar on its data baseline (0.424095ms)
+✔ bottom wipe never transforms the bar and clips only inside its fixed geometry (1.308697ms)
+✔ directional wipe rectangles stay within the source bounds (0.458365ms)
+✔ a wipe exit leaves the correct remainder and finishes hidden (0.279141ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 245.398434

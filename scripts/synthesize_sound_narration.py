@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
 
@@ -16,6 +17,7 @@ def main():
     parser.add_argument('--model',type=Path,required=True)
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--speed',type=float,default=.9)
+    parser.add_argument('--sentence-clips',action='store_true',help='Synthesize each sentence independently and retain measured cue boundaries')
     parser.add_argument('--model-url',default='https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-vits-zh-ll.tar.bz2')
     args=parser.parse_args()
     import numpy as np
@@ -32,17 +34,28 @@ def main():
     tts=sherpa_onnx.OfflineTts(config);records=[]
     for scene in story['scenes']:
         if not scene['narration']:continue
-        audio=tts.generate(scene['narration'],sid=0,speed=args.speed)
-        data=np.asarray(audio.samples,dtype=np.float32)
-        peak=float(np.max(np.abs(data)))
-        if not math.isfinite(peak) or peak <= .001:raise ValueError('Empty speech output')
-        data=data*(.82/peak)
-        path=args.out/(scene['id']+'.wav');sf.write(path,data,audio.sample_rate)
-        duration=len(data)/audio.sample_rate
+        parts=re.findall(r'[^。！？]+[。！？]?',scene['narration']) if args.sentence_clips else [scene['narration']]
+        chunks=[];cues=[];cursor=0;sample_rate=None
+        for i,part in enumerate(parts):
+            audio=tts.generate(part,sid=0,speed=args.speed)
+            if sample_rate is not None and audio.sample_rate!=sample_rate:raise ValueError('Changing speech sample rate')
+            sample_rate=audio.sample_rate
+            data=np.asarray(audio.samples,dtype=np.float32)
+            peak=float(np.max(np.abs(data)))
+            if not math.isfinite(peak) or peak <= .001:raise ValueError('Empty speech output')
+            data=data*(.82/peak)
+            cues.append({'text':part,'start_seconds':cursor/sample_rate,'end_seconds':(cursor+len(data))/sample_rate})
+            chunks.append(data);cursor+=len(data)
+            if i<len(parts)-1:
+                gap=np.zeros(round(.18*sample_rate),dtype=np.float32);chunks.append(gap);cursor+=len(gap)
+        data=np.concatenate(chunks)
+        path=args.out/(scene['id']+'.wav');sf.write(path,data,sample_rate)
+        duration=len(data)/sample_rate
         if duration+.6 > scene['duration_seconds']-.7:
             raise ValueError(f"Narration overflows scene {scene['id']}: {duration:.2f}s")
         records.append({'scene':scene['id'],'text':scene['narration'],'duration_seconds':duration,
-                        'sample_rate':audio.sample_rate,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
+                        'sample_rate':sample_rate,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
+                        **({'cues':cues,'cue_timing':'independently_synthesized_sentence_sample_boundaries'} if args.sentence_clips else {})})
         print(scene['id'],round(duration,2),flush=True)
     sample_rate=48000
     for freq in [220,440]:

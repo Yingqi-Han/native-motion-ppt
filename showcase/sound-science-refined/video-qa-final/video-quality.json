@@ -1,0 +1,1038 @@
+{
+  "origin": "rendered_science_video_qa",
+  "status": "passed",
+  "checked_at": "2026-10-27T09:16:32.489750+00:00",
+  "video_sha256": "396a69ee598f569a4e79fc0f836a2d030b855d2a8073393fa6e1d206efe989d7",
+  "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+  "metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuvj420p",
+        "level": 40,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 5940000,
+        "duration": "66.000000",
+        "bit_rate": "1385507",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1980",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "ICC Profile"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 3168240,
+        "duration": "66.005000",
+        "bit_rate": "317376",
+        "nb_frames": "3096",
+        "extradata_size": 2,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "output/sound-video-refined/sound-explainer-improved.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "66.005000",
+      "size": "14124834",
+      "bit_rate": "1711971",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.100",
+        "comment": "Made with Remotion 4.0.535"
+      }
+    }
+  },
+  "frame_comparisons": [
+    {
+      "frame": 90,
+      "rmse": 1.0088095753209618,
+      "max_tile_rmse": 1.0714087299750112,
+      "worst_tile": {
+        "box": [
+          40,
+          36,
+          80,
+          72
+        ],
+        "rmse": 1.0714087299750112
+      }
+    },
+    {
+      "frame": 330,
+      "rmse": 1.0098817312493138,
+      "max_tile_rmse": 1.0790513666419461,
+      "worst_tile": {
+        "box": [
+          160,
+          144,
+          200,
+          180
+        ],
+        "rmse": 1.0790513666419461
+      }
+    },
+    {
+      "frame": 570,
+      "rmse": 1.0084251565169802,
+      "max_tile_rmse": 1.0579286190301134,
+      "worst_tile": {
+        "box": [
+          160,
+          144,
+          200,
+          180
+        ],
+        "rmse": 1.0579286190301134
+      }
+    },
+    {
+      "frame": 780,
+      "rmse": 1.0108983674233822,
+      "max_tile_rmse": 1.0691377626646417,
+      "worst_tile": {
+        "box": [
+          160,
+          144,
+          200,
+          180
+        ],
+        "rmse": 1.0691377626646417
+      }
+    },
+    {
+      "frame": 1080,
+      "rmse": 1.0187450295266158,
+      "max_tile_rmse": 1.0742137520927506,
+      "worst_tile": {
+        "box": [
+          160,
+          72,
+          200,
+          108
+        ],
+        "rmse": 1.0742137520927506
+      }
+    },
+    {
+      "frame": 1530,
+      "rmse": 1.0139906722121923,
+      "max_tile_rmse": 1.0750753634220427,
+      "worst_tile": {
+        "box": [
+          120,
+          144,
+          160,
+          180
+        ],
+        "rmse": 1.0750753634220427
+      }
+    },
+    {
+      "frame": 1740,
+      "rmse": 1.0146610453925178,
+      "max_tile_rmse": 1.140581398202656,
+      "worst_tile": {
+        "box": [
+          160,
+          108,
+          200,
+          144
+        ],
+        "rmse": 1.140581398202656
+      }
+    },
+    {
+      "frame": 1920,
+      "rmse": 1.0137252531573282,
+      "max_tile_rmse": 1.0490295338849918,
+      "worst_tile": {
+        "box": [
+          80,
+          144,
+          120,
+          180
+        ],
+        "rmse": 1.0490295338849918
+      }
+    }
+  ],
+  "parcel_max_model_error_px": 0.309467228170206,
+  "parcel_vertical_range_px": 0.3479138535290076,
+  "parcel_observations": [
+    {
+      "frame": 270,
+      "seconds": 9.0,
+      "x": 991.5214659685864,
+      "y": 600.1581151832461,
+      "expected_x": 991.3955410846828,
+      "error_px": 0.12592488390362178
+    },
+    {
+      "frame": 273,
+      "seconds": 9.1,
+      "x": 984.410229645094,
+      "y": 600.079853862213,
+      "expected_x": 984.1819731546673,
+      "error_px": 0.22825649042670193
+    },
+    {
+      "frame": 276,
+      "seconds": 9.2,
+      "x": 975.7934782608695,
+      "y": 600.027950310559,
+      "expected_x": 975.9115369598114,
+      "error_px": 0.11805869894192256
+    },
+    {
+      "frame": 279,
+      "seconds": 9.3,
+      "x": 966.9085684430512,
+      "y": 600.064263322884,
+      "expected_x": 966.9456902477863,
+      "error_px": 0.03712180473507942
+    },
+    {
+      "frame": 282,
+      "seconds": 9.4,
+      "x": 957.615525352849,
+      "y": 600.1408782017774,
+      "expected_x": 957.6762835428133,
+      "error_px": 0.06075818996430371
+    },
+    {
+      "frame": 285,
+      "seconds": 9.5,
+      "x": 948.5251177394034,
+      "y": 600.194400837258,
+      "expected_x": 948.5084343974481,
+      "error_px": 0.01668334195528587
+    },
+    {
+      "frame": 288,
+      "seconds": 9.6,
+      "x": 939.9411458333334,
+      "y": 600.1682291666667,
+      "expected_x": 939.8428218115641,
+      "error_px": 0.09832402176925825
+    },
+    {
+      "frame": 291,
+      "seconds": 9.7,
+      "x": 932.0512552301255,
+      "y": 600.0998953974895,
+      "expected_x": 932.0581746373873,
+      "error_px": 0.0069194072617619895
+    },
+    {
+      "frame": 294,
+      "seconds": 9.8,
+      "x": 925.8041865394806,
+      "y": 600.2170111287759,
+      "expected_x": 925.4947193113104,
+      "error_px": 0.309467228170206
+    },
+    {
+      "frame": 297,
+      "seconds": 9.9,
+      "x": 920.4038865546219,
+      "y": 600.1796218487395,
+      "expected_x": 920.4393103260364,
+      "error_px": 0.03542377141457109
+    },
+    {
+      "frame": 300,
+      "seconds": 10.0,
+      "x": 917.296875,
+      "y": 600.0520833333334,
+      "expected_x": 917.1128933127653,
+      "error_px": 0.18398168723467734
+    },
+    {
+      "frame": 303,
+      "seconds": 10.1,
+      "x": 915.705866946045,
+      "y": 600.2202723939236,
+      "expected_x": 915.6608486568969,
+      "error_px": 0.04501828914817452
+    },
+    {
+      "frame": 306,
+      "seconds": 10.2,
+      "x": 916.1352266805628,
+      "y": 600.2681083897863,
+      "expected_x": 916.1466376775759,
+      "error_px": 0.011410997013058477
+    },
+    {
+      "frame": 309,
+      "seconds": 10.3,
+      "x": 918.348153926157,
+      "y": 599.9435777431097,
+      "expected_x": 918.5490290635242,
+      "error_px": 0.20087513736723395
+    },
+    {
+      "frame": 312,
+      "seconds": 10.4,
+      "x": 922.6085594989562,
+      "y": 600.134133611691,
+      "expected_x": 922.7630267832232,
+      "error_px": 0.154467284266957
+    },
+    {
+      "frame": 315,
+      "seconds": 10.5,
+      "x": 928.5015706806282,
+      "y": 600.1994764397906,
+      "expected_x": 928.6044589153172,
+      "error_px": 0.1028882346889759
+    },
+    {
+      "frame": 318,
+      "seconds": 10.6,
+      "x": 935.6799687010955,
+      "y": 600.1061554512258,
+      "expected_x": 935.8180268453327,
+      "error_px": 0.1380581442372204
+    },
+    {
+      "frame": 321,
+      "seconds": 10.7,
+      "x": 944.1109674081738,
+      "y": 600.0535437144335,
+      "expected_x": 944.0884630401886,
+      "error_px": 0.022504367985220597
+    },
+    {
+      "frame": 324,
+      "seconds": 10.8,
+      "x": 953.1798748696559,
+      "y": 600.0166840458811,
+      "expected_x": 953.0543097522137,
+      "error_px": 0.1255651174421928
+    },
+    {
+      "frame": 327,
+      "seconds": 10.9,
+      "x": 962.2891156462586,
+      "y": 600.1567242281528,
+      "expected_x": 962.3237164571867,
+      "error_px": 0.03460081092816836
+    },
+    {
+      "frame": 330,
+      "seconds": 11.0,
+      "x": 971.5015756302521,
+      "y": 600.2914915966387,
+      "expected_x": 971.4915656025519,
+      "error_px": 0.010010027700218416
+    },
+    {
+      "frame": 333,
+      "seconds": 11.1,
+      "x": 980.2433350757972,
+      "y": 600.0692629377941,
+      "expected_x": 980.1571781884359,
+      "error_px": 0.08615688736131233
+    },
+    {
+      "frame": 336,
+      "seconds": 11.2,
+      "x": 987.8748031496064,
+      "y": 600.1,
+      "expected_x": 987.9418253626127,
+      "error_px": 0.06702221300633937
+    },
+    {
+      "frame": 339,
+      "seconds": 11.3,
+      "x": 994.4869723814487,
+      "y": 600.1972381448671,
+      "expected_x": 994.5052806886895,
+      "error_px": 0.018308307240772592
+    },
+    {
+      "frame": 342,
+      "seconds": 11.4,
+      "x": 999.6363157894737,
+      "y": 600.17,
+      "expected_x": 999.5606896739636,
+      "error_px": 0.07562611551009013
+    },
+    {
+      "frame": 345,
+      "seconds": 11.5,
+      "x": 1002.7148109243698,
+      "y": 600.0399159663865,
+      "expected_x": 1002.8871066872347,
+      "error_px": 0.17229576286490556
+    },
+    {
+      "frame": 348,
+      "seconds": 11.6,
+      "x": 1004.381126173097,
+      "y": 600.0422314911366,
+      "expected_x": 1004.3391513431031,
+      "error_px": 0.041974829993819185
+    },
+    {
+      "frame": 351,
+      "seconds": 11.7,
+      "x": 1003.7794117647059,
+      "y": 600.1144957983194,
+      "expected_x": 1003.8533623224241,
+      "error_px": 0.07395055771826264
+    },
+    {
+      "frame": 354,
+      "seconds": 11.8,
+      "x": 1001.6688447464714,
+      "y": 600.1576058546785,
+      "expected_x": 1001.4509709364758,
+      "error_px": 0.2178738099956945
+    },
+    {
+      "frame": 357,
+      "seconds": 11.9,
+      "x": 997.4216300940438,
+      "y": 600.1201671891328,
+      "expected_x": 997.2369732167768,
+      "error_px": 0.18465687726700253
+    },
+    {
+      "frame": 360,
+      "seconds": 12.0,
+      "x": 991.5129937629938,
+      "y": 600.1439708939708,
+      "expected_x": 991.3955410846828,
+      "error_px": 0.11745267831099682
+    },
+    {
+      "frame": 363,
+      "seconds": 12.1,
+      "x": 984.3749345892203,
+      "y": 600.1787022501309,
+      "expected_x": 984.1819731546673,
+      "error_px": 0.19296143455301262
+    },
+    {
+      "frame": 366,
+      "seconds": 12.2,
+      "x": 975.8812467800103,
+      "y": 600.0497166409068,
+      "expected_x": 975.9115369598114,
+      "error_px": 0.03029017980111348
+    },
+    {
+      "frame": 369,
+      "seconds": 12.3,
+      "x": 966.8259182617693,
+      "y": 600.1404552509053,
+      "expected_x": 966.9456902477862,
+      "error_px": 0.11977198601687178
+    },
+    {
+      "frame": 372,
+      "seconds": 12.4,
+      "x": 957.5987394957983,
+      "y": 600.1281512605042,
+      "expected_x": 957.6762835428132,
+      "error_px": 0.07754404701483963
+    },
+    {
+      "frame": 375,
+      "seconds": 12.5,
+      "x": 948.5447133087848,
+      "y": 600.1465018411362,
+      "expected_x": 948.508434397448,
+      "error_px": 0.03627891133680805
+    },
+    {
+      "frame": 378,
+      "seconds": 12.6,
+      "x": 939.9093506493507,
+      "y": 600.165974025974,
+      "expected_x": 939.842821811564,
+      "error_px": 0.06652883778667729
+    },
+    {
+      "frame": 381,
+      "seconds": 12.7,
+      "x": 931.9589905362776,
+      "y": 600.1319663512093,
+      "expected_x": 932.0581746373872,
+      "error_px": 0.09918410110958575
+    },
+    {
+      "frame": 384,
+      "seconds": 12.8,
+      "x": 925.7596714361421,
+      "y": 600.1475887652358,
+      "expected_x": 925.4947193113105,
+      "error_px": 0.2649521248315523
+    },
+    {
+      "frame": 387,
+      "seconds": 12.9,
+      "x": 920.3533263488738,
+      "y": 600.1485070717654,
+      "expected_x": 920.4393103260365,
+      "error_px": 0.08598397716275485
+    },
+    {
+      "frame": 390,
+      "seconds": 13.0,
+      "x": 917.34767866458,
+      "y": 600.1218049034951,
+      "expected_x": 917.1128933127654,
+      "error_px": 0.23478535181459392
+    },
+    {
+      "frame": 393,
+      "seconds": 13.1,
+      "x": 915.6467985424258,
+      "y": 600.1012493492973,
+      "expected_x": 915.660848656897,
+      "error_px": 0.014050114471160668
+    },
+    {
+      "frame": 396,
+      "seconds": 13.2,
+      "x": 916.2643979057592,
+      "y": 600.1696335078534,
+      "expected_x": 916.1466376775759,
+      "error_px": 0.11776022818332876
+    },
+    {
+      "frame": 399,
+      "seconds": 13.3,
+      "x": 918.4643979057591,
+      "y": 600.0570680628273,
+      "expected_x": 918.5490290635242,
+      "error_px": 0.08463115776510222
+    },
+    {
+      "frame": 402,
+      "seconds": 13.4,
+      "x": 922.5491631799164,
+      "y": 600.2573221757323,
+      "expected_x": 922.7630267832232,
+      "error_px": 0.2138636033067769
+    },
+    {
+      "frame": 405,
+      "seconds": 13.5,
+      "x": 928.526617954071,
+      "y": 600.0250521920668,
+      "expected_x": 928.6044589153172,
+      "error_px": 0.0778409612462383
+    },
+    {
+      "frame": 408,
+      "seconds": 13.6,
+      "x": 935.6751295336787,
+      "y": 600.0777202072538,
+      "expected_x": 935.8180268453327,
+      "error_px": 0.14289731165399644
+    },
+    {
+      "frame": 411,
+      "seconds": 13.7,
+      "x": 944.1105044201768,
+      "y": 600.0569422776911,
+      "expected_x": 944.0884630401886,
+      "error_px": 0.02204137998819533
+    },
+    {
+      "frame": 414,
+      "seconds": 13.8,
+      "x": 953.1247412008281,
+      "y": 600.128364389234,
+      "expected_x": 953.0543097522138,
+      "error_px": 0.07043144861427209
+    },
+    {
+      "frame": 417,
+      "seconds": 13.9,
+      "x": 962.3998957247132,
+      "y": 600.1454640250261,
+      "expected_x": 962.3237164571868,
+      "error_px": 0.07617926752641324
+    }
+  ],
+  "tone_measurements": [
+    {
+      "seconds": 38.2,
+      "expected_hz": 220,
+      "measured_hz": 220.0
+    },
+    {
+      "seconds": 40.2,
+      "expected_hz": 440,
+      "measured_hz": 440.0
+    }
+  ],
+  "edit_quality": {
+    "origin": "measurement_of_original_authored_science_video",
+    "video_sha256": "396a69ee598f569a4e79fc0f836a2d030b855d2a8073393fa6e1d206efe989d7",
+    "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+    "status": "passed",
+    "cuts": [
+      {
+        "seconds": 7,
+        "max_adjacent_step_px": 1.9362312186650923,
+        "parcel_points": [
+          {
+            "frame": 206,
+            "x": 859.9831932773109,
+            "y": 530.2394957983194
+          },
+          {
+            "frame": 207,
+            "x": 858.05,
+            "y": 530.3479166666666
+          },
+          {
+            "frame": 208,
+            "x": 858.1659663865546,
+            "y": 530.40756302521
+          },
+          {
+            "frame": 209,
+            "x": 858.0104166666666,
+            "y": 530.1979166666666
+          },
+          {
+            "frame": 210,
+            "x": 856.4814814814815,
+            "y": 530.1399176954733
+          },
+          {
+            "frame": 211,
+            "x": 856.0508474576271,
+            "y": 530.3135593220339
+          },
+          {
+            "frame": 212,
+            "x": 856.1147540983607,
+            "y": 530.2090163934427
+          },
+          {
+            "frame": 213,
+            "x": 856.2060041407867,
+            "y": 530.3737060041408
+          },
+          {
+            "frame": 214,
+            "x": 856.7514285714286,
+            "y": 531.2219047619047
+          }
+        ],
+        "max_progress_error_px": 0.48484848484849863,
+        "progress": [
+          {
+            "frame": 206,
+            "width_px": 200,
+            "expected_px": 199.75757575757575,
+            "error_px": 0.24242424242424931
+          },
+          {
+            "frame": 207,
+            "width_px": 201,
+            "expected_px": 200.72727272727272,
+            "error_px": 0.2727272727272805
+          },
+          {
+            "frame": 208,
+            "width_px": 202,
+            "expected_px": 201.6969696969697,
+            "error_px": 0.30303030303031164
+          },
+          {
+            "frame": 209,
+            "width_px": 203,
+            "expected_px": 202.66666666666666,
+            "error_px": 0.3333333333333428
+          },
+          {
+            "frame": 210,
+            "width_px": 204,
+            "expected_px": 203.63636363636363,
+            "error_px": 0.36363636363637397
+          },
+          {
+            "frame": 211,
+            "width_px": 205,
+            "expected_px": 204.6060606060606,
+            "error_px": 0.39393939393940514
+          },
+          {
+            "frame": 212,
+            "width_px": 206,
+            "expected_px": 205.57575757575756,
+            "error_px": 0.4242424242424363
+          },
+          {
+            "frame": 213,
+            "width_px": 207,
+            "expected_px": 206.54545454545453,
+            "error_px": 0.45454545454546746
+          },
+          {
+            "frame": 214,
+            "width_px": 208,
+            "expected_px": 207.5151515151515,
+            "error_px": 0.48484848484849863
+          }
+        ]
+      },
+      {
+        "seconds": 15,
+        "max_adjacent_step_px": 2.2673808670244133,
+        "parcel_points": [
+          {
+            "frame": 446,
+            "x": 902.8116370808679,
+            "y": 531.1489151873767
+          },
+          {
+            "frame": 447,
+            "x": 900.6445783132531,
+            "y": 530.4819277108434
+          },
+          {
+            "frame": 448,
+            "x": 899.3614718614718,
+            "y": 530.3874458874459
+          },
+          {
+            "frame": 449,
+            "x": 898.402004454343,
+            "y": 530.6648106904231
+          },
+          {
+            "frame": 450,
+            "x": 896.8319587628866,
+            "y": 530.398969072165
+          },
+          {
+            "frame": 451,
+            "x": 895.718818380744,
+            "y": 530.6269146608315
+          },
+          {
+            "frame": 452,
+            "x": 893.961038961039,
+            "y": 530.6082251082252
+          },
+          {
+            "frame": 453,
+            "x": 893.4557894736843,
+            "y": 530.438947368421
+          },
+          {
+            "frame": 454,
+            "x": 891.9073275862069,
+            "y": 530.3254310344828
+          }
+        ],
+        "max_progress_error_px": 0.48484848484849863,
+        "progress": [
+          {
+            "frame": 446,
+            "width_px": 432,
+            "expected_px": 432.4848484848485,
+            "error_px": 0.48484848484849863
+          },
+          {
+            "frame": 447,
+            "width_px": 433,
+            "expected_px": 433.45454545454544,
+            "error_px": 0.45454545454543904
+          },
+          {
+            "frame": 448,
+            "width_px": 434,
+            "expected_px": 434.42424242424244,
+            "error_px": 0.4242424242424363
+          },
+          {
+            "frame": 449,
+            "width_px": 435,
+            "expected_px": 435.3939393939394,
+            "error_px": 0.3939393939393767
+          },
+          {
+            "frame": 450,
+            "width_px": 436,
+            "expected_px": 436.3636363636364,
+            "error_px": 0.36363636363637397
+          },
+          {
+            "frame": 451,
+            "width_px": 437,
+            "expected_px": 437.3333333333333,
+            "error_px": 0.3333333333333144
+          },
+          {
+            "frame": 452,
+            "width_px": 438,
+            "expected_px": 438.3030303030303,
+            "error_px": 0.30303030303031164
+          },
+          {
+            "frame": 453,
+            "width_px": 439,
+            "expected_px": 439.27272727272725,
+            "error_px": 0.27272727272725206
+          },
+          {
+            "frame": 454,
+            "width_px": 440,
+            "expected_px": 440.24242424242425,
+            "error_px": 0.24242424242424931
+          }
+        ]
+      }
+    ],
+    "sentence_audio_checks": [
+      {
+        "scene": "question",
+        "cue": 0,
+        "text": "声音传过来，空气也会一路跑过来吗？",
+        "normalized_correlation": 0.999985749490977,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "question",
+        "cue": 1,
+        "text": "盯住这个橙色标记。",
+        "normalized_correlation": 0.9999861052429598,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "parcel",
+        "cue": 0,
+        "text": "它在平衡位置附近，来回振动。",
+        "normalized_correlation": 0.9999885208221896,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "parcel",
+        "cue": 1,
+        "text": "图示是空气团的平均运动，没有画出热运动。",
+        "normalized_correlation": 0.9999751185856599,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "compression",
+        "cue": 0,
+        "text": "向右走的是压缩区。",
+        "normalized_correlation": 0.9999689176324809,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "compression",
+        "cue": 1,
+        "text": "相邻的空气接力振动，把疏密变化传向前方。",
+        "normalized_correlation": 0.9999889198539625,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "parallel",
+        "cue": 0,
+        "text": "空气的振动方向，与声波的传播方向平行。",
+        "normalized_correlation": 0.9999809815104176,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "parallel",
+        "cue": 1,
+        "text": "这就是空气中的纵波。",
+        "normalized_correlation": 0.9999856234554386,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "frequency",
+        "cue": 0,
+        "text": "波速近似不变时，频率翻倍，波长减半。",
+        "normalized_correlation": 0.9999936532683517,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "frequency",
+        "cue": 1,
+        "text": "先听二百二十赫兹，再听四百四十赫兹。",
+        "normalized_correlation": 0.9999769444171239,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "wavelength",
+        "cue": 0,
+        "text": "二十摄氏度时，空气中的声速约为每秒三百四十三米。",
+        "normalized_correlation": 0.9999768139515114,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "wavelength",
+        "cue": 1,
+        "text": "波长等于声速除以频率。",
+        "normalized_correlation": 0.9999772524629866,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "wavelength",
+        "cue": 2,
+        "text": "三百四十三除以四百四十，约等于零点七八米。",
+        "normalized_correlation": 0.9999469244077375,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "recap",
+        "cue": 0,
+        "text": "所以，传过去的是振动。",
+        "normalized_correlation": 0.9999915268555287,
+        "offset_seconds": 0.0
+      },
+      {
+        "scene": "recap",
+        "cue": 1,
+        "text": "空气只在附近往复，声波把能量传向远方。",
+        "normalized_correlation": 0.9999802720032547,
+        "offset_seconds": 0.0
+      }
+    ],
+    "sentence_timing_scope": "Generated sentence boundaries and encoded waveform correlation, not word ASR or full human listening review. Legacy sources without measured cues are not certified for sentence timing.",
+    "thresholds": {
+      "max_cut_step_px": 3,
+      "max_progress_error_px": 3,
+      "min_audio_correlation": 0.96,
+      "max_audio_offset_seconds": 0.03333333333333333
+    },
+    "errors": []
+  },
+  "visual_review": {
+    "note": "已查看最终66秒实际编码成片的八张内容帧及28.5秒纵波卡片独立帧。橙色标记、压缩区、两种方向、试听频率与公式单位可读；纵波文字已与粒子背景分离。另查看源关键帧与切镜邻帧；具体连续性、进度和15句音轨对照由本次实际像素/波形检查独立记录，未降低阈值。帧审阅不等于完整人工听审。",
+    "reviewed_at": "2026-10-27T09:16:32.500738+00:00",
+    "source_frame_sha256": {
+      "90": "7f305c6f16da152c930c99a617b66c4ccb8919e6764627e7eb9e665a944fbe1c",
+      "330": "3ead01d83e9ccff142b3c90068435b4ee8f0aa53fd721bcc5ed74c27ba940948",
+      "570": "c232a35b6d27e16c50f9ca7ac1f06b531e34c2e1d96d7013b265d2ec874ad4a0",
+      "780": "771977653676f002f91c481459e12c9d56e8a06c5ebcca7ba665ab7a76988aab",
+      "1080": "4994e5df65e1ef430dcb31a0d9bc9427149043449fb69fccec26b7d965b8575f",
+      "1530": "6ae26b465976f01ebaef992f55ec8568a8e8621247898a77f250082859b31550",
+      "1740": "2293e426462f5531158934435c6fa5ba576cbaab1f6ed216333e5b6a258cfa71",
+      "1920": "bf5cd629319a86cf621d97424ccf31a848e1d301d00a9d74ac445f7019024a23"
+    }
+  },
+  "scope": "Original authored animation, not a PPT/WPS capture. Pixel test covers one tagged parcel after zoom; tone FFT covers two isolated windows. Caption timing provenance is in video-origin.json.",
+  "errors": []
+}

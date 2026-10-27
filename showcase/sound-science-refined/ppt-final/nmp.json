@@ -1,0 +1,6 @@
+{
+  "format_version": 1,
+  "source": "project.json",
+  "template": "sound-video-first",
+  "profile": "generic"
+}

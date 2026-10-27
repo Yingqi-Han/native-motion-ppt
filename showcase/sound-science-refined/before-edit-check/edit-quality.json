@@ -1,0 +1,238 @@
+{
+  "origin": "measurement_of_original_authored_science_video",
+  "video_sha256": "56aeab930502c5931834cf7f63ce23ff58b0a1546fa663a26906fe8228146eee",
+  "story_sha256": "4e3ff23b0148938ea92f983661a2018eeb1a006da5258d3ad51a2b95c25d0a94",
+  "status": "failed",
+  "cuts": [
+    {
+      "seconds": 8,
+      "max_adjacent_step_px": 107.45321167176395,
+      "parcel_points": [
+        {
+          "frame": 236,
+          "x": 879.7966804979253,
+          "y": 530.1846473029045
+        },
+        {
+          "frame": 237,
+          "x": 881.9246284501062,
+          "y": 530.5445859872611
+        },
+        {
+          "frame": 238,
+          "x": 882.8559670781893,
+          "y": 530.312757201646
+        },
+        {
+          "frame": 239,
+          "x": 884.1427104722793,
+          "y": 530.4691991786448
+        },
+        {
+          "frame": 240,
+          "x": 965.7429149797571,
+          "y": 600.3805668016195
+        },
+        {
+          "frame": 241,
+          "x": 968.7760646108663,
+          "y": 600.1152716593245
+        },
+        {
+          "frame": 242,
+          "x": 972.0046728971963,
+          "y": 600.0665887850467
+        },
+        {
+          "frame": 243,
+          "x": 975.1564885496183,
+          "y": 599.9246183206106
+        },
+        {
+          "frame": 244,
+          "x": 978.1742556917688,
+          "y": 599.7259194395797
+        }
+      ],
+      "max_progress_error_px": 1705.2972972972973,
+      "progress": [
+        {
+          "frame": 236,
+          "width_px": 1888,
+          "expected_px": 204.1081081081081,
+          "error_px": 1683.8918918918919
+        },
+        {
+          "frame": 237,
+          "width_px": 1896,
+          "expected_px": 204.97297297297297,
+          "error_px": 1691.027027027027
+        },
+        {
+          "frame": 238,
+          "width_px": 1904,
+          "expected_px": 205.83783783783784,
+          "error_px": 1698.162162162162
+        },
+        {
+          "frame": 239,
+          "width_px": 1912,
+          "expected_px": 206.7027027027027,
+          "error_px": 1705.2972972972973
+        },
+        {
+          "frame": 240,
+          "width_px": 0,
+          "expected_px": 207.56756756756758,
+          "error_px": 207.56756756756758
+        },
+        {
+          "frame": 241,
+          "width_px": 6,
+          "expected_px": 208.43243243243242,
+          "error_px": 202.43243243243242
+        },
+        {
+          "frame": 242,
+          "width_px": 13,
+          "expected_px": 209.2972972972973,
+          "error_px": 196.2972972972973
+        },
+        {
+          "frame": 243,
+          "width_px": 19,
+          "expected_px": 210.16216216216216,
+          "error_px": 191.16216216216216
+        },
+        {
+          "frame": 244,
+          "width_px": 26,
+          "expected_px": 211.02702702702703,
+          "error_px": 185.02702702702703
+        }
+      ]
+    },
+    {
+      "seconds": 18,
+      "max_adjacent_step_px": 118.97748463857302,
+      "parcel_points": [
+        {
+          "frame": 536,
+          "x": 998.4771665801765,
+          "y": 600.0391800726518
+        },
+        {
+          "frame": 537,
+          "x": 997.4461859979101,
+          "y": 600.1739811912225
+        },
+        {
+          "frame": 538,
+          "x": 995.6037735849056,
+          "y": 600.1404612159329
+        },
+        {
+          "frame": 539,
+          "x": 993.594940010433,
+          "y": 600.008607198748
+        },
+        {
+          "frame": 540,
+          "x": 897.011677282378,
+          "y": 530.5297239915075
+        },
+        {
+          "frame": 541,
+          "x": 895.6870967741936,
+          "y": 530.2010752688172
+        },
+        {
+          "frame": 542,
+          "x": 894.0346320346321,
+          "y": 530.8441558441558
+        },
+        {
+          "frame": 543,
+          "x": 893.5738396624472,
+          "y": 530.4177215189874
+        },
+        {
+          "frame": 544,
+          "x": 891.7107526881721,
+          "y": 530.3344086021506
+        }
+      ],
+      "max_progress_error_px": 1447.837837837838,
+      "progress": [
+        {
+          "frame": 536,
+          "width_px": 1894,
+          "expected_px": 463.56756756756755,
+          "error_px": 1430.4324324324325
+        },
+        {
+          "frame": 537,
+          "width_px": 1901,
+          "expected_px": 464.43243243243245,
+          "error_px": 1436.5675675675675
+        },
+        {
+          "frame": 538,
+          "width_px": 1907,
+          "expected_px": 465.2972972972973,
+          "error_px": 1441.7027027027027
+        },
+        {
+          "frame": 539,
+          "width_px": 1914,
+          "expected_px": 466.1621621621622,
+          "error_px": 1447.837837837838
+        },
+        {
+          "frame": 540,
+          "width_px": 0,
+          "expected_px": 467.02702702702703,
+          "error_px": 467.02702702702703
+        },
+        {
+          "frame": 541,
+          "width_px": 6,
+          "expected_px": 467.8918918918919,
+          "error_px": 461.8918918918919
+        },
+        {
+          "frame": 542,
+          "width_px": 13,
+          "expected_px": 468.7567567567568,
+          "error_px": 455.7567567567568
+        },
+        {
+          "frame": 543,
+          "width_px": 19,
+          "expected_px": 469.6216216216216,
+          "error_px": 450.6216216216216
+        },
+        {
+          "frame": 544,
+          "width_px": 26,
+          "expected_px": 470.4864864864865,
+          "error_px": 444.4864864864865
+        }
+      ]
+    }
+  ],
+  "sentence_audio_checks": [],
+  "sentence_timing_scope": "Generated sentence boundaries and encoded waveform correlation, not word ASR or full human listening review. Legacy sources without measured cues are not certified for sentence timing.",
+  "thresholds": {
+    "max_cut_step_px": 3,
+    "max_progress_error_px": 3,
+    "min_audio_correlation": 0.96,
+    "max_audio_offset_seconds": 0.03333333333333333
+  },
+  "errors": [
+    "Tagged parcel jumps at 8s: 107.45px/frame",
+    "Global progress resets/drifts at 8s",
+    "Tagged parcel jumps at 18s: 118.98px/frame",
+    "Global progress resets/drifts at 18s"
+  ]
+}

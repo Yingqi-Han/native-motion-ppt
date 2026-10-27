@@ -1,0 +1,122 @@
+{
+  "question": [
+    {
+      "text": "声音传过来，空气也会一路跑过来吗？",
+      "startMs": 600,
+      "endMs": 3630,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "盯住这个橙色标记。",
+      "startMs": 3810,
+      "endMs": 5459,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "parcel": [
+    {
+      "text": "它在平衡位置附近，来回振动。",
+      "startMs": 600,
+      "endMs": 3201,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "图示是空气团的平均运动，没有画出热运动。",
+      "startMs": 3381,
+      "endMs": 7038,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "compression": [
+    {
+      "text": "向右走的是压缩区。",
+      "startMs": 600,
+      "endMs": 2237,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "相邻的空气接力振动，把疏密变化传向前方。",
+      "startMs": 2417,
+      "endMs": 6213,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "parallel": [
+    {
+      "text": "空气的振动方向，与声波的传播方向平行。",
+      "startMs": 600,
+      "endMs": 4187,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这就是空气中的纵波。",
+      "startMs": 4367,
+      "endMs": 6132,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "frequency": [
+    {
+      "text": "波速近似不变时，频率翻倍，波长减半。",
+      "startMs": 600,
+      "endMs": 3797,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "先听二百二十赫兹，再听四百四十赫兹。",
+      "startMs": 3977,
+      "endMs": 7518,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "wavelength": [
+    {
+      "text": "二十摄氏度时，空气中的声速约为每秒三百四十三米。",
+      "startMs": 600,
+      "endMs": 4849,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "波长等于声速除以频率。",
+      "startMs": 5029,
+      "endMs": 6980,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "三百四十三除以四百四十，约等于零点七八米。",
+      "startMs": 7160,
+      "endMs": 10910,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "recap": [
+    {
+      "text": "所以，传过去的是振动。",
+      "startMs": 600,
+      "endMs": 2458,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "空气只在附近往复，声波把能量传向远方。",
+      "startMs": 2638,
+      "endMs": 6179,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "credits": []
+}

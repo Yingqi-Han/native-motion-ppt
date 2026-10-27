@@ -1,0 +1,40 @@
+{
+  "method": "ffmpeg silencedetect noise=-38dB d=0.8; compare gaps before final credit sequence",
+  "before_max_narrative_gap_seconds": 5.643167,
+  "after_max_narrative_gap_seconds": 2.878479,
+  "after_all_silence_events": [
+    {
+      "end": 7.652875,
+      "duration": 2.214792
+    },
+    {
+      "end": 15.723521,
+      "duration": 1.704021
+    },
+    {
+      "end": 23.714688,
+      "duration": 2.59275
+    },
+    {
+      "end": 30.680979,
+      "duration": 1.619729
+    },
+    {
+      "end": 40.002604,
+      "duration": 1.157917
+    },
+    {
+      "end": 42.685458,
+      "duration": 1.840437
+    },
+    {
+      "end": 55.735146,
+      "duration": 2.878479
+    },
+    {
+      "end": 66.005333,
+      "duration": 4.903271
+    }
+  ],
+  "scope": "Measures low audio level, not a comprehension or pacing score. Listening gaps are deliberate."
+}

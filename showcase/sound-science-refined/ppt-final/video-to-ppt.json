@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-27T09:17:18.409866+00:00",
+  "video_locked_at": "2026-10-27T09:16:32.513992+00:00",
+  "video_sha256": "396a69ee598f569a4e79fc0f836a2d030b855d2a8073393fa6e1d206efe989d7",
+  "video_lock_sha256": "072e9e83f1e2d64cfd63283c6d5b065c56cecb5c3ec33dcf5701cb83d46be1fd",
+  "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+  "mapping": [
+    {
+      "slide": 1,
+      "scene": "question",
+      "video_start_seconds": 0,
+      "video_end_seconds": 7,
+      "representative_frame": 90,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 2,
+      "scene": "parcel",
+      "video_start_seconds": 7,
+      "video_end_seconds": 15,
+      "representative_frame": 330,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 3,
+      "scene": "compression",
+      "video_start_seconds": 15,
+      "video_end_seconds": 23,
+      "representative_frame": 570,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 4,
+      "scene": "parallel",
+      "video_start_seconds": 23,
+      "video_end_seconds": 30,
+      "representative_frame": 780,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 5,
+      "scene": "frequency",
+      "video_start_seconds": 30,
+      "video_end_seconds": 42,
+      "representative_frame": 1080,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 6,
+      "scene": "wavelength",
+      "video_start_seconds": 42,
+      "video_end_seconds": 55,
+      "representative_frame": 1530,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 7,
+      "scene": "recap",
+      "video_start_seconds": 55,
+      "video_end_seconds": 62,
+      "representative_frame": 1740,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    },
+    {
+      "slide": 8,
+      "scene": "credits",
+      "video_start_seconds": 62,
+      "video_end_seconds": 66,
+      "representative_frame": 1920,
+      "adaptation": "Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion."
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "origin": "measurement_of_original_authored_science_video",
+  "video_sha256": "396a69ee598f569a4e79fc0f836a2d030b855d2a8073393fa6e1d206efe989d7",
+  "story_sha256": "20b52110379faf4b5c40b89f68550219a5a26d99d3fe9c0e78ec90caaaaff00e",
+  "status": "passed",
+  "cuts": [
+    {
+      "seconds": 7,
+      "max_adjacent_step_px": 1.9362312186650923,
+      "parcel_points": [
+        {
+          "frame": 206,
+          "x": 859.9831932773109,
+          "y": 530.2394957983194
+        },
+        {
+          "frame": 207,
+          "x": 858.05,
+          "y": 530.3479166666666
+        },
+        {
+          "frame": 208,
+          "x": 858.1659663865546,
+          "y": 530.40756302521
+        },
+        {
+          "frame": 209,
+          "x": 858.0104166666666,
+          "y": 530.1979166666666
+        },
+        {
+          "frame": 210,
+          "x": 856.4814814814815,
+          "y": 530.1399176954733
+        },
+        {
+          "frame": 211,
+          "x": 856.0508474576271,
+          "y": 530.3135593220339
+        },
+        {
+          "frame": 212,
+          "x": 856.1147540983607,
+          "y": 530.2090163934427
+        },
+        {
+          "frame": 213,
+          "x": 856.2060041407867,
+          "y": 530.3737060041408
+        },
+        {
+          "frame": 214,
+          "x": 856.7514285714286,
+          "y": 531.2219047619047
+        }
+      ],
+      "max_progress_error_px": 0.48484848484849863,
+      "progress": [
+        {
+          "frame": 206,
+          "width_px": 200,
+          "expected_px": 199.75757575757575,
+          "error_px": 0.24242424242424931
+        },
+        {
+          "frame": 207,
+          "width_px": 201,
+          "expected_px": 200.72727272727272,
+          "error_px": 0.2727272727272805
+        },
+        {
+          "frame": 208,
+          "width_px": 202,
+          "expected_px": 201.6969696969697,
+          "error_px": 0.30303030303031164
+        },
+        {
+          "frame": 209,
+          "width_px": 203,
+          "expected_px": 202.66666666666666,
+          "error_px": 0.3333333333333428
+        },
+        {
+          "frame": 210,
+          "width_px": 204,
+          "expected_px": 203.63636363636363,
+          "error_px": 0.36363636363637397
+        },
+        {
+          "frame": 211,
+          "width_px": 205,
+          "expected_px": 204.6060606060606,
+          "error_px": 0.39393939393940514
+        },
+        {
+          "frame": 212,
+          "width_px": 206,
+          "expected_px": 205.57575757575756,
+          "error_px": 0.4242424242424363
+        },
+        {
+          "frame": 213,
+          "width_px": 207,
+          "expected_px": 206.54545454545453,
+          "error_px": 0.45454545454546746
+        },
+        {
+          "frame": 214,
+          "width_px": 208,
+          "expected_px": 207.5151515151515,
+          "error_px": 0.48484848484849863
+        }
+      ]
+    },
+    {
+      "seconds": 15,
+      "max_adjacent_step_px": 2.2673808670244133,
+      "parcel_points": [
+        {
+          "frame": 446,
+          "x": 902.8116370808679,
+          "y": 531.1489151873767
+        },
+        {
+          "frame": 447,
+          "x": 900.6445783132531,
+          "y": 530.4819277108434
+        },
+        {
+          "frame": 448,
+          "x": 899.3614718614718,
+          "y": 530.3874458874459
+        },
+        {
+          "frame": 449,
+          "x": 898.402004454343,
+          "y": 530.6648106904231
+        },
+        {
+          "frame": 450,
+          "x": 896.8319587628866,
+          "y": 530.398969072165
+        },
+        {
+          "frame": 451,
+          "x": 895.718818380744,
+          "y": 530.6269146608315
+        },
+        {
+          "frame": 452,
+          "x": 893.961038961039,
+          "y": 530.6082251082252
+        },
+        {
+          "frame": 453,
+          "x": 893.4557894736843,
+          "y": 530.438947368421
+        },
+        {
+          "frame": 454,
+          "x": 891.9073275862069,
+          "y": 530.3254310344828
+        }
+      ],
+      "max_progress_error_px": 0.48484848484849863,
+      "progress": [
+        {
+          "frame": 446,
+          "width_px": 432,
+          "expected_px": 432.4848484848485,
+          "error_px": 0.48484848484849863
+        },
+        {
+          "frame": 447,
+          "width_px": 433,
+          "expected_px": 433.45454545454544,
+          "error_px": 0.45454545454543904
+        },
+        {
+          "frame": 448,
+          "width_px": 434,
+          "expected_px": 434.42424242424244,
+          "error_px": 0.4242424242424363
+        },
+        {
+          "frame": 449,
+          "width_px": 435,
+          "expected_px": 435.3939393939394,
+          "error_px": 0.3939393939393767
+        },
+        {
+          "frame": 450,
+          "width_px": 436,
+          "expected_px": 436.3636363636364,
+          "error_px": 0.36363636363637397
+        },
+        {
+          "frame": 451,
+          "width_px": 437,
+          "expected_px": 437.3333333333333,
+          "error_px": 0.3333333333333144
+        },
+        {
+          "frame": 452,
+          "width_px": 438,
+          "expected_px": 438.3030303030303,
+          "error_px": 0.30303030303031164
+        },
+        {
+          "frame": 453,
+          "width_px": 439,
+          "expected_px": 439.27272727272725,
+          "error_px": 0.27272727272725206
+        },
+        {
+          "frame": 454,
+          "width_px": 440,
+          "expected_px": 440.24242424242425,
+          "error_px": 0.24242424242424931
+        }
+      ]
+    }
+  ],
+  "sentence_audio_checks": [
+    {
+      "scene": "question",
+      "cue": 0,
+      "text": "声音传过来，空气也会一路跑过来吗？",
+      "normalized_correlation": 0.999985749490977,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "question",
+      "cue": 1,
+      "text": "盯住这个橙色标记。",
+      "normalized_correlation": 0.9999861052429598,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "parcel",
+      "cue": 0,
+      "text": "它在平衡位置附近，来回振动。",
+      "normalized_correlation": 0.9999885208221896,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "parcel",
+      "cue": 1,
+      "text": "图示是空气团的平均运动，没有画出热运动。",
+      "normalized_correlation": 0.9999751185856599,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "compression",
+      "cue": 0,
+      "text": "向右走的是压缩区。",
+      "normalized_correlation": 0.9999689176324809,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "compression",
+      "cue": 1,
+      "text": "相邻的空气接力振动，把疏密变化传向前方。",
+      "normalized_correlation": 0.9999889198539625,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "parallel",
+      "cue": 0,
+      "text": "空气的振动方向，与声波的传播方向平行。",
+      "normalized_correlation": 0.9999809815104176,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "parallel",
+      "cue": 1,
+      "text": "这就是空气中的纵波。",
+      "normalized_correlation": 0.9999856234554386,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "frequency",
+      "cue": 0,
+      "text": "波速近似不变时，频率翻倍，波长减半。",
+      "normalized_correlation": 0.9999936532683517,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "frequency",
+      "cue": 1,
+      "text": "先听二百二十赫兹，再听四百四十赫兹。",
+      "normalized_correlation": 0.9999769444171239,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "wavelength",
+      "cue": 0,
+      "text": "二十摄氏度时，空气中的声速约为每秒三百四十三米。",
+      "normalized_correlation": 0.9999768139515114,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "wavelength",
+      "cue": 1,
+      "text": "波长等于声速除以频率。",
+      "normalized_correlation": 0.9999772524629866,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "wavelength",
+      "cue": 2,
+      "text": "三百四十三除以四百四十，约等于零点七八米。",
+      "normalized_correlation": 0.9999469244077375,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "recap",
+      "cue": 0,
+      "text": "所以，传过去的是振动。",
+      "normalized_correlation": 0.9999915268555287,
+      "offset_seconds": 0.0
+    },
+    {
+      "scene": "recap",
+      "cue": 1,
+      "text": "空气只在附近往复，声波把能量传向远方。",
+      "normalized_correlation": 0.9999802720032547,
+      "offset_seconds": 0.0
+    }
+  ],
+  "sentence_timing_scope": "Generated sentence boundaries and encoded waveform correlation, not word ASR or full human listening review. Legacy sources without measured cues are not certified for sentence timing.",
+  "thresholds": {
+    "max_cut_step_px": 3,
+    "max_progress_error_px": 3,
+    "min_audio_correlation": 0.96,
+    "max_audio_offset_seconds": 0.03333333333333333
+  },
+  "errors": []
+}

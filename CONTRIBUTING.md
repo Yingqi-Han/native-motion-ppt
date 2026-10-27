@@ -6,7 +6,7 @@ Run from the repository root:
 
 ```bash
 python -m unittest discover -s tests -v
-node --test tests/test_timeline.mjs
+node --test tests/test_*.mjs
 python tests/smoke_core_cli.py --isolated
 python scripts/validate_skill.py
 python scripts/package_skill.py --source-only --out dist

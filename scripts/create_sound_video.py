@@ -20,8 +20,22 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 def captions(story,audio):
     durations={c['scene']:c['duration_seconds'] for c in audio['clips']}
+    clips={c['scene']:c for c in audio['clips']}
     result={};global_cues=[];start=0
     for scene in story['scenes']:
+        measured=clips.get(scene['id'],{}).get('cues')
+        if measured is not None:
+            if ''.join(c['text'] for c in measured)!=scene['narration']:
+                raise ValueError('Measured captions do not match the narration')
+            previous=0;rows=[]
+            for cue in measured:
+                a,b=cue['start_seconds'],cue['end_seconds']
+                if not 0<=previous<=a<b<=durations[scene['id']]+1e-8:
+                    raise ValueError('Invalid measured sentence boundaries')
+                previous=b
+                rows.append(dict(text=cue['text'],startMs=round((.6+a)*1000),endMs=round((.6+b)*1000),timestampMs=None,confidence=None))
+                global_cues.append((start+.6+a,start+.6+b,cue['text']))
+            result[scene['id']]=rows;start+=scene['duration_seconds'];continue
         chunks=[]
         for sentence in re.findall(r'[^。！？]+[。！？]?',scene['narration']):
             if len(sentence)<=29:chunks.append(sentence);continue
@@ -84,7 +98,7 @@ def prepare(story_path,audio_dir,destination):
     (destination/'font-manifest.json').write_text(json.dumps(font_records,indent=2)+'\n')
     (destination/'video-origin.json').write_text(json.dumps({'origin':'original_authored_science_animation',
        'is_pptx_playback_recording':False,'story_sha256':sha(story_path),'narration_manifest_sha256':sha(audio_dir/'narration-manifest.json'),
-       'duration_seconds':total/30,'caption_timing':'Sentence durations allocated by text length within each measured narration clip; not word-forced alignment.',
+       'duration_seconds':total/30,'caption_timing':'Independently synthesized sentence sample boundaries; not word-forced alignment.' if all('cues' in c for c in manifest['clips']) else 'Sentence durations allocated by text length within each measured narration clip; not word-forced alignment.',
        'ppt_started':False},indent=2)+'\n')
     (destination/'README.md').write_text('''# 声波科普：先视频，后 PPT
 
@@ -100,6 +114,11 @@ npm run render -- --browser-executable=/path/to/chromium
 
 先完成视频与物理/音频/画面检查，封存 VIDEO_LOCK.json，再制作对应 PPT。PPT 是使用已知对象和分镜重新制作的原生教学版本，不声称 MP4 无损转为原生动画。
 ''',encoding='utf-8')
+    readme=destination/'README.md'
+    text=readme.read_text().replace('74秒',f'{total/30:g}秒')
+    if all('cues' in c for c in manifest['clips']):
+        text=text.replace('按实际音频长度分句近似对齐，未做词级强制对齐','按独立合成句子的实际音频边界对齐，未做词级强制对齐')
+    readme.write_text(text)
     return {'project':str(destination.resolve()),'duration_seconds':total/30,'caption_cues':len(cues)}
 
 

@@ -81,3 +81,25 @@ PPT 导出后继续做实际页面、目标 WPS 的手动与自动放映、原�
 通用页面匹配对第6页大字号公式仍待检；成组粒子 Morph 的自动轮廓方法也不覆盖。保留原始 pending，另附绑定两份录像与实际帧的审阅，不能宣布所有自动项通过。隔离的无对象动画 Morph 诊断通过，只证明该播放器的诊断场景。
 
 此次同时修复辅助设计预演中的 SVG 宿主语言差异：根 SVG 明确使用与预览页一致的 zh-CN。原先失败运行留存；修复后单帧与浏览器参考一致，完整辅助视频44帧对照最大RMSE约3.27，沿用阈值5。此修复不把代码预演转成WPS实播证据。
+
+## 视频迭代复查
+
+用户反馈首版有问题后，新增对实际编码帧的切镜检查，确认旧片两处标记点跳位约107/119px，逐页进度条也在切镜时重置。原先八张代表帧和局部模型检查没有覆盖这些问题；旧报告与录像保留，不扩大它们的检查结论。
+
+改进脚本是 `examples/science-video/sound-refined.json`：66秒，保留八段结构。镜头在同一世界坐标中连续推近和拉远；纵波段提高图形对比；频率段加入试听提示；公式随旁白句子揭示；进度条覆盖全片。使用逐句合成，字幕来自每句真实音频的样本边界，不按字数猜测。
+
+```bash
+/path/to/tts-python scripts/synthesize_sound_narration.py \
+  --story examples/science-video/sound-refined.json --sentence-clips --speed 1 \
+  --model /path/to/vits-melo-tts-zh_en \
+  --model-url https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-melo-tts-zh_en.tar.bz2 \
+  --out output/refined-audio
+python scripts/create_sound_video.py --story examples/science-video/sound-refined.json \
+  --audio-dir output/refined-audio --out output/refined-video
+```
+
+先在Studio查看画面，再按用户的成片交付要求导出。代表帧秒数读取故事的 `qa_sample_seconds`；重排场景后仍须检查所有切镜，不能仅替换帧编号。`check_sound_video.py` 对该修订版自动运行 `check_sound_edit.py`：用真实橙色像素检查切镜前后轨迹（相邻帧≤3px）、用编码帧检查全片进度（误差≤3px），再核对合成句子与编码后音轨的波形及字幕边界（相关系数≥0.96、偏移≤一帧）。沿用旧模型和编码对照阈值，不降低标准去消除失败。
+
+音轨波形对照可以发现错误文件、时间偏移或丢失；它不证明科学文本正确、发音自然或完整人工听审，也不是词级ASR。主动查看文字、单位、模型与关键帧。新的主片检查、锁、PPT和目标播放器录像分别在新目录生成，不复用旧WPS验收来认证新版PPT。
+
+最终66秒主片的实测记录：两处切镜附近的最大相邻帧位移为1.94/2.27px（旧片107/119px），进度条误差小于0.49px；15句编码旁白对源音频的最低归一化相关系数约0.99995，采样窗口未检出时移。主片实际标记模型误差小于0.31px，220/440Hz听辨通过。第一轮修订仍有3.31px的镜头尾部位移，原始失败保留；进一步平滑加速度后通过原有3px门槛。画面审阅还补了纵波标签的独立底色，避免文字叠在粒子上。证据见 [修订示例](../showcase/sound-science-refined/README.md)。这些数值说明具体回归检查通过，审美效果仍由观看决定。

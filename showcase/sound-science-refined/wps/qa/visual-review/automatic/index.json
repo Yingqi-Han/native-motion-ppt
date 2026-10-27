@@ -1,0 +1,51 @@
+{
+  "origin": "actual_desktop_capture_frame_extraction",
+  "recording_sha256": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf",
+  "samples": [
+    {
+      "path": "qa/visual-review/automatic/frame-001.png",
+      "frame_index": 280,
+      "timestamp": 9.333333,
+      "sha256": "ed5fc39c4d672856e7af9552f858fd5183a57812a9b3540c11c249da28f9a018"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-002.png",
+      "frame_index": 572,
+      "timestamp": 19.066667,
+      "sha256": "4dfea0bc7c428aa9cd0f6de52d273e757c2105b44177a3f938f21a9ed2fc41b3"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-003.png",
+      "frame_index": 865,
+      "timestamp": 28.833333,
+      "sha256": "604a092da64bcf3680c059538ef95dc6dfc4df2304c86b988e58b50ae2373d0c"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-004.png",
+      "frame_index": 1155,
+      "timestamp": 38.5,
+      "sha256": "330be3b08ccb9beaf85483081b734931b37f8647903ca0a7a80ca230f8c9378c"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-005.png",
+      "frame_index": 1412,
+      "timestamp": 47.066667,
+      "sha256": "c016484f6b4f03a4973bd786725ca683d3a2a374de760784011145c83ff3cf9a"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-006.png",
+      "frame_index": 1927,
+      "timestamp": 64.233333,
+      "sha256": "d169174a4ee7a9eed92998ee5c081565f9be02da5581df29db98735784cd775d"
+    },
+    {
+      "path": "qa/visual-review/automatic/frame-007.png",
+      "frame_index": 2210,
+      "timestamp": 73.666667,
+      "sha256": "7d368e3aea5e413e4bbb24dec113155fe8cf09b6b5dabb9423590c27e27b73c5"
+    }
+  ],
+  "contact": "qa/visual-review/automatic/contact.jpg",
+  "selection_basis": "measured_phase_or_held_probes",
+  "scope": "Context-only samples do not establish page identity, arrival, motion or acceptance"
+}

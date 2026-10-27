@@ -1,0 +1,24 @@
+{
+  "name": "sound-science-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx --no-open",
+    "typecheck": "tsc --noEmit",
+    "render": "remotion render src/index.tsx SoundJourney out/sound-explainer.mp4"
+  },
+  "dependencies": {
+    "@remotion/captions": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "@remotion/media": "4.0.535",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}

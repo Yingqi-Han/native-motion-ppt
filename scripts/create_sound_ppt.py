@@ -85,11 +85,11 @@ def closed_horizontal_cycle(time=11,zoom=1.85):
 
 
 def generate(story):
-    slides=[];mapping=[]
+    slides=[];mapping=[];times=story.get('qa_sample_seconds',TIMES)
     for index,scene in enumerate(story['scenes']):
         prefix=scene['id'];objects=[];annotations=[];clicks=[]
         if index in [0,1,2,3,6]:
-            objects=field(story,TIMES[index],zoom=1.85 if index==1 else 1,
+            objects=field(story,times[index],zoom=1.85 if index==1 else 1,
                           dim=.2 if index==1 else .4 if index==3 else 1,bands=index==2)
         objects+=viewport()
         title='记住这两个方向。' if index==6 else '让一个标记，讲清一个概念。' if index==7 else scene['title']
@@ -103,7 +103,7 @@ def generate(story):
         elif index==1:
             for o in objects:
                 if o['id'] in ['tagged-parcel','tagged-halo']:
-                    o['animations']=[dict(kind='move',at=200,duration=3000,path=closed_horizontal_cycle(),accel=0,decel=0)]
+                    o['animations']=[dict(kind='move',at=200,duration=3000,path=closed_horizontal_cycle(time=times[index]),accel=0,decel=0)]
             annotations+=arrow('local-motion',840,795,240,'局部往复',ORANGE,True)
             annotations += [path('mean-position',[960,500,.01,200],'M 0 0 L 0 200',ORANGE,1.5,opacity=.45)]
         elif index==2:
@@ -150,7 +150,7 @@ def generate(story):
                            clicks=clicks,objects=objects,notes=notes))
         mapping.append({'slide':index+1,'scene':prefix,'video_start_seconds':sum(s['duration_seconds'] for s in story['scenes'][:index]),
                         'video_end_seconds':sum(s['duration_seconds'] for s in story['scenes'][:index+1]),
-                        'representative_frame':TIMES[index]*30,'adaptation':'Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion.'})
+                        'representative_frame':round(times[index]*30),'adaptation':'Native editable reconstruction; continuous wave field becomes a teaching snapshot, with a finite marker cycle and semantic reveals. Not lossless video conversion.'})
     return dict(version=1,title='声音走了，空气也走了吗？ · 对应教学 PPT',canvas=story['canvas'],
                 theme=dict(font=SANS,latin_font=LATIN,background=BG,foreground=WHITE,accent=CYAN),slides=slides),mapping
 

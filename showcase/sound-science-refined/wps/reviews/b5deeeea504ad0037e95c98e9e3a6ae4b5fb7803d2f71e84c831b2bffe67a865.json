@@ -1,0 +1,51 @@
+{
+  "check_id": "visual-review",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "已查看本次新版PPT两份真实WPS录像的八页全景、三段转场中间帧、局部往复序列、箭头/公式揭示前后帧。更新后的标题与字幕、440Hz、20°C、343m/s、0.78米和两个方向表达清楚，未见越界或单位错误。第3页为教学定格，连续传播见独立科普成片。组合Morph与通用阶段自动待检保留。",
+  "recordings": {
+    "manual": "c179e3822be2a2a52a96a23863ee959373a072291749c377410c39af7b86e62c",
+    "automatic": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf"
+  },
+  "evidence": [
+    {
+      "path": "qa/science-video-review/manual-all-eight.jpg",
+      "sha256": "73235690365c9e5b4457903310322b024fbb1fbc0719a6414140720bd6255300"
+    },
+    {
+      "path": "qa/science-video-review/automatic-all-eight.jpg",
+      "sha256": "30615b04e35aa72f5e091bf95e8e851032720b18cf6a4c70f9c80ba4556222b9"
+    },
+    {
+      "path": "qa/science-video-review/manual-transitions.jpg",
+      "sha256": "62dc0148ac770d93be96507c36dd7980828c0e66356008b3aff786dc86557618"
+    },
+    {
+      "path": "qa/science-video-review/automatic-transitions.jpg",
+      "sha256": "c9b87a4f83c892d856df36dba334417eed69675cc8510a59e4dcba68a09d6a5a"
+    },
+    {
+      "path": "qa/science-video-review/manual-reveals.jpg",
+      "sha256": "210ff3c3b09e41bc94349b815a54b856e3c8085a2dd6ebdf9346d24c867ee4ca"
+    },
+    {
+      "path": "qa/science-video-review/automatic-reveals.jpg",
+      "sha256": "7e49ee86efedf77d415f7c6a0f109960d2b82169d7257dad3ec6123dbaa8868a"
+    },
+    {
+      "path": "qa/science-video-review/manual-cycle.jpg",
+      "sha256": "671aa8c9d0587ca3d09fe248fdc21953e19652b9a184bb93ed75596fccb3f39b"
+    },
+    {
+      "path": "qa/science-video-review/automatic-cycle.jpg",
+      "sha256": "8f1561f410e0117a53a354555a37f9aea22b3acb6c7323330d919112c4b5d4a8"
+    },
+    {
+      "path": "qa/science-video-review/actual-capture-supplement.json",
+      "sha256": "9bbc16a08c3121a170648209b8873c6f82ee5d0e4eac587baeeed004a7aad5da"
+    }
+  ],
+  "reviewer": "Codex review of revised sound deck actual WPS frames, 2026-10-27",
+  "machine_evidence_sha256": null,
+  "reviewed_at": "2026-10-27T09:28:18.176974+00:00"
+}

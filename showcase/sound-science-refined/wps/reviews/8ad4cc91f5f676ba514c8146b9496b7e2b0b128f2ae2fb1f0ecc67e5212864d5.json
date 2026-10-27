@@ -1,0 +1,27 @@
+{
+  "check_id": "native-motion-manual",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "针对本次修订PPT的真实录像像素测量：第2页橙色标记水平往复约84.5/84.9px，手动/自动纵向变化约0.30/0.24px。已查看两份往复连续帧与第3/6页箭头、公式揭示前后帧。结论覆盖局部标记运动与语义揭示，不扩大为全部成组粒子的Morph自动验证。",
+  "recordings": {
+    "manual": "c179e3822be2a2a52a96a23863ee959373a072291749c377410c39af7b86e62c",
+    "automatic": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf"
+  },
+  "evidence": [
+    {
+      "path": "qa/science-video-review/actual-capture-supplement.json",
+      "sha256": "9bbc16a08c3121a170648209b8873c6f82ee5d0e4eac587baeeed004a7aad5da"
+    },
+    {
+      "path": "qa/science-video-review/manual-cycle.jpg",
+      "sha256": "671aa8c9d0587ca3d09fe248fdc21953e19652b9a184bb93ed75596fccb3f39b"
+    },
+    {
+      "path": "qa/science-video-review/manual-reveals.jpg",
+      "sha256": "210ff3c3b09e41bc94349b815a54b856e3c8085a2dd6ebdf9346d24c867ee4ca"
+    }
+  ],
+  "reviewer": "Codex review of revised sound deck actual WPS frames, 2026-10-27",
+  "machine_evidence_sha256": null,
+  "reviewed_at": "2026-10-27T09:28:18.177308+00:00"
+}

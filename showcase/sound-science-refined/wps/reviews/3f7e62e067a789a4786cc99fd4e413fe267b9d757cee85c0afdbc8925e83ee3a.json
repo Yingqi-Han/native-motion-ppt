@@ -1,0 +1,23 @@
+{
+  "check_id": "native-held-pages-automatic",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "查看本次录像的八页稳定全景；第6页0.78米公式已独立补帧查看，文字、单位、箭头和原生图形正常，未见越界、残留或遮挡。原始页面匹配器对第6页仍为pending，不改写该原始测量。",
+  "recordings": {
+    "manual": "c179e3822be2a2a52a96a23863ee959373a072291749c377410c39af7b86e62c",
+    "automatic": "c47274e3c4e2cc6735d79657238829e812b617902a354b5e0549f2d993eb42bf"
+  },
+  "evidence": [
+    {
+      "path": "qa/science-video-review/automatic-all-eight.jpg",
+      "sha256": "30615b04e35aa72f5e091bf95e8e851032720b18cf6a4c70f9c80ba4556222b9"
+    },
+    {
+      "path": "qa/science-video-review/automatic-reveals.jpg",
+      "sha256": "7e49ee86efedf77d415f7c6a0f109960d2b82169d7257dad3ec6123dbaa8868a"
+    }
+  ],
+  "reviewer": "Codex review of revised sound deck actual WPS frames, 2026-10-27",
+  "machine_evidence_sha256": null,
+  "reviewed_at": "2026-10-27T09:28:18.178298+00:00"
+}
