@@ -1,0 +1,9 @@
+{
+  "engine": "sherpa-onnx",
+  "version": "2.0.1",
+  "model": "vits-melo-tts-zh_en",
+  "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-melo-tts-zh_en.tar.bz2",
+  "license": "MIT (MyShell.ai 2024), copy included with generated audio",
+  "binaries_in_delivery": false,
+  "voice_is_synthetic": true
+}

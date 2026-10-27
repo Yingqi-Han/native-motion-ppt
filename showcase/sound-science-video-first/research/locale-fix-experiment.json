@@ -1,0 +1,8 @@
+{
+  "origin": "comparison_of_authored_previews_not_WPS",
+  "before_rmse": 6.3113238550027155,
+  "after_rmse": 0.0,
+  "threshold_unchanged": 5,
+  "cause": "Source HTML language zh-CN versus renderer host language; make SVG language explicit rather than inheriting host.",
+  "video_unchanged_in_original_failure": true
+}

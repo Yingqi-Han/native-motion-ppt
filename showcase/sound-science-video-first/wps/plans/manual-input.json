@@ -1,0 +1,119 @@
+{
+  "show_after": 1.0,
+  "seconds": 84.0,
+  "click_at": [
+    11.5,
+    22.0,
+    26.2,
+    32.5,
+    43.0,
+    53.5,
+    58.5,
+    64.0,
+    74.5
+  ],
+  "pages": [
+    {
+      "slide": 1,
+      "page_input_seconds": 1.0,
+      "content_base_seconds": 3.5,
+      "click_at_seconds": [],
+      "held_probe_seconds": 6.5,
+      "next_page_seconds": 11.5,
+      "bar_objects": [],
+      "bar_start_seconds": 3.3,
+      "bar_end_seconds": 6.75,
+      "looping_objects": []
+    },
+    {
+      "slide": 2,
+      "page_input_seconds": 11.5,
+      "content_base_seconds": 14.0,
+      "click_at_seconds": [],
+      "held_probe_seconds": 19.2,
+      "next_page_seconds": 22.0,
+      "bar_objects": [],
+      "bar_start_seconds": 13.8,
+      "bar_end_seconds": 19.45,
+      "looping_objects": []
+    },
+    {
+      "slide": 3,
+      "page_input_seconds": 22.0,
+      "content_base_seconds": 24.5,
+      "click_at_seconds": [
+        26.2
+      ],
+      "held_probe_seconds": 29.05,
+      "next_page_seconds": 32.5,
+      "bar_objects": [],
+      "bar_start_seconds": 24.3,
+      "bar_end_seconds": 29.3,
+      "looping_objects": []
+    },
+    {
+      "slide": 4,
+      "page_input_seconds": 32.5,
+      "content_base_seconds": 35.0,
+      "click_at_seconds": [],
+      "held_probe_seconds": 38.0,
+      "next_page_seconds": 43.0,
+      "bar_objects": [],
+      "bar_start_seconds": 34.8,
+      "bar_end_seconds": 38.25,
+      "looping_objects": []
+    },
+    {
+      "slide": 5,
+      "page_input_seconds": 43.0,
+      "content_base_seconds": 45.5,
+      "click_at_seconds": [],
+      "held_probe_seconds": 48.5,
+      "next_page_seconds": 53.5,
+      "bar_objects": [],
+      "bar_start_seconds": 45.3,
+      "bar_end_seconds": 48.75,
+      "looping_objects": []
+    },
+    {
+      "slide": 6,
+      "page_input_seconds": 53.5,
+      "content_base_seconds": 56.0,
+      "click_at_seconds": [
+        58.5
+      ],
+      "held_probe_seconds": 61.92,
+      "next_page_seconds": 64.0,
+      "bar_objects": [],
+      "bar_start_seconds": 55.8,
+      "bar_end_seconds": 62.17,
+      "looping_objects": []
+    },
+    {
+      "slide": 7,
+      "page_input_seconds": 64.0,
+      "content_base_seconds": 66.5,
+      "click_at_seconds": [],
+      "held_probe_seconds": 69.5,
+      "next_page_seconds": 74.5,
+      "bar_objects": [],
+      "bar_start_seconds": 66.3,
+      "bar_end_seconds": 69.75,
+      "looping_objects": []
+    },
+    {
+      "slide": 8,
+      "page_input_seconds": 74.5,
+      "content_base_seconds": 77.0,
+      "click_at_seconds": [],
+      "held_probe_seconds": 80.0,
+      "next_page_seconds": 83.0,
+      "bar_objects": [],
+      "bar_start_seconds": 76.8,
+      "bar_end_seconds": 80.25,
+      "looping_objects": []
+    }
+  ],
+  "scope": "Manual playback with reading/transition allowance; actual frames must confirm each page",
+  "mode": "manual"
+}

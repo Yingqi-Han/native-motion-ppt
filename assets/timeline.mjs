@@ -150,7 +150,9 @@ export function sceneSVG(doc,index,time,transition=true){
    body=oldScene+`<defs><clipPath id="wipe"><rect x="${box[0]}" y="${box[1]}" width="${box[2]}" height="${box[3]}"/></clipPath></defs><g clip-path="url(#wipe)">${newScene}</g>`;
   }else body=`<g opacity="${1-p}">${oldScene}</g><g opacity="${p}">${newScene}</g>`;
  }else body=objects.map(o=>objectSVG(o,local,s,"new")).join("");
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${doc.canvas.width} ${doc.canvas.height}" width="${doc.canvas.width}" height="${doc.canvas.height}"><rect width="100%" height="100%" fill="#${bg}"/>${body}</svg>`;
+ // Keep glyph selection consistent with preview.html when embedded in a host
+ // whose document language differs (for example Remotion's English shell).
+ return `<svg xmlns="http://www.w3.org/2000/svg" lang="zh-CN" xml:lang="zh-CN" viewBox="0 0 ${doc.canvas.width} ${doc.canvas.height}" width="${doc.canvas.width}" height="${doc.canvas.height}"><rect width="100%" height="100%" fill="#${bg}"/>${body}</svg>`;
 }
 export function locate(doc,time){
  let offset=0;

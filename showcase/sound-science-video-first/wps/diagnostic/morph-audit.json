@@ -1,0 +1,2685 @@
+{
+  "status": "passed",
+  "origin": "measurement_of_actual_desktop_recording",
+  "player": "WPS Office Presentation (Linux)",
+  "recording_sha256": "0100cc78e90feb2a238c7540cc126006b0301c939ccf574854ebe328397f7f9e",
+  "source_pptx_sha256": "ef0a603b129c7c29e2853cd504b6012608d251897dec0f8bb525ffd9fbf6cd46",
+  "native_transition_present": true,
+  "object_animations_present": false,
+  "endpoint_boxes_px": [
+    [
+      260.0,
+      450.0,
+      440.0,
+      630.0
+    ],
+    [
+      1300.0,
+      350.0,
+      1660.0,
+      710.0
+    ]
+  ],
+  "solid_intermediate_distinct_poses": 39,
+  "max_edge_step_px": 69.0,
+  "max_capture_gap_seconds": 0.016666999999999987,
+  "observed_transition_seconds": [
+    4.033333,
+    5.566667
+  ],
+  "errors": [],
+  "records": [
+    {
+      "timestamp": 3.0,
+      "frame_index": 180,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.016667,
+      "frame_index": 181,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.033333,
+      "frame_index": 182,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.05,
+      "frame_index": 183,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.066667,
+      "frame_index": 184,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.083333,
+      "frame_index": 185,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.1,
+      "frame_index": 186,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.116667,
+      "frame_index": 187,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.133333,
+      "frame_index": 188,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.15,
+      "frame_index": 189,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.166667,
+      "frame_index": 190,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.183333,
+      "frame_index": 191,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.2,
+      "frame_index": 192,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.216667,
+      "frame_index": 193,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.233333,
+      "frame_index": 194,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.25,
+      "frame_index": 195,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.266667,
+      "frame_index": 196,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.283333,
+      "frame_index": 197,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.3,
+      "frame_index": 198,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.316667,
+      "frame_index": 199,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.333333,
+      "frame_index": 200,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.35,
+      "frame_index": 201,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.366667,
+      "frame_index": 202,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.383333,
+      "frame_index": 203,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.4,
+      "frame_index": 204,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.416667,
+      "frame_index": 205,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.433333,
+      "frame_index": 206,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.45,
+      "frame_index": 207,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.466667,
+      "frame_index": 208,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.483333,
+      "frame_index": 209,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.5,
+      "frame_index": 210,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.516667,
+      "frame_index": 211,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.533333,
+      "frame_index": 212,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.55,
+      "frame_index": 213,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.566667,
+      "frame_index": 214,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.583333,
+      "frame_index": 215,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.6,
+      "frame_index": 216,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.616667,
+      "frame_index": 217,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.633333,
+      "frame_index": 218,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.65,
+      "frame_index": 219,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.666667,
+      "frame_index": 220,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.683333,
+      "frame_index": 221,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.7,
+      "frame_index": 222,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.716667,
+      "frame_index": 223,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.733333,
+      "frame_index": 224,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.75,
+      "frame_index": 225,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.766667,
+      "frame_index": 226,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.783333,
+      "frame_index": 227,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.8,
+      "frame_index": 228,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.816667,
+      "frame_index": 229,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.833333,
+      "frame_index": 230,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.85,
+      "frame_index": 231,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.866667,
+      "frame_index": 232,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.883333,
+      "frame_index": 233,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.9,
+      "frame_index": 234,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.916667,
+      "frame_index": 235,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.933333,
+      "frame_index": 236,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.95,
+      "frame_index": 237,
+      "box": [
+        261,
+        451,
+        440,
+        630
+      ],
+      "solid_occupancy": 0.9999375799756562
+    },
+    {
+      "timestamp": 3.966667,
+      "frame_index": 238,
+      "box": [
+        261,
+        450,
+        439,
+        629
+      ],
+      "solid_occupancy": 0.9941937103759965
+    },
+    {
+      "timestamp": 3.983333,
+      "frame_index": 239,
+      "box": [
+        261,
+        450,
+        439,
+        629
+      ],
+      "solid_occupancy": 0.9941937103759965
+    },
+    {
+      "timestamp": 4.0,
+      "frame_index": 240,
+      "box": [
+        263,
+        450,
+        443,
+        629
+      ],
+      "solid_occupancy": 0.9941961514587213
+    },
+    {
+      "timestamp": 4.016667,
+      "frame_index": 241,
+      "box": [
+        263,
+        450,
+        443,
+        629
+      ],
+      "solid_occupancy": 0.9941961514587213
+    },
+    {
+      "timestamp": 4.033333,
+      "frame_index": 242,
+      "box": [
+        263,
+        450,
+        443,
+        629
+      ],
+      "solid_occupancy": 0.9941961514587213
+    },
+    {
+      "timestamp": 4.05,
+      "frame_index": 243,
+      "box": [
+        268,
+        450,
+        448,
+        630
+      ],
+      "solid_occupancy": 0.9998148148148148
+    },
+    {
+      "timestamp": 4.066667,
+      "frame_index": 244,
+      "box": [
+        268,
+        450,
+        448,
+        630
+      ],
+      "solid_occupancy": 0.9998148148148148
+    },
+    {
+      "timestamp": 4.083333,
+      "frame_index": 245,
+      "box": [
+        273,
+        449,
+        454,
+        630
+      ],
+      "solid_occupancy": 0.9936815115533714
+    },
+    {
+      "timestamp": 4.1,
+      "frame_index": 246,
+      "box": [
+        273,
+        449,
+        454,
+        630
+      ],
+      "solid_occupancy": 0.9936815115533714
+    },
+    {
+      "timestamp": 4.116667,
+      "frame_index": 247,
+      "box": [
+        273,
+        449,
+        454,
+        630
+      ],
+      "solid_occupancy": 0.9936815115533714
+    },
+    {
+      "timestamp": 4.133333,
+      "frame_index": 248,
+      "box": [
+        281,
+        449,
+        463,
+        630
+      ],
+      "solid_occupancy": 0.9999392872321049
+    },
+    {
+      "timestamp": 4.15,
+      "frame_index": 249,
+      "box": [
+        281,
+        449,
+        463,
+        630
+      ],
+      "solid_occupancy": 0.9999392872321049
+    },
+    {
+      "timestamp": 4.166667,
+      "frame_index": 250,
+      "box": [
+        290,
+        448,
+        473,
+        631
+      ],
+      "solid_occupancy": 0.9997909761414195
+    },
+    {
+      "timestamp": 4.183333,
+      "frame_index": 251,
+      "box": [
+        290,
+        448,
+        473,
+        631
+      ],
+      "solid_occupancy": 0.9997909761414195
+    },
+    {
+      "timestamp": 4.2,
+      "frame_index": 252,
+      "box": [
+        300,
+        447,
+        486,
+        632
+      ],
+      "solid_occupancy": 0.9893344957861087
+    },
+    {
+      "timestamp": 4.216667,
+      "frame_index": 253,
+      "box": [
+        300,
+        447,
+        486,
+        632
+      ],
+      "solid_occupancy": 0.9893344957861087
+    },
+    {
+      "timestamp": 4.233333,
+      "frame_index": 254,
+      "box": [
+        313,
+        446,
+        501,
+        633
+      ],
+      "solid_occupancy": 0.9893617021276596
+    },
+    {
+      "timestamp": 4.25,
+      "frame_index": 255,
+      "box": [
+        313,
+        446,
+        501,
+        633
+      ],
+      "solid_occupancy": 0.9893901467743771
+    },
+    {
+      "timestamp": 4.266667,
+      "frame_index": 256,
+      "box": [
+        313,
+        446,
+        501,
+        633
+      ],
+      "solid_occupancy": 0.9893617021276596
+    },
+    {
+      "timestamp": 4.283333,
+      "frame_index": 257,
+      "box": [
+        329,
+        444,
+        520,
+        634
+      ],
+      "solid_occupancy": 0.9948195095067511
+    },
+    {
+      "timestamp": 4.3,
+      "frame_index": 258,
+      "box": [
+        329,
+        444,
+        520,
+        634
+      ],
+      "solid_occupancy": 0.9948195095067511
+    },
+    {
+      "timestamp": 4.316667,
+      "frame_index": 259,
+      "box": [
+        329,
+        444,
+        520,
+        634
+      ],
+      "solid_occupancy": 0.9948195095067511
+    },
+    {
+      "timestamp": 4.333333,
+      "frame_index": 260,
+      "box": [
+        348,
+        442,
+        541,
+        636
+      ],
+      "solid_occupancy": 0.9991720527749586
+    },
+    {
+      "timestamp": 4.35,
+      "frame_index": 261,
+      "box": [
+        348,
+        442,
+        541,
+        636
+      ],
+      "solid_occupancy": 0.9991720527749586
+    },
+    {
+      "timestamp": 4.366667,
+      "frame_index": 262,
+      "box": [
+        368,
+        440,
+        565,
+        637
+      ],
+      "solid_occupancy": 0.9994073539642866
+    },
+    {
+      "timestamp": 4.383333,
+      "frame_index": 263,
+      "box": [
+        368,
+        440,
+        565,
+        637
+      ],
+      "solid_occupancy": 0.9994073539642866
+    },
+    {
+      "timestamp": 4.4,
+      "frame_index": 264,
+      "box": [
+        391,
+        438,
+        592,
+        639
+      ],
+      "solid_occupancy": 0.9992079403975149
+    },
+    {
+      "timestamp": 4.416667,
+      "frame_index": 265,
+      "box": [
+        391,
+        438,
+        592,
+        639
+      ],
+      "solid_occupancy": 0.9992079403975149
+    },
+    {
+      "timestamp": 4.433333,
+      "frame_index": 266,
+      "box": [
+        391,
+        438,
+        592,
+        639
+      ],
+      "solid_occupancy": 0.9992079403975149
+    },
+    {
+      "timestamp": 4.45,
+      "frame_index": 267,
+      "box": [
+        418,
+        435,
+        623,
+        641
+      ],
+      "solid_occupancy": 0.999242244849633
+    },
+    {
+      "timestamp": 4.466667,
+      "frame_index": 268,
+      "box": [
+        418,
+        435,
+        623,
+        641
+      ],
+      "solid_occupancy": 0.999242244849633
+    },
+    {
+      "timestamp": 4.483333,
+      "frame_index": 269,
+      "box": [
+        448,
+        432,
+        659,
+        643
+      ],
+      "solid_occupancy": 0.9950585117135734
+    },
+    {
+      "timestamp": 4.5,
+      "frame_index": 270,
+      "box": [
+        448,
+        432,
+        659,
+        643
+      ],
+      "solid_occupancy": 0.9950585117135734
+    },
+    {
+      "timestamp": 4.516667,
+      "frame_index": 271,
+      "box": [
+        481,
+        430,
+        697,
+        646
+      ],
+      "solid_occupancy": 0.9999356995884774
+    },
+    {
+      "timestamp": 4.533333,
+      "frame_index": 272,
+      "box": [
+        481,
+        430,
+        697,
+        646
+      ],
+      "solid_occupancy": 0.9999356995884774
+    },
+    {
+      "timestamp": 4.55,
+      "frame_index": 273,
+      "box": [
+        481,
+        430,
+        697,
+        646
+      ],
+      "solid_occupancy": 0.9998928326474623
+    },
+    {
+      "timestamp": 4.566667,
+      "frame_index": 274,
+      "box": [
+        517,
+        426,
+        740,
+        649
+      ],
+      "solid_occupancy": 0.9992157493615396
+    },
+    {
+      "timestamp": 4.583333,
+      "frame_index": 275,
+      "box": [
+        517,
+        426,
+        740,
+        649
+      ],
+      "solid_occupancy": 0.9992157493615396
+    },
+    {
+      "timestamp": 4.6,
+      "frame_index": 276,
+      "box": [
+        559,
+        422,
+        788,
+        652
+      ],
+      "solid_occupancy": 0.9997911524587051
+    },
+    {
+      "timestamp": 4.616667,
+      "frame_index": 277,
+      "box": [
+        559,
+        422,
+        788,
+        652
+      ],
+      "solid_occupancy": 0.9997911524587051
+    },
+    {
+      "timestamp": 4.633333,
+      "frame_index": 278,
+      "box": [
+        559,
+        422,
+        788,
+        652
+      ],
+      "solid_occupancy": 0.9997911524587051
+    },
+    {
+      "timestamp": 4.65,
+      "frame_index": 279,
+      "box": [
+        603,
+        417,
+        840,
+        655
+      ],
+      "solid_occupancy": 0.9958160479381626
+    },
+    {
+      "timestamp": 4.666667,
+      "frame_index": 280,
+      "box": [
+        603,
+        417,
+        840,
+        655
+      ],
+      "solid_occupancy": 0.9958160479381626
+    },
+    {
+      "timestamp": 4.683333,
+      "frame_index": 281,
+      "box": [
+        653,
+        413,
+        900,
+        659
+      ],
+      "solid_occupancy": 0.9997037622198084
+    },
+    {
+      "timestamp": 4.7,
+      "frame_index": 282,
+      "box": [
+        653,
+        413,
+        900,
+        659
+      ],
+      "solid_occupancy": 0.9997037622198084
+    },
+    {
+      "timestamp": 4.716667,
+      "frame_index": 283,
+      "box": [
+        653,
+        413,
+        900,
+        659
+      ],
+      "solid_occupancy": 0.9997037622198084
+    },
+    {
+      "timestamp": 4.733333,
+      "frame_index": 284,
+      "box": [
+        705,
+        408,
+        960,
+        663
+      ],
+      "solid_occupancy": 0.9999846212995002
+    },
+    {
+      "timestamp": 4.75,
+      "frame_index": 285,
+      "box": [
+        705,
+        408,
+        960,
+        663
+      ],
+      "solid_occupancy": 0.9999846212995002
+    },
+    {
+      "timestamp": 4.766667,
+      "frame_index": 286,
+      "box": [
+        763,
+        402,
+        1029,
+        667
+      ],
+      "solid_occupancy": 0.9964817704638956
+    },
+    {
+      "timestamp": 4.783333,
+      "frame_index": 287,
+      "box": [
+        763,
+        402,
+        1029,
+        667
+      ],
+      "solid_occupancy": 0.9963824655979572
+    },
+    {
+      "timestamp": 4.8,
+      "frame_index": 288,
+      "box": [
+        763,
+        402,
+        1029,
+        667
+      ],
+      "solid_occupancy": 0.9964108384167967
+    },
+    {
+      "timestamp": 4.816667,
+      "frame_index": 289,
+      "box": [
+        823,
+        396,
+        1098,
+        672
+      ],
+      "solid_occupancy": 0.996429512516469
+    },
+    {
+      "timestamp": 4.833333,
+      "frame_index": 290,
+      "box": [
+        823,
+        396,
+        1098,
+        672
+      ],
+      "solid_occupancy": 0.996429512516469
+    },
+    {
+      "timestamp": 4.85,
+      "frame_index": 291,
+      "box": [
+        879,
+        391,
+        1165,
+        676
+      ],
+      "solid_occupancy": 0.9965157649368176
+    },
+    {
+      "timestamp": 4.866667,
+      "frame_index": 292,
+      "box": [
+        879,
+        391,
+        1165,
+        676
+      ],
+      "solid_occupancy": 0.9965157649368176
+    },
+    {
+      "timestamp": 4.883333,
+      "frame_index": 293,
+      "box": [
+        931,
+        386,
+        1226,
+        680
+      ],
+      "solid_occupancy": 0.996679349705984
+    },
+    {
+      "timestamp": 4.9,
+      "frame_index": 294,
+      "box": [
+        931,
+        386,
+        1226,
+        680
+      ],
+      "solid_occupancy": 0.9966908797417272
+    },
+    {
+      "timestamp": 4.916667,
+      "frame_index": 295,
+      "box": [
+        978,
+        382,
+        1280,
+        684
+      ],
+      "solid_occupancy": 0.999868426823385
+    },
+    {
+      "timestamp": 4.933333,
+      "frame_index": 296,
+      "box": [
+        978,
+        382,
+        1280,
+        684
+      ],
+      "solid_occupancy": 0.999868426823385
+    },
+    {
+      "timestamp": 4.95,
+      "frame_index": 297,
+      "box": [
+        978,
+        382,
+        1280,
+        684
+      ],
+      "solid_occupancy": 0.999868426823385
+    },
+    {
+      "timestamp": 4.966667,
+      "frame_index": 298,
+      "box": [
+        1021,
+        378,
+        1330,
+        687
+      ],
+      "solid_occupancy": 0.9999790534242414
+    },
+    {
+      "timestamp": 4.983333,
+      "frame_index": 299,
+      "box": [
+        1021,
+        378,
+        1330,
+        687
+      ],
+      "solid_occupancy": 0.9999790534242414
+    },
+    {
+      "timestamp": 5.0,
+      "frame_index": 300,
+      "box": [
+        1059,
+        374,
+        1376,
+        690
+      ],
+      "solid_occupancy": 0.9968454258675079
+    },
+    {
+      "timestamp": 5.016667,
+      "frame_index": 301,
+      "box": [
+        1059,
+        374,
+        1376,
+        690
+      ],
+      "solid_occupancy": 0.9968454258675079
+    },
+    {
+      "timestamp": 5.033333,
+      "frame_index": 302,
+      "box": [
+        1095,
+        371,
+        1418,
+        693
+      ],
+      "solid_occupancy": 0.9960963790550545
+    },
+    {
+      "timestamp": 5.05,
+      "frame_index": 303,
+      "box": [
+        1095,
+        371,
+        1418,
+        693
+      ],
+      "solid_occupancy": 0.9960963790550545
+    },
+    {
+      "timestamp": 5.066667,
+      "frame_index": 304,
+      "box": [
+        1095,
+        371,
+        1418,
+        693
+      ],
+      "solid_occupancy": 0.9960963790550545
+    },
+    {
+      "timestamp": 5.083333,
+      "frame_index": 305,
+      "box": [
+        1128,
+        367,
+        1456,
+        695
+      ],
+      "solid_occupancy": 0.9970348750743605
+    },
+    {
+      "timestamp": 5.1,
+      "frame_index": 306,
+      "box": [
+        1128,
+        367,
+        1456,
+        695
+      ],
+      "solid_occupancy": 0.9970348750743605
+    },
+    {
+      "timestamp": 5.116667,
+      "frame_index": 307,
+      "box": [
+        1155,
+        365,
+        1488,
+        697
+      ],
+      "solid_occupancy": 0.9999366836716235
+    },
+    {
+      "timestamp": 5.133333,
+      "frame_index": 308,
+      "box": [
+        1155,
+        365,
+        1488,
+        697
+      ],
+      "solid_occupancy": 1.0
+    },
+    {
+      "timestamp": 5.15,
+      "frame_index": 309,
+      "box": [
+        1155,
+        365,
+        1488,
+        697
+      ],
+      "solid_occupancy": 1.0
+    },
+    {
+      "timestamp": 5.166667,
+      "frame_index": 310,
+      "box": [
+        1180,
+        363,
+        1518,
+        699
+      ],
+      "solid_occupancy": 0.9998326993519301
+    },
+    {
+      "timestamp": 5.183333,
+      "frame_index": 311,
+      "box": [
+        1180,
+        363,
+        1518,
+        699
+      ],
+      "solid_occupancy": 0.9998326993519301
+    },
+    {
+      "timestamp": 5.2,
+      "frame_index": 312,
+      "box": [
+        1202,
+        360,
+        1544,
+        702
+      ],
+      "solid_occupancy": 0.9941092985875996
+    },
+    {
+      "timestamp": 5.216667,
+      "frame_index": 313,
+      "box": [
+        1202,
+        361,
+        1544,
+        702
+      ],
+      "solid_occupancy": 0.9970160004115861
+    },
+    {
+      "timestamp": 5.233333,
+      "frame_index": 314,
+      "box": [
+        1222,
+        359,
+        1566,
+        703
+      ],
+      "solid_occupancy": 0.9972873850730124
+    },
+    {
+      "timestamp": 5.25,
+      "frame_index": 315,
+      "box": [
+        1222,
+        359,
+        1566,
+        703
+      ],
+      "solid_occupancy": 0.9972958355868037
+    },
+    {
+      "timestamp": 5.266667,
+      "frame_index": 316,
+      "box": [
+        1222,
+        359,
+        1566,
+        703
+      ],
+      "solid_occupancy": 0.9972958355868037
+    },
+    {
+      "timestamp": 5.283333,
+      "frame_index": 317,
+      "box": [
+        1239,
+        357,
+        1586,
+        704
+      ],
+      "solid_occupancy": 0.9999916949729671
+    },
+    {
+      "timestamp": 5.3,
+      "frame_index": 318,
+      "box": [
+        1239,
+        357,
+        1586,
+        704
+      ],
+      "solid_occupancy": 0.9999916949729671
+    },
+    {
+      "timestamp": 5.316667,
+      "frame_index": 319,
+      "box": [
+        1253,
+        355,
+        1603,
+        705
+      ],
+      "solid_occupancy": 0.9998530612244898
+    },
+    {
+      "timestamp": 5.333333,
+      "frame_index": 320,
+      "box": [
+        1253,
+        355,
+        1603,
+        705
+      ],
+      "solid_occupancy": 0.9998530612244898
+    },
+    {
+      "timestamp": 5.35,
+      "frame_index": 321,
+      "box": [
+        1253,
+        355,
+        1603,
+        705
+      ],
+      "solid_occupancy": 0.9998530612244898
+    },
+    {
+      "timestamp": 5.366667,
+      "frame_index": 322,
+      "box": [
+        1265,
+        355,
+        1617,
+        706
+      ],
+      "solid_occupancy": 0.9999919062419063
+    },
+    {
+      "timestamp": 5.383333,
+      "frame_index": 323,
+      "box": [
+        1265,
+        355,
+        1617,
+        706
+      ],
+      "solid_occupancy": 0.9999919062419063
+    },
+    {
+      "timestamp": 5.4,
+      "frame_index": 324,
+      "box": [
+        1275,
+        353,
+        1629,
+        707
+      ],
+      "solid_occupancy": 0.9998483832870504
+    },
+    {
+      "timestamp": 5.416667,
+      "frame_index": 325,
+      "box": [
+        1275,
+        353,
+        1629,
+        707
+      ],
+      "solid_occupancy": 0.9998483832870504
+    },
+    {
+      "timestamp": 5.433333,
+      "frame_index": 326,
+      "box": [
+        1283,
+        353,
+        1639,
+        708
+      ],
+      "solid_occupancy": 0.999770533312233
+    },
+    {
+      "timestamp": 5.45,
+      "frame_index": 327,
+      "box": [
+        1283,
+        353,
+        1639,
+        708
+      ],
+      "solid_occupancy": 0.9997784459566387
+    },
+    {
+      "timestamp": 5.466667,
+      "frame_index": 328,
+      "box": [
+        1283,
+        353,
+        1639,
+        708
+      ],
+      "solid_occupancy": 0.9998496597562906
+    },
+    {
+      "timestamp": 5.483333,
+      "frame_index": 329,
+      "box": [
+        1290,
+        352,
+        1647,
+        708
+      ],
+      "solid_occupancy": 0.9998662386302836
+    },
+    {
+      "timestamp": 5.5,
+      "frame_index": 330,
+      "box": [
+        1290,
+        352,
+        1647,
+        708
+      ],
+      "solid_occupancy": 0.9998662386302836
+    },
+    {
+      "timestamp": 5.516667,
+      "frame_index": 331,
+      "box": [
+        1290,
+        352,
+        1647,
+        708
+      ],
+      "solid_occupancy": 0.9998662386302836
+    },
+    {
+      "timestamp": 5.533333,
+      "frame_index": 332,
+      "box": [
+        1295,
+        351,
+        1652,
+        708
+      ],
+      "solid_occupancy": 0.9999293835181131
+    },
+    {
+      "timestamp": 5.55,
+      "frame_index": 333,
+      "box": [
+        1295,
+        351,
+        1652,
+        708
+      ],
+      "solid_occupancy": 0.9999293835181131
+    },
+    {
+      "timestamp": 5.566667,
+      "frame_index": 334,
+      "box": [
+        1298,
+        351,
+        1657,
+        709
+      ],
+      "solid_occupancy": 0.9971211154510512
+    },
+    {
+      "timestamp": 5.583333,
+      "frame_index": 335,
+      "box": [
+        1298,
+        351,
+        1657,
+        709
+      ],
+      "solid_occupancy": 0.9971211154510512
+    },
+    {
+      "timestamp": 5.6,
+      "frame_index": 336,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.616667,
+      "frame_index": 337,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.633333,
+      "frame_index": 338,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.65,
+      "frame_index": 339,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.666667,
+      "frame_index": 340,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.683333,
+      "frame_index": 341,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.7,
+      "frame_index": 342,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997361907496062
+    },
+    {
+      "timestamp": 5.716667,
+      "frame_index": 343,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.733333,
+      "frame_index": 344,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.75,
+      "frame_index": 345,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.766667,
+      "frame_index": 346,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.783333,
+      "frame_index": 347,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.8,
+      "frame_index": 348,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.816667,
+      "frame_index": 349,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.833333,
+      "frame_index": 350,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.85,
+      "frame_index": 351,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.866667,
+      "frame_index": 352,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.883333,
+      "frame_index": 353,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.9,
+      "frame_index": 354,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.916667,
+      "frame_index": 355,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.933333,
+      "frame_index": 356,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.95,
+      "frame_index": 357,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.966667,
+      "frame_index": 358,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 5.983333,
+      "frame_index": 359,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.0,
+      "frame_index": 360,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.016667,
+      "frame_index": 361,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.033333,
+      "frame_index": 362,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.05,
+      "frame_index": 363,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.066667,
+      "frame_index": 364,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.083333,
+      "frame_index": 365,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.1,
+      "frame_index": 366,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.116667,
+      "frame_index": 367,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.133333,
+      "frame_index": 368,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.15,
+      "frame_index": 369,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.166667,
+      "frame_index": 370,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.183333,
+      "frame_index": 371,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.2,
+      "frame_index": 372,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.216667,
+      "frame_index": 373,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.233333,
+      "frame_index": 374,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.25,
+      "frame_index": 375,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.266667,
+      "frame_index": 376,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.283333,
+      "frame_index": 377,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.3,
+      "frame_index": 378,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.316667,
+      "frame_index": 379,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.333333,
+      "frame_index": 380,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.35,
+      "frame_index": 381,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.366667,
+      "frame_index": 382,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.383333,
+      "frame_index": 383,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.4,
+      "frame_index": 384,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.416667,
+      "frame_index": 385,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.433333,
+      "frame_index": 386,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.45,
+      "frame_index": 387,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.466667,
+      "frame_index": 388,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.483333,
+      "frame_index": 389,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.5,
+      "frame_index": 390,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.516667,
+      "frame_index": 391,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.533333,
+      "frame_index": 392,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.55,
+      "frame_index": 393,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.566667,
+      "frame_index": 394,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.583333,
+      "frame_index": 395,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.6,
+      "frame_index": 396,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.616667,
+      "frame_index": 397,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.633333,
+      "frame_index": 398,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.65,
+      "frame_index": 399,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.666667,
+      "frame_index": 400,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.683333,
+      "frame_index": 401,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.7,
+      "frame_index": 402,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.716667,
+      "frame_index": 403,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.733333,
+      "frame_index": 404,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.75,
+      "frame_index": 405,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.766667,
+      "frame_index": 406,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.783333,
+      "frame_index": 407,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.8,
+      "frame_index": 408,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.816667,
+      "frame_index": 409,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.833333,
+      "frame_index": 410,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.85,
+      "frame_index": 411,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.866667,
+      "frame_index": 412,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.883333,
+      "frame_index": 413,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.9,
+      "frame_index": 414,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.916667,
+      "frame_index": 415,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.933333,
+      "frame_index": 416,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.95,
+      "frame_index": 417,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.966667,
+      "frame_index": 418,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 6.983333,
+      "frame_index": 419,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    },
+    {
+      "timestamp": 7.0,
+      "frame_index": 420,
+      "box": [
+        1301,
+        351,
+        1660,
+        710
+      ],
+      "solid_occupancy": 0.9997284316540064
+    }
+  ],
+  "scope": "Isolated rectangle, left-to-right position and scale Morph in this exact recorded build. No source animation evaluator; fade and double-image frames cannot pass. Complex group Morph requires its own visual review."
+}

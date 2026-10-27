@@ -1,0 +1,23 @@
+{
+  "check_id": "native-held-pages-automatic",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "查看本次录像的八页稳定全景；第6页0.78米公式已独立补帧查看，文字、单位、箭头和原生图形正常，未见越界、残留或遮挡。原始页面匹配器对第6页仍为pending，不改写该原始测量。",
+  "recordings": {
+    "manual": "d788e9a48ea6ee0794cb23fb56b54a61d5dac24b1a4fe92489df62e2f331b0dd",
+    "automatic": "96a272d668e9f61f466e88d13eb2bb1b0be510671a8fe1fc9ad2895332fbd3cb"
+  },
+  "evidence": [
+    {
+      "path": "qa/science-video-review/automatic-all-eight.jpg",
+      "sha256": "3a71748e027c6529b8139b4ad124a69df051158a885a00d76bb93cb564509adb"
+    },
+    {
+      "path": "qa/science-video-review/automatic-reveals.jpg",
+      "sha256": "772b527e603fe69efc76d84e6da06dddc5f0a310fc8ddbaaeae70292cf21464a"
+    }
+  ],
+  "reviewer": "Codex actual-frame review, 2026-10-27",
+  "machine_evidence_sha256": null,
+  "reviewed_at": "2026-10-27T08:07:31.029898+00:00"
+}

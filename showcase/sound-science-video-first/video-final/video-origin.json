@@ -1,0 +1,9 @@
+{
+  "origin": "original_authored_science_animation",
+  "is_pptx_playback_recording": false,
+  "story_sha256": "4e3ff23b0148938ea92f983661a2018eeb1a006da5258d3ad51a2b95c25d0a94",
+  "narration_manifest_sha256": "aea6a2fe1c35fcb31a97e2dbdd7842f0e97762206ff19f74e4980b99739d692f",
+  "duration_seconds": 74.0,
+  "caption_timing": "Sentence durations allocated by text length within each measured narration clip; not word-forced alignment.",
+  "ppt_started": false
+}

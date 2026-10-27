@@ -1,0 +1,27 @@
+{
+  "check_id": "native-motion-manual",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "针对本例的实际录像像素测量：第2页橙色标记水平往复幅度约85px，垂直变化小于0.25px；已查看往复序列及第3/6页箭头、公式出现前后帧。结论覆盖本例编排的局部标记运动与语义揭示，不扩大为全部成组粒子的 Morph 自动验证。",
+  "recordings": {
+    "manual": "d788e9a48ea6ee0794cb23fb56b54a61d5dac24b1a4fe92489df62e2f331b0dd",
+    "automatic": "96a272d668e9f61f466e88d13eb2bb1b0be510671a8fe1fc9ad2895332fbd3cb"
+  },
+  "evidence": [
+    {
+      "path": "qa/science-video-review/actual-capture-supplement.json",
+      "sha256": "b631ecf7958f9fcc1079eadb634b3538395fd2a2433c985cc8bf454be1d82ea0"
+    },
+    {
+      "path": "qa/science-video-review/manual-cycle.jpg",
+      "sha256": "0f4c14ee1d291b9d2831632a5f780d660fb493e50c48b013bdcf79bbc082d312"
+    },
+    {
+      "path": "qa/science-video-review/manual-reveals.jpg",
+      "sha256": "f3016688a55d7cc98a93071ff1dfaa5e949537bab004a777e28cc880ede3bc5e"
+    }
+  ],
+  "reviewer": "Codex actual-frame review, 2026-10-27",
+  "machine_evidence_sha256": null,
+  "reviewed_at": "2026-10-27T08:07:31.029121+00:00"
+}

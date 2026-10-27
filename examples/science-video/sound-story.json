@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "title": "声音走了，空气也走了吗？",
+  "language": "zh-CN",
+  "canvas": {"width":1920,"height":1080,"fps":30},
+  "facts": {"air_temperature_c":20,"sound_speed_m_s":343,"frequencies_hz":[220,440],"wavelength_440_m":0.7795454545454545},
+  "model": {"amplitude_px":24,"wavelength_px":480,"period_seconds":3,"parcel_spacing_px":54,"columns":25,"rows":6,"origin_x":340,"origin_y":410,"row_spacing_px":60,"tagged_column":10,"tagged_row":2},
+  "model_scope": "Small-amplitude plane progressive wave; dots represent coarse-grained parcels of air, not tracked individual molecules. Thermal motion, attenuation, reflections and second-order streaming are omitted. Time and displacement are enlarged; visual periods are not real audible frequencies.",
+  "sources": [
+    {"role":"visual-reference","title":"University of Salford: Longitudinal Waves","url":"https://salfordacoustics.co.uk/sound-waves/waves-transverse-introduction/longitudinal-waves","used_for":"Follow a marked parcel; contrast local oscillation with a travelling compression. Original Chinese writing, layout, code and audio; no reference footage or artwork is reused."},
+    {"role":"scientific-reference","title":"Dan Russell, Penn State: Wave Motion in Mechanical Medium","url":"https://www.acs.psu.edu/drussell/Demos/waves/wavemotion.html","used_for":"Longitudinal wave displacement is parallel to propagation. The tutorial's media are not redistributed or modified."},
+    {"role":"scientific-reference","title":"UCLA Physics: Sound Waves","url":"https://dbauer.physics.ucla.edu/5b/20-sound-waves/","used_for":"Mechanical pressure/density disturbance; approximate air sound speed 343 m/s at 20 C and wavelength relation."}
+  ],
+  "scenes": [
+    {"id":"question","duration_seconds":8,"title":"声音走了，\n空气也走了吗？","subtitle":"先盯住这个橙色标记。","narration":"你听见声音时，空气会从音箱一路跑进耳朵吗？先盯住这个橙色标记。"},
+    {"id":"parcel","duration_seconds":10,"title":"它在原位附近，来回运动。","subtitle":"标记的是一小团空气的平均运动。","narration":"它只是在原位附近来回运动。这里画的是一小团空气的平均位移，真实的热运动没有画出。"},
+    {"id":"compression","duration_seconds":10,"title":"向前走的是，疏密变化。","subtitle":"压缩与舒张接力，把扰动传向前方。","narration":"相邻区域接力压缩和舒张。向前走的是疏密变化，以及波携带的能量。"},
+    {"id":"parallel","duration_seconds":8,"title":"振动方向，与传播方向平行。","subtitle":"空气中的声音，是纵波。","narration":"粒子的振动方向，与波的传播方向平行。这就是空气中的纵波。"},
+    {"id":"frequency","duration_seconds":12,"title":"频率翻倍，波长减半。","subtitle":"同一种介质、相同温度下，波速近似不变。","narration":"同一种空气里，频率越高，每秒振动越多。波速近似不变，波长就越短。"},
+    {"id":"wavelength","duration_seconds":14,"title":"440 Hz 的纯音，有多长？","subtitle":"20°C 空气中：343 ÷ 440 ≈ 0.78 米。","narration":"以二十摄氏度的空气为例，声速约为每秒三百四十三米。四百四十赫兹的纯音，波长约零点七八米。"},
+    {"id":"recap","duration_seconds":8,"title":"空气局部往复。\n声波向外传播。","subtitle":"传来的是振动，不是一团空气的远行。","narration":"记住这个区别：空气局部往复，声波向外传播。我们听见的是传来的振动。"},
+    {"id":"credits","duration_seconds":4,"title":"把变化，看清楚。","subtitle":"原创中文科普动画 · 参考文献见工程与对应 PPT","narration":""}
+  ]
+}

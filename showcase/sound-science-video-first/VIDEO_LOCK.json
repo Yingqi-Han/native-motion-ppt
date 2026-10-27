@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "stage": "video_completed_before_ppt",
+  "sealed_at": "2026-10-27T07:29:03.359182+00:00",
+  "video": {
+    "path": "sound-explainer.mp4",
+    "sha256": "56aeab930502c5931834cf7f63ce23ff58b0a1546fa663a26906fe8228146eee"
+  },
+  "story": {
+    "path": "video-final/src/story.json",
+    "sha256": "4e3ff23b0148938ea92f983661a2018eeb1a006da5258d3ad51a2b95c25d0a94"
+  },
+  "quality": {
+    "path": "video-qa-v2/video-quality.json",
+    "sha256": "000bb90f019ee10fa3f57ecd69c1ba1313a4b633e174f9f293cad0eb6947cbde"
+  },
+  "scope": "Binds this authored video, source script and actual checks. Not WPS playback evidence."
+}

@@ -1,0 +1,19 @@
+✔ a future re-entrance does not hide an already visible object (3.282301ms)
+✔ a delayed scale leaves the initial size intact (2.250713ms)
+✔ distinct dotted and underscored IDs have distinct gradient IDs (0.919073ms)
+✔ chained cubic motion follows every arc and remains tangent-continuous (0.498344ms)
+✔ closed cubic cycles have no position or velocity jump at their seam (0.20384ms)
+✔ Morph starts from the outgoing animated pose including its correct local clock (0.641904ms)
+✔ Morph hands off to incoming animation without a jump (0.321853ms)
+✔ paired native scale and translation keep a bar on its data baseline (0.256708ms)
+✔ bottom wipe never transforms the bar and clips only inside its fixed geometry (1.206696ms)
+✔ directional wipe rectangles stay within the source bounds (0.342464ms)
+✔ a wipe exit leaves the correct remainder and finishes hidden (0.243609ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.54539

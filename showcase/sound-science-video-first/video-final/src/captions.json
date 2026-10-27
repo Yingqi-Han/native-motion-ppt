@@ -1,0 +1,115 @@
+{
+  "question": [
+    {
+      "text": "你听见声音时，空气会从音箱一路跑进耳朵吗？",
+      "startMs": 600,
+      "endMs": 4784,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "先盯住这个橙色标记。",
+      "startMs": 4784,
+      "endMs": 6777,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "parcel": [
+    {
+      "text": "它只是在原位附近来回运动。",
+      "startMs": 600,
+      "endMs": 2992,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这里画的是一小团空气的平均位移，真实的热运动没有画出。",
+      "startMs": 2992,
+      "endMs": 7961,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "compression": [
+    {
+      "text": "相邻区域接力压缩和舒张。",
+      "startMs": 600,
+      "endMs": 2946,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "向前走的是疏密变化，以及波携带的能量。",
+      "startMs": 2946,
+      "endMs": 6660,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "parallel": [
+    {
+      "text": "粒子的振动方向，与波的传播方向平行。",
+      "startMs": 600,
+      "endMs": 4220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这就是空气中的纵波。",
+      "startMs": 4220,
+      "endMs": 6231,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "frequency": [
+    {
+      "text": "同一种空气里，频率越高，每秒振动越多。",
+      "startMs": 600,
+      "endMs": 4362,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "波速近似不变，波长就越短。",
+      "startMs": 4362,
+      "endMs": 6936,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "wavelength": [
+    {
+      "text": "以二十摄氏度的空气为例，声速约为每秒三百四十三米。",
+      "startMs": 600,
+      "endMs": 5402,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "四百四十赫兹的纯音，波长约零点七八米。",
+      "startMs": 5402,
+      "endMs": 9052,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "recap": [
+    {
+      "text": "记住这个区别：空气局部往复，声波向外传播。",
+      "startMs": 600,
+      "endMs": 4394,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们听见的是传来的振动。",
+      "startMs": 4394,
+      "endMs": 6561,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "credits": []
+}

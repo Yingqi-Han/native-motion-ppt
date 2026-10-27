@@ -50,6 +50,8 @@ python scripts/nmp.py preview output/my-first-deck
 | [wps-generic-regression.json](examples/wps-generic-regression.json) | 独立两页、无页码、柱图与 Morph 回归 |
 | [roles-portrait.json](examples/roles-portrait.json) | 竖版与语义编排 |
 
+先做原创科普视频、再做对应 PPT 的完整案例见[科普视频优先流程](references/science-video-first.md)：在线参考 → 事实和模型 → 中文配音动画成片 → 完成锁 → 原生教学 PPT → 真实 WPS 放映。
+
 ## 完整 WPS 验收
 
 按 [WPS 实播准备](references/wps-playback.md) 安装并完成首次 GUI 检查，再运行：

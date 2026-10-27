@@ -1,0 +1,31 @@
+{
+  "check_id": "automatic-advance",
+  "automatic_status": "pending",
+  "reviewed_status": "passed",
+  "note": "输入计划与采集证据均记录只发送F5，没有翻页按键。自动版实际录像顺序出现01到08页，包括通用匹配器待检的第6页；按8、18、28、38、46、55、63、71秒逐帧复核，第3/6页语义揭示也自动完成。",
+  "recordings": {
+    "manual": "d788e9a48ea6ee0794cb23fb56b54a61d5dac24b1a4fe92489df62e2f331b0dd",
+    "automatic": "96a272d668e9f61f466e88d13eb2bb1b0be510671a8fe1fc9ad2895332fbd3cb"
+  },
+  "evidence": [
+    {
+      "path": "plans/automatic-input.json",
+      "sha256": "d8b827b498e8148639fa8f55d2182fa4a98be86e8a66152f82d6befa63ab0162"
+    },
+    {
+      "path": "playback-evidence-auto.json",
+      "sha256": "c57423b37f2420e54a9771381db0572defffe4c9df0b97ee7000fede4077102c"
+    },
+    {
+      "path": "qa/science-video-review/automatic-all-eight.jpg",
+      "sha256": "3a71748e027c6529b8139b4ad124a69df051158a885a00d76bb93cb564509adb"
+    },
+    {
+      "path": "qa/science-video-review/automatic-reveals.jpg",
+      "sha256": "772b527e603fe69efc76d84e6da06dddc5f0a310fc8ddbaaeae70292cf21464a"
+    }
+  ],
+  "reviewer": "Codex actual-frame review, 2026-10-27",
+  "machine_evidence_sha256": "890587f89181e325f7a830bb259a785e6922ec746e1083120971ed86fad176c5",
+  "reviewed_at": "2026-10-27T08:07:31.030339+00:00"
+}

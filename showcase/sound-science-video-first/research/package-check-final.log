@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "version": "1.8.0",
+  "source_files": 170,
+  "fresh_install_files": 170,
+  "archive_sha256": "7c1f9001d4d21ef1377e014a3ca476fb5ca03f804be7d11b87175972dc1fdda1",
+  "errors": []
+}
